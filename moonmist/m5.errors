@@ -1,0 +1,27 @@
+Assembling M5.ZAP.13 on Sunday, May 1, 1988 13:55:06
+Release: 13
+
+    64	Inserting M5FREQ.XZAP.1	   (594 bytes)
+   658	Inserting M5DAT.ZAP.13	 (23812 bytes)
+ 24470	Inserting M5PUR.ZAP.13	  (1254 bytes)
+ 25724	Inserting MISC.ZAP.9	  (1226 bytes)
+ 26950	Inserting PARSER.ZAP.12	 (13044 bytes)
+ 39994	Inserting VERBS.ZAP.10	 (21117 bytes)
+ 61111	Inserting GOAL.ZAP.7	 (11204 bytes)
+ 72315	Inserting PEOPLE.ZAP.6	 (23145 bytes)
+ 95460	Inserting CASTLE.ZAP.6	 (10608 bytes)
+106068	Inserting TOWER.ZAP.7	  (8177 bytes)
+114245	Inserting THINGS.ZAP.6	  (2553 bytes)
+116798	Inserting PLACES.ZAP.6	   (846 bytes)
+117644	Inserting GLOBAL.ZAP.7	  (3193 bytes)
+120837	Inserting COLORS.ZAP.6	  (4237 bytes)
+125074	Inserting M5STR.ZAP.13	  (3754 bytes)
+254 objects.
+230 globals.
+955 word vocabulary.
+
+128828 bytes (126K).
+ 24470 bytes of preload.
+ 13899 bytes of impure.
+
+Outputting symbol tables

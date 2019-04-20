@@ -1,0 +1,440 @@
+
+Combined ZIL Compiler Ver 2.0 (MIM)
+-----------------------------------
+Input file: SS:<MOONMIST>M5.ZIL.4
+[ZIP instructions]
+
+Loading SS:<MOONMIST>MACROS.ZIL.56 because not abstracted.
+Loading abstract SS:<MOONMIST>MISC.ZABSTR.1.
+Loading SS:<MOONMIST>SYNTAX.ZIL.225 because not abstracted.
+ ** Warning: Two different pre-actions for verb V?COMPARE: PRE-COMPARE; 0
+
+ ** Warning: Two different pre-actions for verb V?COMPARE: PRE-COMPARE; 0
+
+ ** Warning: Two different pre-actions for verb V?EXAMINE: PRE-EXAMINE; 0
+Loading SS:<MOONMIST>PARSER.ZIL.470 and compiling it.
+Compiling routine: MAIN-LOOP
+Compiling routine: MAIN-LOOP-1
+Compiling routine: TELL-I-ASSUME
+Compiling routine: VERB-ALL-TEST
+Compiling routine: GAME-VERB?
+Compiling routine: QCONTEXT-CHECK
+Compiling routine: QCONTEXT-GOOD?
+Compiling routine: NOT-IT
+Compiling routine: NOT-HERE-OBJECT-F
+Compiling routine: PRSO-VERB?
+Compiling routine: PRSI-VERB?
+Compiling routine: GEN-TEST
+Compiling routine: NOT-SECRET-TEST
+Compiling routine: PRUNE
+Compiling routine: ELIMINATE
+Compiling routine: MOBY-FIND
+Compiling routine: FIND-NOT-HERE
+Compiling routine: NOT-HERE-PRINT
+Compiling routine: SEE-VERB?
+Compiling routine: FIX-HIM-HER-IT
+Compiling routine: FAKE-ORPHAN
+Compiling routine: PERFORM
+Compiling routine: D-APPLY
+Compiling routine: I-PROMPT
+Compiling routine: BUZZER-WORD?
+Compiling routine: QUESTION-WORD?
+Compiling routine: TO-DO-X-USE-Y
+Compiling routine: NUMBER-WORD?
+Compiling routine: NAUGHTY-WORD?
+Compiling routine: NOT-THAT-WAY
+Compiling routine: PARSER
+Compiling routine: CHANGE-LEXV
+Compiling routine: PRINT-LEXV
+Compiling routine: STUFF
+Compiling routine: INBUF-STUFF
+Compiling routine: INBUF-ADD
+Compiling routine: FIX-POSSESSIVES
+Compiling routine: NAME?
+Compiling routine: XNAME?
+Compiling routine: WT?
+Compiling routine: CLAUSE
+Compiling routine: VERB-DIR-ONLY?
+Compiling routine: NUMBER?
+Compiling routine: ORPHAN-MERGE
+Compiling routine: CLAUSE-WIN
+Compiling routine: WORD-PRINT
+Compiling routine: UNKNOWN-WORD
+Compiling routine: CANT-USE
+Compiling routine: SYNTAX-CHECK
+Compiling routine: DONT-UNDERSTAND
+Compiling routine: VERB-PRINT
+Compiling routine: ORPHAN
+Compiling routine: CLAUSE-PRINT
+Compiling routine: BUFFER-PRINT
+Compiling routine: TITLE-NOUN?
+Compiling routine: CAPITAL-NOUN?
+Compiling routine: CAPITALIZE
+Compiling routine: PREP-PRINT
+Compiling routine: CLAUSE-COPY
+Compiling routine: CLAUSE-SUBSTRUC
+Compiling routine: CLAUSE-ADD
+Compiling routine: PREP-FIND
+Compiling routine: SYNTAX-FOUND
+Compiling routine: GWIM
+Compiling routine: SNARF-OBJECTS
+Compiling routine: BUT-MERGE
+Compiling routine: ADJ-CHECK
+Compiling routine: SNARFEM
+Compiling routine: RESOLVE-YOUR-HER-HIS
+Compiling routine: GET-OBJECT
+Compiling routine: GENERIC-CLUE-FCN
+Compiling routine: CLUE-TEST
+Compiling routine: GENERIC-STAIRS
+Compiling routine: GENERIC-CLOTHES
+Compiling routine: GENERIC-CLOSET
+Compiling routine: GENERIC-DINNER
+Compiling routine: GENERIC-BEDROOM
+Compiling routine: GENERIC-GREAT-HALL
+Compiling routine: GENERIC-LENS
+Compiling routine: GENERIC-RECORDER
+Compiling routine: GENERIC-BOX
+Compiling routine: GENERIC-BOOK
+Compiling routine: GENERIC-WELL
+Compiling routine: GENERIC-SKELETON
+Compiling routine: GENERIC-ROOM
+Compiling routine: GENERIC-EYE
+Compiling routine: GENERIC-BELL
+Compiling routine: GENERIC-WINE
+Compiling routine: SPEAKING-VERB?
+Compiling routine: MISSING
+Compiling routine: WHICH-PRINT
+Compiling routine: GLOBAL-SEARCH
+Compiling routine: GLOBAL-CHECK
+Compiling routine: DO-SL
+Compiling routine: SEARCH-LIST
+Compiling routine: ROOM-SEARCH
+Compiling routine: THIS-IT?
+Compiling routine: OBJ-FOUND
+Compiling routine: TAKE-CHECK
+Compiling routine: ITAKE-CHECK
+Compiling routine: MANY-CHECK
+Compiling routine: ZMEMQ
+Compiling routine: ZMEMQB
+Compiling routine: LIT?
+Compiling routine: NOT-HERE
+Compiling routine: PUT-ADJ-NAM
+Compiling routine: NOUN-USED?
+Compiling routine: ADJ-USED?
+Abstracting SS:<MOONMIST>PARSER.
+Loading abstract SS:<MOONMIST>VERBS.ZABSTR.1.
+Loading abstract SS:<MOONMIST>GOAL.ZABSTR.1.
+Loading abstract SS:<MOONMIST>PEOPLE.ZABSTR.1.
+Loading abstract SS:<MOONMIST>CASTLE.ZABSTR.1.
+Loading SS:<MOONMIST>TOWER.ZIL.529 and compiling it.
+Compiling routine: TELL-IN-BROCHURE
+Compiling routine: BROCHURE-PSEUDO
+Compiling routine: MEMENTO-F
+Compiling routine: OLD-GREAT-HALL-F
+Compiling routine: JUNCTION-F
+Compiling routine: BASEMENT-ENTER
+Compiling routine: BASEMENT-F
+Compiling routine: WINE-RACK-F
+Compiling routine: BOTTLE-F
+Compiling routine: BRICKS-D
+Compiling routine: BRICKS-F
+Compiling routine: HOLE-IN-WALL-F
+Compiling routine: WELL-F
+Compiling routine: CRYPT-F
+Compiling routine: SKELETON-F
+Compiling routine: DUNGEON-F
+Compiling routine: IRON-MAIDEN-F
+Compiling routine: COFFIN-F
+Compiling routine: LOVER-PATH-LOSE-N
+Compiling routine: LOVER-PATH-LOSE
+Compiling routine: LOVER-PATH-F
+Compiling routine: CORR-2-F
+Compiling routine: CREST-F
+Compiling routine: TV-PSEUDO
+Compiling routine: JACK-ROOM-F
+Compiling routine: NOT-FOUND
+Compiling routine: FREE-VERB?
+Compiling routine: SECRET-CHECK
+Compiling routine: OPEN-SECRET
+Compiling routine: TELESCOPE-F
+Compiling routine: LIBRARY-F
+Compiling routine: BOOKS-GLOBAL-F
+Compiling routine: BOOKCASE-F
+Compiling routine: HISTORY-BOOK-F
+Compiling routine: JOURNAL-F
+Compiling routine: OFFICE-F
+Compiling routine: INKWELL-F
+Compiling routine: COMPUTER-F
+Compiling routine: TAMARA-ROOM-F
+Compiling routine: DRESSING-TABLE-TAM
+Compiling routine: TAMARA-BED-F
+Compiling routine: JEWELRY-CASE-F
+Compiling routine: EARRING-F
+Compiling routine: CORR-3-F
+Compiling routine: CAGE-PSEUDO
+Compiling routine: LUMBER-ROOM-F
+Compiling routine: LUMBER-CHEST-F
+Compiling routine: LUMBER-RING-F
+Compiling routine: PEEPHOLE-2-F
+Compiling routine: MAGAZINE-F
+Compiling routine: CHAPEL-F
+Compiling routine: STAINED-WINDOW-F
+Compiling routine: BILLIARD-PSEUDO
+Compiling routine: BUFFALO-HEAD-F
+Compiling routine: RHINO-HEAD-F
+Compiling routine: GLASS-EYE-F
+Compiling routine: DECK-F
+Compiling routine: BELL-F
+Compiling routine: GO-TO-SOUND
+Compiling routine: X-TO-BELL
+Compiling routine: LADDER-F
+Compiling routine: LEVER-AND-DOOR
+Compiling routine: SECRET-LANDING-JACK-F
+Compiling routine: PASSAGE-1-F
+Compiling routine: SECRET-LANDING-TAM-F
+Compiling routine: SECRET-VIVIEN-PASSAGE-F
+Compiling routine: DINING-PASSAGE-F
+Compiling routine: SECRET-LANDING-LIB-F
+Compiling routine: SECRET-IAN-PASSAGE-F
+Compiling routine: SITTING-PASSAGE-F
+Compiling routine: SITTING-PASSAGE-LOSE
+Compiling routine: YOUR-CLOSET-F
+Compiling routine: PASSAGE-DESC?
+Compiling routine: IRIS-CLOSET-F
+Compiling routine: WENDISH-CORNER-F
+Compiling routine: MIDPOINT-F
+Compiling routine: DRAWING-CLOSET-F
+Compiling routine: GALLERY-CORNER-F
+Compiling routine: PEEPHOLE-F
+Compiling routine: HYDE-CLOSET-F
+Abstracting SS:<MOONMIST>TOWER.
+Loading abstract SS:<MOONMIST>THINGS.ZABSTR.1.
+Loading abstract SS:<MOONMIST>PLACES.ZABSTR.1.
+Loading SS:<MOONMIST>GLOBAL.ZIL.356 and compiling it.
+Compiling routine: LOCAL-GLOBALS-F
+Compiling routine: UPSTAIRS-DOWNSTAIRS
+Compiling routine: DO-INSTEAD-OF
+Compiling routine: TURN-F
+Compiling routine: IT-F
+Compiling routine: FLOOR-F
+Compiling routine: START-SEARCH
+Compiling routine: I-FOUND-IT
+Compiling routine: YOU-F
+Compiling routine: WALL-F
+Compiling routine: GLOBAL-HERE-F
+Compiling routine: CHAIR-F
+Compiling routine: CLOTHES-FCN
+Compiling routine: SLEEP-GLOBAL-F
+Compiling routine: ROB
+Compiling routine: LIGHT-GLOBAL-F
+Compiling routine: HAUNTING-F
+Compiling routine: KEYHOLE-F
+Compiling routine: HANDS-F
+Compiling routine: HEAD-F
+Compiling routine: EYE-F
+Compiling routine: OTHER-OUTFIT-F
+Compiling routine: FIND-BODY
+Compiling routine: PASSAGE-F
+Compiling routine: CORPSE-F
+Compiling routine: UNDRESSED-F
+Compiling routine: ARTIFACT-F
+Compiling routine: TIMES-UP
+Abstracting SS:<MOONMIST>GLOBAL.
+Loading abstract SS:<MOONMIST>COLORS.ZABSTR.1.
+ ** Warning: Never defined - A?GREEN
+ ** Warning: Never defined - A?BLUE
+ ** Warning: Never defined - A?RED
+ ** Warning: Never defined - A?YELLOW
+
+Warnings: 7
+ ** Note: OBJECT has no properties: ROOMS
+ ** Note: OBJECT has no properties: GENERIC-CLUE
+Vocabulary: 955
+
+Prepositions: 24
+
+ABOUT	 AGAINST  AWAY	   DOWN	    IN	     OUT      THROUGH  UNTIL
+ACROSS	 AROUND	  BEHIND   FOR	    OFF	     OVER     TO       UP
+AFTER	 AT	  BESIDE   FROM	    ON	     RID      UNDER    WITH
+
+Real globals: 223
+
+AGAIN-DIR		 LDESC-STRINGS		  P-VTBL
+AGAIN-LEXV		 LIONEL-FORCED		  P-WALK-DIR
+AHHH			 LIONEL-SPEAKS-COUNTER	  P-WON
+AIMED-HERE		 LIONELS-VOICE		  P-XADJ
+ANCIENT-SECRETS		 LIT			  P-XADJN
+ARRESTED-THE-VILLAIN	 LONG-BLOND-HAIR	  P-XNAM
+AWAITING-REPLY		 LOVER-SAID		  PASS-LINE
+BED-LINE		 MAIN-LINE		  PASSAGE-EAST-WEST
+BEG-PARDON		 MASS-COUNTER		  PIANO-PIECES
+BRICKS-DOWN		 MASS-SAID		  PLAYER-OBSTACLES
+BUTLER-DUTY		 MIDDLE-WORD		  PLAYER-RANG-BELL?
+BUTLER-GHOST-STORY-TOLD	 MISSED-DINNER		  POISON-DART
+BUTLER-HINTS-COUNTER	 MUSTACHE-STORY		  PRESENT-TIME
+BUTLER-RANG-BELL?	 NAUGHTY-WORD-TABLE	  PRSA
+C-INTS			 NEVER-NOTICED-HER	  PRSI
+C-TABLE			 NO-CHANGING		  PRSO
+CAPTOR			 NO-VIOLENCE		  QCONTEXT
+CASTLE-IS-SOUTH		 NOT-ENOUGH-ROOM	  QUESTION-WORD-COUNT
+CHAR-CLOSET-TABLE	 NOTHING-NEW		  QUESTION-WORD-TABLE
+CHAR-POSS-TABLE		 NOW-PRSI		  QUESTIONERS
+CHAR-ROOM-TABLE		 NOW-WEARING		  QUESTIONS
+CHARACTER-TABLE		 NUMBER-WORD-TABLE	  QUITE-WELCOME
+CLASP-MUNGED		 OFFENDED		  QUOTE-FLAG
+CLOCK-WAIT		 OHERE			  QWP1-TABLE
+CLOCKER-RUNNING		 OOPS-INBUF		  QWP2-TABLE
+CLUE-LOC		 OOPS-PRINT		  REMEMBER-NOT-DRESSED
+COLOR-ADJS		 OOPS-TABLE		  RESERVE-INBUF
+COLOR-FORCED		 OPRSO			  RESERVE-LEXV
+COLOR-LETTERS		 OTHER-POSS-POS		  RESERVE-PTR
+COLOR-WORDS		 OU-STOP-SEARCHING	  RHYMES-WITH-RICH
+CONFESSED		 P-AADJ			  SEARCH-ROOMS
+COR-1			 P-ACLAUSE		  SEARCHER
+COR-2			 P-ADJ			  SECRET-TAM-LIB
+COR-4			 P-ADJN			  SHOOTER
+CREEPIES		 P-ADJW			  SHOT
+DARK-TURRETS		 P-ANAM			  SOMETHING
+DINING-DESC		 P-AND			  STAIRS-DOWN-LEFT
+DINNER-SAT		 P-BUTS			  STAIRS-UP-RIGHT
+DINNER-SIT-COUNTER	 P-CCTBL		  SUFFIX
+DIR-STRINGS		 P-CONT			  THATS-INTERESTING
+DISCOVERED-HERE		 P-DIRECTION		  TIMER-PREVENTS-IT
+DRAGON-EYE-COLOR	 P-END-ON-PREP		  TITLE-WORD
+EVIDENCE-FOUND		 P-GETFLAGS		  TOLD-ABOUT-EVID
+FAMOUS-YOUNG-DETECTIVE	 P-GWIMBIT		  TOLD-ABOUT-GHOST
+FAVE-COLOR		 P-HER-OBJECT		  TOO-SLIPPERY
+FAWNING			 P-HIM-OBJECT		  TOUCHED-LDESCS
+FIRST-NAME		 P-INBUF		  TOUR-FORCED
+FOLLOW-LOC		 P-IT-OBJECT		  TOUR-INDEX
+FOLLOWER		 P-IT-WORDS		  TOUR-PATH
+FOUND-COSTUME		 P-ITBL			  TOWER-LINE
+FOUND-FABRIC		 P-LEN			  TOWER-STAIRS
+FOUND-IT		 P-LEXV			  TRAILS-ALONG
+FOUND-IT-PERM		 P-MERGE		  TRANSFER-TABLE
+FOUND-LOC		 P-MERGED		  TREASURE
+FOUND-PASSAGES		 P-MOBY-FLAG		  TREASURE-FOUND
+FRIEND-FOUND-PASSAGES	 P-MOBY-FOUND		  TRESYLLIAN
+FUMBLE-NUMBER		 P-NAM			  VARIATION
+FUMBLE-PROB		 P-NAMW			  VERBOSITY
+GENDER-KNOWN		 P-NCN			  VILLAIN-KNOWN?
+GHOST-CACKLES		 P-NUMBER		  VILLAIN-PER
+GLASSES-FOR		 P-OCL1			  WASHED
+GOAL-PERSON		 P-OCL2			  WHICH-DIR
+GOAL-TABLES		 P-OFLAG		  WHITISH-GLIMPSE
+GUEST-TABLE		 P-OFW			  WHO-CARES-TBL
+HIDING-PLACE		 P-OTBL			  WHO-CARES-VERB
+HO-HUM			 P-OVTBL		  WING-STAIRS
+I-ASSUME		 P-PHR			  WINNER
+IDENTIFIED-THE-GHOST	 P-PROMPT		  WRONG-OUTFIT
+IM-SHOCKED		 P-PRSA-WORD		  YAWNS
+INTO-DARKNESS		 P-PRSI			  YES-INBUF
+INTRODUCES		 P-PRSO			  YES-LEXV
+JACK-THINKS-GLADYS	 P-SLOCBITS		  YOU-DIDNT-SAY-W
+KEEP-WAITING		 P-SYNTAX		  YUKS
+LAST-NAME		 P-TABLE
+LAST-PSEUDO-LOC		 P-TIME
+
+Objects: 254
+
+ACCIDENT	       GREAT-HALL	      PIANO
+ANDIRON		       HANDS		      PLAYER
+ARMOR		       HAUNTING		      PLAYER-NAME
+ARTIFACT	       HEAD		      POND
+BACKSTAIRS	       HER		      PRIEST-DOOR
+BASEMENT	       HIM		      PSEUDO-OBJECT
+BATHROOM	       HISTORY-BOOK	      PUNCHBOWL
+BED		       HOLE-IN-WALL	      RECORDER
+BELL		       HORN		      RHINO-HEAD
+BLOWGUN		       HYDE-CHAIR	      ROMANCE
+BOOKCASE	       HYDE-CLOSET	      ROOMS
+BOOKS-GLOBAL	       HYDE-ROOM	      SECRET-DINING-DOOR
+BOTTLE		       IAN-CHAIR	      SECRET-DRAWING-DOOR
+BRICKS		       IAN-ROOM		      SECRET-HYDE-DOOR
+BROCHURE	       INKWELL		      SECRET-IAN-DOOR
+BUFFALO-HEAD	       INTDIR		      SECRET-IAN-PASSAGE
+BUST		       INTNUM		      SECRET-IRIS-DOOR
+BUTLER		       IRIS-CHAIR	      SECRET-JACK-DOOR
+CANDLE		       IRIS-CLOSET	      SECRET-LANDING-JACK
+CANE		       IRIS-ROOM	      SECRET-LANDING-LIB
+CAR		       IRON-MAIDEN	      SECRET-LANDING-TAM
+CASTLE		       IT		      SECRET-LIBRARY-DOOR
+CHAIR		       JACK-ROOM	      SECRET-SITTING-DOOR
+CHAIR-DINING	       JACK-TAPE	      SECRET-TAMARA-DOOR
+CHAPEL		       JEWEL		      SECRET-VIVIEN-DOOR
+CHEST-OF-DRAWERS       JEWELRY-CASE	      SECRET-VIVIEN-PASSAGE
+CLUE-1		       JOURNAL		      SECRET-WENDISH-DOOR
+CLUE-2		       JUNCTION		      SECRET-YOUR-DOOR
+CLUE-3		       KEYHOLE		      SIDEBOARD
+CLUE-4		       KITCHEN		      SITTING-PASSAGE
+COAT-RACK	       LADDER		      SITTING-ROOM
+COFFIN		       LAMP		      SKELETON
+COMPUTER	       LENS		      SKULL
+CORPSE		       LENS-1		      SLEEP-GLOBAL
+CORR-1		       LENS-2		      SLEEP-OUTFIT
+CORR-2		       LENS-BOX		      STAINED-WINDOW
+CORR-3		       LETTER		      STAIRS
+COSTUME		       LETTER-DEE	      STUDY
+COURTYARD	       LETTER-MAID	      TABLE-DINING
+COUSIN		       LEVER		      TABLE-LIBRARY
+CREST		       LIBRARY		      TABLE-RANDOM
+CREW-GLOBAL	       LIBRARY-CHAIR	      TAMARA-BED
+CRYPT		       LIGHT-GLOBAL	      TAMARA-EVIDENCE
+DANGER		       LIMBO		      TAMARA-ROOM
+DEALER		       LOCAL-GLOBALS	      TAPESTRY
+DEB		       LORD		      TELESCOPE
+DECK		       LOVER		      TOMB
+DESK		       LOVER-PATH	      TOWER
+DINING-PASSAGE	       LOVER-PIC	      TURN
+DINING-ROOM	       LUGGAGE		      TWEED-OUTFIT
+DINNER		       LUMBER-CHEST	      UMBRELLA-STAND
+DINNER-2	       LUMBER-RING	      UNDRESSED
+DINNER-OUTFIT	       LUMBER-ROOM	      VICTORIA-CHAIR
+DOCTOR		       MACE		      VIVIEN-BOX
+DRAGON		       MAGAZINE		      VIVIEN-CHAIR
+DRAGON-EYE	       MAID		      VIVIEN-DIARY
+DRAWING-CLOSET	       MAZE		      VIVIEN-ROOM
+DRAWING-ROOM	       MEMENTO		      VIVIEN-STUFF
+DRESSING-BENCH	       MEMENTO-2	      VOICE
+DRESSING-MIRROR	       MIDPOINT		      WALL
+DRESSING-TABLE	       MIRROR-GLOBAL	      WAR-CLUB
+DRESSING-TABLE-LG      MOON		      WARDROBE
+DRIVEWAY	       MOONMIST		      WARDROBE-LG
+DUNGEON		       MUSIC		      WELL
+EARRING		       MUSTACHE		      WENDISH-BOOK
+EAST-HALL	       NECKLACE		      WENDISH-CHAIR
+EXERCISE-OUTFIT	       NECKLACE-OF-D	      WENDISH-CORNER
+EYE		       NIGHTLAMP	      WENDISH-KIT
+FIGURINE	       NIGHTSTAND	      WENDISH-ROOM
+FIREPLACE	       NIGHTSTAND-LG	      WENDISH-STUFF
+FLOOR		       NOT-HERE-OBJECT	      WEST-HALL
+FOYER		       OBJECT-PAIR	      WINDOW
+FRIEND		       OCEAN		      WINE-RACK
+FRONT-DOOR	       OFFICE		      WRITING-DESK
+FRONT-GATE	       OFFICER		      WYVERN
+GALLERY		       OIL-PAINTING	      YOU
+GALLERY-CORNER	       OLD-GREAT-HALL	      YOUR-BATHROOM
+GAME-ROOM	       OTHER-OUTFIT	      YOUR-BATHROOM-DOOR
+GARDEN		       PAINT		      YOUR-CHAIR
+GENERIC-CLUE	       PAINTER		      YOUR-CLOSET
+GHOST-NEW	       PAINTING-GALLERY	      YOUR-COLOR
+GHOST-OLD	       PASSAGE		      YOUR-MIRROR
+GLASS-EYE	       PASSAGE-1	      YOUR-ROOM
+GLOBAL-HERE	       PEEPHOLE		      YOUR-SWITCH
+GLOBAL-OBJECTS	       PEEPHOLE-2
+
+Properties: 27
+
+P?ACTION     P?DESCFCN	  P?IN	       P?NW	    P?STATION	 P?UP
+P?ADJECTIVE  P?DOWN	  P?LDESC      P?OUT	    P?SW	 P?WEST
+P?CAPACITY   P?EAST	  P?LINE       P?SE	    P?SYNONYM
+P?CHARACTER  P?GENERIC	  P?NE	       P?SIZE	    P?TEXT
+P?CORRIDOR   P?GLOBAL	  P?NORTH      P?SOUTH	    P?THINGS
+
+Flags: 28
+
+CONTBIT	     LOCKED	  OPENBIT      SECRETBIT    TOUCHBIT	 WEAPONBIT
+DOORBIT	     MUNGBIT	  PERSONBIT    SEENBIT	    TRANSBIT	 WEARBIT
+FEMALE	     NARTICLEBIT  READBIT      SURFACEBIT   TRYTAKEBIT	 WORNBIT
+INVISIBLE    NDESCBIT	  RMUNGBIT     TAKEBIT	    VEHBIT
+LIGHTBIT     ONBIT	  SEARCHBIT    TOOLBIT	    VOWELBIT

@@ -1,0 +1,1064 @@
+
+
+	.FUNCT	FAKE-DOOR-ENTER-F
+	PRINTI	"The door is closed."
+	CRLF	
+	RFALSE	
+
+
+	.FUNCT	FAKE-DOOR-F
+	EQUAL?	PRSA,V?OPEN \?CCL3
+	CALL	RECORDING,STR?170
+	RSTACK	
+?CCL3:	EQUAL?	PRSA,V?EXAMINE \?CCL5
+	PRINTR	"There's a slot next to the closed door."
+?CCL5:	EQUAL?	PRSA,V?ENTER \FALSE
+	CALL	DO-WALK,P?WEST
+	RSTACK	
+
+
+	.FUNCT	FORM-F
+	EQUAL?	PRSA,V?EXAMINE,V?READ \?CCL3
+	PRINTI	"[This form can be found in your STATIONFALL package.]"
+	EQUAL?	PRSO,ASSIGNMENT-COMPLETION-FORM \?CND4
+	PRINTI	" You notice that it has "
+	ZERO?	ASSIGNMENT-FORM-VALIDATED \?CND6
+	PRINTI	"not "
+?CND6:	PRINTR	"been validated."
+?CND4:	CRLF	
+	RTRUE	
+?CCL3:	EQUAL?	PRSA,V?VALIDATE \?CCL9
+	ZERO?	ASSIGNMENT-FORM-VALIDATED /?CCL12
+	PRINT	SENILITY-STRIKES
+	RTRUE	
+?CCL12:	SET	'ASSIGNMENT-FORM-VALIDATED,TRUE-VALUE
+	PRINTR	"Done."
+?CCL9:	EQUAL?	PRSA,V?MUNG,V?CRUMPLE \FALSE
+	PRINT	VIOLATION-OF-ACT
+	RTRUE	
+
+
+	.FUNCT	CHRONOMETER-F
+	EQUAL?	PRSA,V?READ,V?EXAMINE \FALSE
+	GRTR?	DAY,2 \?CCL6
+	PRINTI	"You glance at your "
+	PRINTD	CHRONOMETER
+	PRINTR	", and realize with annoyance that it has stopped. You can't recall doing anything that might have broken it."
+?CCL6:	PRINTI	"It is a standard wrist "
+	PRINTD	CHRONOMETER
+	PRINTI	" with a digital display. "
+	CALL	V-TIME,TRUE-VALUE
+	PRINTR	" The back is engraved with the message ""Good luck in the Patrol! Love, Mom and Dad."""
+
+
+	.FUNCT	PATROL-UNIFORM-F
+	EQUAL?	PRSA,V?EXAMINE \?CCL3
+	PRINTI	"It is a standard-issue one-pocket Stellar "
+	PRINTD	PATROL-UNIFORM
+	PRINTI	", a miracle of modern technology. It will keep its owner warm in cold climates and cool in warm locales. It provides protection against mild radiation, repels all insects, absorbs sweat, promotes healthy skin tone, and on top of everything else, it is super-comfy"
+	ZERO?	SUIT-PRESSED /?CND4
+	PRINTI	". The uniform has been recently pressed"
+?CND4:	PRINT	PERIOD-CR
+	RTRUE	
+?CCL3:	EQUAL?	PRSA,V?CLOSE,V?OPEN \FALSE
+	PRINTI	"There's no way to open or close the pocket of the "
+	PRINTD	PRSO
+	PRINT	PERIOD-CR
+	RTRUE	
+
+
+	.FUNCT	I-BLATHER
+	EQUAL?	HERE,SPACETRUCK \?CCL3
+	CALL	DEQUEUE,I-BLATHER
+	RSTACK	
+?CCL3:	RANDOM	100
+	LESS?	BLATHER-PROB,STACK /?CCL5
+	CALL	DEQUEUE,I-BLATHER
+	PRINTR	"   Ensign Twelfth Class Blather walks by, lugging his toilet scrubbing supplies. He spots you, whimpers, and slouches away (Footnote 2)."
+?CCL5:	ADD	BLATHER-PROB,10 >BLATHER-PROB
+	RETURN	BLATHER-PROB
+
+
+	.FUNCT	BOXED-FORMS-F
+	EQUAL?	PRSA,V?EXAMINE /?CTR2
+	CALL	TOUCHING?,PSEUDO-OBJECT
+	ZERO?	STACK /?CCL3
+?CTR2:	PRINTR	"The forms are sealed inside the boxes."
+?CCL3:	EQUAL?	PRSA,V?MUNG,V?CRUMPLE \FALSE
+	PRINT	VIOLATION-OF-ACT
+	RTRUE	
+
+
+	.FUNCT	PALLETS-F,CNT
+	EQUAL?	PRSA,V?READ \?CCL3
+	EQUAL?	HERE,FORM-STORAGE-ROOM \?CCL6
+	PRINTR	"There are numerous boxes; some of the nearer ones read: ""Form Pallet Disbursal Form,"" ""Loss of Form Pallet Label Report Form,"" and ""Loss of Form Pallet Label Report Form Release Form."""
+?CCL6:	PRINTC	34
+	PRINT	FORM-NAME
+	PRINTR	"."""
+?CCL3:	EQUAL?	PRSA,V?SEARCH,V?LOOK-INSIDE,V?OPEN \?CCL8
+	PRINTI	"Forms"
+	SET	'CNT,0
+?PRG9:	EQUAL?	CNT,50 /?REP10
+	PRINTI	" and forms"
+	INC	'CNT
+	JUMP	?PRG9
+?REP10:	PRINTR	". Horrified, you reseal the box."
+?CCL8:	EQUAL?	PRSA,V?CLOSE \?CCL14
+	PRINTR	"They already are."
+?CCL14:	EQUAL?	PRSA,V?TAKE \?CCL16
+	PRINTR	"You'll need a forklift."
+?CCL16:	EQUAL?	PRSA,V?MUNG,V?STAND-ON,V?CLIMB-ON /?CTR17
+	EQUAL?	PRSA,V?SHOOT \?CCL18
+?CTR17:	PRINT	VIOLATION-OF-ACT
+	RTRUE	
+?CCL18:	EQUAL?	PRSA,V?COUNT \FALSE
+	EQUAL?	HERE,FORM-STORAGE-ROOM \?CCL25
+	PRINTR	"Countless."
+?CCL25:	CALL	NOUN-USED,W?PALLET,PALLETS
+	ZERO?	STACK /?CCL27
+	PRINTR	"24."
+?CCL27:	CALL	NOUN-USED,W?BOXES,PALLETS
+	ZERO?	STACK /FALSE
+	SET	'C-ELAPSED,30
+	PRINTR	"1920."
+
+
+	.FUNCT	ROBOT-POOL-F,RARG
+	EQUAL?	RARG,M-ENTER \?CCL3
+	ADD	C-ELAPSED,2
+	CALL	QUEUE,I-FLOYD,STACK
+	RSTACK	
+?CCL3:	EQUAL?	RARG,M-LOOK \?CCL5
+	PRINTI	"This is where a "
+	PRINT	LFC
+	PRINTI	" would come to obtain a robot for use on an important assignment. Also for a trivial assignment like yours. "
+	PRINT	ROBOT-POOL-EQUIPMENT-DESC
+	PRINTI	" You can exit aft."
+	RTRUE	
+?CCL5:	EQUAL?	RARG,M-EXIT \FALSE
+	EQUAL?	ROBOT-PICKED,FLOYD /FALSE
+	CALL	DEQUEUE,I-FLOYD
+	RSTACK	
+
+
+	.FUNCT	BIN-F
+	GET	P-ADJW,0
+	EQUAL?	STACK,FALSE-VALUE \?PRD5
+	EQUAL?	PRSO,PSEUDO-OBJECT /?CTR2
+?PRD5:	GET	P-ADJW,1
+	EQUAL?	STACK,FALSE-VALUE \?CCL3
+	EQUAL?	PRSI,PSEUDO-OBJECT \?CCL3
+?CTR2:	PRINT	REFER-TO-BIN
+	RTRUE	
+?CCL3:	EQUAL?	PRSA,V?LOOK-INSIDE \?CCL11
+	CALL	ADJ-USED,A?FIRST,PSEUDO-OBJECT
+	ZERO?	STACK /?CCL14
+	EQUAL?	ROBOT-PICKED,REX /?CCL14
+	GETP	REX,P?FDESC
+	PRINT	STACK
+	CRLF	
+	RTRUE	
+?CCL14:	CALL	ADJ-USED,A?SECOND,PSEUDO-OBJECT
+	ZERO?	STACK /?CCL18
+	EQUAL?	ROBOT-PICKED,HELEN /?CCL18
+	GETP	HELEN,P?FDESC
+	PRINT	STACK
+	CRLF	
+	RTRUE	
+?CCL18:	CALL	ADJ-USED,A?THIRD,PSEUDO-OBJECT
+	ZERO?	STACK /?CCL22
+	EQUAL?	ROBOT-PICKED,FLOYD /?CCL22
+	CALL	PERFORM,V?EXAMINE,FLOYD
+	RTRUE	
+?CCL22:	PRINTR	"The bin is empty."
+?CCL11:	EQUAL?	PRSA,V?PUT,V?WALK-TO,V?ENTER \FALSE
+	PRINTR	"The bin is only for robots."
+
+
+	.FUNCT	FLOYD-F,OARG=0,X,N,TXT,?TMP1
+	ZERO?	OARG /?CCL3
+	EQUAL?	OARG,M-OBJDESC? /TRUE
+	PRINTI	"   "
+	CALL	DESCRIBE-FLOYD
+	RSTACK	
+?CCL3:	EQUAL?	FLOYD,WINNER \?CCL7
+	SET	'FLOYD-SPOKE,TRUE-VALUE
+	ZERO?	ROBOT-PICKED /?CCL10
+	EQUAL?	ROBOT-PICKED,FLOYD /?CCL10
+	SET	'WINNER,PROTAGONIST
+	CALL	PERFORM,V?COMFORT,FLOYD
+	CALL	STOP
+	RSTACK	
+?CCL10:	ZERO?	FLOYD-ANGUISHED /?CCL14
+	PRINT	FLOYD-SNIFFS
+	CALL	STOP
+	RSTACK	
+?CCL14:	EQUAL?	PRSA,V?TELL-ABOUT \?CCL16
+	EQUAL?	PRSO,ME \?CCL16
+	GETP	PRSI,P?FLOYD-ASK-ABOUT >TXT
+	GRTR?	ROBOT-EVILNESS,12 \?CCL21
+	PRINTR	"""Oh, quit jabbering already."""
+?CCL21:	ZERO?	TXT /?CTR22
+	EQUAL?	PRSI,OLIVER \?CCL23
+	FSET?	OLIVER,TOUCHBIT /?CCL23
+?CTR22:	PRINTI	"Floyd shrugs. ""Beats me."
+	IN?	PLATO,HERE \?CND28
+	PRINTI	" Ask Plato. He knows everything!"
+?CND28:	PRINTR	""""
+?CCL23:	PRINTC	34
+	PRINT	TXT
+	PRINTR	""""
+?CCL16:	ZERO?	STUNNED /?CCL31
+	EQUAL?	PRSA,V?HELP /?CTR33
+	EQUAL?	PRSA,V?SAVE-SOMETHING \?PRD37
+	EQUAL?	PRSO,ME /?CTR33
+?PRD37:	EQUAL?	PRSA,V?KILL,V?OFF \?PRD40
+	EQUAL?	PRSO,PLATO /?CTR33
+?PRD40:	EQUAL?	PRSA,V?TAKE \?CCL34
+	EQUAL?	PRSO,STUN-GUN \?CCL34
+?CTR33:	SET	'FLOYD-TOLD,TRUE-VALUE
+	PRINTR	"Floyd waves his hands helplessly. ""Yes... I mean no... I mean oh no oh help me please. Floyd in quandry..."""
+?CCL34:	PRINTI	"Floyd just looks at you with confusion and panic in his eyes."
+	CRLF	
+	CALL	STOP
+	RSTACK	
+?CCL31:	EQUAL?	HERE,FACTORY \?CCL46
+	ZERO?	FLOYD-SHOT /?CCL49
+	PRINTR	"Floyd is hurt and doesn't respond."
+?CCL49:	PRINTR	"""Shut up!"" orders Floyd."
+?CCL46:	EQUAL?	PRSA,V?LAUNCH \?CCL51
+	EQUAL?	PRSO,SPACETRUCK-OBJECT \?CCL51
+	SET	'AWAITING-REPLY,2
+	CALL	V-YES
+	SET	'AWAITING-REPLY,FALSE-VALUE
+	RTRUE	
+?CCL51:	EQUAL?	PRSA,V?TAKE \?CCL55
+	EQUAL?	PRSO,LEASH \?CCL55
+	FSET?	HERE,WEIGHTLESSBIT /?CCL55
+	CALL	FLOYD-TAKE-LEASH
+	RSTACK	
+?CCL55:	EQUAL?	PRSA,V?TAKE \?CCL60
+	EQUAL?	PRSO,STAR \?CCL60
+	FSET?	STAR,TRYTAKEBIT \?CCL60
+	PRINTR	"""Huh? Floyd shorter even than you!"""
+?CCL60:	EQUAL?	PRSA,V?YES \?CCL65
+	ZERO?	AWAITING-REPLY /?CCL65
+	CALL	V-YES
+	RSTACK	
+?CCL65:	EQUAL?	PRSA,V?NO \?CCL69
+	ZERO?	AWAITING-REPLY /?CCL69
+	CALL	V-NO
+	RSTACK	
+?CCL69:	EQUAL?	PRSA,V?CLIMB-ON,V?ENTER \?CCL73
+	EQUAL?	PRSO,COPILOT-SEAT,PILOT-SEAT \?CCL73
+	IN?	FLOYD,PRSO \?CCL78
+	PRINTR	"""Where is Floyd now, huh?"""
+?CCL78:	PRINTR	"Floyd looks suspicious. ""You first."""
+?CCL73:	EQUAL?	PRSA,V?TAKE \?CCL80
+	IN?	PRSO,HEATING-CHAMBER \?CCL80
+	MOVE	PRSO,HERE
+	PRINTI	"""Okay!"" Floyd reaches into the "
+	PRINTD	HEATING-CHAMBER
+	PRINTI	" and grabs"
+	CALL	TPRINT-PRSO
+	PRINTR	". ""Yikes, it's hot!"" He drops it to the deck, where it quickly cools."
+?CCL80:	EQUAL?	PRSA,V?MUNG,V?UNLOCK,V?OPEN \?CCL84
+	EQUAL?	PRSO,STRONG-BOX,SAFE \?CCL84
+	PRINTR	"""Floyd's a robot, not a locksmith!"""
+?CCL84:	EQUAL?	PRSA,V?UNLOCK,V?OPEN \?CCL88
+	EQUAL?	PRSO,SECURITY-DOOR \?CCL88
+	PRINTR	"""Put your ID in the ID reader, dumbo!"""
+?CCL88:	EQUAL?	PRSA,V?MUNG,V?KILL,V?OFF \?CCL92
+	EQUAL?	PRSO,WELDER \?CCL92
+	PRINTR	"""Sure! Floyd not scared!"" He walks bravely up to the welder, which spits some electric fire in his direction. From his new position (quivering behind your legs) Floyd says, ""Floyd changed his mind, okay?"""
+?CCL92:	EQUAL?	PRSA,V?ENTER \?CCL96
+	EQUAL?	PRSO,EXERCISE-MACHINE \?CCL96
+	PRINTR	"""Floyd doesn't need exercise! Not a gram of flab on Floyd!"" He pokes you in the stomach and grins. ""Can't say the same about you, though!"""
+?CCL96:	EQUAL?	PRSA,V?REACH-IN \?CCL100
+	EQUAL?	PRSO,PSEUDO-OBJECT,DISPENSER \?CCL100
+	EQUAL?	HERE,PX \?CCL100
+	PRINTR	"Floyd happily reaches into the dispenser hole, and then withdraws his hand, looking glum. ""Nope, not even a ball."""
+?CCL100:	EQUAL?	PRSA,V?WEAR \?CCL105
+	FSET?	PRSO,WEARBIT \?CCL105
+	PRINTR	"""Too big for Floyd! Also, it would clash with Floyd's boron-titanium alloy finish!"""
+?CCL105:	EQUAL?	PRSA,V?GIVE \?CCL109
+	EQUAL?	PRSI,ME \?CCL109
+	IN?	PRSO,FLOYD \?CCL114
+	MOVE	PRSO,PROTAGONIST
+	PRINTI	"""Okay,"" says Floyd, handing you the "
+	PRINTD	PRSO
+	PRINTR	", ""but only because you're Floyd's best friend."""
+?CCL114:	PRINT	FLOYD-NOT-HAVE
+	RTRUE	
+?CCL109:	EQUAL?	PRSA,V?SGIVE \?CCL116
+	EQUAL?	PRSO,ME \?CCL116
+	CALL	PERFORM,V?GIVE,PRSI,ME
+	RTRUE	
+?CCL116:	EQUAL?	PRSA,V?WALK \?CCL120
+	PRINTR	"Floyd looks slightly embarrassed. ""You know Floyd and his sense of direction."" Then he looks up at you with wide, trusting eyes. ""Tell Floyd a story?"""
+?CCL120:	EQUAL?	PRSA,V?FOLLOW \?CCL122
+	EQUAL?	PRSO,ME \?CCL122
+	PRINTR	"""Okay!"""
+?CCL122:	EQUAL?	PRSA,V?HELLO \?CCL126
+	GRTR?	ROBOT-EVILNESS,13 \?CCL129
+	PRINTR	"""Enough with the stupid 'FLOYD, HELLO' all the time, okay?"""
+?CCL129:	PRINTR	"""Hi!"" Floyd grins and bounces up and down."
+?CCL126:	EQUAL?	PRSA,V?DROP \?CCL131
+	IN?	PRSO,FLOYD \?CCL134
+	RANDOM	100
+	LESS?	50,STACK /?CCL137
+	MOVE	PRSO,HERE
+	PRINTI	"Floyd shrugs and drops the "
+	PRINTD	PRSO
+	PRINT	PERIOD-CR
+	RTRUE	
+?CCL137:	PRINTI	"Floyd clutches the "
+	PRINTD	PRSO
+	PRINTR	" even more tightly. ""Floyd won't,"" he says defiantly."
+?CCL134:	PRINT	FLOYD-NOT-HAVE
+	RTRUE	
+?CCL131:	PRINTI	"Floyd whines, ""Enough talking! Let's play Hider-and-Seeker."""
+	CRLF	
+	CALL	STOP
+	RSTACK	
+?CCL7:	FSET?	FLOYD,TOUCHBIT /?CCL139
+	CALL	NOUN-USED,W?FLOYD,FLOYD
+	ZERO?	STACK /?CCL139
+	PRINTI	"You don't see anyone by that name here."
+	CRLF	
+	RETURN	8
+?CCL139:	EQUAL?	ROBOT-PICKED,FLOYD /?CCL145
+	CALL	TOUCHING?,FLOYD
+	ZERO?	STACK /?CCL145
+	CALL	CANT-REACH,FLOYD
+	RSTACK	
+?CCL145:	EQUAL?	PRSA,V?COMFORT \?CCL149
+	ZERO?	ROBOT-PICKED /?CCL149
+	EQUAL?	ROBOT-PICKED,FLOYD /?CCL149
+	PRINTR	"Floyd gives you a hurt look and turns away."
+?CCL149:	ZERO?	FLOYD-ANGUISHED /?CCL154
+	CALL	TOUCHING?,FLOYD
+	ZERO?	STACK \?CTR153
+	EQUAL?	PRSA,V?COMFORT \?CCL154
+?CTR153:	PRINT	FLOYD-SNIFFS
+	RTRUE	
+?CCL154:	MUL	ROBOT-EVILNESS,10
+	SUB	STACK,70 >?TMP1
+	RANDOM	100
+	LESS?	?TMP1,STACK /?CCL160
+	CALL	TOUCHING?,FLOYD
+	ZERO?	STACK /?CCL160
+	EQUAL?	PRSA,V?SHAKE,V?KICK,V?OFF /?CCL160
+	FSET?	FLOYD,ACTIVEBIT \?CCL160
+	EQUAL?	HERE,FACTORY /?CCL167
+	PRINTR	"""Hey, will you just leave Floyd alone!"" He shoves you away."
+?CCL167:	ZERO?	FLOYD-SHOT /?CCL169
+	PRINTI	"Before you can..."
+	CRLF	
+	CALL	I-LAUNCH
+	RSTACK	
+?CCL169:	CALL	BACK-OFF,STR?177
+	RSTACK	
+?CCL160:	EQUAL?	PRSA,V?EXAMINE \?CCL171
+	CALL	DESCRIBE-FLOYD,TRUE-VALUE
+	FIRST?	FLOYD \?CCL174
+	PRINTC	32
+	CALL	V-LOOK-INSIDE
+	RSTACK	
+?CCL174:	CRLF	
+	RTRUE	
+?CCL171:	EQUAL?	PRSA,V?PUT \?CCL176
+	EQUAL?	PRSI,FLOYD \?CCL176
+	FSET?	FLOYD,ACTIVEBIT \?CCL181
+	PRINTR	"""Hey, Floyd's a robot, not a garbage pail!"" Floyd giggles uncontrollably at his own joke."
+?CCL181:	CALL	NOUN-USED,W?COMPAR,FLOYD
+	ZERO?	STACK /?CCL183
+	PRINTR	"There's no room."
+?CCL183:	PRINT	HUH
+	RTRUE	
+?CCL176:	EQUAL?	PRSA,V?KILL \?CCL185
+	EQUAL?	PRSO,FLOYD \?CCL185
+	ZERO?	FLOYD-SHOT /?CCL185
+	CALL	PERFORM,V?SHOOT,FLOYD,ZAPGUN
+	RTRUE	
+?CCL185:	EQUAL?	PRSA,V?SHOOT \?CCL190
+	ZERO?	FLOYD-SHOT /?CCL193
+	INC	'ZAPGUN-SHOTS
+	PRINTR	"Floyd is already fatally wounded, so that would accomplish nothing, except perhaps fulfilling some sadistic impulse on your part."
+?CCL193:	EQUAL?	HERE,FACTORY \?CCL195
+	CALL	ROB,FLOYD,HERE
+	CALL	DEQUEUE,I-FACTORY
+	FSET	STUN-GUN,TAKEBIT
+	FCLEAR	FLOYD,ACTIVEBIT
+	SET	'FLOYD-SHOT,TRUE-VALUE
+	PRINTR	"The bolt hits Floyd squarely in the chest. He is blown backwards, against the pedestal, and slumps to the deck."
+?CCL195:	INC	'ZAPGUN-SHOTS
+	PRINTR	"[The author of this story is totally shocked, and won't even dignify such an input with a response.]"
+?CCL190:	EQUAL?	PRSA,V?PICK \?CCL197
+	CALL	PICK-ROBOT
+	RSTACK	
+?CCL197:	EQUAL?	PRSA,V?CLOSE \?CCL199
+	PRINT	HUH
+	RTRUE	
+?CCL199:	EQUAL?	PRSA,V?REACH-IN,V?LOOK-INSIDE \?CCL201
+	CALL	PERFORM,V?OPEN,FLOYD
+	RTRUE	
+?CCL201:	FSET?	FLOYD,ACTIVEBIT \?CCL203
+	SET	'FLOYD-SPOKE,TRUE-VALUE
+	EQUAL?	PRSA,V?ON \?CCL206
+	PRINTR	"He's already been activated."
+?CCL206:	EQUAL?	PRSA,V?OFF \?CCL208
+	GRTR?	PLATO-ATTACK-COUNTER,0 \?CCL211
+	PRINTR	"Floyd jerks away as you touch his on-off switch. ""Hey, you know how much Floyd hates that! And after Floyd just saved your life, you kripping ingrate."""
+?CCL211:	FCLEAR	FLOYD,ACTIVEBIT
+	FCLEAR	FLOYD,ACTORBIT
+	ZERO?	SPACETRUCK-COUNTER \?CND212
+	CALL	DEQUEUE,I-FLOYD
+?CND212:	PRINTI	"Floyd, shocked by this betrayal from his old friend, whimpers and keels over"
+	FIRST?	FLOYD \?CND214
+	CALL	ROB,FLOYD,HERE
+	PRINTI	", dropping what he was carrying"
+?CND214:	PRINT	PERIOD-CR
+	RTRUE	
+?CCL208:	EQUAL?	HERE,FACTORY /FALSE
+	EQUAL?	PRSA,V?KISS \?CCL219
+	PRINTR	"You receive a painful electric shock."
+?CCL219:	EQUAL?	PRSA,V?SCOLD \?CCL221
+	PRINTR	"Floyd looks defensive. ""What did Floyd do wrong?"""
+?CCL221:	EQUAL?	PRSA,V?PLAY-WITH \?CCL223
+	ZERO?	FLOYD-ANGUISHED /?CCL226
+	CALL	PERFORM,V?TOUCH,FLOYD
+	RTRUE	
+?CCL226:	CALL	UNTOUCHABLE?,FLOYD
+	ZERO?	STACK /?CND224
+	CALL	CANT-REACH,FLOYD
+	RTRUE	
+?CND224:	SET	'C-ELAPSED,30
+	CALL	QUEUE,I-FLOYD,1
+	PRINTI	"You play with Floyd for several centichrons until you"
+	MUL	ROBOT-EVILNESS,15
+	SUB	STACK,135 >?TMP1
+	RANDOM	100
+	LESS?	?TMP1,STACK /?CCL230
+	PRINTR	" win a game. Floyd gets angry, accuses you of cheating, and kicks you painfully in the shin."
+?CCL230:	PRINTR	"'re completely winded. Floyd pokes at you gleefully. ""C'mon! Let's play some more!"""
+?CCL223:	EQUAL?	PRSA,V?LISTEN \?CCL232
+	PRINTR	"Floyd is babbling about this and that."
+?CCL232:	EQUAL?	PRSA,V?TAKE \?CCL234
+	EQUAL?	PRSO,FLOYD \?CCL234
+	FSET?	HERE,WEIGHTLESSBIT \?CCL239
+	PRINTR	"Sans gravity, you easily pick up Floyd. ""Oh, boy! Zero-Gee Polo,"" he yells, wriggling away and bounding off several walls."
+?CCL239:	FSET?	FLOYD,TOUCHBIT \FALSE
+	SET	'FLOYD-TRYTAKEN,TRUE-VALUE
+	PRINTR	"You manage to lift Floyd a few centimeters, but he's too heavy and you drop him suddenly. Floyd gives a surprised squeal and moves a respectable distance away."
+?CCL234:	EQUAL?	PRSA,V?MUNG,V?KILL \?CCL243
+	PRINTR	"Floyd starts dashing around the room. ""Oh boy oh boy oh boy! I haven't played Chase and Tag for years! You be It! Nah, nah!"""
+?CCL243:	EQUAL?	PRSA,V?SHAKE,V?KICK \?CCL245
+	GRTR?	ROBOT-EVILNESS,13 \?CCL248
+	PRINTR	"""What the krip do you think you're doing? How you'd like it if Floyd treated you that way, you stupid trot-brain."""
+?CCL248:	PRINTR	"""Why you do that?"" Floyd whines. ""I think a wire now shaken loose."" He goes off into a corner and sulks."
+?CCL245:	EQUAL?	PRSA,V?OPEN,V?CLEAN,V?SEARCH /?CTR249
+	EQUAL?	PRSA,V?TICKLE \?CCL250
+?CTR249:	PRINTR	"Floyd giggles and pushes you away. ""You're tickling Floyd!"" He clutches at his side panels, laughing hysterically. Oil drops stream from his eyes."
+?CCL250:	EQUAL?	PRSA,V?PUT,V?GIVE \?CCL254
+	EQUAL?	PRSI,FLOYD \?CCL254
+	EQUAL?	PRSO,TAFFY,GRAY-GOO,ORANGE-GOO /?CTR258
+	EQUAL?	PRSO,NECTAR,SOUP \?CCL259
+?CTR258:	PRINTR	"Floyd looks at the goo. ""Yech! Got any Number Seven Heavy Grease?"""
+?CCL259:	EQUAL?	PRSO,LEASH \?CCL263
+	CALL	FLOYD-TAKE-LEASH
+	RSTACK	
+?CCL263:	EQUAL?	PRSO,OSTRICH-NIP \?CCL265
+	PRINTR	"""Phew!"" says Floyd, holding his nose and handing it back."
+?CCL265:	CALL	CCOUNT,FLOYD
+	GRTR?	STACK,3 /?CTR266
+	EQUAL?	PRSO,SPACESUIT,OSTRICH-NIP /?CTR266
+	EQUAL?	PRSO,EXPLOSIVE,TIMER,DETONATOR /?CTR266
+	FSET?	PRSO,CONTBIT /?CTR266
+	RANDOM	100
+	LESS?	35,STACK /?CCL267
+?CTR266:	MOVE	PRSO,HERE
+	PRINTI	"Floyd examines the "
+	PRINTD	PRSO
+	PRINTR	", shrugs, and drops it."
+?CCL267:	MOVE	PRSO,FLOYD
+	PRINTR	"""Neat!"" exclaims Floyd. He thanks you profusely."
+?CCL254:	EQUAL?	PRSA,V?SHOW \?CCL274
+	EQUAL?	FLOYD,PRSI \?CCL274
+	SET	'AWAITING-REPLY,3
+	ADD	C-ELAPSED,2
+	CALL	QUEUE,I-REPLY,STACK
+	PRINTI	"Floyd looks over"
+	CALL	TPRINT-PRSO
+	PRINTR	". ""Can you play any games with it?"" he asks."
+?CCL274:	EQUAL?	PRSA,V?HUG,V?TOUCH \?CCL278
+	PRINTR	"Floyd gives a contented sigh."
+?CCL278:	EQUAL?	PRSA,V?SMELL \FALSE
+	PRINTR	"Floyd smells faintly of ozone and light machine oil."
+?CCL203:	EQUAL?	PRSA,V?OFF,V?ON \?CCL282
+	ZERO?	FLOYD-SHOT /?CCL282
+	PRINTR	"The switch crumbles in your hand; it looks like Floyd's headed for that big Robot Pool in the sky..."
+?CCL282:	EQUAL?	PRSA,V?ON \?CCL286
+	CALL	QUEUE,I-FLOYD,-1
+	SET	'FLOYD-SPOKE,TRUE-VALUE
+	FSET	FLOYD,ACTORBIT
+	FSET	FLOYD,ACTIVEBIT
+	FSET	FLOYD,TOUCHBIT
+	PRINTI	"Floyd jumps to his feet"
+	PRINT	HOPPING-MAD
+	CRLF	
+	RTRUE	
+?CCL286:	EQUAL?	PRSA,V?OFF \?CCL288
+	PRINTR	"Floyd isn't on."
+?CCL288:	EQUAL?	PRSA,V?TELL \?CCL290
+	ZERO?	FLOYD-SHOT \?CCL290
+	PRINTI	"Floyd isn't that great a listener even when he's on..."
+	CRLF	
+	CALL	STOP
+	RSTACK	
+?CCL290:	EQUAL?	PRSA,V?OPEN,V?SEARCH \FALSE
+	PRINTR	"You search the robot's compartments and discover a crayon, a paddle ball set, and finally, a photo of yourself. On the back, in crayon, in Floyd's childish scrawl, is the inscription, ""Floyds frend."" Touched, you return everything to the compartments where you found them."
+
+
+	.FUNCT	DESCRIBE-FLOYD,EXAMINING=0
+	FSET?	FLOYD,TOUCHBIT /?CCL3
+	PRINT	YOU-CANT
+	PRINTI	"see the robot in the third bin very well, because he's crouched in the corner. He's a short robot, and he seems to be playing marbles."
+	RTRUE	
+?CCL3:	EQUAL?	HERE,ROBOT-POOL \?CCL5
+	ZERO?	ROBOT-PICKED \?CCL5
+	PRINTI	"With unconcealed excitement, Floyd is hopping around in bin number three."
+	RTRUE	
+?CCL5:	EQUAL?	HERE,ROBOT-POOL \?CCL9
+	EQUAL?	ROBOT-PICKED,FLOYD /?CCL9
+	PRINTI	"Floyd sits dejectedly in bin three."
+	RTRUE	
+?CCL9:	IN?	PLATO,HERE \?CCL13
+	ZERO?	EXAMINING \?CCL13
+	PRINTI	"Plato and Floyd are both here."
+	FSET?	FLOYD,ACTIVEBIT /TRUE
+	PRINTC	32
+	PRINT	FLOYD-OFF-DESC
+	RTRUE	
+?CCL13:	EQUAL?	HERE,FACTORY \?CCL19
+	PRINTI	"Floyd is "
+	ZERO?	FLOYD-SHOT /?CCL22
+	PRINTI	"ly"
+	JUMP	?CND20
+?CCL22:	PRINTI	"stand"
+?CND20:	PRINTI	"ing between you and the pyramid, "
+	ZERO?	FLOYD-SHOT /?CCL25
+	PRINTI	"seriously damaged by zapgun fire."
+	RTRUE	
+?CCL25:	PRINTI	"his face so contorted by hate as to be almost unrecognizable. You also wonder where he picked up that black eye patch."
+	RTRUE	
+?CCL19:	FSET?	FLOYD,ACTIVEBIT /?CCL27
+	PRINT	FLOYD-OFF-DESC
+	RTRUE	
+?CCL27:	ZERO?	FLOYD-ANGUISHED /?CCL29
+	PRINTI	"Floyd is lying on the floor, sobbing."
+	RTRUE	
+?CCL29:	ZERO?	EXAMINING /?CCL31
+	PRINTI	"Floyd is a multi-purpose robot with slightly-crossed eyes and a lopsided grin."
+	RTRUE	
+?CCL31:	PRINTI	"Floyd is here, also looking around the room."
+	RTRUE	
+
+
+	.FUNCT	FLOYD-TAKE-LEASH
+	ZERO?	HANGING-IN-AIR /?CCL3
+	PRINTR	"""Floyd can't until you let go!"""
+?CCL3:	PRINTR	"Floyd grabs the leash and gets pulled up into the air. ""Wheee!"" Then his grip slips and he clatters to the deck. ""Oops! More dents!"""
+
+
+	.FUNCT	MOVE-FLOYD-TO-FACTORY
+	MOVE	FLOYD,FACTORY
+	EQUAL?	HERE,EAST-JUNCTION,LEVEL-FIVE \?CCL3
+	PUSH	SOUTH-CONNECTION
+	JUMP	?CND1
+?CCL3:	EQUAL?	HERE,SOUTH-JUNCTION,NORTH-JUNCTION \?CCL5
+	PUSH	EAST-CONNECTION
+	JUMP	?CND1
+?CCL5:	RANDOM	100
+	LESS?	25,STACK /?CCL7
+	PUSH	SOUTH-JUNCTION
+	JUMP	?CND1
+?CCL7:	RANDOM	100
+	LESS?	33,STACK /?CCL9
+	PUSH	EAST-JUNCTION
+	JUMP	?CND1
+?CCL9:	RANDOM	100
+	LESS?	50,STACK /?CCL11
+	PUSH	NORTH-JUNCTION
+	JUMP	?CND1
+?CCL11:	PUSH	LEVEL-FIVE
+?CND1:	CALL	ROB,FLOYD,STACK
+	MOVE	STUN-GUN,FLOYD
+	CALL	DEQUEUE,I-FLOYD
+	CALL	DEQUEUE,I-ROBOT-EVILNESS
+	RSTACK	
+
+
+	.FUNCT	HELEN-F
+	EQUAL?	HELEN,WINNER \?CCL3
+	EQUAL?	PRSA,V?HELLO \?CCL6
+	PRINTR	"""Mutual, I'm sure."""
+?CCL6:	EQUAL?	PRSA,V?FOLLOW,V?WALK \?CCL8
+	PRINTR	"""I'm supposta stay with any human I'm assigned to."""
+?CCL8:	PRINTI	"You've strayed too far from simple form-sorting to interest Helen."
+	CRLF	
+	CALL	STOP
+	RSTACK	
+?CCL3:	EQUAL?	ROBOT-PICKED,HELEN /?CCL10
+	CALL	TOUCHING?,HELEN
+	ZERO?	STACK /?CCL10
+	CALL	CANT-REACH,HELEN
+	RSTACK	
+?CCL10:	EQUAL?	PRSA,V?GIVE \?CCL14
+	EQUAL?	PRSO,CLASS-THREE-SPACECRAFT-ACTIVATION-FORM,ROBOT-USE-AUTHORIZATION-FORM,ASSIGNMENT-COMPLETION-FORM \?CCL14
+	CALL	CONFETTI,PRSO
+	RSTACK	
+?CCL14:	EQUAL?	PRSA,V?OPEN,V?ON,V?OFF \?CCL18
+	CALL	PERFORM,PRSA,PLATO
+	RTRUE	
+?CCL18:	EQUAL?	PRSA,V?PICK \FALSE
+	CALL	PICK-ROBOT
+	RSTACK	
+
+
+	.FUNCT	REX-F
+	EQUAL?	REX,WINNER \?CCL3
+	EQUAL?	PRSA,V?HELLO \?CCL6
+	PRINTR	"""Yo."""
+?CCL6:	EQUAL?	PRSA,V?FOLLOW,V?WALK \?CCL8
+	PRINTI	"""I'll follow youse "
+	EQUAL?	REX,ROBOT-PICKED \?CCL11
+	PRINTI	"since I been"
+	JUMP	?CND9
+?CCL11:	PRINTI	"if I gets"
+?CND9:	PRINTR	" assigned ta youse."""
+?CCL8:	PRINTI	"Rex merely looks confused."
+	CRLF	
+	CALL	STOP
+	RSTACK	
+?CCL3:	EQUAL?	ROBOT-PICKED,REX /?CCL13
+	CALL	TOUCHING?,REX
+	ZERO?	STACK /?CCL13
+	CALL	CANT-REACH,REX
+	RSTACK	
+?CCL13:	EQUAL?	PRSA,V?OPEN,V?ON,V?OFF \?CCL17
+	CALL	PERFORM,PRSA,PLATO
+	RTRUE	
+?CCL17:	EQUAL?	PRSA,V?PICK \FALSE
+	CALL	PICK-ROBOT
+	RSTACK	
+
+
+	.FUNCT	I-OTHER-ROBOT
+	IN?	ROBOT-PICKED,HERE /FALSE
+	MOVE	ROBOT-PICKED,HERE
+	EQUAL?	HERE,CARGO-BAY-ENTRANCE \?CCL6
+	EQUAL?	ROBOT-PICKED,REX \?CCL6
+	CALL	JIGS-UP,STR?214
+	RSTACK	
+?CCL6:	PRINTR	"   Helen obediently follows you."
+
+
+	.FUNCT	CONFETTI,FORM-NAME
+	REMOVE	FORM-NAME
+	PRINTI	"In a spasm of vocational enthusiasm, Helen tries to burst and decollate your "
+	PRINTD	FORM-NAME
+	PRINTR	", leaving nothing but some useless confetti."
+
+
+	.FUNCT	PICK-ROBOT
+	EQUAL?	PRSO,ROBOT-PICKED \?CCL3
+	PRINT	SENILITY-STRIKES
+	RTRUE	
+?CCL3:	ZERO?	ROBOT-PICKED /?CCL5
+	PRINTI	"You already picked "
+	PRINTD	ROBOT-PICKED
+	PRINT	PERIOD-CR
+	RTRUE	
+?CCL5:	PRINTR	"Use the automated robot selection equipment."
+
+
+	.FUNCT	CARGO-BAY-F,RARG
+	EQUAL?	RARG,M-LOOK \FALSE
+	PRINTI	"This huge airlock is essentially a giant loading dock, where truckloads of forms arrive from various printing planets throughout the sector and are immediately distributed throughout the administrative deck. The only exit on foot is back the way you came. A "
+	PRINTD	SPACETRUCK-OBJECT
+	PRINTI	", its hatch "
+	CALL	OPEN-CLOSED,SPACETRUCK-HATCH
+	PRINTI	", waits in the cargo bay."
+	RTRUE	
+
+
+	.FUNCT	SPACETRUCK-OBJECT-F
+	EQUAL?	PRSA,V?WALK-TO,V?ENTER \?CCL3
+	EQUAL?	HERE,SPACETRUCK \?CCL6
+	PRINT	LOOK-AROUND
+	RTRUE	
+?CCL6:	CALL	DO-WALK,P?IN
+	RSTACK	
+?CCL3:	EQUAL?	PRSA,V?DISEMBARK,V?EXIT,V?LEAVE \?CCL8
+	EQUAL?	HERE,SPACETRUCK \?CCL11
+	CALL	DO-WALK,P?OUT
+	RSTACK	
+?CCL11:	PRINT	LOOK-AROUND
+	RTRUE	
+?CCL8:	EQUAL?	PRSA,V?CLOSE,V?OPEN \?CCL13
+	CALL	PERFORM,PRSA,SPACETRUCK-HATCH
+	RTRUE	
+?CCL13:	EQUAL?	PRSA,V?EXAMINE \?CCL15
+	EQUAL?	HERE,SPACETRUCK \?CCL18
+	CALL	V-LOOK
+	RSTACK	
+?CCL18:	CALL	PERFORM,V?EXAMINE,SPACETRUCK-HATCH
+	RTRUE	
+?CCL15:	EQUAL?	PRSA,V?LOOK-INSIDE \?CCL20
+	EQUAL?	HERE,CARGO-BAY,DOCKING-BAY-2 \?CCL20
+	CALL	PERFORM,V?LOOK-INSIDE,WINDOW
+	RTRUE	
+?CCL20:	EQUAL?	PRSA,V?ON,V?LAUNCH \?CCL24
+	EQUAL?	HERE,SPACETRUCK /?CCL27
+	PRINTR	"You're not even in it!"
+?CCL27:	GRTR?	SPACETRUCK-COUNTER,0 \?CCL29
+	PRINT	SENILITY-STRIKES
+	RTRUE	
+?CCL29:	PRINTR	"That's what the slot and keypad are for!"
+?CCL24:	EQUAL?	PRSA,V?SEARCH \FALSE
+	CALL	PERFORM,V?SEARCH,GLOBAL-ROOM
+	RTRUE	
+
+
+	.FUNCT	SPACETRUCK-F,RARG
+	EQUAL?	RARG,M-ENTER \?CCL3
+	FSET?	SPACETRUCK,TOUCHBIT /?CCL3
+	CALL	QUEUE,I-THERMOS,100
+	RSTACK	
+?CCL3:	EQUAL?	RARG,M-LOOK \?CCL7
+	PRINTI	"This is a twelve-meter rig, the largest Class Three spacecraft made, with seats for a pilot and copilot. Below the viewport is a space band radio, a red button for activating the emergency beacon, plus a slot and keypad for controlling the autopilot. The hatch is "
+	CALL	OPEN-CLOSED,SPACETRUCK-HATCH
+	PRINTI	" and the rear of the truck is empty of cargo."
+	RTRUE	
+?CCL7:	EQUAL?	RARG,M-END \FALSE
+	IN?	HELEN,HERE \FALSE
+	CALL	VISIBLE?,CLASS-THREE-SPACECRAFT-ACTIVATION-FORM
+	ZERO?	STACK /FALSE
+	PRINTI	"   "
+	CALL	CONFETTI,CLASS-THREE-SPACECRAFT-ACTIVATION-FORM
+	RSTACK	
+
+
+	.FUNCT	SPACETRUCK-EXIT-F
+	FSET?	SPACETRUCK-HATCH,OPENBIT /?CCL3
+	CALL	THIS-IS-IT,SPACETRUCK-HATCH
+	CALL	DO-FIRST,STR?215
+	RFALSE	
+?CCL3:	EQUAL?	SPACETRUCK-COUNTER,-1 \?CCL5
+	RETURN	CARGO-BAY
+?CCL5:	EQUAL?	SPACETRUCK-COUNTER,5 \FALSE
+	EQUAL?	COURSE-PICKED,RIGHT-COURSE \FALSE
+	RETURN	DOCKING-BAY-2
+
+
+	.FUNCT	SPACETRUCK-HATCH-F
+	EQUAL?	PRSA,V?OPEN \FALSE
+	GRTR?	SPACETRUCK-COUNTER,-1 \FALSE
+	EQUAL?	SPACETRUCK-COUNTER,5 \?CND6
+	EQUAL?	COURSE-PICKED,RIGHT-COURSE /FALSE
+?CND6:	PRINT	YOU-CANT
+	PRINTR	"open the hatch in deep space!"
+
+
+	.FUNCT	PILOT-SEAT-F,VARG=0
+	EQUAL?	VARG,M-ENTER \FALSE
+	IN?	FLOYD,HERE \FALSE
+	FSET?	FLOYD,ACTIVEBIT \FALSE
+	PRINTI	" Floyd clambers into the "
+	IN?	PROTAGONIST,PILOT-SEAT \?CCL9
+	MOVE	FLOYD,COPILOT-SEAT
+	PRINTI	"co"
+	JUMP	?CND7
+?CCL9:	MOVE	FLOYD,PILOT-SEAT
+?CND7:	PRINTD	PILOT-SEAT
+	LOC	FLOYD
+	EQUAL?	STACK,PILOT-SEAT,COPILOT-SEAT \?CND10
+	PRINTI	", his feet dangling a few centimeters short of the floor"
+?CND10:	PRINTC	46
+	EQUAL?	SPACETRUCK-COUNTER,-1 \TRUE
+	SET	'FLOYD-SPOKE,TRUE-VALUE
+	SET	'AWAITING-REPLY,2
+	ADD	C-ELAPSED,2
+	CALL	QUEUE,I-REPLY,STACK
+	PRINTI	" ""Let Floyd launch the "
+	PRINTD	SPACETRUCK-OBJECT
+	PRINTI	"? Please? Floyd has not crashed a truck in over two weeks!"""
+	RTRUE	
+
+
+	.FUNCT	GENERIC-SEAT-F
+	EQUAL?	PRSA,V?DISEMBARK,V?EXIT,V?LEAVE \FALSE
+	LOC	PROTAGONIST
+	EQUAL?	STACK,PILOT-SEAT,COPILOT-SEAT \FALSE
+	LOC	PROTAGONIST
+	RSTACK	
+
+
+	.FUNCT	RADIO-F
+	EQUAL?	PRSA,V?LISTEN \?CCL3
+	FSET?	RADIO,ACTIVEBIT \?CCL6
+	PRINTR	"""Hiss. Crackle."""
+?CCL6:	PRINTR	"The radio isn't on!"
+?CCL3:	EQUAL?	PRSA,V?EXAMINE \?CCL8
+	PRINTI	"The radio seems to be damaged, because the microphone is missing. "
+	RFALSE	
+?CCL8:	EQUAL?	PRSA,V?ON \?CCL10
+	CALL	QUEUE,I-RADIO,-1
+	RFALSE	
+?CCL10:	EQUAL?	PRSA,V?OFF \FALSE
+	CALL	DEQUEUE,I-RADIO
+	RFALSE	
+
+
+	.FUNCT	RED-BUTTON-F
+	EQUAL?	PRSA,V?PUSH \FALSE
+	EQUAL?	SPACETRUCK-COUNTER,5 \?CCL6
+	CALL	RECORDING,STR?219
+	RSTACK	
+?CCL6:	PRINTR	"You're not in trouble! Misuse of the emergency message beacon is a court-martial offense!"
+
+
+	.FUNCT	I-SPACETRUCK
+	CALL	QUEUE,I-SPACETRUCK,-1
+	INC	'SPACETRUCK-COUNTER
+	PRINTI	"   "
+	ZERO?	SPACETRUCK-COUNTER \?CCL3
+	PRINTI	"The truck roars out of the cargo bay"
+	EQUAL?	HERE,CARGO-BAY \?CCL6
+	CALL	JIGS-UP,STR?220
+	RSTACK	
+?CCL6:	FSET?	SPACETRUCK-HATCH,OPENBIT \?CCL8
+	CALL	JIGS-UP,STR?221
+	RSTACK	
+?CCL8:	LOC	PROTAGONIST
+	EQUAL?	STACK,PILOT-SEAT,COPILOT-SEAT \?CCL10
+	FSET	SPACETRUCK,WEIGHTLESSBIT
+	PRINTR	", slowly picking up speed. You settle back for the long trip."
+?CCL10:	CALL	JIGS-UP,STR?222
+	RSTACK	
+?CCL3:	EQUAL?	SPACETRUCK-COUNTER,1 \?CCL12
+	CALL	RECORDING,STR?223
+	RSTACK	
+?CCL12:	EQUAL?	SPACETRUCK-COUNTER,2 \?CCL14
+	PRINTR	"There is a moment of stillness as the rear engines cut out. The moment ends as the braking rockets in front roar to life."
+?CCL14:	EQUAL?	SPACETRUCK-COUNTER,3 \?CCL16
+	CALL	RECORDING,STR?224
+	RSTACK	
+?CCL16:	EQUAL?	SPACETRUCK-COUNTER,4 \?CCL18
+	EQUAL?	COURSE-PICKED,RIGHT-COURSE \?CCL21
+	PRINTI	"A tiny star directly ahead grows brighter and resolves itself into a distant space station. The station grows rapidly larger as you hurtle towards it."
+	CRLF	
+	CALL	PERFORM,V?LOOK-INSIDE,WINDOW
+	PRINTR	"   With a final burst, the braking rockets bring you to a halt a few thousand meters from the station."
+?CCL21:	PRINTI	"The forward braking rockets sputter off as the "
+	PRINTD	SPACETRUCK-OBJECT
+	PRINTR	" comes to a dead stop in space. There is no space station, or any other sign of human civilization, in sight."
+?CCL18:	EQUAL?	SPACETRUCK-COUNTER,5 \FALSE
+	EQUAL?	COURSE-PICKED,RIGHT-COURSE \?CCL26
+	FCLEAR	SPACETRUCK,WEIGHTLESSBIT
+	CALL	QUEUE,I-WELDER,-1
+	CALL	QUEUE,I-FLOYD,-1
+	CALL	QUEUE,I-PLATO,750
+	CALL	QUEUE,I-ROBOT-EVILNESS,1000
+	MOVE	PALLETS,SHIPPING-ROOM
+	ADD	SCORE,5 >SCORE
+	PRINTI	"The maneuvering thrusters kick on, nudging you toward the station. "
+	CALL	RECORDING,STR?225
+	PRINTI	"   The truck glides into the docking bay, and your stomach flips as the bay's arti-grav field comes on. The truck settles the last few centimeters to the floor, the bay floods with air, and a voice whispers, ""Stationfall."" Through the viewport, you see no one to meet you. Odd."
+	CRLF	
+	JUMP	?CND24
+?CCL26:	CALL	RECORDING,STR?226
+	CALL	QUEUE,I-SUFFOCATE,1970
+?CND24:	CALL	DEQUEUE,I-SPACETRUCK
+	RSTACK	
+
+
+	.FUNCT	I-SUFFOCATE
+	CALL	JIGS-UP,STR?227
+	RSTACK	
+
+
+	.FUNCT	FOOD-KIT-F,?TMP1
+	EQUAL?	PRSA,V?EMPTY \?CCL3
+	FSET?	FOOD-KIT,OPENBIT \?CCL3
+	LOC	GRAY-GOO >?TMP1
+	LOC	ORANGE-GOO
+	EQUAL?	FOOD-KIT,?TMP1,STACK \?CCL3
+	CALL	PERFORM,V?REMOVE,GRAY-GOO
+	RTRUE	
+?CCL3:	EQUAL?	PRSA,V?OPEN \FALSE
+	CALL	IN-VACUUM?
+	ZERO?	STACK /FALSE
+	LOC	GRAY-GOO >?TMP1
+	LOC	ORANGE-GOO
+	EQUAL?	FOOD-KIT,?TMP1,STACK \FALSE
+	FSET	FOOD-KIT,OPENBIT
+	CALL	SPACE-FOOD
+	RSTACK	
+
+
+	.FUNCT	IN-VACUUM?
+	EQUAL?	HERE,VACUUM-STORAGE /TRUE
+	EQUAL?	HERE,AIRLOCK \FALSE
+	FSET?	OUTER-AIRLOCK-DOOR,OPENBIT /TRUE
+	RFALSE	
+
+
+	.FUNCT	SPACE-LIQUID,OBJ
+	CALL	VISIBLE?,OBJ
+	ZERO?	STACK /FALSE
+	PRINTI	"   The "
+	EQUAL?	OBJ,SOUP \?CCL6
+	PRINTI	"soup"
+	JUMP	?CND4
+?CCL6:	EQUAL?	OBJ,COFFEE \?CCL8
+	PRINTI	"coffee"
+	JUMP	?CND4
+?CCL8:	PRINTI	"nectar"
+?CND4:	PRINTI	" boils away into the vacuum"
+	EQUAL?	OBJ,SOUP \?CCL11
+	REMOVE	SOUP
+	PRINT	PERIOD-CR
+	RTRUE	
+?CCL11:	CALL	ANTI-LITTER,OBJ
+	RSTACK	
+
+
+	.FUNCT	SPACE-FOOD
+	REMOVE	ORANGE-GOO
+	REMOVE	GRAY-GOO
+	PRINTI	"The food in the "
+	PRINTD	FOOD-KIT
+	PRINTR	" instantly crystallizes and drifts away."
+
+
+	.FUNCT	THERMOS-F
+	EQUAL?	PRSA,V?EXAMINE \?CCL3
+	PRINTI	"It's your basic insulated bottle, which hasn't changed much over the centuries. This one is plaid, with pictures of little robots all over it. "
+	RFALSE	
+?CCL3:	EQUAL?	PRSA,V?EMPTY,V?POUR \?CCL5
+	EQUAL?	PRSO,THERMOS \?CCL5
+	IN?	SOUP,THERMOS \?CCL5
+	CALL	PERFORM,PRSA,SOUP,PRSI
+	RTRUE	
+?CCL5:	EQUAL?	PRSA,V?PUT \?CCL10
+	EQUAL?	PRSI,THERMOS \?CCL10
+	EQUAL?	PRSO,LARGE-BIT,SMALL-BIT,EXPLOSIVE /?CCL10
+	EQUAL?	PRSO,MEDIUM-BIT /?CCL10
+	PRINTI	"The neck of the Thermos is too narrow for"
+	CALL	TRPRINT,PRSO
+	RSTACK	
+?CCL10:	EQUAL?	PRSA,V?OPEN \?CCL17
+	CALL	IN-VACUUM?
+	ZERO?	STACK /?CCL20
+	IN?	SOUP,THERMOS \?CCL20
+	FSET	THERMOS,OPENBIT
+	CALL	SPACE-LIQUID,SOUP
+	RSTACK	
+?CCL20:	ZERO?	THERMOS-FILLED-WITH-GAS /FALSE
+	FSET	THERMOS,OPENBIT
+	PRINTR	"You open the thermos, releasing a puff of FREZONE (tm) gas."
+?CCL17:	EQUAL?	PRSA,V?REACH-IN \FALSE
+	IN?	SOUP,THERMOS \FALSE
+	CALL	PERFORM,V?EXAMINE,SOUP
+	RTRUE	
+
+
+	.FUNCT	I-THERMOS
+	IN?	SOUP,THERMOS /?CCL3
+	SET	'SOUP-WARMTH,0
+	RETURN	SOUP-WARMTH
+?CCL3:	LESS?	SOUP-WARMTH,0 \?CCL5
+	SET	'SOUP-WARMTH,0
+	RETURN	SOUP-WARMTH
+?CCL5:	FSET?	THERMOS,OPENBIT \?CCL8
+	PUSH	4
+	JUMP	?CND6
+?CCL8:	PUSH	1
+?CND6:	SUB	SOUP-WARMTH,STACK >SOUP-WARMTH
+	CALL	QUEUE,I-THERMOS,100
+	RSTACK	
+
+
+	.FUNCT	SOUP-F
+	EQUAL?	PRSA,V?FIND \?CCL3
+	GET	P-NAMW,0
+	EQUAL?	STACK,W?FOOD \?CCL3
+	CALL	PERFORM,V?SEARCH,GLOBAL-ROOM
+	RTRUE	
+?CCL3:	EQUAL?	PRSA,V?EAT \?CCL7
+	CALL	ULTIMATELY-IN?,THERMOS
+	ZERO?	STACK \?CCL7
+	CALL	THIS-IS-IT,THERMOS
+	PRINT	YNH
+	CALL	TRPRINT,THERMOS
+	RSTACK	
+?CCL7:	EQUAL?	PRSA,V?EMPTY,V?POUR \?CCL11
+	REMOVE	SOUP
+	CALL	MESS,STR?229
+	PRINT	PERIOD-CR
+	RTRUE	
+?CCL11:	EQUAL?	PRSA,V?TASTE,V?TOUCH,V?EXAMINE /?CCL13
+	EQUAL?	PRSA,V?REACH-IN \FALSE
+?CCL13:	PRINTI	"The soup seems to be "
+	CALL	DESCRIBE-SOUP-TEMPERATURE
+	RSTACK	
+
+
+	.FUNCT	DESCRIBE-SOUP-TEMPERATURE
+	GRTR?	SOUP-WARMTH,80 \?CCL3
+	PRINTI	"steaming hot"
+	JUMP	?CND1
+?CCL3:	GRTR?	SOUP-WARMTH,60 \?CCL5
+	PRINTI	"quite hot"
+	JUMP	?CND1
+?CCL5:	GRTR?	SOUP-WARMTH,40 \?CCL7
+	PRINTI	"fairly hot"
+	JUMP	?CND1
+?CCL7:	GRTR?	SOUP-WARMTH,20 \?CCL9
+	PRINTI	"lukewarm"
+	JUMP	?CND1
+?CCL9:	GRTR?	SOUP-WARMTH,0 \?CCL11
+	PRINTI	"tepid"
+	JUMP	?CND1
+?CCL11:	PRINTI	"on the cool side"
+?CND1:	PRINT	PERIOD-CR
+	RTRUE	
+
+
+	.FUNCT	GOO-F
+	EQUAL?	PRSA,V?EAT \?CCL3
+	CALL	ULTIMATELY-IN?,FOOD-KIT,PROTAGONIST
+	ZERO?	STACK \?CCL3
+	CALL	THIS-IS-IT,FOOD-KIT
+	PRINT	YNH
+	CALL	TRPRINT,FOOD-KIT
+	RSTACK	
+?CCL3:	EQUAL?	PRSA,V?DROP,V?REMOVE,V?TAKE \?CCL7
+	EQUAL?	PRSA,V?DROP \?CCL10
+	PRINTI	"The goo, being gooey, sticks where it is"
+	JUMP	?CND8
+?CCL10:	EQUAL?	PRSA,V?TAKE \?CND8
+	PRINTI	"It would ooze through your fingers"
+?CND8:	PRINTI	". You'll have to eat it right from"
+	CALL	TRPRINT,FOOD-KIT
+	RSTACK	
+?CCL7:	EQUAL?	PRSA,V?FIND \FALSE
+	GET	P-NAMW,0
+	EQUAL?	STACK,W?FOOD \FALSE
+	CALL	PERFORM,V?SEARCH,GLOBAL-ROOM
+	RTRUE	
+
+	.ENDI
