@@ -398,7 +398,7 @@ Release " N .V " / Serial number ">
 		       <SETG RAFT-HELD <>>
 		       <MOVE ,PHONE-BOOK ,PROTAGONIST>
 		       <FSET ,PHONE-BOOK ,TOUCHBIT>
-		       <FSET TORCH-LIFE 2>
+		       <SETG TORCH-LIFE 2>
 		       <QUEUE I-TORCH 6>
 		       <INCREMENT-SCORE 21 29 T>
 		       <TELL 
