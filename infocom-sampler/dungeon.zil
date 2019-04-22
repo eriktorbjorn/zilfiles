@@ -1304,8 +1304,7 @@ RESTART and press the RETURN (or ENTER) key. To leave the Sampler, type QUIT.|
 		 <SELF-PROMOTE>
 		 <CRLF>
 		 <CRLF>
-		 <DO-RESTART>
-	       ; <FINISH <>>)
+	         <FINISH <>>)
 		(<OR <EQUAL? .WRD ,W?QUIT ,W?Q ,W?N>
 		     <EQUAL? .WRD ,W?NOTHIN>>
 		 <TELL
