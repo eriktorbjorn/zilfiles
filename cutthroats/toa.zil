@@ -2,6 +2,7 @@
 			      TOA #2
 	(c) Copyright 1984 Infocom, Inc.  All Rights Reserved.
 "
+<VERSION ZIP TIME>
 
 <GC-MON <>>
 ;<COND (<GASSIGNED? ZILCH> <GC 0 T>)
