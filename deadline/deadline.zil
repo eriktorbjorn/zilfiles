@@ -2,6 +2,7 @@
 			    DEADLINE
 	Copyright 1982 Infocom, Inc.  All rights reserved.
 "
+<VERSION ZIP TIME>
 
 ;<SNAME "INFOCOM.DEADLINE">
 
