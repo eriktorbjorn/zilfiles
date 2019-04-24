@@ -1,0 +1,16 @@
+> zilf -ws ZIL0210 zork3.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+Renovated ZORK III: The Dungeon Master
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\zork3\GCLOCK.zil:26: ROUTINE: only 3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
+  in INSERT-FILE called at zork3.zil:24
+19 warnings (18 suppressed)
+
+> zapf zork3.zap
+ZAPF 0.8
+Reading zork3.zap
+Reading zork3_freq.xzap
+Reading zork3_data.zap
+Reading zork3_str.zap
+Measuring..
+Assembling
+Wrote 87656 bytes to zork3.z3
