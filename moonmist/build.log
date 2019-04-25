@@ -1,0 +1,20 @@
+> zilf -ws ZIL0210 m5.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+Compiling MOONMIST: interactive fiction from Infocom!
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\moonmist\MISC.zil:245: ROUTINE: only 3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
+  in INSERT-FILE called at m5.zil:38
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\moonmist\CASTLE.zil:2097: ROUTINE: only 3 routine arguments allowed in V3, so last 1 "OPT" argument will never be passed
+  in INSERT-FILE called at m5.zil:44
+[warning ZIL0308] <top level>: too many parts of speech for 'UPSTAIRS': Adjective (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\moonmist\PEOPLE.zil:1941), Direction (m5.zil:33), Preposition (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\moonmist\SYNTAX.zil:117)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\moonmist\PEOPLE.zil:1941: discarding the Adjective part of speech for 'UPSTAIRS'
+77 warnings (73 suppressed)
+
+> zapf m5.zap
+ZAPF 0.8
+Reading m5.zap
+Reading m5_freq.xzap
+Reading m5_data.zap
+Reading m5_str.zap
+Measuring..
+Assembling
+Wrote 128684 bytes to m5.z3
