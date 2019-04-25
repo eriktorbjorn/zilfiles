@@ -663,7 +663,7 @@ wisdom, tempered by experience." CR>)>
 
 <ROUTINE V-DROP ("OPTIONAL" (SUPPRESS <>))
 	 <COND (<IDROP>
-		<COND (<NOT SUPPRESS>
+		<COND (<NOT .SUPPRESS>
 		       <TELL "Dropped." CR>)>)>>
 
 ;<ROUTINE PRE-THROW ()
