@@ -9,6 +9,9 @@ Copyright (C) 1986 Infocom, Inc.  All rights reserved."
 <FREQUENT-WORDS?>
 <VERSION ZIP TIME>
 
+<COND (<GASSIGNED? ORDER-TREE?>
+       <ORDER-TREE? REVERSE-DEFINED>)>
+
 <COND (<GASSIGNED? PREDGEN>
        <PRINC "Compiling">
        <ID 0>)
