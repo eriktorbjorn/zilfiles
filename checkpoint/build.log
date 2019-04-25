@@ -1,0 +1,31 @@
+> zilf -ws ZIL0210 spy.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+Compiling CHECKPOINT: interactive fiction from Infocom!
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\SYNTAX.zil:826: preaction routine mismatch for 'V?EXAMINE': using PRE-EXAMINE as before
+[warning ZIL0504] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\PARSER.zil:938: treating SET to 0 as true here
+[warning ZIL0410] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\VERBS.zil:202: ZSCII 9 (tab) can not be safely printed in Z-machine version 4
+[warning ZIL0308] <top level>: too many parts of speech for 'PHOTO': Verb (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\SYNTAX.zil:668), Preposition (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\SYNTAX.zil:709), Object (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\THINGS.zil:440)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\THINGS.zil:440: discarding the Object part of speech for 'PHOTO'
+[warning ZIL0308] <top level>: too many parts of speech for 'PICTURE': Object (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\THINGS.zil:440), Preposition (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\SYNTAX.zil:709), Verb (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\SYNTAX.zil:668)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\THINGS.zil:440: discarding the Object part of speech for 'PICTURE'
+[warning ZIL0308] <top level>: too many parts of speech for 'PHOTOGRAPH': Object (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\THINGS.zil:440), Preposition (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\SYNTAX.zil:709), Verb (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\SYNTAX.zil:668)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\THINGS.zil:440: discarding the Object part of speech for 'PHOTOGRAPH'
+[warning ZIL0308] <top level>: too many parts of speech for 'SNAPSHOT': Object (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\THINGS.zil:440), Preposition (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\SYNTAX.zil:709), Verb (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\SYNTAX.zil:668)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\checkpoint\THINGS.zil:440: discarding the Object part of speech for 'SNAPSHOT'
+64 warnings (53 suppressed)
+
+> zapf spy.zap
+ZAPF 0.8
+Reading spy.zap
+Reading spy_freq.xzap
+Reading spy_data.zap
+Reading spy_str.zap
+Measuring
+Restarting
+Reading spy.zap
+Reading spy_freq.xzap
+Reading spy_data.zap
+Reading spy_str.zap
+Measuring..
+Assembling
+Wrote 125648 bytes to spy.z4
