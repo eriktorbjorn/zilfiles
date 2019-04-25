@@ -1,0 +1,26 @@
+> zilf -ws ZIL0210 deadline.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+Compiling DEADLINE: An INTERLOGIC Mystery
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\CLOCK.zil:32: ROUTINE: only 3 rout
+ine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
+  in INSERT-FILE called at deadline.zil:30
+  in IFILE called at deadline.zil:40
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\SYNTAX.zil:294: preaction routine mismatch for 'V?FIND': using PRE-FIND as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\SYNTAX.zil:298: preaction routine mismatch for 'V?EXAMINE': using PRE-EXAMINE as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\SYNTAX.zil:302: preaction routine mismatch for 'V?FIND': using PRE-FIND as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\SYNTAX.zil:390: preaction routine mismatch for 'V?TAKE': using PRE-TAKE as before
+[warning ZIL0504] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\PARSER.zil:238: treating SET to 0 as true here
+[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\VERBS.zil:146: RETURN value ignored: PROG/REPEAT block is in void context
+[warning ZIL0308] <top level>: too many parts of speech for 'UPSTAIRS': Adjective (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\DUNGEON.zil:664), Direction (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\DUNGEON.zil:8), Preposition (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\SYNTAX.zil:123)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\deadline\DUNGEON.zil:664: discarding the Adjective part of speech for 'UPSTAIRS'
+22 warnings (13 suppressed)
+
+> zapf deadline.zap
+ZAPF 0.8
+Reading deadline.zap
+Reading deadline_freq.xzap
+Reading deadline_data.zap
+Reading deadline_str.zap
+Measuring..
+Assembling
+Wrote 107754 bytes to deadline.z3
