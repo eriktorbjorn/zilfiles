@@ -1,0 +1,26 @@
+> zilf -ws ZIL0210 j3.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+
+ *** F1: Nord and Bert ***
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\nordandbert\SYNTAX.zil:461: preaction routine mismatch for 'V?LISTEN': using no preaction routine as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\nordandbert\SYNTAX.zil:462: preaction routine mismatch for 'V?LISTEN': using no preaction routine as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\nordandbert\SYNTAX.zil:693: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\nordandbert\SYNTAX.zil:694: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0200] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\nordandbert\INVIS.zil:7: bare atom 'FARM-HINTS' interpreted as global variable index
+21 warnings (16 suppressed)
+
+> zapf j3.zap
+ZAPF 0.8
+Reading j3.zap
+Reading j3_freq.zap
+Reading j3_data.zap
+Reading j3_str.zap
+Measuring
+Restarting
+Reading j3.zap
+Reading j3_freq.zap
+Reading j3_data.zap
+Reading j3_str.zap
+Measuring..
+Assembling
+Wrote 187524 bytes to j3.z4
