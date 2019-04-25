@@ -77,11 +77,11 @@ to look AT that object, please say so." CR>>
 		<SET V? T>)>
 	 <COND (<IN? ,HERE ,ROOMS>
 		<TELL D ,HERE>
-		<COND (<FSET? <LOC ,ADVENTURER> ,VEHBIT>
-		       <TELL ", in the " D <LOC ,ADVENTURER>>)>
+		<COND (<FSET? <LOC ,WINNER> ,VEHBIT>
+		       <TELL ", in the " D <LOC ,WINNER>>)>
 		<CRLF>)>
 	 <COND (<OR .LOOK? <NOT ,SUPER-BRIEF>>
-		<SET AV <LOC ,ADVENTURER>>
+		<SET AV <LOC ,WINNER>>
 		;<COND (<FSET? .AV ,VEHBIT>
 		       <TELL "(You are in the " D .AV ".)" CR>)>
 		<COND (<AND .V? <APPLY <GETP ,HERE ,P?ACTION> ,M-LOOK>>
@@ -132,7 +132,7 @@ long description (fdesc or ldesc), otherwise will print short."
 		<TELL D .OBJ>
 		<COND (<FSET? .OBJ ,WORNBIT> <TELL " (being worn)">)>)>
 	 <COND (<AND <0? .LEVEL>
-		     <SET AV <LOC ,ADVENTURER>>
+		     <SET AV <LOC ,WINNER>>
 		     <FSET? .AV ,VEHBIT>>
 		<TELL " (outside the " D .AV ")">)>
 	 <CRLF>
@@ -143,13 +143,13 @@ long description (fdesc or ldesc), otherwise will print short."
 		     "AUX" Y 1ST? AV STR (PV? <>) (INV? <>))
 	 <COND (<NOT <SET Y <FIRST? .OBJ>>>
 		<RTRUE>)>
-	 <COND (<AND <SET AV <LOC ,ADVENTURER>>
+	 <COND (<AND <SET AV <LOC ,WINNER>>
 		     <FSET? .AV ,VEHBIT>>
 		T)
 	       (T
 		<SET AV <>>)>
 	 <SET 1ST? T>
-	 <COND (<EQUAL? ,ADVENTURER .OBJ <LOC .OBJ>>
+	 <COND (<EQUAL? ,WINNER .OBJ <LOC .OBJ>>
 		<SET INV? T>)
 	       (T
 		<REPEAT ()
@@ -190,7 +190,7 @@ long description (fdesc or ldesc), otherwise will print short."
 		 <SET Y <NEXT? .Y>>>>
 
 <ROUTINE FIRSTER (OBJ LEVEL)
-	 <COND (<EQUAL? .OBJ ,ADVENTURER>
+	 <COND (<EQUAL? .OBJ ,WINNER>
 		<TELL "You are carrying:" CR>)
 	       (<NOT <IN? .OBJ ,ROOMS>>
 		<COND (<G? .LEVEL 0>
@@ -314,7 +314,7 @@ Copyright (c) 1983 by Infocom, Inc. All rights reserved.|
 	 ;<COND (<NOT <EQUAL? <BAND <GETB 0 1> 8> 0>>
 		<TELL "Licensed to Tandy Corporation.|">)>
 	 <TELL
-"PLANETFALL is a registered trademark of Infocom, Inc.|
+"PLANETFALL is a trademark of Infocom, Inc.|
 Release ">
 	 <PRINTN <BAND <GET 0 1> *3777*>>
 	 <TELL " / Serial number ">
@@ -419,6 +419,20 @@ dangerous now?\"" CR CR>)>
 <ROUTINE V-WALK-AROUND ()
 	 <USE-DIRECTIONS>>
 
+;<ROUTINE GO-NEXT (TBL "AUX" VAL)
+	 <COND (<SET VAL <LKP ,HERE .TBL>>
+		<GOTO .VAL>)>>
+
+;<ROUTINE LKP (ITM TBL "AUX" (CNT 0) (LEN <GET .TBL 0>))
+	 <REPEAT ()
+		 <COND (<G? <SET CNT <+ .CNT 1>> .LEN>
+			<RFALSE>)
+		       (<EQUAL? <GET .TBL .CNT> .ITM>
+			<COND (<EQUAL? .CNT .LEN>
+			       <RFALSE>)
+			      (T
+			       <RETURN <GET .TBL <+ .CNT 1>>>)>)>>>
+
 <ROUTINE V-WALK-TO ()
 	 <COND (<OR <IN? ,PRSO ,HERE>
 		    <GLOBAL-IN? ,PRSO ,HERE>>
@@ -431,9 +445,8 @@ dangerous now?\"" CR CR>)>
 		<PERFORM ,V?WALK-TO ,PRSO>
 		<RTRUE>)
 	       (<SET PT <GETPT ,HERE ,PRSO>>
-		<COND (<SET TEMP-ELAPSED <GETP ,HERE ,P?C-MOVE>>
-		       <SET TEMP-ELAPSED <GET .TEMP-ELAPSED 
-					      <- ,PRSO ,LOW-DIRECTION>>>)>
+		<SET TEMP-ELAPSED <GET <GETP ,HERE ,P?C-MOVE> 
+				       <- ,PRSO ,LOW-DIRECTION>>>
 		<COND (<EQUAL? .TEMP-ELAPSED 0>
 		       <SET TEMP-ELAPSED ,DEFAULT-MOVE>)>
 		<COND (<EQUAL? <SET PTS <PTSIZE .PT>> ,UEXIT>
@@ -517,7 +530,7 @@ dangerous now?\"" CR CR>)>
 		      (T
 		       <SETG PRSI <>>
 		       <RFALSE>)>)
-	       (<EQUAL? ,PRSO <LOC ,ADVENTURER>>
+	       (<EQUAL? ,PRSO <LOC ,WINNER>>
 		<TELL "You are in it, asteroid-brain!" CR>)>>
 
 <ROUTINE V-TAKE ()
@@ -534,7 +547,8 @@ dangerous now?\"" CR CR>)>
 	       (<AND <FSET? ,PRSO ,TRYTAKEBIT>
 		     <GETP ,PRSO ,P?ACTION>>
 		<PERFORM ,V?TAKE ,PRSO>
-		<RTRUE>)
+		<RTRUE>
+		<IN? ,PRSO ,WINNER>)
 	       (T
 		<ITAKE>)>>
 
@@ -543,15 +557,14 @@ dangerous now?\"" CR CR>)>
 		<COND (.VB
 		       <TELL <PICK-ONE ,YUKS> CR>)>
 		<RFALSE>)
-	       (<AND <NOT <IN? <LOC ,PRSO> ,ADVENTURER>>
-		     <G? <+ <WEIGHT ,PRSO> <WEIGHT ,ADVENTURER>>
-			 ,LOAD-ALLOWED>>
+	       (<AND <NOT <IN? <LOC ,PRSO> ,WINNER>>
+		     <G? <+ <WEIGHT ,PRSO> <WEIGHT ,WINNER>> ,LOAD-ALLOWED>>
 		<COND (.VB
 		       <TELL "Your load is too heavy." CR>)>
 		<RFATAL>)
-	       (<AND <G? <SET CNT <CCOUNT ,ADVENTURER>> ,FUMBLE-NUMBER>
+	       (<AND <G? <SET CNT <CCOUNT ,WINNER>> ,FUMBLE-NUMBER>
 		     <PROB <* .CNT ,FUMBLE-PROB>>>
-		 <SET OBJ <FIRST? ,ADVENTURER>>
+		 <SET OBJ <FIRST? ,WINNER>>
 		 <REPEAT ()
 			<COND (<FSET? .OBJ ,WORNBIT>
 			       <SET OBJ <NEXT? .OBJ>>)
@@ -773,7 +786,7 @@ the place and then evaporates." CR>)>
 
 <GLOBAL COPR-NOTICE
 " a transcript of interaction with PLANETFALL.|
-PLANETFALL is a registered trademark of Infocom, Inc.|
+PLANETFALL is a trademark of Infocom, Inc.|
 Copyright (c) 1983 Infocom, Inc.  All rights reserved.|">
 
 <ROUTINE V-SCRIPT ()
@@ -841,7 +854,7 @@ looking up at you." CR CR>)>
 	 ;<SETG CLOCK-WAIT T>>
 
 <ROUTINE PRE-BOARD ("AUX" AV)
-	 <SET AV <LOC ,ADVENTURER>>
+	 <SET AV <LOC ,WINNER>>
 	 <COND (<EQUAL? ,PRSO ,GROUND ,GLOBAL-SHUTTLE>
 		<RFALSE>)
 	       (<FSET? ,PRSO ,VEHBIT>
@@ -857,7 +870,7 @@ looking up at you." CR CR>)>
 
 <ROUTINE V-BOARD ("AUX" AV)
 	 <TELL "You are now in the " D ,PRSO "." CR>
-	 <MOVE ,ADVENTURER ,PRSO>
+	 <MOVE ,WINNER ,PRSO>
 	 <APPLY <GETP ,PRSO ,P?ACTION> ,M-ENTER>
 	 <RTRUE>>
 
@@ -877,19 +890,19 @@ looking up at you." CR CR>)>
 		       <RTRUE>)
 		      (T
 		       <DO-WALK ,P?OUT>)>)
-	       (<NOT <EQUAL? <LOC ,ADVENTURER> ,PRSO>>
+	       (<NOT <EQUAL? <LOC ,WINNER> ,PRSO>>
 		<TELL "You're not in that!" CR>
 		<RFATAL>)
 	       (T
 		<OWN-FEET>)>>
 
 <ROUTINE OWN-FEET ()
-	 <MOVE ,ADVENTURER ,HERE>
+	 <MOVE ,WINNER ,HERE>
 	 <TELL "You're on your own feet again." CR>>
 
 <ROUTINE V-STAND ()
-	 <COND (<FSET? <LOC ,ADVENTURER> ,VEHBIT>
-		<PERFORM ,V?DISEMBARK <LOC ,ADVENTURER>>
+	 <COND (<FSET? <LOC ,WINNER> ,VEHBIT>
+		<PERFORM ,V?DISEMBARK <LOC ,WINNER>>
 		<RTRUE>)
 	       (T
 		<TELL "You are already standing, I think." CR>)>>
@@ -1158,11 +1171,21 @@ Hint Booklet using the order form in your game package." CR>>
 		<A-AN>
 		<TELL D ,PRSO "?" CR>)>>
 
+;<ROUTINE V-FROBOZZ ()
+	 <TELL "FROBOZZCO is a multi-planetary corporation." CR>>
+
 <ROUTINE V-YELL ()
 	 <TELL "Aarrrrggggggghhhhhhhh!" CR>>
 
 <ROUTINE BATTERY-FALLS ()
 	 <TELL "The battery falls out." CR>>
+
+;<ROUTINE PRE-SHAKE ()
+	 <COND (<OR <HELD? ,PRSO>
+		    <EQUAL? ,PRSO ,HANDS>>
+		<RFALSE>)
+	       (T
+		<NOT-HOLDING>)>>
 
 <ROUTINE V-SHAKE ("AUX" X)
 	 <COND (<AND <NOT <HELD? ,PRSO>>
@@ -1231,6 +1254,9 @@ Hint Booklet using the order form in your game package." CR>>
 	 <COND (<SET TEE <GETPT .OBJ2 ,P?GLOBAL>>
 		<ZMEMQB .OBJ1 .TEE <- <PTSIZE .TEE> 1>>)>>
 
+;<ROUTINE HERE?? (OBJ)
+	 <OR <IN? .OBJ ,HERE> <GLOBAL-IN? .OBJ ,HERE>>>
+
 <ROUTINE V-SWIM ()
 	 <COND (<EQUAL? ,HERE ,UNDERWATER>
 		<TELL
@@ -1256,6 +1282,12 @@ Hint Booklet using the order form in your game package." CR>>
 
 <ROUTINE V-ZORK ()
 	 <TELL "Gesundheit!" CR>>
+
+;<ROUTINE V-COMMAND ()
+	 <COND (<FSET? ,PRSO ,ACTORBIT>
+		<TELL "The " D ,PRSO " pays no attention." CR>)
+	       (ELSE
+		<TELL "You cannot talk to that!" CR>)>>
 
 <ROUTINE V-SIT ()
 	 <COND (<EQUAL? ,HERE ,ESCAPE-POD>
@@ -1338,7 +1370,7 @@ Hint Booklet using the order form in your game package." CR>>
 		<TELL "You're around here somewhere..." CR>)
 	       (<EQUAL? .L ,GLOBAL-OBJECTS>
 		<TELL "You find it." CR>)
-	       (<IN? ,PRSO ,ADVENTURER>
+	       (<IN? ,PRSO ,WINNER>
 		<TELL "You have it." CR>)
 	       (<OR <IN? ,PRSO ,HERE>
 		    <EQUAL? ,PRSO ,PSEUDO-OBJECT>>
@@ -1420,6 +1452,15 @@ D ,PRSO "? Dr. Quarnsboggle, the Feinstein's psychiatrist, would ">
 	 <SETG QUOTE-FLAG <>>
 	 <RTRUE>>
 
+;<ROUTINE V-IS-IN ()
+	 <COND (<IN? ,PRSO ,PRSI>
+		<TELL "Yes, it is ">
+		<COND (<FSET? ,PRSI ,SURFACEBIT>
+		       <TELL "on">)
+		      (T <TELL "in">)>
+		<TELL " the " D ,PRSI "." CR>)
+	       (T <TELL "No, it isn't." CR>)>>
+
 <ROUTINE V-KISS ()
 	 <TELL "I'd sooner kiss a pile of Antarian swamp mold." CR>>
 
@@ -1483,8 +1524,7 @@ D ,PRSO "? Dr. Quarnsboggle, the Feinstein's psychiatrist, would ">
 
 <ROUTINE V-TAKE-OFF ()
 	 <COND (<FSET? ,PRSO ,VEHBIT>
-		<PERFORM ,V?DISEMBARK ,PRSO>
-		<RTRUE>)
+		<V-DISEMBARK>)
 	       (<FSET? ,PRSO ,WORNBIT>
 		<TELL "You are no longer wearing the " D ,PRSO "." CR>
 		<SETG C-ELAPSED 18>
@@ -1836,7 +1876,7 @@ We control the disk drives..." CR>)>>
 			<RTRUE>)
 		       (T
 			<SET N <NEXT? .X>>
-			<MOVE .X .WHERE>
+			<MOVE .X ,WHERE>
 			<SET X .N>)>>>
 
 ;<ROUTINE V-CRAG ()

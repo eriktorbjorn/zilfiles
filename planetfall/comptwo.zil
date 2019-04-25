@@ -7,7 +7,10 @@ with Complex Two / the Eastern Complex / the Lawanda Compleks."
 <ROOM LAWANDA-PLATFORM
       (IN ROOMS)
       (DESC "Lawanda Platform")
-      (C-MOVE  <TABLE 0 0 0 30 0 0 0 0 0 0 0 0>)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"    30
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NORTH PER SHUTTLE-ENTER-F)
       (SOUTH PER SHUTTLE-ENTER-F)
       (EAST TO ESCALATOR)
@@ -47,7 +50,10 @@ the platform. A faded sign reads \"Shutul Platform -- Lawanda Staashun.\"" CR>)>
       (LDESC
 "You are in the middle of a long mechanical stairway. It is not running,
 and seems to be in disrepair.")
-      (C-MOVE  <TABLE 0 0 15 30 0 0 0 0 0 0 0 0>)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN"15  ;"UP"    30
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (UP TO FORK)
       (EAST TO FORK)
       (DOWN TO LAWANDA-PLATFORM)
@@ -62,9 +68,10 @@ and seems to be in disrepair.")
       (LDESC
 "This is a hallway which forks to the northeast and southeast. To the west
 is the top of a long escalator.")
-      (C-MOVE  <TABLE 0   0 15      0
-          0 0   0   0 
-	 25 0  25   0>)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN"15  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE" 25 ;"EAST" 0 ;"NE"  25  ;"NORTH"  0>)
       (WEST TO ESCALATOR)
       (DOWN TO ESCALATOR)
       (NE TO SYSTEMS-CORRIDOR-WEST)
@@ -73,7 +80,7 @@ is the top of a long escalator.")
       (PSEUDO "ESCALATOR" ESCALATOR-PSEUDO)
       (FLAGS FLOYDBIT RLANDBIT ONBIT)>
 
-
+^L
 
 "He's dead, Jim"
 
@@ -83,9 +90,10 @@ is the top of a long escalator.")
       (LDESC 
 "You have entered a clean, well-lighted place. There are a number of beds,
 some complicated looking equipment, and many shelves that are mostly bare.")
-      (C-MOVE  <TABLE 25   0 0      0
-          0 0   0   0 
-	 25 0   0   0>)
+      (C-MOVE  <TABLE
+         ;"OUT"25 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE" 25 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (SE TO SYSTEMS-CORRIDOR-WEST)
       (OUT TO SYSTEMS-CORRIDOR-WEST)
       (FLAGS RLANDBIT ONBIT)
@@ -210,9 +218,10 @@ it." CR>)>>
 "You are in a dimly lit room, filled with strange machines and wide storage
 cabinets, all locked. To the south, a narrow stairway leads upward. On the
 north wall of the room is a very small doorway.")
-      (C-MOVE  <TABLE 0   0 0     30
-          0 0   0   0 
-	  0 0   0   0>)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"    30
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (UP TO SYSTEMS-CORRIDOR-WEST)
       (SOUTH TO SYSTEMS-CORRIDOR-WEST)
       (NORTH "It is a robot-sized doorway -- a bit too small for you.")
@@ -296,9 +305,10 @@ interesting inside. Just a shiny fromitz board.\"" CR>)>>
       (LDESC
 "The corridor bends here, leading east and southwest. A doorway opens
 to the northwest, and a narrow stairway leads down to the north.")
-      (C-MOVE  <TABLE 0   0 15      0
-          0 0  25   0 
-	  0 0   0   0>)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN"15  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"  25  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NW TO INFIRMARY)
       (NORTH TO REPAIR-ROOM)
       (DOWN TO REPAIR-ROOM)
@@ -313,7 +323,10 @@ to the northwest, and a narrow stairway leads down to the north.")
       (LDESC
 "This section of hallway has a doorway to the north labelled \"Planateree
 Deefens.\" The corridor continues east and west.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NORTH TO PLANETARY-DEFENSE)
       (WEST TO SYSTEMS-CORRIDOR-WEST)
       (EAST TO SYSTEMS-CORRIDOR-EAST)
@@ -326,7 +339,10 @@ Deefens.\" The corridor continues east and west.")
 "The hallway ends here with a large doorway leading east, and smaller doorways
 to the north and south. The northern doorway is labelled \"Planateree Kors
 Kontrool.\" The hallway itself leads west.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (WEST TO SYSTEMS-CORRIDOR)
       (SOUTH TO LIBRARY-LOBBY)
       (NORTH TO PLANETARY-COURSE-CONTROL)
@@ -341,13 +357,16 @@ Kontrool.\" The hallway itself leads west.")
 intended to heat and ventilate the Lawanda Complex. Oddly, although the
 Lawanda Complex is slightly smaller than its counterpart, this plant is much
 larger than the one in the Kalamontee Complex. The only exit is westward.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (WEST TO SYSTEMS-CORRIDOR-EAST)
       (OUT TO SYSTEMS-CORRIDOR-EAST)
       (FLAGS FLOYDBIT RLANDBIT ONBIT)
       (PSEUDO "EQUIPM" EQUIPMENT-PSEUDO)>
 
-
+^L
 
 "Planetary systems and repairs"
 
@@ -360,7 +379,10 @@ larger than the one in the Kalamontee Complex. The only exit is westward.")
 <ROOM PLANETARY-DEFENSE
       (IN ROOMS)
       (DESC "Planetary Defense")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (SOUTH TO SYSTEMS-CORRIDOR)
       (OUT TO SYSTEMS-CORRIDOR)
       (FLAGS RLANDBIT FLOYDBIT ONBIT)
@@ -512,7 +534,10 @@ shock from the fromitz board." CR>>
 <ROOM PLANETARY-COURSE-CONTROL
       (IN ROOMS)
       (DESC "Course Control")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (SOUTH TO SYSTEMS-CORRIDOR-EAST)
       (OUT TO SYSTEMS-CORRIDOR-EAST)
       (FLAGS FLOYDBIT RLANDBIT ONBIT)
@@ -606,7 +631,7 @@ The other light reads \"Kritikul diivurjins frum pland kors.\"">)>
 		       <TELL
 "You can't get a grip on the bedistor with that." CR>)>)>>
 
-
+^L
 
 "The Library"
 
@@ -617,7 +642,10 @@ The other light reads \"Kritikul diivurjins frum pland kors.\"">)>
 "This is a carpeted room, thick with dust, with exits to the north and south.
 To the west, up a few steps, is a wide doorway. A small booth lies to the
 east.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (UP TO LIBRARY)
       (WEST TO LIBRARY)
       (NORTH TO SYSTEMS-CORRIDOR-EAST)
@@ -656,7 +684,10 @@ east.")
 "This is a tiny room with a large \"3\" painted on the wall. A panel contains
 a slot about ten centimeters wide, a brown button labelled \"1\" and a beige
 button labelled \"2.\"")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (WEST TO LIBRARY-LOBBY)
       (OUT TO LIBRARY-LOBBY)
       (FLAGS RLANDBIT ONBIT)
@@ -669,7 +700,10 @@ button labelled \"2.\"")
       (LDESC
 "This is a large carpeted room with a desk and many small tables. The sole
 exit is down a few steps to the east.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (EAST TO LIBRARY-LOBBY)
       (OUT TO LIBRARY-LOBBY)
       (FLAGS RLANDBIT ONBIT FLOYDBIT)
@@ -1273,9 +1307,10 @@ using complicated medical procedures.">
       (LDESC
 "This is a curving hallway leading east and northwest. There is an opening
 to the west.")
-      (C-MOVE  <TABLE 0   0 0      0
-         25 0   0   0 
-	  0 0   0   0>)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW" 25 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (WEST TO SANFAC-F)
       (EAST TO PROJECT-CORRIDOR)
       (NW TO FORK)
@@ -1287,7 +1322,10 @@ to the west.")
       (LDESC
 "This is another dusty sanitary facility. Unlike the ones near the dorms,
 this one is smaller and has no bathing fixtures.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (EAST TO PROJECT-CORRIDOR-WEST)
       (OUT TO PROJECT-CORRIDOR-WEST)
       (FLAGS FLOYDBIT RLANDBIT ONBIT)
@@ -1299,7 +1337,10 @@ this one is smaller and has no bathing fixtures.")
       (LDESC
 "You are at the center of a long east-west hallway. A doorway, labelled
 \"PrajKon Awfis\", opens to the south.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (EAST TO PROJECT-CORRIDOR-EAST)
       (WEST TO PROJECT-CORRIDOR-WEST)
       (SOUTH TO PROJCON-OFFICE)
@@ -1308,7 +1349,10 @@ this one is smaller and has no bathing fixtures.")
 <ROOM PROJCON-OFFICE
       (IN ROOMS)
       (DESC "ProjCon Office")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NORTH TO PROJECT-CORRIDOR)
       (SOUTH TO CRYO-ELEVATOR IF CRYO-ELEVATOR-DOOR IS OPEN
        ELSE "You can't go that way.")
@@ -1352,7 +1396,10 @@ this before,\" he comments." CR>)>>
 <ROOM CRYO-ELEVATOR
       (IN ROOMS)
       (DESC "Cryo-Elevator")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NORTH PER CRYO-EXIT-F)
       (GLOBAL CRYO-ELEVATOR-DOOR)
       (FLAGS RLANDBIT ONBIT)
@@ -1386,7 +1433,10 @@ to the north which is ">
 <ROOM CRYO-ANTEROOM
       (IN ROOMS)
       (DESC "Cryo-Anteroom")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (FLAGS RLANDBIT ONBIT)
       (ACTION CRYO-ANTEROOM-F)>
 
@@ -1477,13 +1527,22 @@ moment, a landing party from the S.P.S. Flathead materializes, and takes you
 away from the doomed world." CR CR>)>
 		       <FINISH <>>)>)>>
 
+;(OLD HACK ENDING:
+"A parchment containing Mike Dornbrook's phone number appears in the trophy
+case. A holographic image of the Dungeon Master appears in the air before
+you. He is carrying a letter from Chief Inspector Klutz. \"I hope to meet you
+in person some day,\" he says.")
+
 <ROOM PROJECT-CORRIDOR-EAST
       (IN ROOMS)
       (DESC "Project Corridor East")
       (LDESC
 "The hallway ends here but continues back toward the west. Doorways lead
 north, south and east.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NORTH TO LIBRARY-LOBBY)
       (SOUTH TO COMPUTER-ROOM)
       (WEST TO PROJECT-CORRIDOR)
@@ -1497,9 +1556,10 @@ north, south and east.")
 "This is the main computer room for the Project. The only sign of activity is
 a glowing red light. The exits are north, west, and northeast. To the south
 is a small booth.")
-      (C-MOVE  <TABLE 0   0 0      0
-          0 0   0   0 
-	  0 0  25   0>)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"  25  ;"NORTH"  0>)
       (NORTH TO PROJECT-CORRIDOR-EAST)
       (WEST TO PROJCON-OFFICE)
       (SOUTH TO MINI-BOOTH)
@@ -1561,7 +1621,10 @@ The printout ends at this point." CR>
 "This is a small room barely large enough for one person. Mounted on the wall
 is a small slot, and next to it a keyboard with numeric keys. The exit is to
 the north.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NORTH TO COMPUTER-ROOM)
       (OUT TO COMPUTER-ROOM)
       (FLAGS RLANDBIT ONBIT)
@@ -1591,9 +1654,10 @@ the north.")
 "This is the heart of the Project's vast laboratory complex. There are exits
 to the west and southwest, and heavy metal doors to the northeast and
 southeast. A small doorway leads south.")
-      (C-MOVE  <TABLE 0   0 0      0
-          0 0  25   0 
-	  0 0   0   0>)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"  25  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (WEST TO PROJECT-CORRIDOR-EAST)
       (SOUTH TO LAB-STORAGE)
       (SW TO COMPUTER-ROOM)
@@ -1608,7 +1672,10 @@ southeast. A small doorway leads south.")
       (LDESC
 "This is a tiny room for the storage of laboratory supplies. The sole exit is
 to the north.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NORTH TO MAIN-LAB)
       (OUT TO MAIN-LAB)
       (FLAGS RLANDBIT FLOYDBIT ONBIT)
@@ -1669,6 +1736,14 @@ pocket of the uniform." CR>)>)>)
 	(FLAGS TAKEBIT READBIT)
 	(TEXT "The card is embossed \"teliportaashun akses kard.\"")>
 
+;<OBJECT MODULATOR-PIN
+	(IN LAB-UNIFORM)
+	(DESC "modulator pin")
+	(SYNONYM PIN)
+	(ADJECTIVE DIGGER MODULATOR)
+	(SIZE 2)
+	(FLAGS TAKEBIT)>
+
 <OBJECT COMBINATION-PAPER
 	(IN LAB-UNIFORM)
 	(DESC "piece of paper")
@@ -1690,9 +1765,10 @@ pocket of the uniform." CR>)>)>)
 "This is the first half of a sterilization chamber to prevent contamination
 of the delicate biological experiments in the Bio Lab which lies beyond. The
 door to the west leads to the main lab, and the bio lock continues eastward.")
-      (C-MOVE  <TABLE 0   0 0      0
-          0 0   0   0 
-	  0 10   0   0>)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST"10 ;"NE"   0  ;"NORTH"  0>)
       (EAST TO BIO-LOCK-EAST)
       (WEST TO MAIN-LAB IF BIO-DOOR-WEST IS OPEN)
       (FLAGS RLANDBIT ONBIT)
@@ -1705,9 +1781,10 @@ door to the west leads to the main lab, and the bio lock continues eastward.")
 "The is the second half of the sterilization chamber leading from the main
 lab to the Bio Lab. The door to the east, leading to the Bio Lab, has a
 window. The bio lock continues to the west.")
-      (C-MOVE  <TABLE 0   0 0      0
-          0 10   0   0 
-	  0 0   0   0>)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST"10 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (EAST TO BIO-LAB IF BIO-DOOR-EAST IS OPEN)
       (WEST TO BIO-LOCK-WEST)
       (FLAGS RLANDBIT ONBIT)
@@ -1771,7 +1848,10 @@ you to open the door.">)
 "This is the western half of a decontamination chamber to prevent dangerous
 radioactive materials from leaving the Radiation Lab which lies to the east.
 The door leads west to the main lab.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (EAST TO RADIATION-LOCK-EAST)
       (WEST TO MAIN-LAB IF RAD-DOOR-WEST IS OPEN)
       (FLAGS RLANDBIT ONBIT)
@@ -1785,7 +1865,10 @@ The door leads west to the main lab.")
 east leads to the Radiation Lab, and the chamber continues westward. A sign
 on the wall reads \"WORNEENG! Raadeeaashun suuts must bee worn beeyond xis
 point.\"")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (EAST TO RADIATION-LAB IF RAD-DOOR-EAST IS OPEN)
       (WEST TO RADIATION-LOCK-WEST)
       (FLAGS RLANDBIT ONBIT)
@@ -2038,7 +2121,10 @@ and you feel a powerful poison begin to work its numbing effects...">>
 <ROOM BIO-LAB
       (IN ROOMS)
       (DESC "Bio Lab")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (EAST TO LAB-OFFICE IF OFFICE-DOOR IS OPEN)
       (WEST TO BIO-LOCK-EAST IF BIO-DOOR-EAST IS OPEN)
       (FLAGS RLANDBIT ONBIT)
@@ -2060,7 +2146,6 @@ The lighting is ">
 " Some of the experiments seem to be out of control..." CR>)
 	 (<EQUAL? .RARG ,M-END>
 	  <ENABLE <QUEUE I-CHASE-SCENE -1>>
-	  <DISABLE <INT I-SLEEP-WARNINGS>> ;"don't fall asleep in mid-chase"
 	  <COND (,LAB-FLOODED
 		       <TELL
 "The air is filled with mist, which is affecting the mutants. They appear
@@ -2138,7 +2223,10 @@ radioactive warnings. Many of the canisters are split open. You can see the
 Bio Lab through a large crack in the south wall. Sinister-looking forms move
 about within the Bio Lab. Although the lights here are off, the room is
 suffused with a pale blue glow.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (WEST TO RADIATION-LOCK-EAST IF RAD-DOOR-EAST IS OPEN)
       (FLAGS RLANDBIT ONBIT)
       (GLOBAL TABLES RAD-DOOR-EAST)
@@ -2212,7 +2300,10 @@ It seems you have picked up a bad case of radiation poisoning.">)>>
 <ROOM LAB-OFFICE
       (IN ROOMS)
       (DESC "Lab Office")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (WEST TO BIO-LAB IF OFFICE-DOOR IS OPEN)
       (SOUTH TO AUXILIARY-BOOTH)
       (IN TO AUXILIARY-BOOTH)
@@ -2374,14 +2465,17 @@ toward the door!" CR>)>>
 "This is another small booth. Unlike the Miniaturization Booth, this room
 has no slot or keyboard, so presumably it is intended only as a receiving
 station. The exit is on the northern side.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NORTH TO LAB-OFFICE)
       (OUT TO LAB-OFFICE)
       (FLAGS RLANDBIT ONBIT)
       (VALUE 4)
       (PSEUDO "BOOTH" IN-BOOTH-PSEUDO)>
 
-
+^L
 
 ;"INSIDE THE COMPUTER"
 
@@ -2400,7 +2494,10 @@ station. The exit is on the northern side.")
 "You are standing on a square plate of heavy metal. Above your head, parallel
 to the plate beneath you, is an identical metal plate. To the east is a wide,
 metallic strip.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (EAST TO STRIP-NEAR-STATION)
       (FLAGS RLANDBIT ONBIT)
       (GLOBAL STRIP)
@@ -2444,7 +2541,10 @@ room whose distant walls are rushing straight toward you...|">
 metal highway. South of here, the filament makes a right angle and heads
 straight down, like a cliff overlooking a black void. The filament can be
 followed north, however. Station 384 lies westward.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (SOUTH "The plunge would probably be fatal.")
       (EAST "The plunge would probably be fatal.")
       (NORTH TO MIDDLE-OF-STRIP)
@@ -2460,7 +2560,10 @@ followed north, however. Station 384 lies westward.")
       (LDESC
 "You are standing on a section of the strip with a bottomless void stretching
 out on both sides. The strip continues to the north and south.")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NORTH TO STRIP-NEAR-RELAY)
       (SOUTH TO STRIP-NEAR-STATION IF NO-MICROBE ELSE "Not a chance -- unless,
 of course, you don't mind walking into the gullet of a hungry microbe.")
@@ -2498,7 +2601,10 @@ hungry, and seems intent on having you for lunch." CR CR>)>)>>
 <ROOM STRIP-NEAR-RELAY
       (IN ROOMS)
       (DESC "Strip Near Relay")
-      (C-MOVE 0)
+      (C-MOVE  <TABLE
+         ;"OUT" 0 ;"IN"   0 ;"DOWN" 0  ;"UP"     0
+         ;"NW"  0 ;"WEST" 0 ;"SW"   0  ;"SOUTH"  0 
+	 ;"SE"  0 ;"EAST" 0 ;"NE"   0  ;"NORTH"  0>)
       (NORTH "There is a huge featureless wall there, remember?")
       (SOUTH TO MIDDLE-OF-STRIP IF NO-MICROBE ELSE "Not a chance -- unless,
 of course, you don't mind walking into the gullet of a hungry microbe.")
@@ -2566,7 +2672,7 @@ current size.">)>
 	(ADJECTIVE BLUE)
 	(FLAGS NDESCBIT)>
 
-
+^L
 
 ;"Laserium"
 
@@ -2782,6 +2888,16 @@ monster begins to look around for other morsels..." CR>)
 	 <TELL "The battery is now resting in the depression, attached
 to the laser." CR>>
 
+;<ROUTINE LASER-CONTENTS ()
+	  <TELL "The laser ">
+	  <COND (<IN? ,OLD-BATTERY ,LASER>
+		 <TELL "contains an " D ,OLD-BATTERY>)
+		(<IN? ,NEW-BATTERY ,LASER>
+		 <TELL "contains a " D ,NEW-BATTERY>)
+		(T
+		 <TELL "is empty">)>
+	  <TELL "." CR>>
+
 <GLOBAL WARMTH-FLAG 0>
 
 <GLOBAL LASER-JUST-SHOT <>>
@@ -2888,7 +3004,7 @@ With a furious storm of electrical mayhem, Sector 384 comes to life. A
 few micro-volts course through the silicon strip on which you stand.
 Unfortunately, at your current size, this is enough to barbecue you.">)>>
 
-
+^L
 
 ;"The microbe battle"
 
@@ -2903,8 +3019,7 @@ towering over you.")
 	(ACTION MICROBE-F)>
 
 <ROUTINE MICROBE-F ()
-	 <COND (<OR <VERB? HELLO TALK>
-		    <EQUAL? ,MICROBE ,WINNER>>
+	 <COND (<VERB? TELL HELLO TALK>
 		<TELL
 "You don't seem to have bridged the vast communication gulf
 between yourself and the microbe." CR>
@@ -2930,11 +3045,11 @@ the strip. (Whew!)" CR>
 			     <SETG MICROBE-DISPATCHED T>)
 			     (T
 			      <TELL
-"The microbe greedily devours the laser, and turns toward you." CR>)>)
+"The microbe greedily devours the laser, and turns toward you." CR>)
 		      (T
 		       <TELL
 "The microbe ignores the " D ,PRSO ", but does attempt to digest
-your arm." CR>)>)>>
+your arm." CR>)>)>)>>
 
 <ROUTINE I-MICROBE ()
 	 <COND (<EQUAL? ,MICROBE-HIT T>
@@ -3035,7 +3150,7 @@ it. Both the laser and the microbe plummet into the void. (Whew!)" CR>
 "The " D ,PRSO " flies over the edge of the strip and disappears into the
 void." CR>)>)>>
 
-
+^L
 
 ;"Endgame -- The mutant chase scene"
 
@@ -3086,4 +3201,4 @@ fear of light." CR>)>>
 toward you on three leg-like stalks.")
 	(SYNONYM TRIFFID PLANT MUTANT MONSTER)
 	(ADJECTIVE MOBILE MAN-EATING GIANT)
-	(FLAGS ACTORBIL M
+	(FLAGS ACTORBIT)>
