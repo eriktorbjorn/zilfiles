@@ -1,0 +1,35 @@
+> zilf -ws ZIL0210 toa.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+CUTTHROATS: Frobozz Magic Adventure Fiction
+
+Formerly SCUM: Interlogic Adventure Fiction
+
+
+
+
+
+
+
+Get ready![warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\SYNTAX.zil:389: preaction routine mismatch for 'V?LOOK-INSIDE': using no preaction routine as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\SYNTAX.zil:391: preaction routine mismatch for 'V?LOOK-INSIDE': using no preaction routine as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\SYNTAX.zil:563: preaction routine mismatch for 'V?MOVE': using PRE-MOVE as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\SYNTAX.zil:740: preaction routine mismatch for 'V?UNLOCK': using PRE-UNLOCK as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\SYNTAX.zil:812: preaction routine mismatch for 'V?WHAT': using no preaction routine as before
+[warning ZIL0204] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\GLOBALS.zil:629: no such global variable 'PLACE', using the local instead
+[warning ZIL0504] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\PARSER.zil:267: treating SET to 0 as true here
+[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\VERBS.zil:155: RETURN value ignored: PROG/REPEAT block is in void context
+[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\VERBS.zil:176: RETURN value ignored: PROG/REPEAT block is in void context
+[warning ZIL0204] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\BOAT.zil:808: no such global variable 'PLACE', using the local instead
+[warning ZIL0204] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\WRECKS.zil:1374: no such global variable 'CHEST', using the local instead
+[warning ZIL0204] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\cutthroats\EVENTS.zil:632: no such local variable 'WEASEL', using the object instead
+42 warnings (30 suppressed)
+
+> zapf toa.zap
+ZAPF 0.8
+Reading toa.zap
+Reading toa_freq.xzap
+Reading toa_data.zap
+Reading toa_str.zap
+Measuring..
+Assembling
+Wrote 112256 bytes to toa.z3
