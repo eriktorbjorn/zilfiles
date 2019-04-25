@@ -1,0 +1,25 @@
+> zilf -ws ZIL0210 z.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+
+Beyond ZORK: The Coconut of Quendor
+[warning MDL0403] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\beyondzork\SYNTAX.zil:689: ignoring list of flags in syntax definition with no preceding OBJECT
+  in INSERT-FILE called at z.zil:31
+[warning ZIL0308] <top level>: too many parts of speech for 'BACK': Verb (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\beyondzork\SYNTAX.zil:177), Preposition (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\beyondzork\SYNTAX.zil:1134), Object (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\beyondzork\RARITIES.zil:775)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\beyondzork\RARITIES.zil:775: discarding the Object part of speech for 'BACK'
+137 warnings (134 suppressed)
+
+> zapf z.zap
+ZAPF 0.8
+Reading z.zap
+Reading z_freq.xzap
+Reading z_data.zap
+Reading z_str.zap
+Measuring
+Restarting
+Reading z.zap
+Reading z_freq.xzap
+Reading z_data.zap
+Reading z_str.zap
+Measuring..
+Assembling
+Wrote 258440 bytes to z.z5
