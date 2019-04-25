@@ -1,0 +1,27 @@
+> zilf -ws ZIL0210 planetfall.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+Planetfall
+
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\MISC.zil:509: ROUTINE: only 3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
+  in INSERT-FILE called at planetfall.zil:14
+  in IFILE called at planetfall.zil:25
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\SYNTAX.zil:143: preaction routine mismatch for 'V?ZAP': using PRE-ZAP as before
+[warning ZIL0504] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\PARSER.zil:244: treating SET to 0 as true here
+[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\VERBS.zil:156: RETURN value ignored: PROG/REPEAT block is in void context
+[warning ZIL0204] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\VERBS.zil:1881: no such global variable 'WHERE', using the local instead
+[warning ZIL0505] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\COMPTWO.zil:3035: COND: clauses after else part will never be evaluated
+[warning ZIL0308] <top level>: too many parts of speech for 'PORT': Object (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\GLOBALS.zil:78), Adjective (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\GLOBALS.zil:224), Direction (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\GLOBALS.zil:11)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\GLOBALS.zil:224: discarding the Adjective part of speech for 'PORT'
+[warning ZIL0308] <top level>: too many parts of speech for 'BRUSH': Object (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\GLOBALS.zil:548), Adjective (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\GLOBALS.zil:549), Verb (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\SYNTAX.zil:283)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\planetfall\GLOBALS.zil:549: discarding the Adjective part of speech for 'BRUSH'
+20 warnings (10 suppressed)
+
+> zapf planetfall.zap
+ZAPF 0.8
+Reading planetfall.zap
+Reading planetfall_freq.zap
+Reading planetfall_data.zap
+Reading planetfall_str.zap
+Measuring..
+Assembling
+Wrote 121862 bytes to planetfall.z3
