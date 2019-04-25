@@ -1,0 +1,19 @@
+> zilf -ws ZIL0210 x1.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+*** X1: Leather Goddesses of Phobos ***8 warnings (8 suppressed)
+
+> zapf x1.zap
+ZAPF 0.8
+Reading x1.zap
+Reading x1_freq.xzap
+Reading x1_data.zap
+Reading x1_str.zap
+Measuring
+Restarting
+Reading x1.zap
+Reading x1_freq.xzap
+Reading x1_data.zap
+Reading x1_str.zap
+Measuring..
+Assembling
+Wrote 160484 bytes to x1.z5
