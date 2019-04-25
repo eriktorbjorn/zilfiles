@@ -1,0 +1,19 @@
+> zilf -ws ZIL0210 s3.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+*** S3: Planetfall ***9 warnings (9 suppressed)
+
+> zapf s3.zap
+ZAPF 0.8
+Reading s3.zap
+Reading s3_freq.xzap
+Reading s3_data.zap
+Reading s3_str.zap
+Measuring
+Restarting
+Reading s3.zap
+Reading s3_freq.xzap
+Reading s3_data.zap
+Reading s3_str.zap
+Measuring..
+Assembling
+Wrote 136968 bytes to s3.z5
