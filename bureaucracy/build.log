@@ -1,0 +1,26 @@
+> zilf -ws ZIL0210 b.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+
+BUREAUCRACY: Interactive Fiction PLUS
+[warning MDL0403] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\bureaucracy\SYNTAX.zil:587: ignoring list of flags in syntax definition with no preceding OBJECT
+  in INSERT-FILE called at b.zil:42
+[warning ZIL0308] <top level>: too many parts of speech for 'D': Object (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\bureaucracy\XXJETDEFS.zil:30), Adjective (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\bureaucracy\OTHER-MISC.zil:450), Direction (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\bureaucracy\MISC.zil:9),
+ Preposition (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\bureaucracy\SYNTAX.zil:195)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\bureaucracy\XXJETDEFS.zil:30: discarding the Object part of speech for 'D'
+66 warnings (63 suppressed)
+
+> zapf b.zap
+ZAPF 0.8
+Reading b.zap
+Reading b_freq.xzap
+Reading b_data.zap
+Reading b_str.zap
+Measuring
+Restarting
+Reading b.zap
+Reading b_freq.xzap
+Reading b_data.zap
+Reading b_str.zap
+Measuring..
+Assembling
+Wrote 244516 bytes to b.z4
