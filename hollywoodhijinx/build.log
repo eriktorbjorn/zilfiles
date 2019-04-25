@@ -1,0 +1,17 @@
+PS D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\hollywoodhijinx> zilf -ws ZIL0210 anthill.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+
+ANTHILL
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\hollywoodhijinx\SYNTAX.zil:674: preaction routine mismatch for 'V?WALK-AROUND': using no preaction routine as before
+[warning ZIL0504] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\hollywoodhijinx\PARSER.zil:394: treating SET to 0 as true here
+18 warnings (16 suppressed)
+
+PS D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\hollywoodhijinx> zapf anthill.zap
+ZAPF 0.8
+Reading anthill.zap
+Reading anthill_freq.xzap
+Reading anthill_data.zap
+Reading anthill_str.zap
+Measuring..
+Assembling
+Wrote 109500 bytes to anthill.z3
