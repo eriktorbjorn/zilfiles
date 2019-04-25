@@ -16,6 +16,9 @@
 <SET REDEFINE T>	;"don't stop and ask"
 <SETG SOUND-EFFECTS? T>	;"include sound effects?"
 
+<COND (<GASSIGNED? ORDER-FLAGS?>
+       <ORDER-FLAGS? LAST WEARBIT>)>
+
 <DEFINE IFSOUND ("ARGS" FOO)
 	<COND (,SOUND-EFFECTS?
 	       <FORM PROG () !.FOO>)
