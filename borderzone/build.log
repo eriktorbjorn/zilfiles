@@ -1,0 +1,23 @@
+> zilf -ws ZIL0210 spy.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+
+ *** Border Zone: A Game of Intrigue ***
+
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\borderzone\SYNTAX.zil:358: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+27 warnings (26 suppressed)
+
+> zapf spy.zap
+ZAPF 0.8
+Reading spy.zap
+Reading spy_freq.xzap
+Reading spy_data.zap
+Reading spy_str.zap
+Measuring
+Restarting
+Reading spy.zap
+Reading spy_freq.xzap
+Reading spy_data.zap
+Reading spy_str.zap
+Measuring..
+Assembling
+Wrote 178884 bytes to spy.z5
