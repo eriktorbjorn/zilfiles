@@ -2701,7 +2701,7 @@ as if you seemed to be about to talk." CR>)>)
 ;"idrop is not called first for v-throw-out"
 <ROUTINE V-THROW-OUT ()
 	 <COND (<OR <EQUAL? <GET ,P-ITBL ,P-PREP2> ,PR?WITH>
-		    <NOT <GET ,P-ITBL ,P-PREP2> ,W?OF>>
+		    <NOT <GET ,P-ITBL ,P-PREP2> ;,W?OF>>
 		<V-TAKE-UNDER>
 		;<PERFORM ,V?THROW ,PRSO>
 		;<CRLF>
