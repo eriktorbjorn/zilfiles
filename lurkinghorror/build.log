@@ -1,0 +1,24 @@
+> zilf -ws ZIL0210 h1.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+
+*** The Lurking Horror: Interactive Horror ***
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\lurkinghorror\SYNTAX.zil:105: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\lurkinghorror\SYNTAX.zil:245: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\lurkinghorror\SYNTAX.zil:380: preaction routine mismatch for 'V?PUT': using PRE-PUT as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\lurkinghorror\SYNTAX.zil:476: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\lurkinghorror\SYNTAX.zil:477: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\lurkinghorror\SYNTAX.zil:481: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\lurkinghorror\SYNTAX.zil:493: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\lurkinghorror\SYNTAX.zil:718: preaction routine mismatch for 'V?PUT-ON': using PRE-PUT as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\lurkinghorror\SYNTAX.zil:719: preaction routine mismatch for 'V?PUT-ON': using PRE-PUT as before
+48 warnings (39 suppressed)
+
+> zapf h1.zap
+ZAPF 0.8
+Reading h1.zap
+Reading h1_freq.xzap
+Reading h1_data.zap
+Reading h1_str.zap
+Measuring..
+Assembling
+Wrote 129596 bytes to h1.z3
