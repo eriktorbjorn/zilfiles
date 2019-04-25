@@ -1,0 +1,23 @@
+> zilf -ws ZIL0210 z4.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+
+ *** ENCHANTER: Interlogic Fantasy ***
+
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\enchanter\CLOCK.zil:27: ROUTINE: only 3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
+  in INSERT-FILE called at z4.zil:31
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\enchanter\SYNTAX.zil:454: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\enchanter\SYNTAX.zil:455: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0504] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\enchanter\GPARSER.zil:321: treating SET to 0 as true here
+[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\enchanter\VERBS.zil:166: RETURN value ignored: PROG/REPEAT block is in void context
+[warning ZIL0505] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\enchanter\VERBS.zil:1148: COND: clauses after else part will never be evaluated
+19 warnings (13 suppressed)
+
+> zapf z4.zap
+ZAPF 0.8
+Reading z4.zap
+Reading z4_freq.xzap
+Reading z4_data.zap
+Reading z4_str.zap
+Measuring..
+Assembling
+Wrote 110842 bytes to z4.z3
