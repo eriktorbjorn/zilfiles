@@ -1,0 +1,19 @@
+> zilf -ws ZIL0210 mini2.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+Mini-Zork II
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\minizork2-1988\MISC.zil:502: ROUTINE: only
+3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
+  in INSERT-FILE called at mini2.zil:23
+[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\minizork2-1988\VERBS.zil:1120: RETURN value
+ ignored: PROG/REPEAT block is in void context
+16 warnings (14 suppressed)
+
+> zapf mini2.zap
+ZAPF 0.8
+Reading mini2.zap
+Reading mini2_freq.xzap
+Reading mini2_data.zap
+Reading mini2_str.zap
+Measuring..
+Assembling
+Wrote 55668 bytes to mini2.z3
