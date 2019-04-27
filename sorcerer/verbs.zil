@@ -1154,7 +1154,7 @@ later a fish swims by, acting very strangely." CR>)
 		     <EQUAL? ,HERE ,LIBRARY>>
 		<SETG PRSI ,ENCYCLOPEDIA>)>
 	 <COND (<EQUAL? ,PRSO ,ROOMS>
-		<COND (<NOT <NOT ,LIT>
+		<COND (<AND <NOT ,LIT>
 			    <NOT ,BLORTED>>
 		       <TOO-DARK>
 		       <RTRUE>)>
