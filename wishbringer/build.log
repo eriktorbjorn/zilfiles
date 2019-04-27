@@ -1,0 +1,19 @@
+> zilf -ws ZIL0210 j2.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+
+WISHBRINGER: The Magick Stone of Dreams
+
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\wishbringer\MISC.zil:496: ROUTINE: only 3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
+  in INSERT-FILE called at j2.zil:26
+[warning ZIL0504] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\wishbringer\PARSER.zil:287: treating SET to 0 as true here
+22 warnings (20 suppressed)
+
+> zapf j2.zap
+ZAPF 0.8
+Reading j2.zap
+Reading j2_freq.xzap
+Reading j2_data.zap
+Reading j2_str.zap
+Measuring..
+Assembling
+Wrote 125566 bytes to j2.z3
