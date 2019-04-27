@@ -1,0 +1,16 @@
+> zilf -ws ZIL0210 mini.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+Mini-Zork '87
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\minizork-1987\MISC.zil:479: ROUTINE: only 3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
+  in INSERT-FILE called at mini.zil:22
+15 warnings (14 suppressed)
+
+> zapf mini.zap
+ZAPF 0.8
+Reading mini.zap
+Reading mini_freq.xzap
+Reading mini_data.zap
+Reading mini_str.zap
+Measuring..
+Assembling
+Wrote 52196 bytes to mini.z3
