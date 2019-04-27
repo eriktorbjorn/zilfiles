@@ -1,0 +1,22 @@
+> zilf -ws ZIL0210 s4.zil
+ZILF 0.8 built 24/04/2019 07:48:55
+
+ *** THE HITCHHIKER'S GUIDE TO THE GALAXY: Interactive Science Fiction ***
+
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\hitchhikersguide\MISC.zil:583: ROUTINE: only 3 routine arguments allowed in V3, so last 1 "OPT" argument will never be passed
+  in INSERT-FILE called at s4.zil:17
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\hitchhikersguide\SYNTAX.zil:456: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\hitchhikersguide\SYNTAX.zil:457: preaction routine mismatch for 'V?BOARD': using PRE-BOARD as before
+[warning ZIL0504] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\hitchhikersguide\PARSER.zil:233: treating SET to 0 as true here
+[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\hitchhikersguide\VERBS.zil:2503: RETURN value ignored: PROG/REPEAT block is in void context
+29 warnings (24 suppressed)
+
+> zapf s4.zap
+ZAPF 0.8
+Reading s4.zap
+Reading s4_freq.xzap
+Reading s4_data.zap
+Reading s4_str.zap
+Measuring..
+Assembling
+Wrote 113094 bytes to s4.z3
