@@ -3202,9 +3202,9 @@ DER-NOM-CAP .OBJ " f%allt auf die Rutschbahn und ist weg." CR>
 				,WEP-ACC-CAP ,WEP-DAT ,DER-WEP-ACC>
 		       <COND (<EQUAL? .STR ,WEP-NOM>
 			      <TELL "dein">
-			      <COND (<AND <NOT <FSET? .W ,DERBIT>
-					       <FSET? .W ,DASBIT>>
-					  <TELL "e">>)>)
+			      <COND (<AND <NOT <FSET? .W ,DERBIT>>
+					  <NOT <FSET? .W ,DASBIT>>>
+					  <TELL "e">)>)
 			     (<EQUAL? .STR ,WEP-NOM-CAP>
 			      <TELL "Dein">
 			      <COND (<AND <NOT <FSET? .W ,DERBIT>>
