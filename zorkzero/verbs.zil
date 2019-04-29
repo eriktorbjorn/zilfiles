@@ -2403,7 +2403,10 @@ already done so. Are you ready to see the map (y or n)? >">
 			        (DONE <>) DIR OHERE TBL MAP-NUM)
 	 <COND (<SET DIR <MAP-NEIGHBORS>>
 		<DO-WALK .DIR>
-		<D-APPLY "map" <GETP ,HERE ,P?ACTION> ,M-END>
+		<IFFLAG (P-DEBUGGING-PARSER
+                         <D-APPLY "map" <GETP ,HERE ,P?ACTION> ,M-END>)
+                        (T
+                         <ZAPPLY <GETP ,HERE ,P?ACTION> ,M-END>)>
 		<CLOCKER>
 		<RTRUE>)
 	       (<SET DIR <COMPASS-CLICK ,MAP-COMPASS-PIC-LOC ,MAP-N-HL>>
@@ -2419,7 +2422,10 @@ already done so. Are you ready to see the map (y or n)? >">
 			      <SETG CHANGE-MAP T>)>)
 		      (T ;"you've entered a room that's not on the map"
 		       <RETURN-FROM-MAP>)> 
-		<D-APPLY "map" <GETP ,HERE ,P?ACTION> ,M-END>
+		<IFFLAG (P-DEBUGGING-PARSER
+		         <D-APPLY "map" <GETP ,HERE ,P?ACTION> ,M-END>)
+                        (T
+                         <ZAPPLY <GETP ,HERE ,P?ACTION> ,M-END>)>
 		<CLOCKER>
 		<RTRUE>)
 	       (T
@@ -4380,8 +4386,14 @@ dead end and you are forced to return to" TR ,HERE>)>)
 	 <COND (<AND <SET NUM <LOC ,WINNER>>
 		     <NOT <IN? .NUM ,ROOMS>>
 		     ;<FSET? .NUM ,VEHBIT>>
-		<SET NUM <D-APPLY "M-END" <GETP .NUM ,P?ACTION> ,M-END>>)>
-	 <SET NUM <D-APPLY "M-END" <GETP ,HERE ,P?ACTION> ,M-END>>
+		<IFFLAG (P-DEBUGGING-PARSER
+		         <SET NUM <D-APPLY "M-END" <GETP .NUM ,P?ACTION> ,M-END>>)
+                        (T
+                         <SET NUM <ZAPPLY <GETP .NUM ,P?ACTION> ,M-END>>)>)>
+	 <IFFLAG (P-DEBUGGING-PARSER
+	          <SET NUM <D-APPLY "M-END" <GETP ,HERE ,P?ACTION> ,M-END>>)
+                 (T
+                  <SET NUM <ZAPPLY <GETP ,HERE ,P?ACTION> ,M-END>>)>
 	 <COND (<EQUAL? ,M-FATAL .NUM>
 		<SETG P-CONT -1>)>
 	 <SETG CLOCK-WAIT T>>
