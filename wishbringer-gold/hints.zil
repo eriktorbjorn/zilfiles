@@ -579,7 +579,7 @@
 		 "It has two switches, so it probably controls two things."
 		 "Have you examined both of the switches?"
 		 "The first switch controls the power in the Palace Theater. (If you watched the entire movie, you'd already know this.)"
-		 "The second switch controls the "security" for something. Hmm. Wonder what the Evil One wants to keep secure ..."
+		 "The second switch controls the \"security\" for something. Hmm. Wonder what the Evil One wants to keep secure ..."
 		 "TURN OFF THE SECOND SWITCH.">
 	
 	"THE LIBRARY"
