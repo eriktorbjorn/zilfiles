@@ -603,10 +603,10 @@ is the P?CHARACTER property of the object."
 <GLOBAL GOAL-TABLES
 	<TABLE <TABLE <> <> <> <> 1 <> <> I-FOLLOW 4 4>
 	       <TABLE <> <> <> <> 1 <> <> I-PHONG 3 3>
-	       <TABLE <> <> <> <> 1 <> <> I-LINDER 4 4>
+	       ;<TABLE <> <> <> <> 1 <> <> I-LINDER 4 4>
 	       <TABLE <> <> <> <> 1 <> <> I-STILES 9 9>
 	       <TABLE <> <> <> <> 1 <> <> I-MONICA 2 2>
-	       <TABLE <> <> <> <> 1 <> <> I-CAT 1 1>>>
+	       ;<TABLE <> <> <> <> 1 <> <> I-CAT 1 1>>>
 
 <GLOBAL ATTENTION-TABLE <TABLE 0 0 0 0 0 0 0 0>>
 

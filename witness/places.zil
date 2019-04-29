@@ -944,7 +944,7 @@ There's a door into the house, and a couple of windows.")
 	;(ACTION BACK-DOOR-F)>
 
 "Inside the house"
-)>[
+;")>["
 <ROOM MONICA-ROOM
 	(IN ROOMS)
 	(DESC "Monica's bedroom")
@@ -1080,7 +1080,7 @@ chooses another one and starts it up. It's \"">
 		"Pennies from Heaven"
 		"Sweet Leilani"
 		"When I Grow Too Old to Dream">>
-]
+;"]"
 <OBJECT MONICA-DOOR
 	(SYNONYM DOOR)
 	(ADJECTIVE BEDROOM)

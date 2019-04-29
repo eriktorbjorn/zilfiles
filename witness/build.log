@@ -1,0 +1,30 @@
+> zilf -ws ZIL0210 witness.zil
+ZILF 0.8 built 29/04/2019 06:35:36
+Compiling WITNESS: An INTERLOGIC Mystery
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\CLOCK.zil:30: ROUTINE: only 3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
+  in INSERT-FILE called at witness.zil:29
+  in IFILE called at witness.zil:41
+[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\MAIN.zil:263: ROUTINE: only 3 routine arguments allowed in V3, so last 1 "OPT" argument will never be passed
+  in INSERT-FILE called at witness.zil:29
+  in IFILE called at witness.zil:42
+[warning ZIL0202] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\PEOPLE.zil:73: mentioned object 'DRIVEWAY-GATE' is never defined
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\SYNTAX.zil:116: preaction routine mismatch for 'V?COMPARE': using PRE-COMPARE as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\SYNTAX.zil:118: preaction routine mismatch for 'V?COMPARE': using PRE-COMPARE as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\SYNTAX.zil:297: preaction routine mismatch for 'V?FIND': using PRE-FIND as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\SYNTAX.zil:372: preaction routine mismatch for 'V?TAKE': using PRE-TAKE as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\SYNTAX.zil:427: preaction routine mismatch for 'V?FIND': using PRE-FIND as before
+[warning ZIL0505] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\PEOPLE.zil:431: COND: clauses after else part will never be evaluated
+[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\VERBS.zil:493: RETURN value ignored: PROG/REPEAT block is in void context
+[warning ZIL0308] <top level>: too many parts of speech for 'PHONE': Adjective (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\THINGS.zil:937), Object (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\THINGS.zil:756), Verb (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\SYNTAX.zil:99)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\witness\THINGS.zil:937: discarding the Adjective part of speech for 'PHONE'
+30 warnings (18 suppressed)
+
+> zapf witness.zap
+ZAPF 0.8
+Reading witness.zap
+Reading witness_freq.xzap
+Reading witness_data.zap
+Reading witness_str.zap
+Measuring..
+Assembling
+Wrote 103568 bytes to witness.z3
