@@ -619,7 +619,7 @@ they may or may not be useful:|">
 	       <RETURN T>)>>
  <TELL
 "[Sorry, but I don't understand. Please say that another way, or try
-something else.]" CR>>>>
+something else.]" CR>>>
 
 <DEFINE MISSING (NV)
 	<TELL "[I think there's a " .NV " missing in that sentence!]" CR>>
