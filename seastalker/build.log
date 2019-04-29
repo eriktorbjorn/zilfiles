@@ -1,0 +1,23 @@
+> zilf -ws ZIL0210 j1.zil
+ZILF 0.8 built 29/04/2019 06:35:36
+Compiling SEASTALKER: junior-level interactive fiction from Infocom![warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\seastalker\CLOCK.zil:66: ROUTINE: only 3 routine arguments allowed in V3, so last 1 "OPT" argument will never be passed
+  in INSERT-FILE called at j1.zil:28
+  in IFILE called at j1.zil:46
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\seastalker\SYNTAX.zil:247: preaction routine mismatch for 'V?COMPARE': using PRE-COMPARE as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\seastalker\SYNTAX.zil:249: preaction routine mismatch for 'V?COMPARE': using PRE-COMPARE as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\seastalker\SYNTAX.zil:446: preaction routine mismatch for 'V?FIND': using PRE-FIND as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\seastalker\SYNTAX.zil:605: preaction routine mismatch for 'V?FIND': using PRE-FIND as before
+[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\seastalker\VERBS.zil:577: RETURN value ignored: PROG/REPEAT block is in void context
+[warning ZIL0308] <top level>: too many parts of speech for 'INSERT': Adjective (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\seastalker\SUB.zil:1600), Object (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\seastalker\GLOBAL.zil:813), Verb (D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\seastalker\SYNTAX.zil:522)
+[warning ZIL0306] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\seastalker\SUB.zil:1600: discarding the Adjective part of speech for 'INSERT'
+36 warnings (28 suppressed)
+
+> zapf j1.zap
+ZAPF 0.8
+Reading j1.zap
+Reading j1_freq.xzap
+Reading j1_data.zap
+Reading j1_str.zap
+Measuring..
+Assembling
+Wrote 116426 bytes to j1.z3
