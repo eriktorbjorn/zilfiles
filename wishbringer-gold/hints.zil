@@ -452,7 +452,7 @@
 		 "BLOW THE WHISTLE only when it's twinkling ... unless you just like to hear the music.">
 	<PLTABLE "How do I get to Misty Island?"
 		 "Read the above hint. You may discover something unexpected.">
-	<PLTABLE "What should I say to King Anatinus?":
+	<PLTABLE "What should I say to King Anatinus?"
 		 "You don't need to say anything. Just do what he says."
 		 "If he offers you a gift, take it."
 		 "TAKE THE HAT."
