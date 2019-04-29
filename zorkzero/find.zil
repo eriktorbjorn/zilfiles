@@ -7,7 +7,19 @@ Copyright (C) 1988 Infocom, Inc.  All rights reserved."
 
 <USE "NEWSTRUC" "PARSER" "PMEM">
 
+<BLOCK (<ROOT>)>
+THINGS
+<ENDBLOCK>
+
 <FILE-FLAGS MDL-ZIL? CLEAN-STACK? ;ZAP-TO-SOURCE-DIRECTORY?>
+
+<DEFAULTS-DEFINED
+	EXCLUDE-HERE-OBJECT?
+	INVALID-OBJECT?
+	MOBY-FIND?
+	LAST-PSEUDO-LOC
+	PSEUDO-OBJECTS
+	SEARCH-IN-LG?>
 
 <BEGIN-SEGMENT 0>
 
@@ -90,27 +102,33 @@ Copyright (C) 1988 Infocom, Inc.  All rights reserved."
 			  "AUX" (EXC:<OR FALSE PMEM> <FIND-EXCEPTIONS .F>))
   <COND (.EXC
 	 <REPEAT ((PHRASE:PMEM <NPP-NOUN-PHRASE .EXC>)
-		  (CT:FIX <NOUN-PHRASE-COUNT .PHRASE>)
-		  (VEC <REST-TO-SLOT .PHRASE NOUN-PHRASE-OBJ1>) VV)
-		 <REPEAT ()
-			 <COND (<L? <SET CT <- .CT 1>> 0>
-				<SET VV <>>
-				<RETURN>)>
-			 <COND (<==? .FOBJ <ZGET .VEC 0>>
-				<SET VV T>
-				<RETURN>)>
-			 <SET VEC <ZREST .VEC 4 ;2>>>
-		 <COND (.VV
-			<RETURN T .EX>)
-		       (<SET EXC <NPP-NEXT .EXC>>
-			<SET PHRASE <NPP-NOUN-PHRASE .EXC>>
-			<SET CT <NOUN-PHRASE-COUNT .PHRASE>>
-			<SET VEC <REST-TO-SLOT .PHRASE NOUN-PHRASE-OBJ1>>)
-		       (T
-			<RETURN <> .EX>)>>)>>
+		  CT:FIX VEC VV)
+	    <COND (.PHRASE
+		   ; "We may possibly have a non-existent phrase if
+		      the luser was excluding an object that wasn't
+		      here.  Be safe, rather than sorry."
+		   <SET CT <NOUN-PHRASE-COUNT .PHRASE>>
+		   <SET VEC <REST-TO-SLOT .PHRASE NOUN-PHRASE-OBJ1>>
+		   <REPEAT ()
+		      <COND (<L? <SET CT <- .CT 1>> 0>
+			     <SET VV <>>
+			     <RETURN>)>
+		      <COND (<==? .FOBJ <ZGET .VEC 0>>
+			     <SET VV T>
+			     <RETURN>)>
+		      <SET VEC <ZREST .VEC 4 ;2>>>
+		   <COND (.VV
+			  <RETURN T .EX>)>)>
+	    <COND (<SET EXC <NPP-NEXT .EXC>>
+		   <SET PHRASE <NPP-NOUN-PHRASE .EXC>>)
+		  (T
+		   <RETURN <> .EX>)>>)>>
+
+<DEFAULT-DEFINITION INVALID-OBJECT?
+	<DEFINE INVALID-OBJECT? (OBJ) <>>>
 
 <DEFINE MATCH-OBJECT (FOBJ:OBJECT F:FINDER INCLUDE?:BOOLEAN
-		      "AUX" NOUN ADJS APP TB (RES <FIND-RES .F>))
+		      "AUX" NOUN ADJS APP TB (RES <FIND-RES .F>) TMP)
   <COND (<AND <NOT <FSET? .FOBJ ,INVISIBLE>>
 	      <OR <EQUAL? <SET NOUN <FIND-NOUN .F>> <> ,W?ONE>
 		  <AND <SET TB <GETPT .FOBJ ,P?SYNONYM>>
@@ -126,9 +144,13 @@ Copyright (C) 1988 Infocom, Inc.  All rights reserved."
 	 <COND (<NOT .INCLUDE?>	;"location didn't match the syntax bits"
 		T)
 	       (<AND <T? <SET ADJS <FIND-ADJS .F>>>
+		     <SET TMP <GETPT .FOBJ ,P?ADJECTIVE>>
+		     ;"TAA 6/23/89  Got confused in Arthur 'cause lots of swords
+		       have no adjectives.  Let's require that before we do anything
+		       radical."
 		     <EQUAL? <ADJS-COUNT .ADJS>
 			     <COND (T ;<CHECK-EXTENDED?>
-				    </ <PTSIZE <GETPT .FOBJ ,P?ADJECTIVE>> 2>)
+				    </ <PTSIZE .TMP> 2>)
 			   ;(T <- <PTSIZE <GETPT .FOBJ ,P?ADJECTIVE>> 1>)>>>
 		;"the only way to do so."
 		<FIND-RES-COUNT .RES 1>
@@ -315,22 +337,40 @@ be include when the crunch comes."
 <ADD-WORD CLOSED ADJ>
 <ADD-WORD SHUT ADJ>
 
+<DEFINE CHECK-ADJS-THERE? (OWNER "AUX" TMP)
+   <COND (<ZERO? <SET TMP <FIND-RES-COUNT ,OWNER-SR-THERE>>>
+	  <>)
+	 (<NOT <INTBL? .OWNER
+		       <REST-TO-SLOT ,OWNER-SR-THERE FIND-RES-OBJ1>
+		       .TMP>>
+	  <>)
+	 (T)>>
+
 <DEFINE CHECK-ADJS CA (OBJ:OBJECT F ADJS:PMEM
 		       "AUX" CNT (TMP <>) OWNER (ID <>) VEC)
   <SET OWNER <GETP .OBJ ,P?OWNER>>
   <COND (<OR <PMEM-TYPE? .ADJS NP>	;"it's NP-OF"
 	     <SET TMP <ADJS-POSS .ADJS>>>
 	 <COND (<OBJECT? <SET ID .OWNER>>
-		<COND (<EQUAL? .OWNER .TMP .OBJ>
+		<COND (<EQUAL? .OWNER .TMP ;.OBJ>
 		       T)
+		      ;(<EQUAL? .OWNER .OBJ>)
 		      (<EQUAL? .OWNER ,ROOMS ;"any">
-		       <SET ID <FIND-RES-OBJ1 ,OWNER-SR-HERE>> ;"real owner")
-		      (<ZERO? <SET TMP <FIND-RES-COUNT ,OWNER-SR-THERE>>>
-		       <RETURN <> .CA>)
+		       <COND (<FIND-RES-COUNT ,OWNER-SR-HERE>
+			      <SET ID <FIND-RES-OBJ1 ,OWNER-SR-HERE>>
+			      ;"real owner")
+			     (<FIND-RES-COUNT ,OWNER-SR-THERE>
+			      <SET ID <FIND-RES-OBJ1 ,OWNER-SR-THERE>>)
+			     (T
+			      <RETURN <> .CA>)>)
+		      (<ZERO? <SET TMP <FIND-RES-COUNT ,OWNER-SR-HERE>>>
+		       <COND (<NOT <CHECK-ADJS-THERE? .OWNER>>
+			      <RETURN <> .CA>)>)
 		      (<NOT <INTBL? .OWNER
-			       <REST-TO-SLOT ,OWNER-SR-THERE FIND-RES-OBJ1>
-			       .TMP>>
-		       <RETURN <> .CA>)>)
+				    <REST-TO-SLOT ,OWNER-SR-HERE FIND-RES-OBJ1>
+				    .TMP>>
+		       <COND (<NOT <CHECK-ADJS-THERE? .OWNER>>
+			      <RETURN <> .CA>)>)>)
 	       (<T? .OWNER>	;"table for multiple owners (body parts)"
 		;<SET ID <>>
 		<COND (<AND ;<ZERO? .ID>
@@ -401,6 +441,25 @@ be include when the crunch comes."
 <OBJECT GENERIC-OBJECTS
 	(ADJACENT 0)	;"to establish property">
 
+<DEFAULT-DEFINITION MOBY-FIND?
+;<DEFINE MOBY-FIND? (SEARCH)
+	<COND (<OR <AND <NOT <0? <ANDB .SEARCH ,SEARCH-MOBY ;128>>>
+			<0? <ANDB .SEARCH ,SEARCH-MUST-HAVE>>>
+		   <BAND ,PAST-TENSE <WORD-FLAGS <PARSE-VERB ,PARSE-RESULT>>>>
+	       T)>>
+<DEFMAC MOBY-FIND? ('SEARCH)
+	<FORM OR <FORM AND <FORM BAND .SEARCH ',SEARCH-MOBY ;128>
+		  <FORM 0? <FORM BAND .SEARCH ',SEARCH-MUST-HAVE>>>
+		 <FORM BAND ',PAST-TENSE
+			    <FORM WORD-FLAGS
+				  <FORM PARSE-VERB ',PARSE-RESULT>>>>>>
+
+<DEFAULT-DEFINITION SEARCH-IN-LG?
+	<DEFINE SEARCH-IN-LG? (OBJ) <>>>
+
+<DEFAULT-DEFINITION EXCLUDE-HERE-OBJECT?
+	<DEFINE EXCLUDE-HERE-OBJECT? () <>>>
+
 <DEFINE FIND-OBJECTS ("OPT" (SEARCH:FIX
 			     <COND (<==? 1 <FIND-WHICH ,FINDER>>
 				    <SYNTAX-SEARCH <PARSE-SYNTAX ,PARSE-RESULT>
@@ -409,6 +468,7 @@ be include when the crunch comes."
 				    <SYNTAX-SEARCH <PARSE-SYNTAX ,PARSE-RESULT>
 						   2>)>)
 			    (PARENT:<OR OBJECT FALSE> <>)
+			    (NO-ADJACENT <>)
 		      "AUX" GLBS (CONT? T) N:FIX (RES <FIND-RES ,FINDER>))
   ;<MAKE-FIND-RES 'FIND-RES .RES 'FIND-RES-COUNT 0>
   <FIND-RES-COUNT .RES 0>
@@ -423,12 +483,19 @@ be include when the crunch comes."
 	 ;<SET CONT? <>>
 	 T)
 	(T
-	  <COND (.PARENT
-		 <COND (<NOT <SET GLBS <FIND-ADJS ,FINDER>>>
-			<FIND-ADJS ,FINDER
-				  <SET GLBS <PMEM-ALLOC ADJS>>>)>
-		 <COND (<NOT <ADJS-POSS .GLBS>>
-			<ADJS-POSS .GLBS .PARENT>)>)>
+	  <COND (<AND .PARENT <ZERO? .NO-ADJACENT>>
+		 <IFFLAG (P-ARTHUR
+			  <COND (<NOT <SET GLBS <FIND-ADJS ,FINDER>>>
+				 <FIND-ADJS ,FINDER
+					    <SET GLBS <PMEM-ALLOC ADJS POSS .PARENT>>>)
+				(<NOT <ADJS-POSS .GLBS>>
+				 <ADJS-POSS .GLBS .PARENT>)>)
+			 (T
+			  <COND (<NOT <SET GLBS <FIND-ADJS ,FINDER>>>
+				 <FIND-ADJS ,FINDER
+					    <SET GLBS <PMEM-ALLOC ADJS POSS .PARENT>>>)>
+			  ;<COND (<NOT <ADJS-POSS .GLBS>>	;"must save old value?"
+				  <ADJS-POSS .GLBS .PARENT>)>)>)>
 	  <COND (<AND <T? <ANDB .SEARCH ,SEARCH-MOBY ;128>>
 		      <F? <ANDB .SEARCH ,SEARCH-MUST-HAVE>>
 		      <FIRST? ,GENERIC-OBJECTS>
@@ -498,8 +565,8 @@ be include when the crunch comes."
 				      ,FINDER T>>>
 			   <RETURN>)
 			  (<AND <FIRST? .O>
-				<ZAPPLY ,SEARCH-IN-LG? .O>
-				<NOT <0? <ANDB .SEARCH ,SEARCH-OFF-GROUND>>>>
+				<NOT <0? <ANDB .SEARCH ,SEARCH-OFF-GROUND>>>
+				<SEARCH-IN-LG? .O>>
 			   <COND
 			    (<NOT
 			      <SET CONT?
@@ -508,7 +575,12 @@ be include when the crunch comes."
 	   <COND (<AND .CONT?
 		       <NOT <EXCLUDE-HERE-OBJECT?>>>
 		  <SET CONT? <MATCH-OBJECT ,HERE ,FINDER T>>)>
-	   <COND (<AND .CONT? <GETP ,HERE ,P?THINGS>>
+	   <COND (<AND .CONT?
+		       <NOT <EQUAL? ,HERE <LOC ,PLAYER>>>
+		       <GETP <LOC ,PLAYER> ,P?THINGS>>
+		  <SET CONT? <ZAPPLY ,TEST-THINGS <LOC ,PLAYER> ,FINDER>>)>
+	   <COND (<AND .CONT?
+		       <GETP ,HERE ,P?THINGS>>
 		  <SET CONT? <ZAPPLY ,TEST-THINGS ,HERE ,FINDER>>)>
 	   <COND (<NOT <0? <FIND-RES-COUNT .RES>>>
 		  <SET CONT? <>>)>
@@ -521,26 +593,25 @@ be include when the crunch comes."
 	   <COND (<AND .CONT?
 		       <0? <FIND-RES-COUNT .RES>:FIX>
 		       ;<BTST .SEARCH ,SEARCH-ADJACENT>
+		       <NOT .NO-ADJACENT>
 		       <SET GLBS <GETP ,HERE ,P?ADJACENT>>>
 		  <SET N <GETB .GLBS 0>>
-		  ;<SET LOSING? ,HERE>
-		  <REPEAT ((SCH <ANDB .SEARCH <XORB -1 ,SEARCH-ADJACENT>>))
+		  <REPEAT (;(SCH <ANDB .SEARCH <XORB -1 ,SEARCH-ADJACENT>>))
 		    <COND (<T? <GETB .GLBS .N>>	;"room visible now?"
-			   ;<SETG HERE <GETB .GLBS <SET N <- .N 1>>>>
-			   <FIND-OBJECTS .SCH <GETB .GLBS <SET N <- .N 1>>>>)
+			   <SET N <- .N 1>>
+			   <FIND-OBJECTS ,SEARCH-ON-GROUND <GETB .GLBS .N> T>)
 			  (T
 			   <SET N <- .N 1>>)>
 		    <COND (<L? <SET N <- .N 1>> 1>
 			   <RETURN>)>>
-		  ;<SETG HERE .LOSING?>
 		  <COND (<NOT <0? <FIND-RES-COUNT .RES>:FIX>>
 			 <SET CONT? <>>)>)>
 	   <COND
 	    (<AND .CONT?
 		  <0? <FIND-RES-COUNT .RES>:FIX>
-		  <ZAPPLY ,MOBY-FIND? .SEARCH>>
+		  <MOBY-FIND? .SEARCH>>
 	     <REPEAT ((OBJ 1))
-	         <COND (<AND <NOT <FSET? .OBJ ,INVISIBLE>>
+	         <COND (T ;<AND <NOT <FSET? .OBJ ,INVISIBLE>>
 			     ;<NOT <IN? .OBJ ,ROOMS>>>
 			<COND (<NOT <MATCH-OBJECT .OBJ ,FINDER T>>
 			       <RETURN>)>)>
@@ -550,6 +621,169 @@ be include when the crunch comes."
 	      <FIND-OF ,FINDER>>
 	 <MATCH-OF-OBJECTS .RES>)>
   <1? <FIND-RES-COUNT .RES>:FIX>>
+
+"old default pseudo stuff, which doesn't work if you use it"
+;<DEFAULT-DEFINITION PSEUDO-OBJECTS
+<DEFINE20 PSEUDO ("TUPLE" V)
+	<MAPF ,PLTABLE
+	      <FUNCTION (OBJ)
+		   <COND (<N==? <LENGTH .OBJ> 3>
+			  <ERROR BAD-THING .OBJ PSEUDO>)>
+		   <MAPRET <COND (<NTH .OBJ 2>
+				  <VOC <SPNAME <NTH .OBJ 2>> NOUN>)>
+			   <COND (<NTH .OBJ 1>
+				  <VOC <SPNAME <NTH .OBJ 1>> ADJ>)>
+			   <NTH .OBJ 3>>>
+	      .V>>
+
+<GLOBAL LAST-PSEUDO-LOC:OBJECT <>>
+
+<COND (<CHECK-VERSION? ZIP>
+       <OBJECT PSEUDO-OBJECT
+		(LOC LOCAL-GLOBALS)
+		(DESC "pseudo")
+		(ACTION 0)>)
+      (T
+       <OBJECT PSEUDO-OBJECT
+		(LOC LOCAL-GLOBALS)
+		(DESC "pseudoxxx")
+		(ACTION 0)	;"no other properties!">)>
+
+<DEFINE TEST-THINGS (RM F "AUX" CT)
+	<COND (<T? <SET CT <FIND-ADJS .F>>>
+	       <SET CT <ADJS-COUNT .CT>>)>
+	<REPEAT ((NOUN <FIND-NOUN .F>)
+		 (V <REST-TO-SLOT <FIND-ADJS .F> ADJS-COUNT 1>)
+		 (GLBS <GETP .RM ,P?THINGS>)
+		 (N <ZGET .GLBS 0>))
+		<SET N <- .N 3>>
+		<COND (<L? .N 0>
+		       <RTRUE>)
+		      (<AND <EQUAL? .NOUN ;<> ,W?ONE <ZGET .GLBS <+ .N 1>>>
+			    <OR <0? .CT>
+				<ZMEMQ <ZGET .GLBS <+ .N 2>> .V .CT>>>
+		       <SETG LAST-PSEUDO-LOC .RM>
+		       <PUTP ,PSEUDO-OBJECT
+			     ,P?ACTION
+			     <ZGET .GLBS <+ .N 3>>>
+		       <SET V <ZBACK <GETPT ,PSEUDO-OBJECT ,P?ACTION> 7>>
+		       <COND (T ;<CHECK-EXTENDED?>
+			      <COPYT .NOUN .V 6>)
+			     ;(T
+			      <ZPUT .V 0 <ZGET .NOUN 0>>
+			      <ZPUT .V 1 <ZGET .NOUN 1>>)>
+		       <ADD-OBJECT ,PSEUDO-OBJECT .F>
+		       <RFALSE>)>>>>
+
+"new default pseudo stuff, which probably doesn't work either"
+<DEFAULT-DEFINITION PSEUDO-OBJECTS
+<PUTPROP THINGS PROPSPEC HACK-PSEUDOS>
+
+<DEFINE20 HACK-PSEUDOS (LIST "AUX" (N 0) (CT 0))
+  <SET LIST <REST .LIST>>
+  <SET LIST
+    <MAPR ,LIST
+      <FUNCTION (X "AUX" L (ACT 0) (NCT 0))
+        <COND (<0? .N>
+	       <SET CT <+ .CT 1>>
+	       <SET N 1>
+	       <COND (<TYPE? <1 .X> ATOM>
+		      <SET ACT 1>
+		      ;<TABLE (PURE)
+			     1
+			     <VOC <SPNAME <1 .X>> ADJ>>)
+		     (<TYPE? <1 .X> LIST>
+		      <SET ACT <LENGTH <1 .X>>>
+		      ;<EVAL <CHTYPE (TABLE (PURE)
+				     <LENGTH <1 .X>>
+				     !<MAPF ,LIST
+				       <FUNCTION (Y)
+				         <VOC <SPNAME .Y> ADJ>>
+				       <1 .X>>) FORM>>)
+		     (T
+		      <SET ACT 0>)>
+	       <COND (<LENGTH? .X 1>)
+		     (<TYPE? <2 .X> ATOM>
+		      <SET NCT 1>)
+		     (<TYPE? <2 .X> LIST>
+		      <SET NCT <LENGTH <2 .X>>>)
+		     (T
+		      <SET NCT 0>)>
+	       <TABLE (PURE)
+		      <BYTE .ACT> <BYTE .NCT>
+		      <COND (<0? .ACT>
+			     0)
+			    (<==? .ACT 1>
+			     <VOC <SPNAME <1 .X>> ADJ>)
+			    (T
+			     <EVAL <CHTYPE (TABLE (PURE)
+					    ;.ACT
+					    !<MAPF ,LIST
+						<FUNCTION (Y)
+						 <VOC <SPNAME .Y> ADJ>>
+						<1 .X>>) FORM>>)>
+		      <COND (<0? .NCT>
+			     0)
+			    (<==? .NCT 1>
+			     <VOC <SPNAME <2 .X>> NOUN>)
+			    (T
+			     <EVAL <CHTYPE (TABLE (PURE)
+					    ;.NCT
+					    !<MAPF ,LIST
+						<FUNCTION (Y)
+						 <VOC <SPNAME .Y> NOUN>>
+						<2 .X>>) FORM>>)>>)
+	      (<1? .N>
+	       <SET N 2>
+	       <MAPRET>)
+	      (T
+	       <SET N 0>
+	       <1 .X>)>>
+      .LIST>>
+  (<> <EVAL <CHTYPE (TABLE (PURE ;PATTERN ;(BYTE [REST WORD]))
+		     .CT !.LIST) FORM>>)>
+
+<DEFINE TEST-THINGS (RM F
+		     "AUX" CT (RMG <GETP .RM ,P?THINGS>) (RMGL <GET .RMG 0>))
+ <SET RMG <REST .RMG 2>>
+ <COND (<T? <SET CT <FIND-ADJS .F>>>
+	<SET CT <ADJS-COUNT .CT>>)>
+ <REPEAT (TTBL (NOUN <FIND-NOUN .F>) XCT
+	       (V <REST-TO-SLOT <FIND-ADJS .F> ADJS-COUNT 1>))
+  <SET TTBL <GET .RMG 0 ;1>>
+  <COND (<AND <OR <EQUAL? .NOUN ;<> ,W?ONE>
+		  <AND <1? <SET XCT <GETB .TTBL 1>>>
+		       <EQUAL? .NOUN <ZGET .TTBL 2>>>
+		  <INTBL? .NOUN <ZGET .TTBL 2> .XCT>>
+	      <OR <0? .CT>
+		  <AND <1? <SET XCT <GETB .TTBL 0>>>
+		       <EQUAL? <ZGET .V 0> <ZGET .TTBL 1>>>
+		  <INTBL? <ZGET .V 0> <ZGET .TTBL 1> .XCT>>
+	      <OR <NOT <FIND-OF .F>>
+		  <AND <EQUAL? 1 <FIND-RES-COUNT ,OWNER-SR-HERE>>
+		       <EQUAL? ,PSEUDO-OBJECT <FIND-RES-OBJ1 ,OWNER-SR-HERE>>
+		       <EQUAL? ,LAST-PSEUDO-LOC .RM>
+		       <EQUAL? <GETP ,PSEUDO-OBJECT ,P?ACTION> <GET .RMG 1>>>>>
+	 <SETG LAST-PSEUDO-LOC .RM>
+	 <PUTP ,PSEUDO-OBJECT ,P?ACTION <GET .RMG 1 ;2>>
+	 <SET V <ZBACK <GETPT ,PSEUDO-OBJECT ,P?ACTION> 7>>
+	 <COPYT .NOUN .V 6>
+	 <COND (<BTST <WORD-FLAGS .NOUN> ,PLURAL-FLAG>
+		<FSET ,PSEUDO-OBJECT ,PLURAL>)
+	       (T
+		<FCLEAR ,PSEUDO-OBJECT ,PLURAL>)>
+	 <ADD-OBJECT ,PSEUDO-OBJECT .F>
+	 <RFALSE>)>
+  <SET RMG <ZREST .RMG 4 ;6>>
+  <COND (<L? <SET RMGL <- .RMGL 1>> 1>
+	 <RTRUE>)>>>
+
+<GLOBAL LAST-PSEUDO-LOC:OBJECT <>>
+
+<OBJECT PSEUDO-OBJECT
+	(LOC LOCAL-GLOBALS)
+	(DESC "pseudoxxx")
+	(ACTION 0)	;"no other properties!">>
 
 <END-SEGMENT>
 <END-DEFINITIONS>
