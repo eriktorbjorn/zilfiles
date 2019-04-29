@@ -1,0 +1,24 @@
+> zilf -ws ZIL0210 m3.zil
+ZILF 0.8 built 29/04/2019 06:35:36
+Compiling Suspect: An INTERLOGIC Mystery
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspect\SYNTAX.zil:115: preaction routine mismatch for 'V?COMPARE': using PRE-COMPARE as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspect\SYNTAX.zil:117: preaction routine mismatch for 'V?COMPARE': using PRE-COMPARE as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspect\SYNTAX.zil:297: preaction routine mismatch for 'V?FIND': using PRE-FIND as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspect\SYNTAX.zil:380: preaction routine mismatch for 'V?TAKE': using PRE-TAKE as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspect\SYNTAX.zil:436: preaction routine mismatch for 'V?FIND': using PRE-FIND as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspect\SYNTAX.zil:517: preaction routine mismatch for 'V?SHOW': using PRE-SHOW as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspect\SYNTAX.zil:637: preaction routine mismatch for 'V?EXAMINE': using PRE-EXAMINE as before
+[warning ZIL0504] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspect\PARSER.zil:261: treating SET to 0 as true here
+[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspect\VERBS.zil:474: RETURN value ignored: PROG/REPEAT block is in void context
+[warning ZIL0204] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspect\PEOPLE.zil:1887: no such global variable 'WHO', using the local instead
+37 warnings (27 suppressed)
+
+> zapf m3.zap
+ZAPF 0.8
+Reading m3.zap
+Reading m3_freq.xzap
+Reading m3_data.zap
+Reading m3_str.zap
+Measuring..
+Assembling
+Wrote 118250 bytes to m3.z3

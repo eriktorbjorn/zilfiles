@@ -1,7 +1,9 @@
 "COMPILE/LOAD FILE for M3
 Copyright (C) 1984 Infocom, Inc.  All rights reserved."
 
-<REPEAT (CHR)
+<SETG DEBUGGING? <>>
+
+;<REPEAT (CHR)
 	<PRINC "Debugging? (Y or N): " ,OUTCHAN>
 	<SET CHR <TYI>>
 	<COND (<MEMQ .CHR "Yy ">
