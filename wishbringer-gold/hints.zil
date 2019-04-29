@@ -452,7 +452,7 @@
 		 "BLOW THE WHISTLE only when it's twinkling ... unless you just like to hear the music.">
 	<PLTABLE "How do I get to Misty Island?"
 		 "Read the above hint. You may discover something unexpected.">
-	<PLTABLE "What should I say to King Anatinus?":
+	<PLTABLE "What should I say to King Anatinus?"
 		 "You don't need to say anything. Just do what he says."
 		 "If he offers you a gift, take it."
 		 "TAKE THE HAT."
@@ -579,7 +579,7 @@
 		 "It has two switches, so it probably controls two things."
 		 "Have you examined both of the switches?"
 		 "The first switch controls the power in the Palace Theater. (If you watched the entire movie, you'd already know this.)"
-		 "The second switch controls the "security" for something. Hmm. Wonder what the Evil One wants to keep secure ..."
+		 "The second switch controls the \"security\" for something. Hmm. Wonder what the Evil One wants to keep secure ..."
 		 "TURN OFF THE SECOND SWITCH.">
 	
 	"THE LIBRARY"

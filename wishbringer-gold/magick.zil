@@ -91,7 +91,7 @@
 |
 You feel a cool wind whip your face as you streak northward, guided by the steady glow of Wishbringer.">
 	 <TO-FINISH>
-	 <MOVE ,BROOM, ,CLIFF-EDGE>
+	 <MOVE ,BROOM ,CLIFF-EDGE>
 	 <SETG BROOM-SIT? <>>
 	 <CLATTERS ,BROOM>
 	 <CRLF>
@@ -273,7 +273,7 @@ Everything around you is soaked in a brief but savage downpour.">
 	 <SET FROM ,HERE>
 	 <SETG HERE ,MUSEUM>
 	 <CARRIAGE-RETURNS>
-	 <USL>
+	 <UPDATE-STATUS-LINE>
 	 <TELL
 "A pinprick of brilliance pierces the gloom. It creeps closer, growing more powerful and unearthly as it approaches.|
 |
@@ -342,7 +342,7 @@ D ,SHOE " begin to twinkle with Luck." CR>
 	       
 <ROUTINE BAD-LUCK (STR)
 	 <TELL CR "(It's bad luck to " .STR ".">
-	 <COND (<QUEUED? ,I-LUCK>
+	 <COND (<ENABLED? ,I-LUCK>
 		<DISABLE <INT I-LUCK>>
 		<TELL " You've neutralized the Luck Wish!)" CR>
 		<I-LUCK T>
