@@ -886,3 +886,115 @@ D ,MAGICK-SHOPPE " is closed... and y">)
 
 
 
+;"status line stuff"
+
+<CONSTANT S-TEXT 0>
+<CONSTANT S-WINDOW 1>
+
+<CONSTANT H-NORMAL 0>
+<CONSTANT H-INVERSE 1>
+<CONSTANT H-BOLD 2>
+<CONSTANT H-ITALIC 4>
+
+<CONSTANT D-SCREEN-ON 1>
+<CONSTANT D-SCREEN-OFF -1>
+<CONSTANT D-PRINTER-ON 2>
+<CONSTANT D-PRINTER-OFF -2>
+<CONSTANT D-TABLE-ON 3>
+<CONSTANT D-TABLE-OFF -3>
+<CONSTANT D-RECORD-ON 4>
+<CONSTANT D-RECORD-OFF -4>
+
+<GLOBAL HOST:NUMBER 0> "Host machine."
+<GLOBAL WIDTH:NUMBER 0> "Width of screen in chars."
+;<GLOBAL MIDSCREEN:NUMBER 0> "Center of screen."
+;<GLOBAL CWIDTH:NUMBER 0> "Pixel width of characters."
+;<GLOBAL CHEIGHT:NUMBER 0> "Pixel height of characters."
+
+<ROUTINE INIT-STATUS-LINE ()
+	 <SETG HOST <LOWCORE INTID>>
+	 ;<SETG CWIDTH <LOWCORE (FWRD 0)>>
+	 ;<SETG WIDTH </ <LOWCORE HWRD> ,CWIDTH>>
+	 <SETG WIDTH <LOWCORE SCRH>>
+	 <COND (<L? ,WIDTH 38>
+		<TELL "[Screen too narrow.]" CR>
+		<QUIT>)>
+	 ;<SETG MIDSCREEN <+ </ ,WIDTH 2> 1>>
+	 ;<SETG CHEIGHT <LOWCORE (FWRD 1)>>
+	 
+	 <SETG OHERE <>>
+	 <SETG OLD-LEN 0>
+	 ;<SETG DO-WINDOW <>>
+	 <SPLIT 1>
+	 <SCREEN ,S-WINDOW>
+	 ;<BUFOUT <>>
+	 <HLIGHT ,H-INVERSE>
+	 <CURSET 1 1>	 
+	 ;<ERASE 1> ;"This semi by Jeff"
+	 ;<PRINT-SPACES <LOWCORE SCRH>>
+	 <PRINT-SPACES ,WIDTH>
+	 <COND (<G? ,WIDTH 75>
+		<CURSET 1 53>
+		<TELL "Score:">
+		<CURSET 1 66>
+		<TELL "Moves:">)>
+	 ;<BUFOUT T>
+	 <HLIGHT ,H-NORMAL>
+	 <SCREEN ,S-TEXT>
+	 <RTRUE>>
+
+<CONSTANT SL-TABLE:TABLE <ITABLE NONE 80>>	"status line constructed here"
+<GLOBAL OHERE:OBJECT <>>
+<GLOBAL OLD-LEN:NUMBER 0>
+
+;<GLOBAL MIDSCREEN:NUMBER 0>
+
+<ROUTINE UPDATE-STATUS-LINE ()
+	 <SCREEN ,S-WINDOW>
+	 ;<BUFOUT <>>
+	 <HLIGHT ,H-NORMAL>
+	 <HLIGHT ,H-INVERSE>
+	 <COND (<NOT <EQUAL? ,HERE ,OHERE>>
+		<SETG OHERE ,HERE>
+		; <DIROUT ,D-SCREEN-OFF>	        ; "Screen off."
+		  <DIROUT ,D-TABLE-ON ,SL-TABLE>  ; "Table on."
+		  <SAY-HERE>
+		  <DIROUT ,D-TABLE-OFF> 	        ; "Table off."
+		  ; <DIROUT ,D-SCREEN-ON>		; "Screen on."
+		    <CURSET 1 2>
+		    <PRINT-SPACES ,OLD-LEN>  ; "Erase old HERE desc"
+		    <SETG OLD-LEN <GET ,SL-TABLE 0>> ; "Print new HERE desc."
+		    <CURSET 1 2>
+		    <SAY-HERE>)>
+	 <COND (<G? ,WIDTH 78>
+		<CURSET 1 ;59 60>
+		<TELL N ,SCORE " ">
+		<CURSET 1 73>
+		<TELL N ,MOVES>)
+	       (T
+		<DIROUT ,D-TABLE-ON ,SL-TABLE>
+		<TELL N ,SCORE "/" N ,MOVES>
+		<DIROUT ,D-TABLE-OFF>
+		<CURSET 1 <- ,WIDTH <+ <GET ,SL-TABLE 0> 2 ;1>>>
+		<TELL " " N ,SCORE "/" N ,MOVES>)>
+	 <HLIGHT ,H-NORMAL>
+	 <SCREEN ,S-TEXT>  ;"Back to main screen."
+	 <RTRUE>>
+
+<ROUTINE PRINT-SPACES (N) 
+	 <REPEAT ()
+		 <COND (<L? <SET N <- .N 1>> 0>
+			<RTRUE>)
+		       (T
+			<TELL !\ >)>>
+	 <RTRUE>>
+
+<ROUTINE SAY-HERE ()
+	 <COND (<ZERO? ,LIT?>
+		<TELL "Darkness">)
+	       (T
+		<TELL D ,HERE>
+	        <COND (<AND <G? ,WIDTH 75>
+			    <NOT <IN? ,ADVENTURER ,HERE>>>
+		       <TELL ", in the " D <LOC ,ADVENTURER>>)>)>
+	 <RTRUE>>
