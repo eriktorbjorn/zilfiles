@@ -1,0 +1,25 @@
+> zilf -ws ZIL0210 suspended.zil
+ZILF 0.8 built 29/04/2019 06:35:36
+SUSPENDED: Interlogic Science Fiction
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspended\SYNTAX.zil:154: preaction routine mismatch for 'V?ZAP': using PRE-ZAP as before
+[warning ZIL0208] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspended\SYNTAX.zil:440: preaction routine mismatch for 'V?TAKE': using PRE-TAKE as before
+[warning ZIL0504] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspended\PARSER.zil:261: treating SET to 0 as true here
+[warning ZIL0410] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspended\VERBS.zil:2369: ZSCII 9 (tab) cannot be safely printed in Z-machine version 5
+[warning ZIL0204] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\suspended\ROBOTS.zil:709: no such local variable 'SCORE', using the global instead
+32 warnings (27 suppressed)
+
+> zapf suspended.zap
+ZAPF 0.8
+Reading suspended.zap
+Reading suspended_freq.xzap
+Reading suspended_data.zap
+Reading suspended_str.zap
+Measuring
+Restarting
+Reading suspended.zap
+Reading suspended_freq.xzap
+Reading suspended_data.zap
+Reading suspended_str.zap
+Measuring..
+Assembling
+Wrote 108520 bytes to suspended.z5

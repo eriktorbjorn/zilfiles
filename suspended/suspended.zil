@@ -3,10 +3,12 @@
 	(c) Copyright 1982 Infocom, Inc.  All Rights Reserved.
 "
 
+<VERSION XZIP>
+
 <SNAME "SUSPENDED">
 
 <SETG STRS <IVECTOR 2000 "">>
-<SETG TBLS <IUVECTOR 400 ()>>
+<SETG TBLS <IVECTOR 400 ()>>
  ;<GC-MON T>
 <COND (<GASSIGNED? ZILCH> <GC 0 T>)
       (T <GC 0 T 5>)>

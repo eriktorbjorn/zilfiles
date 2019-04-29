@@ -892,7 +892,7 @@ Extrapolation based on current weather systems and food supplies:|
 "Too bad. They've got such tiny ears..."
 "They're just shallow imitations of life (unlike me)."
 "How do they plug into the CLC? I don't understand them at all." >)
-	(CLC-TXT <PLTABLE
+	;(CLC-TXT <PLTABLE
 0 "These humans can be of help in reaching areas which cannot be reached by other means." 0 >)
 	(CAPACITY 100)>
 
