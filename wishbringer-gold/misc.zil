@@ -410,7 +410,7 @@ The reptile bellows with rage and flaps its wings to fan the fire in its belly. 
 	           <EQUAL? .V ,V?QUIT ,V?RESTART ,V?RESTORE>
 	           <EQUAL? .V ,V?SAVE ,V?SCRIPT ,V?SUPER-BRIEF>
 	           <EQUAL? .V ,V?TELL ,V?UNSCRIPT ,V?VERSION>
-		   <EQUAL? .V ,V?TIME ; ,V?INVENTORY ,V?HINTS>
+		   <EQUAL? .V ,V?TIME ; ,V?INVENTORY ,V?HINT>
 		   <EQUAL? .V ,V?HINTS-NO>>
 	       <RTRUE>)
 	      (T
