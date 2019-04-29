@@ -91,7 +91,7 @@
 |
 You feel a cool wind whip your face as you streak northward, guided by the steady glow of Wishbringer.">
 	 <TO-FINISH>
-	 <MOVE ,BROOM, ,CLIFF-EDGE>
+	 <MOVE ,BROOM ,CLIFF-EDGE>
 	 <SETG BROOM-SIT? <>>
 	 <CLATTERS ,BROOM>
 	 <CRLF>
