@@ -342,7 +342,7 @@ D ,SHOE " begin to twinkle with Luck." CR>
 	       
 <ROUTINE BAD-LUCK (STR)
 	 <TELL CR "(It's bad luck to " .STR ".">
-	 <COND (<QUEUED? ,I-LUCK>
+	 <COND (<ENABLED? ,I-LUCK>
 		<DISABLE <INT I-LUCK>>
 		<TELL " You've neutralized the Luck Wish!)" CR>
 		<I-LUCK T>
