@@ -1,11 +1,11 @@
 > zilf -ws ZIL0210 zork1.zil
 ZILF 0.8 built 24/04/2019 07:48:55
 Renovated ZORK I: The Great Underground Empire
-[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\zork1\GCLOCK.zil:26: ROUTINE: only 3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
+[warning MDL0417] GCLOCK.zil:26: ROUTINE: only 3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
   in INSERT-FILE called at zork1.zil:29
-[warning ZIL0502] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\zork1\1ACTIONS.zil:3338: RETURN value ignored: PROG/REPEAT block is in void context
-[warning ZIL0410] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\zork1\1DUNGEON.zil:1011: ZSCII 9 (tab) cannot be safely printed in Z-machine version 3
-[warning ZIL0410] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\zork1\1DUNGEON.zil:1073: ZSCII 9 (tab) cannot be safely printed in Z-machine version 3
+[warning ZIL0502] 1ACTIONS.zil:3338: RETURN value ignored: PROG/REPEAT block is in void context
+[warning ZIL0410] 1DUNGEON.zil:1011: ZSCII 9 (tab) cannot be safely printed in Z-machine version 3
+[warning ZIL0410] 1DUNGEON.zil:1073: ZSCII 9 (tab) cannot be safely printed in Z-machine version 3
 25 warnings (21 suppressed)
 
 > zapf zork1.zap
