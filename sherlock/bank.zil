@@ -132,7 +132,7 @@ before, he strolls back to you, slips something into your hand, and whispers,
 
 <ROUTINE RT-AC-TH-INTNUM ("OPTIONAL" (CONTEXT <>))
 	<DEBUGGING? <RT-DEBUG-TH-AC "TH-INTNUM" .CONTEXT>>
-	<COND (<MC-VERB? WAIT-FOR WAIT VERIFY>
+	<COND (<MC-VERB? WAIT-FOR WAIT ;VERIFY>
 	       <RFALSE>)
 	      (<MC-VERB? SHOOT>
 	       <RT-IMPOSSIBLE-MSG>

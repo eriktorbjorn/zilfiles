@@ -1,0 +1,23 @@
+> zilf -ws ZIL0210 gamesound.zil
+ZILF 0.8 built 01/05/2019 07:10:03
+
+******************************************************************************
+******************************* SHERLOCK 1.00 ********************************
+******************************************************************************
+35 warnings (35 suppressed)
+
+> zapf gamesound.zap
+ZAPF 0.8
+Reading gamesound.zap
+Reading gamesound_freq.xzap
+Reading gamesound_data.zap
+Reading gamesound_str.zap
+Measuring
+Restarting
+Reading gamesound.zap
+Reading gamesound_freq.xzap
+Reading gamesound_data.zap
+Reading gamesound_str.zap
+Measuring..
+Assembling
+Wrote 189484 bytes to gamesound.z5

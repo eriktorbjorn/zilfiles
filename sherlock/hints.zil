@@ -529,7 +529,7 @@ work this out on our own.\"">)>
   <COND (<NOT .Q>
 	 <AGAIN>	;"AGAIN does whole routine?")>
   <CLEAR -1>
-  <V-REFRESH>
+  ;<V-REFRESH>
   <SET WHO <RT-WHO-SAYS?>>
   <COND (<EQUAL? .WHO ,CH-HOLMES>
 	 <TELL CR

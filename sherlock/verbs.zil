@@ -3853,14 +3853,14 @@ CR>
 		       <TELL "Restart failed." CR>)
 		      (<EQUAL? .KEY 51>
 		       <COND (<MC-T? ,GL-DEBUG-FLAG>
-			      <V-REFRESH>)>
+			      ;<V-REFRESH>)>
 		       <RT-P-CLEAR>
 		       <PUTB ,GL-OOPS-INBUF 1 0>
 		       <RESTORE>
 		       <TELL "Restore failed." CR>)
 		      (<EQUAL? .KEY 52>
 		       <V-HINT>
-		       <V-REFRESH>
+		       ;<V-REFRESH>
 		       <AGAIN>)
 		      (<AND <EQUAL? .KEY 53>
 			    <MC-T? ,GL-CAN-UNDO>>
@@ -3926,7 +3926,7 @@ dangerous times.\"" CR CR>)
 CTHE ,CH-WIGGINS " glances around in alarm and says, \"Do you know somefing I
 don't know?\"" CR CR>)>
 	<COND (<MC-T? ,GL-DEBUG-FLAG>
-	       <V-REFRESH>)>
+	       ;<V-REFRESH>)>
 	<SETG GL-SCORE-STS  -1>
 	<SETG GL-MOVES-STS  -1>
 	<SETG GL-PLACE-STS  -1>
@@ -3964,7 +3964,7 @@ Don't sneak up on people that way.\"" CR CR>)>
 	         <SETG SOUND-QUEUED? <>>
 		 <KILL-SOUNDS>>
 	<COND (<MC-T? ,GL-DEBUG-FLAG>
-	       <V-REFRESH>)>
+	       ;<V-REFRESH>)>
 	<RT-P-CLEAR>
 	<PUTB ,GL-OOPS-INBUF 1 0>
 	<RESTORE>

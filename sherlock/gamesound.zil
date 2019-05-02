@@ -42,7 +42,7 @@ DISABLE!-INITIAL
    ROOMS-AND-LGS-FIRST.  DIRECTION properties redefined to take advantage
    of single-byte room pointers, and to make more common exit types take
    less space."
-<PROPDEF GLOBAL <>
+;<PROPDEF GLOBAL <>
 	 (GLOBAL "MANY" LG:OBJECT = <> "MANY" <ROOM .LG>)>
 
 <PROPDEF DIRECTIONS <>
@@ -163,7 +163,7 @@ DISABLE!-INITIAL
 <PUT-PURE-HERE>
 <INSERT-FILE "OTHER-MISC" T>  ;"GO & WAIT & WINDOW MERGED INTO OTHER-MISC"
 <INSERT-FILE "SOUNDS"	 T>
-<INSERT-FILE "DEBUG"     T>
+;<INSERT-FILE "DEBUG"     T>
 <INSERT-FILE "HINTS"     T>
 <INSERT-FILE "VERBS"	 T>
 <INSERT-FILE "PEOPLE"	 T>
