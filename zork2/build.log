@@ -1,9 +1,7 @@
 > zilf -ws ZIL0210 zork2.zil
-ZILF 0.8 built 24/04/2019 07:48:55
+ZILF 0.8 built 01/05/2019 07:10:03
 Renovated ZORK II: The Wizard of Frobozz
-[warning MDL0417] D:\Alex\Documents\Projects\ZILF\Learning ZIL\The ZIL Files\zork2\GCLOCK.zil:26: ROUTINE: only 3 routine arguments allowed in V3, so last 2 "OPT" arguments will never be passed
-  in INSERT-FILE called at zork2.zil:32
-19 warnings (18 suppressed)
+8 warnings (8 suppressed)
 
 > zapf zork2.zap
 ZAPF 0.8
@@ -13,4 +11,4 @@ Reading zork2_data.zap
 Reading zork2_str.zap
 Measuring..
 Assembling
-Wrote 92224 bytes to zork2.z3
+Wrote 92204 bytes to zork2.z3

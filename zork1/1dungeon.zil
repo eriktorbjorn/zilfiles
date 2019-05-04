@@ -1008,7 +1008,7 @@ against one wall. He is armed with a deadly stiletto.")
 "Some guidebooks entitled \"Flood Control Dam #3\" are on the reception
 desk.")
 	(TEXT
-"\"	Flood Control Dam #3|
+"\"        Flood Control Dam #3|
 |
 FCD#3 was constructed in year 783 of the Great Underground Empire to
 harness the mighty Frigid River. This work was supported by a grant of
@@ -1071,7 +1071,7 @@ out of the room.")
 	(SIZE 5)
 	(TEXT
 "---> Frobozz Magic Gunk Company <---|
-	  All-Purpose Gunk")>
+          All-Purpose Gunk")>
 
 <OBJECT PUTTY
 	(IN TUBE)
