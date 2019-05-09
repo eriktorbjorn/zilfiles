@@ -19,15 +19,15 @@
 
 <FREQUENT-WORDS?>
 
-<INSERT-FILE "../ZORKLIB/GSYNTAX" T>
-<INSERT-FILE "../ZORKLIB/GMACROS" T>
-<INSERT-FILE "../ZORKLIB/GCLOCK" T>
-<INSERT-FILE "../ZORKLIB/GMAIN" T>
-<INSERT-FILE "../ZORKLIB/GPARSER" T>
-<INSERT-FILE "3DUNGEON" T>
-<INSERT-FILE "../ZORKLIB/GGLOBALS" T>
-<INSERT-FILE "../ZORKLIB/GVERBS" T>
-<INSERT-FILE "3ACTIONS" T>
+<INSERT-FILE "../zorklib/gsyntax" T>
+<INSERT-FILE "../zorklib/gmacros" T>
+<INSERT-FILE "../zorklib/gclock" T>
+<INSERT-FILE "../zorklib/gmain" T>
+<INSERT-FILE "../zorklib/gparser" T>
+<INSERT-FILE "3dungeon" T>
+<INSERT-FILE "../zorklib/gglobals" T>
+<INSERT-FILE "../zorklib/gverbs" T>
+<INSERT-FILE "3actions" T>
 
 <PROPDEF SIZE 5>
 <PROPDEF CAPACITY 0>
