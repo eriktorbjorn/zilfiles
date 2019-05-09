@@ -286,7 +286,7 @@ the direction(s), as in >CHARACTER, NW.NW]" CR>)
 			      <COPYT ,PIECE-MOVE-TABLE 0 16>
 			      <TELL ,CANNOT-TRAVEL>
 			      <STOP>)
-			     (<OR ,P-CONT ,M-PTR>
+			     (<OR ,P-CONT ;,M-PTR>
 			      <SETG CLOCK-WAIT T>)
 			     (T
 			      <SETG DIR-CNT 0>
