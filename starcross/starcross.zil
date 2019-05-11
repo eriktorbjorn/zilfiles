@@ -26,22 +26,22 @@
 <COND (<GASSIGNED? PREDGEN>
        <ID 0>)>
 
-<IFILE "DUNGEON" T>
+<IFILE "dungeon" T>
 
 <PROPDEF SIZE 5>
 <PROPDEF CAPACITY 0>
 <PROPDEF VALUE 0>
 
-<IFILE "SYNTAX" T>
+<IFILE "syntax" T>
 <ENDLOAD>
-<IFILE "MACROS" T>
-<IFILE "CLOCK" T>
-<IFILE "PARSER" T>
-<IFILE "MAIN" T>
+<IFILE "macros" T>
+<IFILE "clock" T>
+<IFILE "parser" T>
+<IFILE "main" T>
 ;<INSERT-CRUFTY "CRUFTY">
-<IFILE "VERBS" T>
-<IFILE "ACTIONS" T>
-<IFILE "EMERG" T>
+<IFILE "verbs" T>
+<IFILE "actions" T>
+<IFILE "emerg" T>
 
 <GC 0 T>
 

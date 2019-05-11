@@ -29,26 +29,21 @@
 <DEFINE IFILE (STR "OPTIONAL" (FLOAD? <>) "AUX" (TIM <TIME>))
 	<INSERT-FILE .STR .FLOAD?>>
 
-<IFILE "DUNGEON" T>
+<IFILE "dungeon" T>
 
 <PROPDEF SIZE 5>
 <PROPDEF CAPACITY 0>
 
-<IFILE "SYNTAX" T>
+<IFILE "syntax" T>
 <ENDLOAD>
-<IFILE "MACROS" T>
-<IFILE "CLOCK" T>
-<IFILE "MAIN" T>
-<IFILE "PARSER" T>
-<INSERT-CRUFTY "CRUFTY">
-<IFILE "VERBS" T>
-<IFILE "ACTIONS" T>
-<IFILE "GOAL" T>
+<IFILE "macros" T>
+<IFILE "clock" T>
+<IFILE "main" T>
+<IFILE "parser" T>
+<INSERT-CRUFTY "crufty">
+<IFILE "verbs" T>
+<IFILE "actions" T>
+<IFILE "goal" T>
 
 <GC-MON T>
 <GC 0 T 5>
-
-
-
-
-
