@@ -1,0 +1,24 @@
+Assembling G.ZAP.2 on Friday, June 12, 1987 14:54:19
+Release: 5
+
+    64	Inserting GDAT.ZAP.2	  (9813 bytes)
+  9877	Inserting GPUR.ZAP.1	    (16 bytes)
+  9893	Inserting G-MISC.ZAP.8	  (1345 bytes)
+ 11238	Inserting G-PARSER.ZAP.9
+*****		SET	FOO,M-CONT
+14228?  (in D-APPLY)	Warning: first argument is usually quoted.
+	 (10178 bytes)
+ 21416	Inserting G-GLOBALS.ZAP.7	  (1045 bytes)
+ 22461	Inserting G-SYNTAX.ZAP.7	     (0 bytes)
+ 22461	Inserting G-VERBS.ZAP.8	  (7508 bytes)
+ 29969	Inserting G-ROOMS.ZAP.7	     (0 bytes)
+ 29969	Inserting GSTR.ZAP.2	   (883 bytes)
+23 objects.
+97 globals.
+532 word vocabulary.
+
+ 30852 bytes (31K).
+  9877 bytes of preload.
+  2709 bytes of impure.
+
+Outputting symbol tables

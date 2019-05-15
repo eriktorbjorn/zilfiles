@@ -1,0 +1,50 @@
+Assembling GENERIC.ZAP.1 on Monday, October 7, 1985 11:37:29
+Release(last was 2): 3
+
+    64	Inserting GENERICDAT.ZAP.1	  (8237 bytes)
+  8301	Inserting MISC.ZAP.1	  (1784 bytes)
+ 10085	Inserting PARSER.ZAP.1	  (5257 bytes)
+ 15342	Inserting SYNTAX.ZAP.1	     (0 bytes)
+ 15342	Inserting VERBS.ZAP.1	  (9718 bytes)
+ 25060	Inserting GLOBALS.ZAP.1	   (852 bytes)
+ 25912	Inserting GENERICSTR.ZAP.1	   (526 bytes)
+
+WORDS global undefined:  24
+
+
+Symbols unused:
+SERIAL
+GLOBAL-NOT-HERE-PRINT
+SPLASH
+NOT-GOING-ANYWHERE
+CANT-ENTER
+OPEN-CLOSE
+WORD-TYPE
+BLT
+ROB
+2OBJS?
+NOTHING-HELD?
+IN-HERE?
+RANDOMIZE-OBJECTS
+GO-NEXT
+V-LAND
+PRE-DROP
+I-AGAIN-LOC
+CAPITALIZE
+QUEUE
+DEMON
+ZPROB
+QUEUED?
+ENABLED?
+BIGFIX
+GWIM-DISABLE
+P-DIRECTION
+DEATHS
+
+16 objects.
+90 globals.
+439 word vocabulary.
+
+ 26438 bytes (26K).
+  8263 bytes of preload.
+

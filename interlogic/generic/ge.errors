@@ -1,0 +1,22 @@
+Assembling GE.XZAP.2 on Friday, July 5, 1985 17:38:36
+Release: 6
+
+    64	Inserting GEFREQ.XZAP.1	   (648 bytes)
+   712	Inserting GEDAT.ZAP.5	 (11105 bytes)
+ 11817	Inserting G-MISC.ZAP.7	  (1530 bytes)
+ 13347	Inserting G-PARSER.ZAP.7	  (9907 bytes)
+ 23254	Inserting G-GLOBALS.ZAP.6	   (863 bytes)
+ 24117	Inserting G-SYNTAX.ZAP.6	     (0 bytes)
+ 24117	Inserting G-VERBS.ZAP.7	  (6854 bytes)
+ 30971	Inserting G-ROOMS.ZAP.6	     (0 bytes)
+ 30971	Inserting GESTR.ZAP.5	   (801 bytes)
+
+Symbols unused:
+ZMEMQB
+
+22 objects.
+95 globals.
+531 word vocabulary.
+
+ 31772 bytes (32K).
+ 11801 bytes of preload.

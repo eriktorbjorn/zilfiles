@@ -1,0 +1,51 @@
+Input from PS:<TAA.PARSE>BASEDEFS.MUD.0
+Output to PS:<TAA.PARSE>BASEDEFS.MIMA.0
+Temporary output to PS:<TAA.PARSE>BASEDEFS.TEMP.1
+Bounds checking disabled.
+File loaded.
+Functions ordered.
+Compiling: ZILCH?
+Compiling: CHTYPE-VAL
+Compiling: GET-TYPE
+Compiling: FIND-WORD
+Compiling: COMPARE-WORD-TYPES
+Compiling: ZIL-COMPARE-WORD-TYPES
+Compiling: REALLY-GET-CLASSIFICATION
+Compiling: GET-CLASSIFICATION
+Compiling: REST-TO-SLOT
+Compiling: VERSION?
+Compiling: IF-MUDDLE
+Compiling: DEBUG-CHECK
+Compiling: DEBUG20
+Compiling: TABLE?
+Compiling: WORD-LEXICAL-WORD
+Compiling: GET-OFFS
+Compiling: WORD-CLASSIFICATION-NUMBER
+Compiling: WORD-FLAGS
+Compiling: WORD-SEMANTIC-STUFF
+Compiling: WORD-VERB-STUFF
+Compiling: WORD-DIR-ID
+Compiling: DO-WORD-ADJ-ID
+Compiling: WORD-ADJ-ID
+Compiling: VWORD-PRINT
+===== External variable being referenced: OUTCHAN
+ **** .OUTCHAN **** 
+Compiling: MAKE-VWORD
+Compiling: SYNTAX-ID
+Compiling: SYNTAX-GET
+Compiling: SYNTAX-PREP
+Compiling: SYNTAX-FIND
+Compiling: SYNTAX-SEARCH
+Compiling: PRINT-REDUCTION
+===== External variable being referenced: OUTCHAN
+ **** .OUTCHAN **** 
+*** WARNING Variable never used:  FUNC 
+
+
+Total time used is
+	53 sec. CPU time,
+	10 sec. garbage collector CPU time,
+	16 sec. I/O time.
+	1 min. 50 sec. real time.
+CPU utilization is 48.181818%.
+Number of garbage collects = 1

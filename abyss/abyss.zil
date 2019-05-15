@@ -54,28 +54,28 @@ DISABLE!-INITIAL
  
 ;<SETG L-SEARCH-PATH (["~PARSER" ""] !,L-SEARCH-PATH)>
  
-<INSERT-FILE "DEFS">
+<INSERT-FILE "defs">
  
-<XFLOAD ;"~PARSER/" "PARSER.REST">
+<XFLOAD ;"~parser/" "parser.rest">
  
-<INSERT-FILE "MACROS">
-<INSERT-FILE "MISC">
-<INSERT-FILE "GAS-MIX">
-<INSERT-FILE "SYNTAX">
-<INSERT-FILE "VERBS">
-<IF-P-BE-VERB!- <INSERT-FILE "BE">>
-<INSERT-FILE "SUB-BAY">
-<INSERT-FILE "COMMAND">
-<INSERT-FILE "MONTANA">
-<INSERT-FILE "RETURN1">
-<INSERT-FILE "RETURN2">
-<INSERT-FILE "OCEAN">
-<INSERT-FILE "CRANE">
-<INSERT-FILE "GLOBAL">
-<INSERT-FILE "UTIL">
-<INSERT-FILE "STOPPER">
-<INSERT-FILE "ALIEN">
-<INSERT-FILE "ENDGAME">
+<INSERT-FILE "macros">
+<INSERT-FILE "misc">
+<INSERT-FILE "gas-mix">
+<INSERT-FILE "syntax">
+<INSERT-FILE "verbs">
+<IF-P-BE-VERB!- <INSERT-FILE "be">>
+<INSERT-FILE "sub-bay">
+<INSERT-FILE "command">
+<INSERT-FILE "montana">
+<INSERT-FILE "return1">
+<INSERT-FILE "return2">
+<INSERT-FILE "ocean">
+<INSERT-FILE "crane">
+<INSERT-FILE "global">
+<INSERT-FILE "util">
+<INSERT-FILE "stopper">
+<INSERT-FILE "alien">
+<INSERT-FILE "endgame">
  
 ;"***************************************************************************"
 ; "end of file"

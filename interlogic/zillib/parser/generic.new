@@ -1,0 +1,44 @@
+GENERIC ADVICE -- SWG 11-May-88
+
+The only difference in generic routines under the new parser is
+the much more wonderful arguments that they take.  As far as what
+they should return, the old protocol holds (quoted from REDS.ZIL):
+
+;"Protocol: returns .OBJ if that's the one to use,
+		  ,ROOMS if case was handled and msg TELLed,
+		      <> if WHICH-PRINT should be called"
+
+The two arguments to a generic routine are
+ * ARG1: a table of candidate objects (a "find result"), and
+ * ARG2: a table of criteria for finding objects (a "finder").
+
+All sorts of stuff is in these tables, but you can probably get by with:
+
+	<FIND-RES-COUNT .ARG1>
+		is the number of candidates.
+	<REST-TO-SLOT .ARG1 FIND-RES-OBJ1>
+		points to the first candidate.
+
+	<FIND-NOUN .ARG2>
+		is the user's noun.
+	<FIND-ADJS .ARG2>
+		points to a table of the user's adjectives.
+	<REST-TO-SLOT <FIND-ADJS .ARG2> ADJS-COUNT 1>
+		points to the user's first adjective.
+
+Here are examples from Zork Zero:
+
+<ROUTINE GENERIC-GRAVEL-F (FR F)
+	 <COND (<INTBL? ,GRAVEL <REST-TO-SLOT .FR FIND-RES-OBJ1>
+				<FIND-RES-COUNT .FR>>
+		;"GRAVEL is a candidate object."
+		,GRAVEL)
+	       (T
+		,MORE-GRAVEL)>>
+
+<ROUTINE GENERIC-DIMWIT-F (FR F)
+	 <COND (<EQUAL? <FIND-NOUN .F> ,W?STATUE>
+		;"Player used the noun STATUE."
+		<>)
+	       (T
+		,DIMWIT)>>

@@ -1,0 +1,17 @@
+Files on disk:
+
+1. GESTALT  C       1806   5-03-80   5:47a
+   The C source code the demonstration program.
+
+2. GESTALT  WRI    13952   5-03-80   5:31a
+   The Microsoft Windows Write document file for the Gestalt article.
+
+3. GESTALT  PRJ       21  11-10-87   1:45p
+   The progject file for Turboc C to compile the Gestalt program.
+
+4. GESTALT  EXE     9230  11-10-87   1:44p
+   The executable demonstration program.
+
+5. SIMIL    ASM    16334  11-11-87  11:20a
+   The assembly language source code for the similiarity routine.
+

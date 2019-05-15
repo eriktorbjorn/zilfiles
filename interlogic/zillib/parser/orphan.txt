@@ -1,0 +1,48 @@
+THE ORPHANIST MANIFESTO - SWG 1 July 1987
+
+When the user's input is incomplete or ambiguous, the parser should help
+to make it complete by asking a question and expecting the user to give
+a short answer, called an orphan.
+
+The "old" parser can ask two kinds of questions: for incomplete input,
+"What do you want to frob the mumble with?"; for ambiguous input, "Which
+mumble do you mean ...?"  In both cases it's expecting the user to input
+a noun phrase, which it will merge into its memory of the old input
+before proceeding.
+
+The "new" parser may need memory of arbitrarily large size for the old
+input, and so it recycles the memory before parsing any new input.
+Instead of duplicating this entire memory when it expects an orphan, it
+should remember only the textual form of the old input, and then merge
+the orphan into this textual form before re-parsing it.  To make the
+re-parsing fast, it should create this textual form by un-parsing the
+incomplete input to suit the grammar.  For example, "PICK THE BOOK UP"
+could be remembered as "TAKE THE [which?] BOOK", including a hidden mark
+where the orphan is expected to fit in.
+
+Issues about un-parsed text:
+
+* It could include other hidden comments to make re-parsing even faster,
+for example "TAKE-verb THE [which?]-adjective BOOK-noun".  In the
+absence of intelligent strategy for a particular grammar, it's probably
+best to comment un-parsed text to the max.
+
+* It could be used to speed up the AGAIN command.
+
+* It could be just a list of words (LEXV form) without the letters
+(INBUF form) to go along.  But a non-vocabulary word, for instance a
+number, would need its "value" stored somewhere for reference;
+preferably, the value would be linked with the word in the list instead
+of stored in a global variable (as in the P-NUMBER strategy), whether or
+not orphans are involved.
+
+Issues about orphaning:
+
+* If more sentences follow the incomplete one on the same line, should
+they be flushed?  Probably so.
+
+* The parser should not panic if it senses incompleteness before parsing
+is finished; a different parse of the sentence might be complete, or
+indeed it might be even more incomplete than the first one.  Maybe the
+priority of the grammar rule should prioritize incompleteness, as it does
+errors.

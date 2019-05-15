@@ -1,0 +1,83 @@
+HOW TO USE QUERIES AND STATEMENTS IN THE PARSER -- Stu Galley 17-Aug-88
+
+1. What can the user type? ----------------------------------------------------
+
+(a) One kind of valid sentence is a statement in the form:
+
+	subject verb [preposition] [first object] [preposition] [second object]
+
+where items in brackets are optional.  The astute reader will notice
+that this looks exactly like a typical command in any one of our
+interactive fictions, except that there is a subject, and the verb is
+not in the imperative mood.  In fact, the sentence is handled like a
+typical command, because the parser, in effect, adds a comma after the
+subject, and changes the verb to imperative mood.  Examples:
+
+	THE TROLL ATTACKS ME becomes TROLL, ATTACK ME
+	I SEARCH FOR A CLUE  becomes SEARCH FOR A CLUE
+
+(b) Another kind of valid sentence has the form:
+
+	subject be-verb [NOT] [BE] predicate
+
+where "be-verb" is either AM, ARE, IS, WAS, WERE, WILL, or SHALL; and
+"predicate" is a noun phrase, an adjective, or a prepositional phrase.
+
+Examples:
+	MY NAME IS ARTHUR DENT
+	I AM NOT A CROOK
+	YOU WILL NOT BE SORRY
+	WE ARE FROM FRANCE
+
+(c) Other kinds of valid sentences are questions in these forms:
+
+	question-word be-verb subject
+
+	[question-word] be-verb subject [NOT] [BE] predicate
+
+where "question-word" is either WHAT, WHEN, WHERE, WHO, WHOM, WHY, or HOW.
+
+Examples:
+	WHAT IS A GRUE
+	WHEN IS LUNCH
+	WHY WILL I NOT BE SORRY
+	IS THE POPE CATHOLIC
+
+(d) Or in this form:
+
+	[question-word] can-word subject [NOT] command
+
+where "can-word" is either CAN, COULD, DO, MAY, MIGHT, WILL, WOULD,
+SHOULD, or MUST (or their inflections); and "command" is a typical
+command.
+
+Examples:
+	WHERE WILL WE EAT
+	CAN YOU OPEN THE DOOR
+	DOES A BEAR SHIT IN THE WOODS
+	WHY DID THE CHICKEN CROSS THE ROAD
+
+2. Changes to the XFLOAD file (named PARSER.REST or whatever) -----------------
+
+Insert at the top: 
+
+<COMPILATION-FLAG P-BE-VERB T>
+
+and insert after <INSERT-FILE "P:REDS">:
+
+<INSERT-FILE "P:BREDS">
+
+3. Additions to the file named DEFS.ZIL ---------------------------------------
+
+<INCLUDE "SYMBOLS">
+<COMPILATION-FLAG P-PS-COMMA T>
+<TERMINALS VERB NOUN ADJ
+	   ADV QUANT MISCWORD
+	   DIR TOBE QWORD CANDO COMMA
+	   PARTICLE PREP PRONOUN>
+
+4. Additions to the file named game.ZIL ---------------------------------------
+
+Insert after <INSERT-FILE "VERBS">:
+
+<INSERT-FILE "P:QVERBS">

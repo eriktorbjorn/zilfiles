@@ -1,0 +1,19 @@
+PLURAL NOUNS:
+
+Suppose you have two keys in your game, and the player acquires them
+both.  Then the command EXAMINE KEYS should be interpreted as meaning
+both keys.
+
+The Right Thing is to create a plural noun, with the form
+
+	<NEW-ADD-WORD "KEYS" NOUN <VOC "KEY"> ,PLURAL-FLAG>
+
+in any file after the parser files (or at least after PDEFS).
+The plural noun should NOT appear in the SYNONYM list of either key.
+When the parser looks for a KEYS object and fails to find one,
+it will notice the PLURAL-FLAG and re-interpret the phrase as ALL KEYS.
+Then it will find both keys, and call PERFORM for each one.
+
+Note: The parser must first fail to find a KEYS object before
+assuming ALL.  This feature allows you to implement, for example,
+FRENCH DOORS as well as singular DOORs.

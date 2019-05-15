@@ -1,0 +1,56 @@
+Input from PS:<TAA.PARSE>LALR.MUD.0
+Output to PS:<TAA.PARSE>LALR.MIMA.0
+Temporary output to PS:<TAA.PARSE>LALR.TEMP.1
+Bounds checking disabled.
+File loaded.
+Functions ordered.
+Compiling: PRINT-BIT-WORDS
+*** WARNING Variable never used:  SV 
+Compiling: PRINT-FROB
+Compiling: PRINT-NONTERMINAL-STATE
+Compiling: PRINT-TERMINAL-STATE
+===== Arithmetic can't open compile because:  <L=?  **** ,NUMBER-WORD-CLASSES ****  15>
+ is of type:  <OR FIX FLOAT>
+ **** <L=? ,NUMBER-WORD-CLASSES 15> **** 
+Compiling: PRINT-STATE
+===== External variable being referenced: OUTCHAN
+ **** .OUTCHAN **** 
+Compiling: PRINT-ACTION-TABLE
+===== External variable being referenced: OUTCHAN
+ **** .OUTCHAN **** 
+Compiling: SET=?
+Compiling: MERGE-ITEM-WITH-SET
+Compiling: CLOSURE
+Compiling: KERNELS-ARE-EQUAL?
+Compiling: MERGE-SET-WITH-SET
+Compiling: MAKE-BASIS
+Compiling: LALR
+Compiling: STATE-L=?
+Compiling: MERGESORT-STATES
+Compiling: SORT-STATES
+Compiling: PROD-L=?
+Compiling: SORT-PRODUCTIONS
+Compiling: SYM-L=?
+Compiling: SORT-SYMBOLS
+Compiling: ADD-RES
+Compiling: TS-L=?
+Compiling: SORT-TERMINAL-STATE
+Compiling: FINISH-TERMINAL-STATE
+===== Arithmetic can't open compile because:  <L=?  **** ,NUMBER-WORD-CLASSES ****  15>
+ is of type:  <OR FIX FLOAT>
+ **** <L=? ,NUMBER-WORD-CLASSES 15> **** 
+Compiling: RES-L=?
+Compiling: SORT-RES-LIST
+Compiling: FIND-NEXT-STATE
+Compiling: MAKE-TERMINAL-STATE
+Compiling: MAKE-NONTERMINAL-STATE
+Compiling: MAKE-TABLES
+
+
+Total time used is
+	1 min. 46 sec. CPU time,
+	20 sec. garbage collector CPU time,
+	22 sec. I/O time.
+	2 min. 53 sec. real time.
+CPU utilization is 61.271677%.
+Number of garbage collects = 2

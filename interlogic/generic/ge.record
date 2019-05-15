@@ -1,0 +1,477 @@
+
+Combined ZIL Compiler Ver 2.0 (MIM)
+-----------------------------------
+Input file: GE.ZIL
+Input file: G-MISC.ZIL
+Compiling routine: GO
+Compiling routine: INIT-STATUS-LINE
+Compiling routine: USL
+Compiling routine: INVERSE-LINE
+Compiling routine: PRINT-SPACES
+Compiling routine: RESET-THEM
+Compiling routine: PCLEAR
+Compiling routine: DO-MAIN-LOOP
+Compiling routine: MAIN-LOOP
+Compiling routine: DONT-ALL?
+Compiling routine: GAME-VERB?
+Compiling routine: QCONTEXT-CHECK
+Compiling routine: SAID-TO
+Compiling routine: SPOKEN-TO
+Compiling routine: QCONTEXT-GOOD?
+Compiling routine: ACCESSIBLE?
+Compiling routine: VISIBLE?
+Compiling routine: SEE-INSIDE?
+Compiling routine: META-LOC
+Compiling routine: QUEUE
+Compiling routine: INT
+Compiling routine: CLOCKER
+Input file: G-PARSER.ZIL
+Compiling routine: PARSER
+Compiling routine: CHANGE-LEXV
+Compiling routine: WAY-TO-TALK
+Compiling routine: WT?
+Compiling routine: CLAUSE
+Compiling routine: THIS-IS-IT
+Compiling routine: FAKE-ORPHAN
+Compiling routine: SEE-VERB?
+Compiling routine: PERFORM
+Compiling routine: D-APPLY
+Compiling routine: BUZZER-WORD?
+Compiling routine: QUESTION-WORD?
+Compiling routine: NUMBER-WORD?
+Compiling routine: NAUGHTY-WORD?
+Compiling routine: VERB-DIR-ONLY?
+Compiling routine: STUFF
+Compiling routine: INBUF-STUFF
+Compiling routine: INBUF-ADD
+Compiling routine: NUMBER?
+Compiling routine: ORPHAN-MERGE
+Compiling routine: ACLAUSE-WIN
+Compiling routine: NCLAUSE-WIN
+Compiling routine: WORD-PRINT
+Compiling routine: UNKNOWN-WORD
+Compiling routine: SYNTAX-CHECK
+Compiling routine: VERB-PRINT
+Compiling routine: ORPHAN
+Compiling routine: CLAUSE-PRINT
+Compiling routine: BUFFER-PRINT
+Compiling routine: NAME?
+Compiling routine: CAPITALIZE
+Compiling routine: PREP-PRINT
+Compiling routine: CLAUSE-COPY
+Compiling routine: CLAUSE-ADD
+Compiling routine: PREP-FIND
+Compiling routine: SYNTAX-FOUND
+Compiling routine: GWIM
+Compiling routine: SNARF-OBJECTS
+Compiling routine: BUT-MERGE
+Compiling routine: SNARFEM
+Compiling routine: GET-OBJECT
+Compiling routine: SPEAKING-VERB?
+Compiling routine: MOBY-FIND
+Compiling routine: WHICH-PRINT
+Compiling routine: GLOBAL-CHECK
+Compiling routine: DO-SL
+Compiling routine: SEARCH-LIST
+Compiling routine: THIS-IT?
+Compiling routine: OBJ-FOUND
+Compiling routine: TAKE-CHECK
+Compiling routine: ITAKE-CHECK
+Compiling routine: MANY-CHECK
+Compiling routine: ZMEMQ
+Compiling routine: ZMEMQB
+Compiling routine: LIT?
+Compiling routine: PICK-ONE
+Compiling routine: DONT-HAVE?
+Compiling routine: NOT-HOLDING
+Compiling routine: ASKING?
+Compiling routine: TALKING-TO?
+Compiling routine: HURT?
+Compiling routine: ANYONE-HERE?
+Compiling routine: GETTING-INTO?
+Compiling routine: SAY-THE
+Compiling routine: BUT-THE
+Compiling routine: MOVING?
+Compiling routine: NOT-HERE-OBJECT-F
+Compiling routine: FIND-NOT-HERE
+Compiling routine: NOT-HERE-PRINT
+Compiling routine: PRINT-CONTENTS
+Compiling routine: MOVE-ALL
+Compiling routine: DESCRIBE-OBJECTS
+Compiling routine: SEE-ANYTHING-IN?
+Compiling routine: GLOBAL-IN?
+Compiling routine: ARTICLE
+Compiling routine: HELD?
+Compiling routine: WHAT-A-CONCEPT
+Compiling routine: YOU-DONT-NEED
+Compiling routine: ITS-CLOSED
+Compiling routine: IS-CLOSED
+Compiling routine: I-PROMPT
+Input file: G-GLOBALS.ZIL
+** Note: PSEUDO used in OBJECT named: LOCAL-GLOBALS
+Compiling routine: BE-SPECIFIC
+Compiling routine: TO-DO-THING-USE
+Compiling routine: CANT-USE
+Compiling routine: DONT-UNDERSTAND
+Compiling routine: NOT-IN-SENTENCE
+Compiling routine: WALLS-F
+Compiling routine: CEILING-F
+Compiling routine: ME-F
+Compiling routine: TALK-TO-SELF
+Compiling routine: SIGN-OF-COLLAPSE
+Compiling routine: GLOBAL-ROOM-F
+Compiling routine: OBJECT-IS-LOCKED
+Compiling routine: CANT-SEE-ANY
+Compiling routine: YOU-CANT-SEE
+Compiling routine: HOW?
+Compiling routine: PRESUMABLY-YOU-WANT-TO
+Compiling routine: NOT-LIKELY
+Compiling routine: YOUD-HAVE-TO
+Compiling routine: DO-TO
+Input file: G-SYNTAX.ZIL
+Input file: G-VERBS.ZIL
+Compiling routine: V-VERBOSE
+Compiling routine: V-BRIEF
+Compiling routine: V-SUPER-BRIEF
+Compiling routine: V-INVENTORY
+Compiling routine: SAY-SURE
+Compiling routine: V-QUIT
+Compiling routine: V-RESTART
+Compiling routine: FINISH
+Compiling routine: YES?
+Compiling routine: SAY-OKAY
+Compiling routine: FAILED
+Compiling routine: V-RESTORE
+Compiling routine: V-SAVE
+Compiling routine: V-SCORE
+Compiling routine: V-TIME
+Compiling routine: TELL-TIME
+Compiling routine: V-SCRIPT
+Compiling routine: V-UNSCRIPT
+Compiling routine: TRANSCRIPT
+Compiling routine: V-VERSION
+Compiling routine: V-USE
+Compiling routine: V-$VERIFY
+Compiling routine: V-ALARM
+Compiling routine: V-ASK-ABOUT
+Compiling routine: V-QUESTION
+Compiling routine: V-WAVE-AT
+Compiling routine: V-ASK-FOR
+Compiling routine: V-BITE
+Compiling routine: V-BLOW-INTO
+Compiling routine: V-BURN
+Compiling routine: V-BUY
+Compiling routine: V-CLEAN
+Compiling routine: V-CLIMB-DOWN
+Compiling routine: V-CLIMB-ON
+Compiling routine: V-CLIMB-OVER
+Compiling routine: V-CLIMB-UP
+Compiling routine: V-CLOSE
+Compiling routine: CANT-CLOSE-THAT
+Compiling routine: NOW-CLOSED-OR-OPEN
+Compiling routine: V-COUNT
+Compiling routine: V-COVER
+Compiling routine: V-CROSS
+Compiling routine: V-CUT
+Compiling routine: V-DIG
+Compiling routine: V-DRINK
+Compiling routine: V-DRINK-FROM
+Compiling routine: V-DROP
+Compiling routine: IDROP
+Compiling routine: V-EAT
+Compiling routine: V-ENTER
+Compiling routine: PRE-DUMB-EXAMINE
+Compiling routine: V-DUMB-EXAMINE
+Compiling routine: PRE-EXAMINE
+Compiling routine: V-EXAMINE
+Compiling routine: V-EXIT
+Compiling routine: V-FILL
+Compiling routine: V-FIND
+Compiling routine: V-FIRST-LOOK
+Compiling routine: V-FLY
+Compiling routine: V-FOLLOW
+Compiling routine: PRE-FEED
+Compiling routine: V-FEED
+Compiling routine: V-SFEED
+Compiling routine: PRE-GIVE
+Compiling routine: V-SGIVE
+Compiling routine: V-GIVE
+Compiling routine: V-HELLO
+Compiling routine: V-HELP
+Compiling routine: V-HIDE
+Compiling routine: V-KICK
+Compiling routine: V-KILL
+Compiling routine: V-KNOCK
+Compiling routine: V-KISS
+Compiling routine: V-LAMP-OFF
+Compiling routine: V-LAMP-ON
+Compiling routine: V-LEAP
+Compiling routine: V-LEAVE
+Compiling routine: V-LIE-DOWN
+Compiling routine: V-LISTEN
+Compiling routine: V-LOCK
+Compiling routine: V-UNLOCK
+Compiling routine: CANT-LOCK
+Compiling routine: THING-WONT-LOCK
+Compiling routine: V-LOOK
+Compiling routine: V-LOOK-BEHIND
+Compiling routine: V-LOOK-DOWN
+Compiling routine: V-LOOK-UP
+Compiling routine: V-LOOK-INSIDE
+Compiling routine: NOT-A
+Compiling routine: V-LOOK-ON
+Compiling routine: V-LOOK-THRU
+Compiling routine: V-LOOK-UNDER
+Compiling routine: V-LOWER
+Compiling routine: V-MOVE
+Compiling routine: V-MUNG
+Compiling routine: V-OPEN
+Compiling routine: V-PAY
+Compiling routine: V-PLAY
+Compiling routine: V-PICK
+Compiling routine: V-POINT
+Compiling routine: V-POUR
+Compiling routine: V-EMPTY
+Compiling routine: V-PULL
+Compiling routine: V-PUSH
+Compiling routine: V-PUSH-TO
+Compiling routine: PRE-PUT
+Compiling routine: TAKE-OFF-PRSO-FIRST
+Compiling routine: V-PUT
+Compiling routine: SAY-IF-NOT-LIT
+Compiling routine: V-PUT-BEHIND
+Compiling routine: PRE-PUT-ON
+Compiling routine: V-PUT-ON
+Compiling routine: V-PUT-UNDER
+Compiling routine: V-RAPE
+Compiling routine: V-RAISE
+Compiling routine: V-REACH-IN
+Compiling routine: V-READ
+Compiling routine: V-READ-TO
+Compiling routine: HOW-READ
+Compiling routine: V-RELEASE
+Compiling routine: V-REPLACE
+Compiling routine: V-REPLY
+Compiling routine: V-RESCUE
+Compiling routine: V-RIDE
+Compiling routine: V-RUB
+Compiling routine: V-BOW
+Compiling routine: V-YELL
+Compiling routine: V-SAY
+Compiling routine: V-SEARCH
+Compiling routine: NOTHING-INTERESTING
+Compiling routine: V-SHAKE
+Compiling routine: V-SHOOT
+Compiling routine: V-SIT
+Compiling routine: V-SLEEP
+Compiling routine: V-SMELL
+Compiling routine: V-SPIN
+Compiling routine: V-SQUEEZE
+Compiling routine: V-STAND
+Compiling routine: V-STAND-ON
+Compiling routine: V-STAND-UNDER
+Compiling routine: V-SWING
+Compiling routine: V-SWIM
+Compiling routine: V-TAKE-OFF
+Compiling routine: V-TASTE
+Compiling routine: V-TELL
+Compiling routine: NO-ANSWER
+Compiling routine: V-THANK
+Compiling routine: V-THROUGH
+Compiling routine: PRE-THROW
+Compiling routine: V-THROW
+Compiling routine: V-THROW-OFF
+Compiling routine: V-TIE
+Compiling routine: V-TIE-UP
+Compiling routine: V-TURN
+Compiling routine: DO-WALK
+Compiling routine: V-WALK
+Compiling routine: V-WALK-AROUND
+Compiling routine: V-WALK-TO
+Compiling routine: V-WAIT
+Compiling routine: V-WAIT-FOR
+Compiling routine: V-WEAR
+Compiling routine: PRE-TAKE
+Compiling routine: V-TAKE
+Compiling routine: ITAKE
+Compiling routine: TOO-MUCH-JUNK?
+Compiling routine: CCOUNT
+Compiling routine: WEIGHT
+Compiling routine: DESCRIBE-ROOM
+Compiling routine: GOTO
+Compiling routine: OTHER-SIDE
+Compiling routine: HACK-HACK
+Compiling routine: TOO-DARK
+Compiling routine: CANT-GO
+Compiling routine: NOW-BLACK
+Compiling routine: ALREADY-OPEN
+Compiling routine: ALREADY-CLOSED
+Compiling routine: ITS-ALREADY
+Compiling routine: REFERRING
+Compiling routine: WASTE-OF-TIME
+Input file: G-ROOMS.ZIL
+** Note: OBJECT has no properties: GLOBAL-OBJECTS
+
+** Note: OBJECT has no properties: DUMMY-OBJECT
+
+** Note: OBJECT has no properties: C-OBJECT
+Vocabulary: 531
+Prepositions: 19
+	 OFF
+	 ON
+	 IN
+	 TO
+	 UP
+	 FROM
+	 THROUGH
+	 DOWN
+	 OUT
+	 WITH
+	 INTO
+	 UNDER
+	 AROUND
+	 OVER
+	 ABOUT
+	 FOR
+	 AT
+	 BEHIND
+Objects: 22
+	 PSEUDO-OBJECT
+	 C-OBJECT
+	 DUMMY-OBJECT
+	 CEILING
+	 INTNUM
+	 NOT-HERE-OBJECT
+	 WALLS
+	 IT
+	 GLOBAL-OBJECTS
+	 LOCAL-GLOBALS
+	 ROOMS
+	 HANDS
+	 PROTAGONIST
+	 THE-ROOM
+	 ME
+	 GLOBAL-ROOM
+	 HER
+	 HIM
+	 THEM
+	 INTDIR
+	 OTHER-ROOM
+	 THE-THING
+Properties: 25
+	 P?CAPACITY
+	 P?SIZE
+	 P?CONTFCN
+	 P?PSEUDO
+	 P?LDESC
+	 P?FDESC
+	 P?ADVFCN
+	 P?GLOBAL
+	 P?DESCFCN
+	 P?SYNONYM
+	 P?OUT
+	 P?IN
+	 P?DOWN
+	 P?UP
+	 P?NW
+	 P?WEST
+	 P?SW
+	 P?SOUTH
+	 P?SE
+	 P?EAST
+	 P?NE
+	 P?NORTH
+	 P?ACTION
+	 P?ADJECTIVE
+Globals: 91
+	 P-HER-OBJECT
+	 P-NCN
+	 QUESTION-WORD-COUNT
+	 RESERVE-PTR
+	 PRSI
+	 P-PROMPT
+	 LOW-DIRECTION
+	 P-IT-OBJECT
+	 QCONTEXT-ROOM
+	 WINNER
+	 P-OFLAG
+	 P-NUMBER
+	 OOPS-INBUF
+	 P-GETFLAGS
+	 P-TABLE
+	 QUOTE-FLAG
+	 P-ITBL
+	 LAST-PLAYER-LOC
+	 P-OVTBL
+	 QCONTEXT
+	 P-WON
+	 HERE
+	 P-MERGE
+	 SL-TABLE
+	 OFFENDED
+	 P-INBUF
+	 SCORE
+	 P-AND
+	 P-PRSO
+	 YOU-SEE
+	 PRSA
+	 P-AADJ
+	 ITAKE-LOC
+	 MOVES
+	 P-XADJ
+	 P-SYNTAX
+	 P-OCLAUSE
+	 C-DEMONS
+	 P-GWIMBIT
+	 P-MERGED
+	 PRSO
+	 P-LEXV
+	 C-INTS
+	 P-LEN
+	 P-ADJ
+	 P-MOBY-FLAG
+	 RESERVE-LEXV
+	 P-VTBL
+	 LIT
+	 P-DOLLAR-FLAG
+	 P-THEM-OBJECT
+	 RESERVE-INBUF
+	 P-DIRECTION
+	 AGAIN-LEXV
+	 P-PRSI
+	 NOW-PRSI
+	 P-CONT
+	 LAST-PSEUDO-LOC
+	 ALWAYS-LIT?
+	 P-ANAM
+	 OOPS-TABLE
+	 P-WALK-DIR
+	 P-MOBY-FOUND
+	 P-XNAM
+	 C-TABLE
+	 P-NAM
+	 P-OTBL
+	 CLOCK-WAIT
+	 P-ADVERB
+	 P-SLOCBITS
+	 P-AMOUNT
+	 P-ACLAUSE
+	 P-DIR
+	 P-HIM-OBJECT
+	 P-BUTS
+	 UNKNOWN-MSGS
+	 P-END-ON-PREP
+	 LIKELIES
+	 I-ASSUME
+	 CANT
+	 VERBOSE
+	 SUPER-BRIEF
+	 YES-INBUF
+	 YES-LEXV
+	 OKAY
+	 SAYING?
+	 YAWNS
+	 FIRST-WARNING?
+	 HO-HUM
+	 YUKS
+	 USELESSNESS

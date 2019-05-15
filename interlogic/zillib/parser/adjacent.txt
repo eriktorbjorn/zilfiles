@@ -1,0 +1,61 @@
+Here is the standard method for the (new) parser to find objects in
+adjacent rooms, if the author so desires.  The goal is to avoid this
+kind of situation:
+
+	221-B Baker Street
+
+	You are standing in the spill of a gas streetlight outside
+	Holmes's house.
+
+	...
+
+	>LOOK THROUGH WINDOW
+	You look down into Baker Street.
+
+	>EXAMINE STREETLIGHT
+	You cannot see any streetlight here.
+
+The author has to do two things for any such method to work:
+ (1) declare what rooms are adjacent to a given one, and
+ (2) declare what verbs should look for objects in adjacent rooms.
+
+Here is my proposal (ahem):
+
+(1) The player can see into adjacent rooms if HERE has an ADJACENT
+    property whose value is a LTABLE of bytes containing pairs: the name
+    of an adjacent room and whether that room is visible from here at the
+    moment.  (Maybe it's hidden behind a closed door.)  If all the adjacent
+    rooms are always visible from here, the LTABLE should be pure.
+    The main ZIL file for the game must include <ORDER-OBJECTS? ROOMS-FIRST>,
+    and the number of rooms must not exceed 255.
+    In the example, the author would write:
+
+	<ROOM HOLMES-STUDY
+	      (ADJACENT <TABLE (LENGTH BYTE) BAKER-STREET T>)
+	      ...>
+
+	<COND (<SET TMP1 <INTBL? ,BAKER-STREET
+				 <REST <SET TMP2
+					    <GETP ,HOLMES-STUDY ,P?ADJACENT>>
+				       1>
+				 <GETB .TMP2 0>
+				 1>>
+	       <PUTB .TMP1 1 0>)>	;"window shade closed"
+
+    Note: This property duplicates information from the CORRIDOR property
+    in the mysteries.  But does anyone plan to use CORRIDOR in the future?
+
+(2) The player can use a verb (syntax) on an object in an adjacent room
+    if the syntax has a special combination of bits following OBJECT.
+    (A single bit would be tidier, but none is available.)  The special
+    combination is one that will never occur otherwise; I propose the
+    combination (HAVE EVERYWHERE).  (By the way, I took a census of the
+    OBJECT bits actually used in Shogun and Zork Zero.  See P:SYNTAX.CENSUS.)
+    In the example, the author would write:
+
+	<SYNTAX EXAMINE OBJECT (HAVE EVERYWHERE) = V-EXAMINE PRE-EXAMINE>
+
+    Note: If the adjacent room itself has a SYNONYM or ADJECTIVE property,
+    and the author wants the player to be able to refer to it (for
+    example, ENTER BAKER STREET), then it should appear in the GLOBAL
+    property of HERE.

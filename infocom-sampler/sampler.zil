@@ -25,16 +25,16 @@
 <COND (<GASSIGNED? PREDGEN>
        <ID 0>)>
 
-<IFILE "MISC" T>
-<IFILE "SYNTAX" T>
-<IFILE "DUNGEON" T>
-<IFILE "GLOBALS" T>
-<IFILE "PARSER" T>
-<IFILE "VERBS" T>
-<IFILE "ACTIONS" T>
-<IFILE "TUTORIAL" T>
-<IFILE "PLANETFALL" T>
-<IFILE "INFIDEL" T>
+<IFILE "misc" T>
+<IFILE "syntax" T>
+<IFILE "dungeon" T>
+<IFILE "globals" T>
+<IFILE "parser" T>
+<IFILE "verbs" T>
+<IFILE "actions" T>
+<IFILE "tutorial" T>
+<IFILE "planetfall" T>
+<IFILE "infidel" T>
 
 <PROPDEF SIZE 5>
 <PROPDEF CAPACITY 0>

@@ -1,0 +1,29 @@
+Input from PS:<TAA.PARSE>SYMBOLS.MUD.0
+Output to PS:<TAA.PARSE>SYMBOLS.MIMA.0
+Temporary output to PS:<TAA.PARSE>SYMBOLS.TEMP.1
+Bounds checking disabled.
+File loaded.
+Functions ordered.
+Compiling: PRINT-SYMBOL
+===== External variable being referenced: OUTCHAN
+<PRIN1 <%<OFFSET 1 SYMBOL ATOM> .SYM>  **** .OUTCHAN **** >
+Compiling: MAKE-INTERNAL
+Compiling: RESET-SYMBOLS
+Compiling: GET-CLASSIFICATION-NUMBER
+Compiling: BUILD-SYMBOL
+Compiling: MAKE-TERMINAL
+Compiling: TERMINALS
+===== External variable being referenced: OUTCHAN
+ **** .OUTCHAN **** 
+*** WARNING Variable never used:  T 
+Compiling: MAKE-NONTERMINAL
+Compiling: LOOKUP-SYMBOL
+
+
+Total time used is
+	9 sec. CPU time,
+	0 sec. garbage collector CPU time,
+	3 sec. I/O time.
+	24 sec. real time.
+CPU utilization is 37.5%.
+Number of garbage collects = 0

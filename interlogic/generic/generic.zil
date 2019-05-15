@@ -1,0 +1,31 @@
+"GENERIC for Generic
+(c) Copyright 1984 Infocom, Inc.  All Rights Reserved."
+
+<PRINC "
+ *** Generic Interactive Fiction ***
+
+">
+
+<BLOAT 90000 0 0 3300 0 0 0 0 0 256>
+
+;<SNAME "SEM">
+
+<SET REDEFINE T>
+
+<GLOBAL BIGFIX 10000>
+
+<OR <GASSIGNED? ZILCH>
+    <SETG WBREAKS <STRING !\" !,WBREAKS>>>
+
+<COND (<GASSIGNED? PREDGEN>
+       <SETG ZSTR-ON <SETG ZSTR-OFF ,TIME>>
+       <ID 0>)>
+
+<INSERT-FILE "MISC" T>
+<INSERT-FILE "PARSER" T>
+<INSERT-FILE "SYNTAX" T>
+<INSERT-FILE "VERBS" T>
+<INSERT-FILE "GLOBALS" T>
+
+<PROPDEF SIZE 5>
+<PROPDEF CAPACITY 0>

@@ -1,0 +1,9 @@
+"call like <Z-APPLY \"Winner\" <GETP ,WINNER ,P?ACTION> ,M-WINNER>
+ *note the SET V part is not included here"
+
+<DEFMAC Z-APPLY ('STR 'OBJ "ARGS" ARGS)
+   <FORM IFFLAG
+	 (P-DEBUGGING-PARSER
+	  <FORM D-APPLY .STR .OBJ !.ARGS>)
+	 (T
+	  <FORM ZAPPLY .OBJ !.ARGS>)>>
