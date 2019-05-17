@@ -833,7 +833,7 @@ Implementers." CR>)
 	(TEXT
 "This legend, written in an ancient tongue, goes something like this:
 At one time a shapeless and formless manifestation of evil was disturbed
-from millenia of sleep. It was so powerful that it required the combined
+from millennia of sleep. It was so powerful that it required the combined
 wisdom of the leading enchanters of that age to conquer it. The legend tells
 how the enchanters lured the Terror \"to a recess deep within the earth\" by
 placing there a powerful spell scroll. When it had reached the scroll, the
