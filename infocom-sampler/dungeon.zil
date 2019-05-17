@@ -1121,7 +1121,7 @@ The rain outside is falling heavily now.|
 The note is written in a spidery hand on fine rag paper. It says:|
 \"Linder --|
 Since Virginia died, I've lost too much sleep because of you and
-your harrassments. The time has come to put this matter to rest
+your harassments. The time has come to put this matter to rest
 once and for all. I'll be seeing you sooner than you imagine.|
               -- Stiles\"|
 |
