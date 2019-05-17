@@ -2947,7 +2947,7 @@ agree, say it directly to him.\"" CR>)
 			(<NOT <B-LYING?>>
 			 <COND (<EQUAL? ,DELAY-CNT 1>
 				<TELL CR
-"Omi watches you with great curiousity." CR>
+"Omi watches you with great curiosity." CR>
 				<RTRUE>)
 			       (<EQUAL? <CROOCQ-IN-CAULDRON> T>
 				<COND (<EQUAL? ,DELAY-CNT 2 3>
