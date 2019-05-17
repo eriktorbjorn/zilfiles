@@ -20,14 +20,14 @@
 <COND (<GASSIGNED? PREDGEN>
        <ID 0>)>
 
-<IFILE "SYNTAX" T>
+<IFILE "syntax" T>
 <ENDLOAD>
-<IFILE "MISC" T>
-<IFILE "GLOBALS" T>
-<IFILE "PARSER" T>
-<IFILE "VERBS" T>
-<IFILE "COMPONE" T>
-<IFILE "COMPTWO" T>
+<IFILE "misc" T>
+<IFILE "globals" T>
+<IFILE "parser" T>
+<IFILE "verbs" T>
+<IFILE "compone" T>
+<IFILE "comptwo" T>
 
 <PROPDEF SIZE 5>
 <PROPDEF CAPACITY 0>

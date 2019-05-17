@@ -33,28 +33,28 @@
 <COND (<GASSIGNED? PREDGEN>
        <ID 0>)>
 
-<IFILE "MACROS" T>
+<IFILE "macros" T>
 <PROPDEF SIZE 5>
 <PROPDEF CAPACITY 0>
 <PROPDEF VALUE 0>
 
-<IFILE "SYNTAX" T>
+<IFILE "syntax" T>
 <ENDLOAD>
-<IFILE "GLOBALS" T>
-<IFILE "CLOCK" T>
-<IFILE "MAIN" T>
-<IFILE "PARSER" T>
-<INSERT-CRUFTY "CRUFTY">
-<IFILE "VERBS" T>
+<IFILE "globals" T>
+<IFILE "clock" T>
+<IFILE "main" T>
+<IFILE "parser" T>
+<INSERT-CRUFTY "crufty">
+<IFILE "verbs" T>
 
 
 ;"MIKE: Add your files here, as with ROBOTS"
 
 
-<IFILE "STATUS" T>
-<IFILE "ROBOTS" T>
-<IFILE "ROOMS" T>
-<IFILE "OBJECTS" T>
-<IFILE "GOAL" T>
-<IFILE "PEOPLE" T>
-<IFILE "SETUP" T>
+<IFILE "status" T>
+<IFILE "robots" T>
+<IFILE "rooms" T>
+<IFILE "objects" T>
+<IFILE "goal" T>
+<IFILE "people" T>
+<IFILE "setup" T>

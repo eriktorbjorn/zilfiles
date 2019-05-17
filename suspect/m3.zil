@@ -50,21 +50,21 @@ Copyright (C) 1984 Infocom, Inc.  All rights reserved."
 <COND (<GASSIGNED? PREDGEN>
        <SETG ZSTR-ON <SETG ZSTR-OFF ,TIME>>)>
 
-<IFILE "MACROS" T>
-<IFILE "SYNTAX" T>
+<IFILE "macros" T>
+<IFILE "syntax" T>
 
-%<DEBUG-CODE <IFILE "DEBUG" T>>
+%<DEBUG-CODE <IFILE "debug" T>>
 
-<IFILE "PARSER" T>
+<IFILE "parser" T>
 <ENDLOAD> ;"ZILCH ignores this, of course"
-<IFILE "CLOCK" T>
-<IFILE "MAIN" T>
-<IFILE "GOAL" T>
-<IFILE "VERBS" T>
-<IFILE "PLACES" T>
-<IFILE "PEOPLE" T>
-<IFILE "THINGS" T>
-<IFILE "EVENTS" T>
+<IFILE "clock" T>
+<IFILE "main" T>
+<IFILE "goal" T>
+<IFILE "verbs" T>
+<IFILE "places" T>
+<IFILE "people" T>
+<IFILE "things" T>
+<IFILE "events" T>
 
 <GC-MON T>
 <GC 0 T 5>

@@ -33,34 +33,34 @@
 <COND (<GASSIGNED? PREDGEN>
        <ID 0>)>
 
-<IFILE "MACROS" T>
+<IFILE "macros" T>
 
-<IFILE "GLOBALS" T>
+<IFILE "globals" T>
 <PROPDEF SIZE 5>
 <PROPDEF CAPACITY 0>
 <PROPDEF VALUE 0>
 
-<IFILE "SYNTAX" T>
+<IFILE "syntax" T>
 <ENDLOAD>
 
-<IFILE "CLOCK" T>
-<IFILE "MAIN" T>
-<IFILE "PARSER" T>
-<INSERT-CRUFTY "CRUFTY">
-<IFILE "VERBS" T>
+<IFILE "clock" T>
+<IFILE "main" T>
+<IFILE "parser" T>
+<INSERT-CRUFTY "crufty">
+<IFILE "verbs" T>
 
 
 
 ;"MIKE: Add your files here, as with ROBOTS"
 
-<IFILE "INTERRUPTS" T>
-<IFILE "RA" T>
-<IFILE "ANTE" T>
-<IFILE "DIAMOND" T>
-<IFILE "BARGE" T>
-<IFILE "CUBE" T>
-<IFILE "CAMP" T>
-<IFILE "TEMPLE" T>
+<IFILE "interrupts" T>
+<IFILE "ra" T>
+<IFILE "ante" T>
+<IFILE "diamond" T>
+<IFILE "barge" T>
+<IFILE "cube" T>
+<IFILE "camp" T>
+<IFILE "temple" T>
 
 <PRINC "INFIDEL: Interlogic Adventure Fiction
 

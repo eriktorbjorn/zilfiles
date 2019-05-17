@@ -365,16 +365,11 @@ START::
 	.DEBUG-LINE 1,319,1
 ?L134:	SET 'MOVES,INTERNAL-MOVES
 	.DEBUG-LINE 1,320,1
-?L135:	ZERO? P-WON /?L136
+?L135:	ZERO? P-WON /?L1
 	.DEBUG-LINE 1,321,1
-	ZERO? C-ELAPSED /?L138
+	ZERO? C-ELAPSED /?L1
 	.DEBUG-LINE 1,322,1
 	CALL CLOCKER >V
-	PUSH V
-	JUMP ?L1
-?L138:	PUSH 0
-	JUMP ?L1
-?L136:	PUSH 0
 	JUMP ?L1
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -492,7 +487,6 @@ START::
 	RETURN OBJ
 	.DEBUG-LINE 1,472,1
 ?L7:	LOC OBJ >OBJ
-	PUSH OBJ
 	JUMP ?L1
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -505,8 +499,8 @@ START::
 	RETURN CINT
 	.DEBUG-ROUTINE-END 0,0,0
 
-	.DEBUG-ROUTINE 0,0,0,"INT","RTN","DEMON","E","C","INT"
-	.FUNCT INT,RTN,DEMON=0,E,C,INT
+	.DEBUG-ROUTINE 0,0,0,"INT","RTN","DEMON","E","C","INT?1"
+	.FUNCT INT,RTN,DEMON=0,E,C,INT?1
 	.DEBUG-LINE 1,510,1
 	ADD C-TABLE,C-TABLELEN >E
 	.DEBUG-LINE 1,511,1
@@ -517,13 +511,14 @@ START::
 	SUB C-INTS,C-INTLEN >C-INTS
 	.DEBUG-LINE 1,515,1
 	ZERO? DEMON /?L5
+	.DEBUG-LINE 1,515,1
 	SUB C-DEMONS,C-INTLEN >C-DEMONS
 	.DEBUG-LINE 1,516,1
-?L5:	ADD C-TABLE,C-INTS >INT
+?L5:	ADD C-TABLE,C-INTS >INT?1
 	.DEBUG-LINE 1,517,1
-	PUT INT,C-RTN,RTN
+	PUT INT?1,C-RTN,RTN
 	.DEBUG-LINE 1,518,1
-	RETURN INT
+	RETURN INT?1
 	.DEBUG-LINE 1,519,1
 ?L3:	GET C,C-RTN >STACK
 	EQUAL? STACK,RTN \?L7
@@ -531,7 +526,6 @@ START::
 	RETURN C
 	.DEBUG-LINE 1,520,1
 ?L7:	ADD C,C-INTLEN >C
-	PUSH C
 	JUMP ?L1
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -582,7 +576,6 @@ START::
 	SET 'FLG,1
 	.DEBUG-LINE 1,547,1
 ?L18:	ADD C,C-INTLEN >C
-	PUSH C
 	JUMP ?L4
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -997,9 +990,9 @@ START::
 	.DEBUG-LINE 2,406,1
 	RETURN W
 	.DEBUG-LINE 2,407,1
-?L7:	NEXT? W >W \FALSE
-	PUSH 0
-	JUMP ?L2
+?L7:	NEXT? W >W /?L2
+	.DEBUG-LINE 2,407,1
+	RFALSE
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"NOT-HERE-OBJECT-F","TBL","PRSO?","OBJ"
@@ -1008,6 +1001,8 @@ START::
 	EQUAL? PRSO,NOT-HERE-OBJECT \?L5
 	EQUAL? PRSI,NOT-HERE-OBJECT \?L1
 	.DEBUG-LINE 2,428,1
+	.DEBUG-LINE 2,428,1
+	.DEBUG-LINE 2,429,1
 	PRINTR "Those things aren't here!"
 	.DEBUG-LINE 2,430,1
 ?L1:	EQUAL? PRSO,NOT-HERE-OBJECT \?L5
@@ -1062,6 +1057,8 @@ START::
 	.DEBUG-LINE 2,458,1
 	CALL NOT-HERE-PRINT,PRSO?
 	.DEBUG-LINE 2,459,1
+	.DEBUG-LINE 2,459,1
+	.DEBUG-LINE 2,460,1
 	PRINTR " here!"""
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -1087,6 +1084,8 @@ START::
 	.DEBUG-LINE 2,481,1
 	CALL NOT-HERE-PRINT,PRSO?
 	.DEBUG-LINE 2,482,1
+	.DEBUG-LINE 2,482,1
+	.DEBUG-LINE 2,483,1
 	PRINTR " there."
 	.DEBUG-LINE 2,484,1
 ?L6:	RETURN NOT-HERE-OBJECT
@@ -1205,7 +1204,8 @@ START::
 	.DEBUG-LINE 2,627,1
 ?L18:	IN? BLATHER,HERE \?L23
 	.DEBUG-LINE 2,628,1
-	PRINTR " ""Removing your uniform while on duty? Five hundred demerits!"""
+	PRINTI " ""Removing your uniform while on duty? Five hundred demerits!"""
+	JUMP ?L27
 	.DEBUG-LINE 2,630,1
 ?L23:	IN? FLOYD,HERE \?L27
 	.DEBUG-LINE 2,631,1
@@ -1242,6 +1242,7 @@ START::
 	.DEBUG-LINE 2,717,1
 	IN? BLATHER,HERE \?L3
 	.DEBUG-LINE 2,718,1
+	.DEBUG-LINE 2,719,1
 	IGRTR? 'BRIGS-UP,3 \?L5
 	.DEBUG-LINE 2,720,1
 	CRLF
@@ -2477,6 +2478,7 @@ START::
 	.DEBUG-LINE 2,1820,1
 	PRINT WRONG-CARD
 	.DEBUG-LINE 2,1820,1
+	.DEBUG-LINE 2,1821,1
 	CRLF
 	RTRUE
 	.DEBUG-LINE 2,1822,1
@@ -2485,10 +2487,14 @@ START::
 ?L7:	ZERO? BETTY-BROKEN /?L5
 	EQUAL? HERE,BETTY-CONTROL-EAST,BETTY-CONTROL-WEST \?L5
 	.DEBUG-LINE 2,1826,1
+	.DEBUG-LINE 2,1826,1
+	.DEBUG-LINE 2,1829,1
 ?L6:	PRINTR "A garbled recording mentions that the shuttle car has undergone some damage and that the repair robot has been summoned."
 	.DEBUG-LINE 2,1830,1
 ?L5:	GRTR? INTERNAL-MOVES,6000 \?L10
 	.DEBUG-LINE 2,1831,1
+	.DEBUG-LINE 2,1831,1
+	.DEBUG-LINE 2,1834,1
 	PRINTR "A recorded voice explains that using the shuttle car during the evening hours requires special authorization."
 	.DEBUG-LINE 2,1835,1
 ?L10:	EQUAL? HERE,ALFIE-CONTROL-EAST \?L14
@@ -4102,6 +4108,7 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 ?L49:	SET 'QUOTE-FLAG,1
 	.DEBUG-LINE 3,194,1
 ?L51:	ZERO? P-LEN /?L53
+	.DEBUG-LINE 3,195,1
 	ADD PTR,P-LEXELEN >P-CONT
 	.DEBUG-LINE 3,196,1
 ?L53:	PUTB P-LEXV,P-LEXWORDS,P-LEN
@@ -4440,7 +4447,6 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	SET 'FIRST??,0
 	.DEBUG-LINE 3,393,1
 	ADD PTR,P-LEXELEN >PTR
-	PUSH PTR
 	JUMP ?L7
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -4655,6 +4661,7 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	.DEBUG-LINE 3,496,1
 	GET P-OTBL,P-NC2 >STACK
 	ZERO? STACK /?L1
+	.DEBUG-LINE 3,496,1
 	SET 'P-NCN,2
 	.DEBUG-LINE 3,497,1
 ?L1:	SET 'P-ACLAUSE,0
@@ -4671,7 +4678,6 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	PRINTC STACK
 	.DEBUG-LINE 3,508,1
 	INC 'BUF
-	PUSH BUF
 	JUMP ?L1
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -4977,7 +4983,6 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 ?L23:	SET 'FIRST??,0
 	.DEBUG-LINE 3,672,1
 ?L14:	ADD BEG,P-WORDLEN >BEG
-	PUSH BEG
 	JUMP ?L1
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -5043,7 +5048,6 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	CALL CLAUSE-ADD,STACK
 	.DEBUG-LINE 3,702,1
 	ADD BEG,P-WORDLEN >BEG
-	PUSH BEG
 	JUMP ?L1
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -5071,13 +5075,11 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 ?L1:	IGRTR? 'CNT,SIZE /FALSE
 	.DEBUG-LINE 3,715,1
 	GET PREPOSITIONS,CNT >STACK
-	EQUAL? STACK,PREP \?L5
+	EQUAL? STACK,PREP \?L1
 	.DEBUG-LINE 3,716,1
 	SUB CNT,1 >STACK
 	GET PREPOSITIONS,STACK >STACK
 	RSTACK
-?L5:	PUSH 0
-	JUMP ?L1
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"SYNTAX-FOUND","SYN"
@@ -5153,6 +5155,7 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	.DEBUG-LINE 3,750,1
 	GET P-BUTS,P-MATCHLEN >STACK
 	ZERO? STACK /?L5
+	.DEBUG-LINE 3,751,1
 	CALL BUT-MERGE,P-PRSO >P-PRSO
 	.DEBUG-LINE 3,752,1
 ?L5:	GET P-ITBL,P-NC2 >PTR
@@ -5227,7 +5230,7 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	.DEBUG-LINE 3,816,1
 ?L1:	EQUAL? PTR,EPTR \?L3
 	.DEBUG-LINE 3,816,1
-	ZERO? BUT /?L6
+?L49:	ZERO? BUT /?L6
 	PUSH BUT
 	JUMP ?L5
 ?L6:	PUSH TBL
@@ -5333,14 +5336,11 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	.DEBUG-LINE 3,857,1
 	SET 'P-ONEOBJ,WORD
 	.DEBUG-LINE 3,858,1
-?L44:	EQUAL? PTR,EPTR /?L46
+?L44:	EQUAL? PTR,EPTR /?L49
 	.DEBUG-LINE 3,859,1
 	ADD PTR,P-WORDLEN >PTR
 	.DEBUG-LINE 3,860,1
 	SET 'WORD,NW
-	PUSH WORD
-	JUMP ?L1
-?L46:	PUSH 0
 	JUMP ?L1
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -5644,11 +5644,11 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	.DEBUG-LINE 3,1032,1
 	PRINTI ", "
 	.DEBUG-LINE 3,1033,1
-?L27:	DLESS? 'LEN,1 \?L31
+?L27:	DLESS? 'LEN,1 \?L12
 	.DEBUG-LINE 3,1034,1
+	.DEBUG-LINE 3,1034,1
+	.DEBUG-LINE 3,1035,1
 	PRINTR "?"
-?L31:	PUSH 0
-	JUMP ?L12
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"GLOBAL-CHECK","TBL","LEN","RMG","RMGL","CNT","OBJ","OBITS","FOO"
@@ -5786,9 +5786,9 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 ?L17:	PUSH P-SRCTOP
 ?L18:	CALL SEARCH-LIST,OBJ,TBL,STACK >FLS
 	.DEBUG-LINE 3,1117,1
-?L14:	NEXT? OBJ >OBJ \TRUE
-	PUSH 1
-	JUMP ?L3
+?L14:	NEXT? OBJ >OBJ /?L3
+	.DEBUG-LINE 3,1117,1
+	RTRUE
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"OBJ-FOUND","OBJ","TBL","PTR"
@@ -5833,8 +5833,8 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	SET 'OBJ,P-IT-OBJECT
 	.DEBUG-LINE 3,1137,1
 ?L9:	CALL HELD?,OBJ >STACK
-	ZERO? STACK \?L12
-	EQUAL? OBJ,HANDS /?L12
+	ZERO? STACK \?L3
+	EQUAL? OBJ,HANDS /?L3
 	.DEBUG-LINE 3,1139,1
 	SET 'PRSO,OBJ
 	.DEBUG-LINE 3,1140,1
@@ -5880,8 +5880,8 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	.DEBUG-LINE 3,1158,1
 	RFALSE
 	.DEBUG-LINE 3,1159,1
-?L19:	ZERO? TAKEN \?L30
-?L36:	EQUAL? WINNER,ADVENTURER \?L30
+?L19:	ZERO? TAKEN \?L3
+?L36:	EQUAL? WINNER,ADVENTURER \?L3
 	.DEBUG-LINE 3,1161,1
 	PRINTI "(Taking the "
 	.DEBUG-LINE 3,1161,1
@@ -5890,43 +5890,38 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	PRINTI " first)"
 	.DEBUG-LINE 3,1161,1
 	CRLF
-	PUSH 1
-	JUMP ?L3
-?L30:	PUSH 0
-	JUMP ?L3
-?L12:	PUSH 0
 	JUMP ?L3
 	.DEBUG-ROUTINE-END 0,0,0
 
-	.DEBUG-ROUTINE 0,0,0,"HERE?","CAN"
-	.FUNCT HERE?,CAN
+	.DEBUG-ROUTINE 0,0,0,"HERE?","CAN?1"
+	.FUNCT HERE?,CAN?1
 	.DEBUG-LINE 3,1167,1
-?L1:	LOC CAN >CAN
+?L1:	LOC CAN?1 >CAN?1
 	.DEBUG-LINE 3,1168,1
-	ZERO? CAN /?L2
+	ZERO? CAN?1 /?L2
 	.DEBUG-LINE 3,1169,1
-	EQUAL? CAN,HERE \?L1
+	EQUAL? CAN?1,HERE \?L1
 	.DEBUG-LINE 3,1169,1
 	RTRUE
 	.DEBUG-LINE 3,1170,1
-?L2:	CALL GLOBAL-IN?,CAN,HERE >STACK
+?L2:	CALL GLOBAL-IN?,CAN?1,HERE >STACK
 	ZERO? STACK \TRUE
 	.DEBUG-LINE 3,1171,1
-	EQUAL? CAN,PSEUDO-OBJECT \FALSE
+	EQUAL? CAN?1,PSEUDO-OBJECT \FALSE
 	.DEBUG-LINE 3,1171,1
 	RTRUE
 	.DEBUG-ROUTINE-END 0,0,0
 
-	.DEBUG-ROUTINE 0,0,0,"HELD?","CAN"
-	.FUNCT HELD?,CAN
+	.DEBUG-ROUTINE 0,0,0,"HELD?","CAN?1"
+	.FUNCT HELD?,CAN?1
 	.DEBUG-LINE 3,1176,1
-?L1:	LOC CAN >CAN
+?L1:	LOC CAN?1 >CAN?1
 	.DEBUG-LINE 3,1177,1
-	ZERO? CAN /FALSE
+	ZERO? CAN?1 /FALSE
 	.DEBUG-LINE 3,1178,1
-	EQUAL? CAN,WINNER /TRUE
-	PUSH 0
-	JUMP ?L1
+	EQUAL? CAN?1,WINNER \?L1
+	.DEBUG-LINE 3,1178,1
+	RTRUE
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"MANY-CHECK","LOSS","TMP"
@@ -5997,9 +5992,9 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 ?L6:	GET TBL,CNT >STACK
 	EQUAL? ITM,STACK /TRUE
 	.DEBUG-LINE 3,1207,1
-	IGRTR? 'CNT,SIZE /FALSE
-	PUSH 0
-	JUMP ?L6
+	IGRTR? 'CNT,SIZE \?L6
+	.DEBUG-LINE 3,1207,1
+	RFALSE
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"ZMEMQB","ITM","TBL","SIZE","CNT"
@@ -6008,13 +6003,13 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 ?L1:	GETB TBL,CNT >STACK
 	EQUAL? ITM,STACK /TRUE
 	.DEBUG-LINE 3,1212,1
-	IGRTR? 'CNT,SIZE /FALSE
-	PUSH 0
-	JUMP ?L1
+	IGRTR? 'CNT,SIZE \?L1
+	.DEBUG-LINE 3,1212,1
+	RFALSE
 	.DEBUG-ROUTINE-END 0,0,0
 
-	.DEBUG-ROUTINE 0,0,0,"LIT?","RM","OHERE","LIT"
-	.FUNCT LIT?,RM,OHERE,LIT=0
+	.DEBUG-ROUTINE 0,0,0,"LIT?","RM","OHERE","LIT?1"
+	.FUNCT LIT?,RM,OHERE,LIT?1=0
 	.DEBUG-LINE 3,1215,1
 	SET 'P-GWIMBIT,ONBIT
 	.DEBUG-LINE 3,1216,1
@@ -6024,7 +6019,7 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	.DEBUG-LINE 3,1218,1
 	FSET? RM,ONBIT \?L1
 	.DEBUG-LINE 3,1219,1
-	SET 'LIT,1
+	SET 'LIT?1,1
 	JUMP ?L7
 	.DEBUG-LINE 3,1221,1
 ?L1:	PUT P-MERGE,P-MATCHLEN,0
@@ -6042,13 +6037,13 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	GET P-TABLE,P-MATCHLEN >STACK
 	GRTR? STACK,0 \?L7
 	.DEBUG-LINE 3,1226,1
-	SET 'LIT,1
+	SET 'LIT?1,1
 	.DEBUG-LINE 3,1227,1
 ?L7:	SET 'HERE,OHERE
 	.DEBUG-LINE 3,1228,1
 	SET 'P-GWIMBIT,0
 	.DEBUG-LINE 3,1229,1
-	RETURN LIT
+	RETURN LIT?1
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"PRSO-PRINT","PTR"
@@ -6436,9 +6431,6 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	JUMP ?L58
 	.DEBUG-LINE 4,169,1
 ?L11:	FIRST? OBJ >Y /?L32
-	JUMP ?L57
-	.DEBUG-LINE 4,171,1
-?L29:	ZERO? Y \?L32
 	.DEBUG-LINE 4,172,1
 ?L57:	ZERO? PV? /?L34
 	ZERO? AV /?L34
@@ -6481,9 +6473,8 @@ Xis stuneeng vuu uf xee Kalamontee Valee kuvurz oovur fortee skwaar miilz uf xat
 	.DEBUG-LINE 4,189,1
 	CALL PRINT-CONT,Y,V?,LEVEL
 	.DEBUG-LINE 4,190,1
-?L53:	NEXT? Y >Y /?L56
-?L56:	PUSH Y
-	JUMP ?L29
+?L53:	NEXT? Y >Y /?L32
+	JUMP ?L57
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"FIRSTER","OBJ","LEVEL"
@@ -7067,6 +7058,8 @@ Release "
 	LOC PRSO >STACK
 	FSET? STACK,OPENBIT /?L6
 	.DEBUG-LINE 4,520,1
+	.DEBUG-LINE 4,520,1
+	.DEBUG-LINE 4,521,1
 	PRINTR "You can't reach into a closed container."
 	.DEBUG-LINE 4,522,1
 ?L6:	ZERO? PRSI /?L9
@@ -7235,6 +7228,8 @@ Release "
 	FSET? PRSI,CONTBIT /?L4
 	FSET? PRSI,VEHBIT /?L4
 	.DEBUG-LINE 4,617,1
+	.DEBUG-LINE 4,617,1
+	.DEBUG-LINE 4,618,1
 	PRINTR "You can't do that."
 	.DEBUG-LINE 4,619,1
 ?L4:	FSET? PRSI,OPENBIT /?L7
@@ -7546,7 +7541,7 @@ Release "
 	.DEBUG-LINE 4,747,1
 ?L20:	SET 'F,N
 	.DEBUG-LINE 4,748,1
-	ZERO? F \?L21
+	ZERO? F \?L3
 	.DEBUG-LINE 4,749,1
 	ZERO? IT? /TRUE
 	ZERO? TWO? \TRUE
@@ -7554,8 +7549,6 @@ Release "
 	CALL THIS-IS-IT,IT?
 	.DEBUG-LINE 4,752,1
 	RTRUE
-?L21:	PUSH 0
-	JUMP ?L3
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"V-CLOSE"
@@ -7716,6 +7709,8 @@ Release "
 	.DEBUG-LINE 4,831,1
 	PRINTR " is now on."
 	.DEBUG-LINE 4,833,1
+	.DEBUG-LINE 4,833,1
+	.DEBUG-LINE 4,834,1
 ?L1:	PRINTR "You can't turn that on."
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -7737,6 +7732,8 @@ Release "
 	.DEBUG-LINE 4,842,1
 	PRINTR " is now off."
 	.DEBUG-LINE 4,844,1
+	.DEBUG-LINE 4,844,1
+	.DEBUG-LINE 4,845,1
 ?L1:	PRINTR "You can't turn that off."
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -7762,8 +7759,7 @@ Release "
 	PRINTI "You are already in it!"
 	.DEBUG-LINE 4,864,1
 	CRLF
-	.DEBUG-LINE 4,871,1
-	RETURN 2
+	JUMP ?L9
 	.DEBUG-LINE 4,868,1
 ?L3:	PRINTI "I suppose you have a theory on boarding "
 	.DEBUG-LINE 4,869,1
@@ -7775,7 +7771,7 @@ Release "
 	.DEBUG-LINE 4,870,1
 	CRLF
 	.DEBUG-LINE 4,871,1
-	RETURN 2
+?L9:	RETURN 2
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"V-BOARD","AV"
@@ -8049,6 +8045,8 @@ Release "
 	.DEBUG-LINE 4,1007,1
 	ZERO? LIT \FALSE
 	.DEBUG-LINE 4,1008,1
+	.DEBUG-LINE 4,1008,1
+	.DEBUG-LINE 4,1009,1
 	PRINTR "It is impossible to read in the dark."
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -8305,6 +8303,7 @@ Release "
 	CALL NO-BUTTON,BOOTH-3 >STACK
 	RSTACK
 	.DEBUG-LINE 4,1126,1
+	.DEBUG-LINE 4,1128,1
 ?L21:	PRINTR "Push a number?!?"
 	.DEBUG-LINE 4,1130,1
 ?L1:	CALL HACK-HACK,STR?87 >STACK
@@ -9747,7 +9746,6 @@ Release "
 ?L7:	MOVE X,WHERE
 	.DEBUG-LINE 4,1882,1
 	SET 'X,N
-	PUSH X
 	JUMP ?L1
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -9885,6 +9883,7 @@ Release "
 	.DEBUG-LINE 5,29,1
 	EQUAL? RARG,M-END \FALSE
 	.DEBUG-LINE 5,30,1
+	.DEBUG-LINE 5,31,1
 	IGRTR? 'DROWN,2 \FALSE
 	.DEBUG-LINE 5,32,1
 	CALL JIGS-UP,STR?93 >STACK
@@ -9929,7 +9928,8 @@ Release "
 	.DEBUG-LINE 5,112,1
 	EQUAL? DAY,4 \?L5
 	.DEBUG-LINE 5,113,1
-	PRINTR " You hear the lapping of water from below."
+	PRINTI " You hear the lapping of water from below."
+	JUMP ?L9
 	.DEBUG-LINE 5,115,1
 ?L5:	EQUAL? DAY,5 \?L9
 	.DEBUG-LINE 5,116,1
@@ -9948,7 +9948,8 @@ Release "
 	.DEBUG-LINE 5,143,1
 	EQUAL? DAY,6,7 \?L5
 	.DEBUG-LINE 5,144,1
-	PRINTR "From the direction of the stairway comes the sound of ocean surf."
+	PRINTI "From the direction of the stairway comes the sound of ocean surf."
+	JUMP ?L9
 	.DEBUG-LINE 5,146,1
 ?L5:	EQUAL? DAY,8 \?L9
 	.DEBUG-LINE 5,147,1
@@ -10405,6 +10406,8 @@ Release "
 	.DEBUG-LINE 5,862,1
 	IN? CANTEEN,ADVENTURER /?L14
 	.DEBUG-LINE 5,863,1
+	.DEBUG-LINE 5,863,1
+	.DEBUG-LINE 5,864,1
 	PRINTR "Maybe if you were holding the canteen..."
 	.DEBUG-LINE 5,865,1
 ?L14:	ZERO? PRSI \?L18
@@ -11023,6 +11026,7 @@ Standing against the rear wall is a large dispensing machine with a spout. "
 	.DEBUG-LINE 5,1826,1
 	CALL PERFORM,V?POUR,CHEMICAL-FLUID,SPOUT-PLACED
 	.DEBUG-LINE 5,1827,1
+	.DEBUG-LINE 5,1828,1
 	RTRUE
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -11207,7 +11211,6 @@ Standing against the rear wall is a large dispensing machine with a spout. "
 ?L82:	MOVE X,HERE
 	.DEBUG-LINE 5,1962,1
 	SET 'X,N
-	PUSH X
 	JUMP ?L77
 	.DEBUG-LINE 5,1965,1
 ?L67:	EQUAL? PRSA,V?EXAMINE \?L84
@@ -11436,6 +11439,8 @@ Standing against the rear wall is a large dispensing machine with a spout. "
 	.DEBUG-LINE 5,2115,1
 	CRLF
 	.DEBUG-LINE 5,2115,1
+	.DEBUG-LINE 5,2115,1
+	.DEBUG-LINE 5,2118,1
 	PRINTR "Floyd scratches his head and looks at you. ""What else were you saying to Floyd? I can't remember."""
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -11552,6 +11557,8 @@ Standing against the rear wall is a large dispensing machine with a spout. "
 	CALL PICK-ONE,FLOYDISMS >STACK
 	PRINT STACK
 	.DEBUG-LINE 5,2192,1
+	.DEBUG-LINE 5,2192,1
+	.DEBUG-LINE 5,2193,1
 	PRINTR "."
 	.DEBUG-LINE 5,2195,1
 ?L3:	ZERO? FLOYD-FOLLOW /?L22
@@ -11564,6 +11571,8 @@ Standing against the rear wall is a large dispensing machine with a spout. "
 	.DEBUG-LINE 5,2198,1
 	CRLF
 	.DEBUG-LINE 5,2198,1
+	.DEBUG-LINE 5,2198,1
+	.DEBUG-LINE 5,2201,1
 	PRINTR "Floyd starts to follow you but notices the Lazarus breast plate. He sniffs and leaves the room."
 	.DEBUG-LINE 5,2202,1
 ?L24:	MOVE FLOYD,HERE
@@ -12370,11 +12379,9 @@ The console on the right side of the room is labelled ""Send Staashun."" A scree
 	EQUAL? TEMP,STACK \?L11
 	.DEBUG-LINE 5,2965,1
 ?L13:	DEC 'COUNT
-	PUSH COUNT
 	JUMP ?L6
 	.DEBUG-LINE 5,2967,1
 ?L11:	PUT ORDER-LTBL,COUNT,TEMP
-	PUSH 1
 	JUMP ?L6
 	.DEBUG-ROUTINE-END 0,0,0
 
@@ -12400,6 +12407,8 @@ The console on the right side of the room is labelled ""Send Staashun."" A scree
 ?L5:	CALL HELD?,FLASK >STACK
 	ZERO? STACK \?L6
 	.DEBUG-LINE 5,2984,1
+	.DEBUG-LINE 5,2984,1
+	.DEBUG-LINE 5,2985,1
 	PRINTR "You're not holding the flask."
 	.DEBUG-LINE 5,2986,1
 ?L6:	REMOVE CHEMICAL-FLUID
@@ -12411,6 +12420,8 @@ The console on the right side of the room is labelled ""Send Staashun."" A scree
 	CALL HELD?,FLASK >STACK
 	ZERO? STACK \?L14
 	.DEBUG-LINE 5,2992,1
+	.DEBUG-LINE 5,2992,1
+	.DEBUG-LINE 5,2993,1
 	PRINTR "You're not holding the flask."
 	.DEBUG-LINE 5,2994,1
 ?L14:	EQUAL? PRSI,CANTEEN \?L18
@@ -12519,9 +12530,7 @@ The console on the right side of the room is labelled ""Send Staashun."" A scree
 	FSET CUBE,MUNGEDBIT
 	.DEBUG-LINE 5,3053,1
 	CALL CUBE-SEEMS
-	.DEBUG-LINE 5,3060,1
-	CRLF
-	RTRUE
+	JUMP ?L79
 	.DEBUG-LINE 5,3054,1
 ?L77:	EQUAL? PRSI,GOOD-BEDISTOR \?L79
 	ZERO? COURSE-CONTROL-FIXED /?L79
@@ -12534,6 +12543,7 @@ The console on the right side of the room is labelled ""Send Staashun."" A scree
 	.DEBUG-LINE 5,3059,1
 	CALL CUBE-SEEMS
 	.DEBUG-LINE 5,3060,1
+	.DEBUG-LINE 5,3061,1
 ?L79:	CRLF
 	RTRUE
 	.DEBUG-LINE 5,3062,1
@@ -12610,6 +12620,8 @@ The console on the right side of the room is labelled ""Send Staashun."" A scree
 	.DEBUG-LINE 5,3101,1
 	SUB SCORE,6 >SCORE
 	.DEBUG-LINE 5,3102,1
+	.DEBUG-LINE 5,3102,1
+	.DEBUG-LINE 5,3104,1
 	PRINTR "The bedistor also happens to dissolve."
 	.DEBUG-LINE 5,3106,1
 ?L98:	CALL CHEMICAL-POURS >STACK
@@ -12874,6 +12886,8 @@ The console on the right side of the room is labelled ""Send Staashun."" A scree
 	.DEBUG-LINE 6,267,1
 	ZERO? HOLE-TRIP-FLAG /?L1
 	.DEBUG-LINE 6,268,1
+	.DEBUG-LINE 6,268,1
+	.DEBUG-LINE 6,269,1
 	PRINTR """Not again,"" whines Floyd."
 	.DEBUG-LINE 6,271,1
 ?L1:	SET 'C-ELAPSED,50
@@ -13240,6 +13254,7 @@ The console on the right side of the room is labelled ""Send Staashun."" A scree
 	.DEBUG-LINE 6,737,1
 	PRINT MORE-INFO
 	.DEBUG-LINE 6,737,1
+	.DEBUG-LINE 6,738,1
 	CRLF
 	RTRUE
 	.DEBUG-LINE 6,740,1
@@ -13257,6 +13272,7 @@ The console on the right side of the room is labelled ""Send Staashun."" A scree
 	.DEBUG-LINE 6,745,1
 	PRINT MORE-INFO
 	.DEBUG-LINE 6,745,1
+	.DEBUG-LINE 6,746,1
 	CRLF
 	RTRUE
 	.DEBUG-LINE 6,748,1
@@ -14514,9 +14530,13 @@ The printout ends at this point."
 	.DEBUG-LINE 6,1825,1
 	SET 'FLOYD-WAITING,1
 	.DEBUG-LINE 6,1826,1
-	PRINTR """Looks dangerous in there,"" says Floyd. ""I don't think you should go inside."" He peers in again. ""We'll need card there to fix computer. Hmmm... I know! Floyd will get card. Robots are tough. Nothing can hurt robots. You open the door, then Floyd will rush in. Then you close door. When Floyd knocks, open door again. Okay? Go!"" Floyd's voice trembles slightly as he waits for you to open the door."
+	PRINTI """Looks dangerous in there,"" says Floyd. ""I don't think you should go inside."" He peers in again. ""We'll need card there to fix computer. Hmmm... I know! Floyd will get card. Robots are tough. Nothing can hurt robots. You open the door, then Floyd will rush in. Then you close door. When Floyd knocks, open door again. Okay? Go!"" Floyd's voice trembles slightly as he waits for you to open the door."
+	JUMP ?L20
 	.DEBUG-LINE 6,1834,1
-?L16:	PRINTR """Ooo, look,"" he says. ""There's a miniaturization booth access card!"""
+?L16:	PRINTI """Ooo, look,"" he says. ""There's a miniaturization booth access card!"""
+	.DEBUG-LINE 6,1836,1
+?L20:	CRLF
+	RTRUE
 	.DEBUG-ROUTINE-END 0,0,0
 
 	.DEBUG-ROUTINE 0,0,0,"I-CLEAR-FLOYD-PEER"

@@ -31,23 +31,23 @@ DISABLE!-INITIAL
 	      without consulting MARC! -- ENCHANTER"
  	    NORTH NE EAST SE SOUTH SW WEST NW UP DOWN IN OUT>
 
-<IFILE "MACROS" T>
-<IFILE "SYNTAX" T>
-<IFILE "MAIN" T>
-<IFILE "SUB" T>
-<IFILE "BATTLE" T>
-<IFILE "THINGS" T>
-<IFILE "DOME" T>
+<IFILE "macros" T>
+<IFILE "syntax" T>
+<IFILE "main" T>
+<IFILE "sub" T>
+<IFILE "battle" T>
+<IFILE "things" T>
+<IFILE "dome" T>
 
-<IFILE "PEOPLE" T>
-<IFILE "PLACES" T>
-<IFILE "GLOBAL" T>
+<IFILE "people" T>
+<IFILE "places" T>
+<IFILE "global" T>
 <CONSTANT SERIAL 0>
-<IFILE "CLOCK" T>
+<IFILE "clock" T>
 <ENDLOAD>
-<IFILE "PARSER" T>
-<IFILE "VERBS" T>
-<IFILE "EVENTS" T>
+<IFILE "parser" T>
+<IFILE "verbs" T>
+<IFILE "events" T>
 
 <PROPDEF SIZE 5>
 <PROPDEF CAPACITY 0>
