@@ -1116,7 +1116,7 @@ flings " .STR " away over the shelves" >
 		<UPDATE-SCORE>
 		<SETG MINCE-EATEN T>
 		<TELL
-		 ". There's a noticable improvement in his breath, even from here">)>
+		 ". There's a noticeable improvement in his breath, even from here">)>
 		<TELL ,PERIOD>>
 
 <ROUTINE GIVE-TO-ROCKS ()

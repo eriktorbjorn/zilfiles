@@ -1203,7 +1203,7 @@ violent force fields and electrical disturbances to the east."
 "Wiring etched into the walls branches off to the northeast from here, while an incredibly powerful source of energy is easily detectable to the east."
 "I can hear a difference in the air currents and air conditioning circuits here
 as if another passage started to the northeast."
-"The great interpreter of all our daily occurences lies ahead, while a walk in
+"The great interpreter of all our daily occurrences lies ahead, while a walk in
 the sky waits for me to the northeast."
 "CLC indicates I have arrived at a northeast branch in the corridor." >)
       (WEST TO CORRIDOR-3)
