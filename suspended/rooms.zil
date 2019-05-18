@@ -1617,6 +1617,7 @@ data energy into an object surrounding me. Sensors detect a similar channeling t
 "The first stage of our journey begins here, the music goes round and round."
 "I stand within the first Filtering Computer, a massive device used to interface us with you and maintain the surface systems.">)
       (SOUTH TO TUBE2)
+      (SW TO MIDMIST)
       (LINE 2)
       (STATION FC1)
       (GLOBAL AIRCON)>
