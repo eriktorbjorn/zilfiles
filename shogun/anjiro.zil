@@ -1836,7 +1836,7 @@ curiosity: what will the barbarian do next?" CR>)
 "You grab for the crucifix, but Sebastio snatches it away, holding
 it up as if to ward you off.  \"Demon!  Heretic!\" he screams.  \"You'd
 love to defile this holy cross to prove to these pagans you're also a
-satan worshipper and an enemy of the church!  You'll die first!\"" CR>
+Satan worshipper and an enemy of the church!  You'll die first!\"" CR>
 		       <JAPANESE-INTERESTED?>)>)>>
 
 <ROUTINE JAPANESE-INTERESTED? ()
