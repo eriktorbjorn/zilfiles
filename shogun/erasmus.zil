@@ -2798,7 +2798,7 @@ rocks.">)>>
 "He stirs weakly, but otherwise doesn't respond." CR>)>)
 	       (<VERB? PISS>
 		<TELL
-"You have come to hate him, but to humilate him in his helpless,
+"You have come to hate him, but to humiliate him in his helpless,
 weakened condition would be too much." CR>)
 	       (<VERB? MOVE>
 		<TELL "He's too weak to be moved." CR>)
