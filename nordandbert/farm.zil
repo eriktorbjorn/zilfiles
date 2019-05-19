@@ -1243,7 +1243,7 @@ each other's heavenward flight path.|
 You take aim and throw, and the birds explode in rapid succession like clay
 pigeons.|
 |
-The old dog lets out a long, wolfish howl which echoes thoughout the
+The old dog lets out a long, wolfish howl which echoes throughout the
 valley." CR>)
 	       (<VERB? KILL>
 		<COND (,PRSI
