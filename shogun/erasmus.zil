@@ -2539,7 +2539,7 @@ sea." CR>)>)
 "You let go of the wheel." CR>)
 		      (ELSE
 		       <TELL
-"You arent' holding it." CR>)>)
+"You aren't holding it." CR>)>)
 	       (<P? PUT LASHING WHEEL>
 		<PERFORM ,V?TIE ,WHEEL>
 		<RTRUE>)
