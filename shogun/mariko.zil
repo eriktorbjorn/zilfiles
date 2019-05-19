@@ -405,7 +405,7 @@ vanguard.  From up ahead twenty more Grays move silently out from the
 hundreds that are waiting.|
 |
 \"Wait,\" Mariko orders.  She steps out of her palanquin and picks up
-a sword, unsheaths it, and walks forward alone.  She approaches the
+a sword, unsheathes it, and walks forward alone.  She approaches the
 officer.  \"You know who I am.  Please get out of my way.\"|
 |
 \"I am Kojima Harutomo, Captain of the Sixth Legion.  Please excuse me,
