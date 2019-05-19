@@ -1947,7 +1947,7 @@ little else.  The interiors are almost entirely mysteries.\"" CR>)
 	 <COND (<PRSI? ,ME>
 		<TELL
 "You relate the story of your life. Toranaga questions
-you closely about many points, particulary those relating to war and
+you closely about many points, particularly those relating to war and
 politics." CR>)
 	       (<PRSI? ,DOMINGO ,PRISON>
 		<HOW-I-LEARNED>)
