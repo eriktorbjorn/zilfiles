@@ -206,7 +206,7 @@ bad.  Lady Ochiba seems surprised." CR>)
 				<SETG OCHIBA-QUESTION 0>
 				<TELL CR
 "\"Bah!  It is clear he is a barbarian without honor!\"  Ishido turns
-away with a snort of dirision." CR>
+away with a snort of derision." CR>
 				<RTRUE>)
 			       (ELSE
 				<TELL CR
