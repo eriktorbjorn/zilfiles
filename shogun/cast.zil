@@ -1428,7 +1428,7 @@ Toranaga.  "G"He is dressed in the Gray uniform." CR>)
 		<TELL
 "Ishido Kazunari is Commander of the
 garrison of Osaka Castle, Commander of the Heir's Bodyguard, Chief General
-of the Armies of the West, Conquerer of Korea, member of the Council of
+of the Armies of the West, Conqueror of Korea, member of the Council of
 Regents, and Inspector General of the Armies of the late Taiko." CR>)
 	       (<P? TELL-ABOUT ISHIDO (TORANAGA KIRITSUBO TORANAGA-IN-DRAG)>
 		<COND (,SEEN-TORANAGA?
