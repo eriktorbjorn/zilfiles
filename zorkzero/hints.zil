@@ -911,7 +911,7 @@ to the slate puzzle"
 		  "stock certificate (John D.): in the Vault"
 		  "saddle (Stonewall): in the Stable"
 		  "lance (Stonewall): inside the armor in the Library
-according the the scroll puzzle"
+according to the scroll puzzle"
 		  "violin (Johann Sebastian): in the Conductor's Pit"
 		  "metronome (Johann Sebastian): hidden in the Torture Chamber"
 		  "zorkmid bill (J. Pierpont): winning the shell game
