@@ -592,7 +592,7 @@ find you've returned to the house you left." CR>)
 		       <FCLEAR ,OMI ,RMUNGBIT> ;"he won't kill you"
 		       <TELL
 "You walk up the dirt path that leads to the fields, watched by curious
-eyes every second.  In the terraced fields are farmers up to the their knees
+eyes every second.  In the terraced fields are farmers up to their knees
 in water, planting and weeding.  How can anything grow in such wetness,
 you wonder, and how can the fields have been built on such steep
 hillsides?  Confused, you walk back to the house you left." CR>)>)
