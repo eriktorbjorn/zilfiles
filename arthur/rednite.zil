@@ -64,7 +64,7 @@ lies to the west.|"
 					<COND
 						(<EQUAL? ,OHERE ,RM-FIELD-OF-HONOUR>
 							<TELL
-"at attention before you, staring off into the distance. He acknowleges
+"at attention before you, staring off into the distance. He acknowledges
 your presence enough to say,"
 							>
 						)
