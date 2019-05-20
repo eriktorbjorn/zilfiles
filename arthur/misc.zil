@@ -152,7 +152,7 @@
 		(<VERB? ATTACK>
 			<RT-WASTE-OF-TIME-MSG>
 			<RT-AUTHOR-MSG
-"Feeling self-desctructive? Dial 1-800-HIT-SELF for an incredibly expensive
+"Feeling self-destructive? Dial 1-800-HIT-SELF for an incredibly expensive
 but absolutely worthless brochure from Masochists Anonymous. Call
 anytime - our lines are always busy!"
 			>
