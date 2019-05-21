@@ -986,7 +986,7 @@ Act the Part, Visit the Manor of Speaking, or Shake a Tower."
 "The farm crisis never seemed so desperate as it has this planting season
 in Punster. One such family farm on the edge of town, the McCleary's, has
 been especially blighted. The family, though well accustomed to hard work,
-suddenly lost the ability to perform even the simplist of chores necessary to
+suddenly lost the ability to perform even the simplest of chores necessary to
 scratch a living from the soil. They have since been driven from the land,
 and join with their fellow Punster neighbors in urging you to somehow save the
 family farm." CR CR>
