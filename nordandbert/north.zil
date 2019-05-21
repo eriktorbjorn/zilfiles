@@ -894,7 +894,7 @@ from you." CR>)>>
 		       <RTRUE>)>
 		<COND (<NOT <FSET? ,MERMAID ,RMUNGBIT>>
 		       <TELL CR
-"A mermaid swims desperately under the suface of the ice.">)
+"A mermaid swims desperately under the surface of the ice.">)
 		      (T
 		       <TELL CR 
 "A mermaid is lying exhausted on the ice.">)>)
