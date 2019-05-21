@@ -1009,7 +1009,7 @@ well within the realm of possibilities." CR CR>
 			      <QUEUE I-DEAN -1>)>
 		       <SETG HINT-TBL ,HAZING-HINTS>
 		       <TELL
-"In the dark forest outside the town boundries of Punster, chaos has been
+"In the dark forest outside the town boundaries of Punster, chaos has been
 the order of the day. On a recent afternoon the daughter of a leading citizen
 of our town, out for a stroll among the tall pines, disappeared without
 apparent trace. Rumor has it that one strange, stand-alone door is the only
