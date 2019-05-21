@@ -1611,7 +1611,7 @@ and puts his hands on his hips." CR>)
 		<JIGS-UP
 "You get a sinking feeling as you're hammered through the floor of the cloud
 like a wooden peg. The view of the divided farmland below is picture-book
-and enobling. Your fodder enriches further the land.">)>>
+and ennobling. Your fodder enriches further the land.">)>>
 
 <ROUTINE CLIENT-FALL ()
 	 <UPDATE-SCORE>
