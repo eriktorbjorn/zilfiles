@@ -823,7 +823,7 @@ deal with you">)>)
 regard you as a minor player in a lower league politically than himself">)
 			     (<NOT <FSET? ,BLESSING ,PHRASEBIT>>
 			      <TELL
-"The mayor, pacing the floor and appearing cursed by the disasterous plague of
+"The mayor, pacing the floor and appearing cursed by the disastrous plague of
 nonsense that has beset his town, ignores the decree">)
 			     (<NOT <FSET? ,LINEN ,PHRASEBIT>>
 			      <TELL
