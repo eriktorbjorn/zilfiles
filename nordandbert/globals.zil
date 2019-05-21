@@ -996,7 +996,7 @@ family farm." CR CR>
 		       <COND (<FINISHED? ,JOAT>
 			      <RTRUE>)>
 		       <TELL 
-"The oddities of language have been so prevalant in the town of Punster,
+"The oddities of language have been so prevalent in the town of Punster,
 that surrounding communities have been similarly affected. One such bordering
 town is Jackville, located in the northern backwoods region, but still
 well within the realm of possibilities." CR CR>
