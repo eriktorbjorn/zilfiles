@@ -219,7 +219,7 @@ chances for finding her. 'they will go to great lengths to keep her from me.'"
 	(OLDDESC "door")
 	(NEWDESC "shore")
 	(OLD-TO-NEW 
-"The wind suddenly picks fiercly, and blows blinding sand the volume
+"The wind suddenly picks fiercely, and blows blinding sand the volume
 of dunes into the area. When the wind dies down, you find your surroundings
 have changed...")
 	(DESCFCN SHINING-DOOR-F)
