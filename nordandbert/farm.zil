@@ -139,7 +139,7 @@ legs.">)
       (LOC ROOMS)
       (DESC "Road")
       (LDESC 
-"The telltail smell of grain and dung drifts by. You're on a dusty
+"The telltale smell of grain and dung drifts by. You're on a dusty
 road in front of abandoned farm -- a nice-sized spread of land that
 stretches far out to meet the horizon.")
       (GLOBAL FARM)
