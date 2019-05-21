@@ -133,7 +133,7 @@ of that existence is the stock room." CR>)>)
 			      <TELL ,DONT-KNOW-WHERE>)
 			     (<NOT <FSET? ,FACTORY ,TOUCHBIT>>
 			      <TELL  "You follow in the precise
-direction of the shepherd. It's trecherous going, since you're
+direction of the shepherd. It's treacherous going, since you're
 travelling over dill and hail -- that is, pickles strewn along the
 paths, and ice chunks hurling from the sky. You eventually come upon an
 out-of-the-way spot along the now quite polluted river. It's a prime
