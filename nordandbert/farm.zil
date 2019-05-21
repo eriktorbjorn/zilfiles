@@ -1110,7 +1110,7 @@ a needle there">)>
 		      <TELL
 "What on earth do you expect to find in a haystack?" CR>)
 		      (T
-		       <TELL "You arleady have." CR>)>)
+		       <TELL "You already have." CR>)>)
 	       (<VERB? CLIMB-UP CLIMB CLIMB-ON ENTER BOARD>
 		<TELL 
 "You step up the pungent haystack, and slide back down." CR>) 
