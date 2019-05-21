@@ -1100,7 +1100,7 @@ yellow stalks of hay grass. You grab it">)
 			      <RTRUE>)>)
 		      (T
 		       <TELL 
-"Finding" A ,PRSI " in a haystack is even less likey than finding
+"Finding" A ,PRSI " in a haystack is even less likely than finding
 a needle there">)>
 		<TELL ,PERIOD>)
 	       (<VERB? SEARCH>
