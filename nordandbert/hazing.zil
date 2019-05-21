@@ -1909,7 +1909,7 @@ you actually remember hearing this noise from reruns of Hee-Haw." CR>)>)
 more than you do." CR>)
 	       (<VERB? EXAMINE>
 		<TELL 
-"The meal is perfectly square, and looks scrumptous." CR>)>>
+"The meal is perfectly square, and looks scrumptious." CR>)>>
 
 <ROOM CLOUD-ROOM
       (LOC ROOMS)
