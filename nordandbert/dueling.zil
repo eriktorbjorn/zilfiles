@@ -379,7 +379,7 @@ of paint lingers in the air.">)>>
 	 <COND (<VERB? EXAMINE>
 		<TELL
 "The television set, which has been left droning on here, is now showing
-a marathon of laundry detergent comercials." CR>)
+a marathon of laundry detergent commercials." CR>)
 	       (<VERB? OFF SET>
 		<TELL "It has no controls of any kind." CR>)>>    
 		
