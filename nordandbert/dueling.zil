@@ -600,7 +600,7 @@ capitalist booty!" CR>)>>
 	(DESC "safe")
 	(LDESC 
 "A safe has been revealed high on the wall where the portrait of the
-Father of our Revolution has once proundly hung.")
+Father of our Revolution has once proudly hung.")
 	(SYNONYM SAFE LOCK)
 	(ADJECTIVE UNIVERSIAL)
 	(FLAGS NDESCBIT CONTBIT SEARCHBIT LOCKEDBIT)
