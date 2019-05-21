@@ -424,7 +424,7 @@ the chair, sweat draining from your temples">)
 		      (<PRSO? ,ADVICE>
 		       <TELL 
 "You read the advice in a loud voice with much sarcasm, taking it so
-lightly that the slip of paper almosts drifts up into the air. The
+lightly that the slip of paper almost drifts up into the air. The
 waitress seems snubbed that you don't seem to be taking the advice to
 heart">)
 		      (<PRSO? ,UMBRAGE>
