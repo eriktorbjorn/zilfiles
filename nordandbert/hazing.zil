@@ -1550,7 +1550,7 @@ shape, stands here looking disheveled and shaken">)>
 			      <RTRUE>)
 			     (<EQUAL? ,HERE ,STOCK-ROOM>
 			      <TELL
-"He's too busy rumaging through the clothes to notice you." CR>
+"He's too busy rummaging through the clothes to notice you." CR>
 			      <STOP>)
 			     (T
 			      <TELL "He ignores you." CR>
