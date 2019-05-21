@@ -745,7 +745,7 @@ side to side below the surface of the ice." CR>)>)>>
 		       <RTRUE>)>  
 		<TELL "The ice is too thick">
 		<COND (,PRSI
-		       <TELL " to be penatrated by" T ,PRSI>)>
+		       <TELL " to be penetrated by" T ,PRSI>)>
 		<TELL ,PERIOD>)>>
 	       
 <OBJECT FROST
