@@ -2922,7 +2922,7 @@ your demise is permanent." CR>
 				   <NOT ,RIVER-EVAPORATED>>
 			      <TELL
 "A moment later you find yourself at the bottom of a river, between
-a whirpool, some sharp rocks, and a school of river sharks. This time,
+a whirlpool, some sharp rocks, and a school of river sharks. This time,
 your death is terminal." CR>
 			      <FINISH>)
 			     (<AND <IN-GUILD-HALL? ,RESURRECTION-ROOM>
