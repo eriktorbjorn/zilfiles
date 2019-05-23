@@ -149,7 +149,7 @@ lies to the northwest.">)>
 		<PERFORM ,V?DRINK ,WATER>
 		<RTRUE>)
 	       (<VERB? EXAMINE>
-		<TELL "It streches east as far as the eye can see." CR>)
+		<TELL "It stretches east as far as the eye can see." CR>)
 	       (<VERB? RESEARCH>
 		<TELL
 "The Flathead Ocean, called the Great Sea by the ancients, has a very
