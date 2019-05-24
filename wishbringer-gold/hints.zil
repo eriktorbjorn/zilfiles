@@ -763,7 +763,7 @@
 		 "Opening the metal can inside the Magick Shoppe?"
 		 "Examining the wanted posters in Festeron? In Witchville?"
 		 "Staying in the Jail Cell after being captured by the Boot Patrol?"
-		 "Getting captured three times by the Boot Patrol, after savingthe seahorse? Without saving the seahorse?"
+		 "Getting captured three times by the Boot Patrol, after saving the seahorse? Without saving the seahorse?"
 		 "Ignoring King Anatinus? Dropping the whistle or the hat?"
 		 "Letting the small mailbox meet the big mailbox?"
 		 "Looking around the Museum after the mailboxes have met? If the mailboxes never met?"
