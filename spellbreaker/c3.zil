@@ -771,7 +771,7 @@ are seen no more.">)>)
 			      <START-FALLING>
 			      <TELL
 " As you are in midair, you begin to fall. The
-carpet loses its impetus the moment you cease to touch it and accordians
+carpet loses its impetus the moment you cease to touch it and accordions
 like a rug that's been slipped on. It too begins to fall.">)>
 		       <CRLF>)
 		      (<AND <VERB? LEAP> <G? ,UD-COUNT 0>>
