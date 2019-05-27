@@ -426,7 +426,7 @@
 	 <PLTABLE "How do I get past Thorbast/Thorbala?"
 		  "You'll never get past while he's/she's alive."
 		  "Try killing him/her with the sword from the Hold."
-		  "Thorbast/Thorbala is a tough opponent, but after several attempts to kill him/her with your sword you will succeed in knocking Thobast's/Thorbala's sword out of his/her hands. Take it as it floats toward you, disarming Thorbast/Thorbala."
+		  "Thorbast/Thorbala is a tough opponent, but after several attempts to kill him/her with your sword you will succeed in knocking Thorbast's/Thorbala's sword out of his/her hands. Take it as it floats toward you, disarming Thorbast/Thorbala."
 		  "Trying to kill Thorbast/Thorbala at this point is the wrong move, however. Thorbast/Thorbala is just too quick for you, even disarmed. Have you ever noticed that you're dressed all in white, and Thorbast/Thorbala all in black?"
 		  "What would the \"good guy\" in any sword fight do upon disarming his/her opponent?"
 		  "Once you're holding Thorbast's/Thorbala's sword, give it to him/her."
