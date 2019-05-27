@@ -371,9 +371,9 @@
 		 "Surely you examined the boomerang!"
 		 "Can we assume that you thoroughly interrogated Winston Churchill and Attila the Hun?"
 		 "Have you realized that this is one of those fake questions designed to keep you from reading hints to puzzles you're not stumped on? There's no basement in Cleveland!">
-	 <PLTABLE "Where's the Cleveland phonebook?"
+	 <PLTABLE "Where's the Cleveland phone book?"
 		  "It's not anywhere in Cleveland."
-		  "When you get there, the phonebook will be obvious."> 
+		  "When you get there, the phone book will be obvious."> 
 	 <PLTABLE "Is there anything in the bedroom?"
 		  "Have you looked out the window?">
 	 <PLTABLE "How can I get the headlight?"
