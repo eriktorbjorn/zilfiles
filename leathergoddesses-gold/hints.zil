@@ -218,7 +218,7 @@
 	<PLTABLE "How can I control the royal barge?"
 		 "Examine the controls. Read the buttons. Try pushing them."
 		 "The orange button turns the magnetic mooring mechanism on or off. If you're docked, pushing the orange button will send you off into the canal. If you're in the canal near a dock, turn on the MagnetoMoor to dock. If you're in the canal but not near a dock, turning on the MagnetoMoor will have no immediate effect -- but if you subsequently pass a dock, you'll dock at it automatically."
-		 "The purple button turns the engines on or off. When the button reads \"Full Spead Ahead\" the engines are on, and the barge will move to a new canal location every turn. When the button reads \"Go With The Flow\" the engines are off, and the barge will move to a new canal location only every other turn.">
+		 "The purple button turns the engines on or off. When the button reads \"Full Speed Ahead\" the engines are on, and the barge will move to a new canal location every turn. When the button reads \"Go With The Flow\" the engines are off, and the barge will move to a new canal location only every other turn.">
 	<PLTABLE "How can I decode the coded message?"
 		 "Reread \"The Adventures of Lane Mastodon #91.\""
 		 "Look at the center-left panel on Page 5 of the comic. This tells you how to decode Martian messages."
