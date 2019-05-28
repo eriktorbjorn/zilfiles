@@ -3409,7 +3409,7 @@ addition by one of his successors. Doorways lead north and southwest.")
 	       (<VERB? EXAMINE>
 		<TELL
 "It's a set of 100-ugh weights, small enough to hold in one hand (but
-unless you a pretty awesome athleter, not nearly light enough to hold
+unless you a pretty awesome athlete, not nearly light enough to hold
 in one hand)." CR>)>>
 
 <END-SEGMENT>
