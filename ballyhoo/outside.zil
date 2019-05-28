@@ -4815,7 +4815,7 @@ tobacco." CR>)
 	       (<AND <VERB? COMPARE>
 		     <EQUAL? ,NOTE ,PRSO ,PRSI>>
 		<TELL 
-"The \"M\" on the " D ,SCRAP " looks like it was cut from the the same
+"The \"M\" on the " D ,SCRAP " looks like it was cut from the same
 newspaper as the letters on the " D ,NOTE "." CR>)  
 	       (<VERB? READ>
 		<TELL 

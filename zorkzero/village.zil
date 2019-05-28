@@ -829,7 +829,7 @@ molten rock. A giant slug-shaped creature oozes up and devours you.">)
 <ROUTINE FR-BLDG-F ()
 	 <COND (<VERB? RESEARCH>
 		<PICTURED-ENTRY ,FR-ILL
-"The FrobozzCo World Headquaters Building in Flatheadia, designed by Frank
+"The FrobozzCo World Headquarters Building in Flatheadia, designed by Frank
 Lloyd Flathead and built by the Frobozz Magic Construction Company in
 781 GUE, is easily the tallest, most impressive building in all of Quendor.">)
 	       (<VERB? EXAMINE>

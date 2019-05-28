@@ -353,7 +353,7 @@ be impossible to scale." CR>)>>
 	 <COND (<AND <VERB? EXAMINE> <EQUAL? ,PRSO ,GLOBAL-WATER>>
 		<COND (<EQUAL? ,HERE ,BEACH>
 		       <TELL
-"The ocean streches out as far as the eye can see to the south and
+"The ocean stretches out as far as the eye can see to the south and
 east." CR>)
 		      (<EQUAL? ,HERE ,FOREST-2>
 		       <TELL

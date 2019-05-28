@@ -316,7 +316,7 @@ protected against this sort of prank." CR>)
 		<RTRUE>)
 	       (<VERB? RESEARCH>
 		<TELL
-"Flumes are artifical water channels, usually with boat rides. The
+"Flumes are artificial water channels, usually with boat rides. The
 boat is typically a hollowed-out log. The largest flume of this kind
 is in Bozbarland." CR>)>>
 

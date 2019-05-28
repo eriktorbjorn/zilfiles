@@ -483,7 +483,7 @@ the old man's servility." CR>)
 			 <COND (<OR <G? ,DELAY-CNT 3>
 				    <NOT <PASSIVE-VERB?>>>
 				<TELL CR
-"Toranaga looks up slowly, gestures imperceptably at Hiro-matsu, and
+"Toranaga looks up slowly, gestures imperceptibly at Hiro-matsu, and
 goes back to his falconry.  Hiro-matsu rises, bows to Toranaga, and
 slays you with a single stroke.">
 				<JIGS-UP>
@@ -1947,7 +1947,7 @@ little else.  The interiors are almost entirely mysteries.\"" CR>)
 	 <COND (<PRSI? ,ME>
 		<TELL
 "You relate the story of your life. Toranaga questions
-you closely about many points, particulary those relating to war and
+you closely about many points, particularly those relating to war and
 politics." CR>)
 	       (<PRSI? ,DOMINGO ,PRISON>
 		<HOW-I-LEARNED>)

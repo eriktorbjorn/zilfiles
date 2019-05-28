@@ -857,7 +857,7 @@ Overhead I can trace an electrical flow that continues to the southeast."
 0
 "There once was a cowboy named Mix|
 Who managed just one shot in six|
-    He looked quite surpised|
+    He looked quite surprised|
     When he opened his eyes|
 And saw that his gun wasn't fixed."
 "CLC tags indicate a robot-oriented area exists to the southeast.">)

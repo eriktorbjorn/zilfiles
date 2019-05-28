@@ -430,7 +430,7 @@ passed their expiration date. They may have been once used as bait-and-switch,
 but now they're a blight on the store." CR>)>)
 	       ;"muscles"
 	       (<VERB? EAT>
-		<TELL "Auto-canibalism is not the answer." CR>)>>
+		<TELL "Auto-cannibalism is not the answer." CR>)>>
 
 <OBJECT SAIL
 	(LOC MUSSEL-SHELF)
@@ -515,7 +515,7 @@ but now they're a blight on the store." CR>)>)
 <ROUTINE BRITISH-ROOM-F (RARG)
 	 <COND (<EQUAL? .RARG ,M-LOOK>
 		<TELL
-"The floor here is richly painted in the bold colours of Brittania.">)>> 
+"The floor here is richly painted in the bold colours of Britannia.">)>> 
 
 <OBJECT BRITISH-SHELF
 	(LOC BRITISH-ROOM)

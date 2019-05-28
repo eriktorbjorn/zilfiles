@@ -2097,7 +2097,7 @@ the huge compressor that supplies air to the hookahs. "
 						<NOT <FSET? ,TH-COMPRESSOR ,FL-ON>>
 					>
 					<TELL
-"The eerie silence makes an unsettling contrast to the normal cacophany in
+"The eerie silence makes an unsettling contrast to the normal cacophony in
 the cylinder."
 					>
 				)

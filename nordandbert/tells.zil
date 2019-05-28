@@ -1201,7 +1201,7 @@ who untied me so I could type out this story.]|">
 			    <EQUAL? ,WIFE-N 2>>
 		       <TELL CR 
 "She walks over to Bob and consoles him as he describes what a
-meanee you have been." CR>)
+meanie you have been." CR>)
 		      (<AND <EQUAL? ,HERE ,FRONT-ROOM>
 			    <EQUAL? ,WIFE-N 3>>
 		       <TELL CR

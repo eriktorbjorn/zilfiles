@@ -154,7 +154,7 @@ cave and the pool we had found within it.">)
 			 ;"Didn't hide..."
 			 <TELL
 "If only I could have avoided the strange creatures that had captured " D
-,LAKE-VICTIM ". I may have inadvertantly worsened my chances by allowing
+,LAKE-VICTIM ". I may have inadvertently worsened my chances by allowing
 myself to have been seen by one of them earlier.">)
 			(,NYMPHS-COMING?
 			 <TELL
@@ -508,7 +508,7 @@ I must not judge him too harshly.")>
 	(SDESC "Umber")
 	(KBD %<ASCII !\U>)
 	(SOLUTION
-"Why did Praxix refuse Umber's offer to join him? Pride? Stubborness? I
+"Why did Praxix refuse Umber's offer to join him? Pride? Stubbornness? I
 suppose we shall never know.")>
 
 <OBJECT HINT-DUNGEON
@@ -906,7 +906,7 @@ I will never know what lay along that path.">)
 that we never found a way across. Could that have helped?">)
 			(<NOT <FSET? ,SUNSET-TOWER ,SOLVED>>
 			 <TELL
-"The Sunset Tower: why do I feel that we have missed simething there? Was
+"The Sunset Tower: why do I feel that we have missed something there? Was
 there something hidden there?">)
 			(T
 			 <TELL

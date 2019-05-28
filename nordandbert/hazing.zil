@@ -133,7 +133,7 @@ of that existence is the stock room." CR>)>)
 			      <TELL ,DONT-KNOW-WHERE>)
 			     (<NOT <FSET? ,FACTORY ,TOUCHBIT>>
 			      <TELL  "You follow in the precise
-direction of the shepherd. It's trecherous going, since you're
+direction of the shepherd. It's treacherous going, since you're
 travelling over dill and hail -- that is, pickles strewn along the
 paths, and ice chunks hurling from the sky. You eventually come upon an
 out-of-the-way spot along the now quite polluted river. It's a prime
@@ -219,7 +219,7 @@ chances for finding her. 'they will go to great lengths to keep her from me.'"
 	(OLDDESC "door")
 	(NEWDESC "shore")
 	(OLD-TO-NEW 
-"The wind suddenly picks fiercly, and blows blinding sand the volume
+"The wind suddenly picks fiercely, and blows blinding sand the volume
 of dunes into the area. When the wind dies down, you find your surroundings
 have changed...")
 	(DESCFCN SHINING-DOOR-F)
@@ -1550,7 +1550,7 @@ shape, stands here looking disheveled and shaken">)>
 			      <RTRUE>)
 			     (<EQUAL? ,HERE ,STOCK-ROOM>
 			      <TELL
-"He's too busy rumaging through the clothes to notice you." CR>
+"He's too busy rummaging through the clothes to notice you." CR>
 			      <STOP>)
 			     (T
 			      <TELL "He ignores you." CR>
@@ -1611,7 +1611,7 @@ and puts his hands on his hips." CR>)
 		<JIGS-UP
 "You get a sinking feeling as you're hammered through the floor of the cloud
 like a wooden peg. The view of the divided farmland below is picture-book
-and enobling. Your fodder enriches further the land.">)>>
+and ennobling. Your fodder enriches further the land.">)>>
 
 <ROUTINE CLIENT-FALL ()
 	 <UPDATE-SCORE>
@@ -1909,7 +1909,7 @@ you actually remember hearing this noise from reruns of Hee-Haw." CR>)>)
 more than you do." CR>)
 	       (<VERB? EXAMINE>
 		<TELL 
-"The meal is perfectly square, and looks scrumptous." CR>)>>
+"The meal is perfectly square, and looks scrumptious." CR>)>>
 
 <ROOM CLOUD-ROOM
       (LOC ROOMS)

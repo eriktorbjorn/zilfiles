@@ -279,7 +279,7 @@ Waldo should remove the maintenance panel and replace all faulty chips."
 			  "Sensa""Sensa""Sensa""Sensa""Sensa"
 "I see Sensa as a robot with two extensions which are used mainly to detect the flow of energy in the environment and objects. She is small and is about one meter in height and not very useful for manipulating objects."
 "Sensa feels small and delicate, much like Iris, contains two extensions which are delicate and tuned as receptors and is about one meter in height."
-"It is diffuclt for me to describe myself."
+"It is difficult for me to describe myself."
 "Sensa makes no sounds, is unable to respond to verbal queries or orders, and is about one meter in height."
 "Sensa is sensitive to sensations and is about one meter in height."
 "CLC tagged object SE-1 is a robot designed to retrieve data from its surroundings and is about one meter in height.">)

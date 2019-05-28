@@ -580,7 +580,7 @@ The+verb ,PRSO "hit" the ,TH-BOAR " and" verb ,PRSO "fall" " to the ground."
 			<COND
 				(<FSET? ,TH-BOAR ,FL-ALIVE>
 					<TELL
-The ,TH-BOAR " is several hundred angry pounds of pure visciousness. He has
+The ,TH-BOAR " is several hundred angry pounds of pure viciousness. He has
 only one tusk, and a gaping hole where the other one used to be." CR
 					>
 				)

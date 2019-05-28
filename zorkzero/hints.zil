@@ -160,7 +160,7 @@ eye...end of eternity...\""
 		 "ANSWER \"THE LETTER Y\"">
 	<PLTABLE "magic glove"
 		 "Putting the glove on gives you additional
-sensory keeness and dexterity.">
+sensory keenness and dexterity.">
 	<PLTABLE "magic cloak"
 		 "Wear it."
 		 "You've been teleported to a strange new region. See the
@@ -911,7 +911,7 @@ to the slate puzzle"
 		  "stock certificate (John D.): in the Vault"
 		  "saddle (Stonewall): in the Stable"
 		  "lance (Stonewall): inside the armor in the Library
-according the the scroll puzzle"
+according to the scroll puzzle"
 		  "violin (Johann Sebastian): in the Conductor's Pit"
 		  "metronome (Johann Sebastian): hidden in the Torture Chamber"
 		  "zorkmid bill (J. Pierpont): winning the shell game

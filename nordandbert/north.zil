@@ -745,7 +745,7 @@ side to side below the surface of the ice." CR>)>)>>
 		       <RTRUE>)>  
 		<TELL "The ice is too thick">
 		<COND (,PRSI
-		       <TELL " to be penatrated by" T ,PRSI>)>
+		       <TELL " to be penetrated by" T ,PRSI>)>
 		<TELL ,PERIOD>)>>
 	       
 <OBJECT FROST
@@ -894,7 +894,7 @@ from you." CR>)>>
 		       <RTRUE>)>
 		<COND (<NOT <FSET? ,MERMAID ,RMUNGBIT>>
 		       <TELL CR
-"A mermaid swims desperately under the suface of the ice.">)
+"A mermaid swims desperately under the surface of the ice.">)
 		      (T
 		       <TELL CR 
 "A mermaid is lying exhausted on the ice.">)>)

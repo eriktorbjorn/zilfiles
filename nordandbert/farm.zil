@@ -139,7 +139,7 @@ legs.">)
       (LOC ROOMS)
       (DESC "Road")
       (LDESC 
-"The telltail smell of grain and dung drifts by. You're on a dusty
+"The telltale smell of grain and dung drifts by. You're on a dusty
 road in front of abandoned farm -- a nice-sized spread of land that
 stretches far out to meet the horizon.")
       (GLOBAL FARM)
@@ -1100,7 +1100,7 @@ yellow stalks of hay grass. You grab it">)
 			      <RTRUE>)>)
 		      (T
 		       <TELL 
-"Finding" A ,PRSI " in a haystack is even less likey than finding
+"Finding" A ,PRSI " in a haystack is even less likely than finding
 a needle there">)>
 		<TELL ,PERIOD>)
 	       (<VERB? SEARCH>
@@ -1110,7 +1110,7 @@ a needle there">)>
 		      <TELL
 "What on earth do you expect to find in a haystack?" CR>)
 		      (T
-		       <TELL "You arleady have." CR>)>)
+		       <TELL "You already have." CR>)>)
 	       (<VERB? CLIMB-UP CLIMB CLIMB-ON ENTER BOARD>
 		<TELL 
 "You step up the pungent haystack, and slide back down." CR>) 
@@ -1243,7 +1243,7 @@ each other's heavenward flight path.|
 You take aim and throw, and the birds explode in rapid succession like clay
 pigeons.|
 |
-The old dog lets out a long, wolfish howl which echoes thoughout the
+The old dog lets out a long, wolfish howl which echoes throughout the
 valley." CR>)
 	       (<VERB? KILL>
 		<COND (,PRSI

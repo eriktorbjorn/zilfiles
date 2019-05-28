@@ -33,7 +33,7 @@ was formed at the behest of King Duncanthraz in 668 GUE. Headquartered in the
 'You name it, we do it!'\""
 ( GREAT UNDERGROUND) ( HIGHWAY TOLL)
 "\"The Great Underground Highway is a system of toll roads stretching
-thoughout both the eastland and westland provinces.\""
+throughout both the eastland and westland provinces.\""
 <> SQUID
 "\"A bottom-dwelling aquatic creature.\""
 <> HELLHOUND
@@ -83,7 +83,7 @@ located in Thriff and Accardi.\""
 of such notable works as THE LIVES OF THE TWELVE FLATHEADS and MUMBERTHRAX:
 THE MAN BEHIND THE LEGEND.\""
 <> MINX
-"\"An irrestibly cuddly animal.\""
+"\"An irresistably cuddly animal.\""
 <> WINDCAT
 "\"The fleetest land animal.\""
  ENDLESS FIRE
@@ -243,7 +243,7 @@ Breadbasket of Quendor. The capital of the province is Gurth City.\""
 is a popular vacation spot.\""
 <> ( FIELDS FROTZEN)
 "\"The Fields of Frotzen, fertile farmland in the heart of Gurth province,
-produces an annual bounty of grain and are freqently referred to as the
+produces an annual bounty of grain and are frequently referred to as the
 Breadbasket of Quendor.\""
 <> FESTERON
 "\"A small village in Antharia.\""

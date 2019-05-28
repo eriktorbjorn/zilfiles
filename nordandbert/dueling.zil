@@ -379,7 +379,7 @@ of paint lingers in the air.">)>>
 	 <COND (<VERB? EXAMINE>
 		<TELL
 "The television set, which has been left droning on here, is now showing
-a marathon of laundry detergent comercials." CR>)
+a marathon of laundry detergent commercials." CR>)
 	       (<VERB? OFF SET>
 		<TELL "It has no controls of any kind." CR>)>>    
 		
@@ -600,7 +600,7 @@ capitalist booty!" CR>)>>
 	(DESC "safe")
 	(LDESC 
 "A safe has been revealed high on the wall where the portrait of the
-Father of our Revolution has once proundly hung.")
+Father of our Revolution has once proudly hung.")
 	(SYNONYM SAFE LOCK)
 	(ADJECTIVE UNIVERSIAL)
 	(FLAGS NDESCBIT CONTBIT SEARCHBIT LOCKEDBIT)

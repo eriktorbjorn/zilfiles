@@ -986,7 +986,7 @@ Act the Part, Visit the Manor of Speaking, or Shake a Tower."
 "The farm crisis never seemed so desperate as it has this planting season
 in Punster. One such family farm on the edge of town, the McCleary's, has
 been especially blighted. The family, though well accustomed to hard work,
-suddenly lost the ability to perform even the simplist of chores necessary to
+suddenly lost the ability to perform even the simplest of chores necessary to
 scratch a living from the soil. They have since been driven from the land,
 and join with their fellow Punster neighbors in urging you to somehow save the
 family farm." CR CR>
@@ -996,7 +996,7 @@ family farm." CR CR>
 		       <COND (<FINISHED? ,JOAT>
 			      <RTRUE>)>
 		       <TELL 
-"The oddities of language have been so prevalant in the town of Punster,
+"The oddities of language have been so prevalent in the town of Punster,
 that surrounding communities have been similarly affected. One such bordering
 town is Jackville, located in the northern backwoods region, but still
 well within the realm of possibilities." CR CR>
@@ -1009,7 +1009,7 @@ well within the realm of possibilities." CR CR>
 			      <QUEUE I-DEAN -1>)>
 		       <SETG HINT-TBL ,HAZING-HINTS>
 		       <TELL
-"In the dark forest outside the town boundries of Punster, chaos has been
+"In the dark forest outside the town boundaries of Punster, chaos has been
 the order of the day. On a recent afternoon the daughter of a leading citizen
 of our town, out for a stroll among the tall pines, disappeared without
 apparent trace. Rumor has it that one strange, stand-alone door is the only

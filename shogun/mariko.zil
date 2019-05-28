@@ -206,7 +206,7 @@ bad.  Lady Ochiba seems surprised." CR>)
 				<SETG OCHIBA-QUESTION 0>
 				<TELL CR
 "\"Bah!  It is clear he is a barbarian without honor!\"  Ishido turns
-away with a snort of dirision." CR>
+away with a snort of derision." CR>
 				<RTRUE>)
 			       (ELSE
 				<TELL CR
@@ -375,11 +375,11 @@ steps forward, standing directly in her way.  \"May I see your
 papers?\" he inquires.|
 |
 Mariko says formally, \"We require none.  I am Toda Mariko-noh-Buntaro
-and I have been ordered by my leige Lord, Lord Toranaga, to escort his
+and I have been ordered by my liege Lord, Lord Toranaga, to escort his
 ladies to meet him.  Kindly let us pass.\"|
 |
 \"My name is Yamazaki Danzenji, Captain of the Fourth Legion, and my line
-is as ancient as your own, my Lady.  Please excuse me, but my leige Lord,
+is as ancient as your own, my Lady.  Please excuse me, but my liege Lord,
 Lord Ishido, says no one may
 leave Osaka Castle without papers.\"|
 |
@@ -405,7 +405,7 @@ vanguard.  From up ahead twenty more Grays move silently out from the
 hundreds that are waiting.|
 |
 \"Wait,\" Mariko orders.  She steps out of her palanquin and picks up
-a sword, unsheaths it, and walks forward alone.  She approaches the
+a sword, unsheathes it, and walks forward alone.  She approaches the
 officer.  \"You know who I am.  Please get out of my way.\"|
 |
 \"I am Kojima Harutomo, Captain of the Sixth Legion.  Please excuse me,
@@ -431,8 +431,8 @@ Mariko turns to Ishido and bows.  \"My orders are clear.  If I am not
 permitted to obey, I will not be able to live with that shame.\"" CR>)
 		 (<TELL CR
 "\"These men have prevented me from
-doing my duty, from obeying my leige Lord.  I cannot live with this
-shame, Sire.  Unless we are allowed to obey our leige Lord, as is our
+doing my duty, from obeying my liege Lord.  I cannot live with this
+shame, Sire.  Unless we are allowed to obey our liege Lord, as is our
 right, I will commit seppuku at sunset!\"|
 |
 She bows and walks toward the gateway.  All in the avenue and all on the

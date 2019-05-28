@@ -218,7 +218,7 @@
 	<PLTABLE "How can I control the royal barge?"
 		 "Examine the controls. Read the buttons. Try pushing them."
 		 "The orange button turns the magnetic mooring mechanism on or off. If you're docked, pushing the orange button will send you off into the canal. If you're in the canal near a dock, turn on the MagnetoMoor to dock. If you're in the canal but not near a dock, turning on the MagnetoMoor will have no immediate effect -- but if you subsequently pass a dock, you'll dock at it automatically."
-		 "The purple button turns the engines on or off. When the button reads \"Full Spead Ahead\" the engines are on, and the barge will move to a new canal location every turn. When the button reads \"Go With The Flow\" the engines are off, and the barge will move to a new canal location only every other turn.">
+		 "The purple button turns the engines on or off. When the button reads \"Full Speed Ahead\" the engines are on, and the barge will move to a new canal location every turn. When the button reads \"Go With The Flow\" the engines are off, and the barge will move to a new canal location only every other turn.">
 	<PLTABLE "How can I decode the coded message?"
 		 "Reread \"The Adventures of Lane Mastodon #91.\""
 		 "Look at the center-left panel on Page 5 of the comic. This tells you how to decode Martian messages."
@@ -371,9 +371,9 @@
 		 "Surely you examined the boomerang!"
 		 "Can we assume that you thoroughly interrogated Winston Churchill and Attila the Hun?"
 		 "Have you realized that this is one of those fake questions designed to keep you from reading hints to puzzles you're not stumped on? There's no basement in Cleveland!">
-	 <PLTABLE "Where's the Cleveland phonebook?"
+	 <PLTABLE "Where's the Cleveland phone book?"
 		  "It's not anywhere in Cleveland."
-		  "When you get there, the phonebook will be obvious."> 
+		  "When you get there, the phone book will be obvious."> 
 	 <PLTABLE "Is there anything in the bedroom?"
 		  "Have you looked out the window?">
 	 <PLTABLE "How can I get the headlight?"
@@ -426,7 +426,7 @@
 	 <PLTABLE "How do I get past Thorbast/Thorbala?"
 		  "You'll never get past while he's/she's alive."
 		  "Try killing him/her with the sword from the Hold."
-		  "Thorbast/Thorbala is a tough opponent, but after several attempts to kill him/her with your sword you will succeed in knocking Thobast's/Thorbala's sword out of his/her hands. Take it as it floats toward you, disarming Thorbast/Thorbala."
+		  "Thorbast/Thorbala is a tough opponent, but after several attempts to kill him/her with your sword you will succeed in knocking Thorbast's/Thorbala's sword out of his/her hands. Take it as it floats toward you, disarming Thorbast/Thorbala."
 		  "Trying to kill Thorbast/Thorbala at this point is the wrong move, however. Thorbast/Thorbala is just too quick for you, even disarmed. Have you ever noticed that you're dressed all in white, and Thorbast/Thorbala all in black?"
 		  "What would the \"good guy\" in any sword fight do upon disarming his/her opponent?"
 		  "Once you're holding Thorbast's/Thorbala's sword, give it to him/her."

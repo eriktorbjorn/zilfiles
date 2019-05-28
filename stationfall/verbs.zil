@@ -120,7 +120,7 @@ to save for important scenes. Not like this one.\"" CR>)>
 <ROUTINE V-DIAGNOSE ()
 	 <SETG C-ELAPSED 18>
 	 <COND (<EQUAL? ,HERE ,FACTORY>
-		<TELL "We're talking adrenaline. Lots of adrenalin." CR>)
+		<TELL "We're talking adrenaline. Lots of adrenaline." CR>)
 	       (T
 	 	<TELL "You feel ">
 	 	<COND (,STUNNED
@@ -3005,7 +3005,7 @@ only its dignity was injured.">)>)
 				<FSET? ,ELEVATOR ,WEIGHTLESSBIT>>>
 		       <COND (,LIT
 		       	      <TELL
-" As the ostrich unexpectly enters the weightless environment of the ">
+" As the ostrich unexpectingly enters the weightless environment of the ">
 			      <COND (<EQUAL? ,HERE ,ELEVATOR>
 				     <TELL "elevator">)
 				    (T

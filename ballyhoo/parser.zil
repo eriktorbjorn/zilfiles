@@ -1377,7 +1377,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 			     (T
 			      <SETG CURSED-ONCE? T>
 			      <TELL
-"Bravisimo! Once more now, with feeling." CR>)>)
+"Bravissimo! Once more now, with feeling." CR>)>)
 		      (<G? ,CURSE-C 4>
 		       <SETG CURSE-C 0>
 		       <DISABLE <INT I-CURSE>>

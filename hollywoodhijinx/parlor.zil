@@ -1078,7 +1078,7 @@ on the post from the room above." CR>)>>
 	 <TELL "When you remove the post, ">
 	 <COND (<NOT <EQUAL? ,THIN-POST-LOC ,LOCAL-GLOBALS>>
 		<TELL
-"the corner of the ceiling that it was holding up begins to sag noticably.
+"the corner of the ceiling that it was holding up begins to sag noticeably.
 Luckily, the other post still supports a corner of the ceiling"
 CR>
 		;<MOVE ,THICK-POST ,PLAYER>
@@ -1097,7 +1097,7 @@ CR>
 	 <TELL "When you remove the post, ">
 	 <COND (<NOT <EQUAL? ,THICK-POST-LOC ,LOCAL-GLOBALS>>
 		<TELL
-"the corner of the ceiling that it was holding up begins to sag noticably.
+"the corner of the ceiling that it was holding up begins to sag noticeably.
 Luckily, the other post still supports a corner of the ceiling"
 CR>
 		<MOVE ,THIN-POST ,PLAYER>
