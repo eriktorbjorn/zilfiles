@@ -28,7 +28,7 @@ for their long journeys to safe havens. The only exit is south.")
  FROBOZZCO ( FROBOZZCO INTERNATIONAL)
 "\"FrobozzCo International is a vast conglomerate of thousands upon thousands
 of companies. It can trace its origin to the Frobozz Magic Cave Company, which
-was formed at the behest of King Duncanthraz in 668 GUE. Headquartered in the
+was formed at the behest of King Duncanthrax in 668 GUE. Headquartered in the
 400-story FrobozzCo Building in Flatheadia, FrobozzCo's corporate motto is
 'You name it, we do it!'\""
 ( GREAT UNDERGROUND) ( HIGHWAY TOLL)
