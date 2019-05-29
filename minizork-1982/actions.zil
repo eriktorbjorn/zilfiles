@@ -987,7 +987,7 @@ D ,PRSO " and stops to admire its beauty." CR>)
 	       (<VERB? CLOSE>
 		<TELL "Oddly, you cannot." CR>)
 	       (<VERB? BURN>
-		<TELL "Sacrelige!" CR>)>>
+		<TELL "Sacrilege!" CR>)>>
 
 <ROUTINE PAINTING-FCN ()
 	 <COND (<VERB? MUNG>
