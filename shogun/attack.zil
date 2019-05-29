@@ -487,7 +487,7 @@ back is straight." CR>)>>
 	       (<VERB? EXAMINE>
 		<COND (<FSET? ,PRSO ,DEAD>
 		       <TELL
-"Achiko's lifeless body is spawled on the floor." CR>)
+"Achiko's lifeless body is sprawled on the floor." CR>)
 		      (ELSE
 		       <TELL
 "She appears to be holding up well." CR>)>)>>
