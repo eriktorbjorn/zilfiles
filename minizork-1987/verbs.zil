@@ -144,7 +144,7 @@ or end this session of the game?|
 	<RTRUE>>
 
 <ROUTINE TRANSCRIPT-MESSAGE (STRING)
-	 <TELL "Here " .STRING "s a transcript of interation with" CR>
+	 <TELL "Here " .STRING "s a transcript of interaction with" CR>
 	 <V-VERSION>>
 
 <ROUTINE V-VERSION ("AUX" (CNT 17))
