@@ -22,7 +22,7 @@ against one wall. He is armed with a deadly stiletto.")
 		     <FSET? ,PRSO ,WEAPONBIT>>
 		<MOVE ,PRSO ,HERE>
 		<TELL
-"You missed hitting the thief, but you suceeded in angering him." CR>)
+"You missed hitting the thief, but you succeeded in angering him." CR>)
 	       (<AND <VERB? THROW GIVE>
 		     <EQUAL? ,PRSI ,THIEF>>
 		<MOVE ,PRSO ,THIEF>
