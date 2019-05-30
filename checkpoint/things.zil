@@ -1211,7 +1211,7 @@ CR>)>>
 	(FDESC "You notice marks and scratches on the walls.")
 	(TEXT
 "The scratches are dark but indistinct, probably from rubber-soled
-shoes, as if there had once been a desparate struggle here.")>
+shoes, as if there had once been a desperate struggle here.")>
 
 <OBJECT WORN-SPOT
 	(CAR 0)
