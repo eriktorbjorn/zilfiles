@@ -168,7 +168,7 @@ I know the forms are kept locked up tighter than Fort Knox. It's even
 signed by Commander McMahon himself. I suppose it could have been
 forged, but I guess I was wrong all along.\"|
 	He turns Catfish over and slaps him on the face a couple of times to
-bring him around. When Catfish has regained a semblence of consciousness,
+bring him around. When Catfish has regained a semblance of consciousness,
 Coffey says, \"I'm sorry, fella. I guess I got carried away.\"|
 	Catfish drags himself to his feet and says groggily, \"Don't mention it.
 Maybe I can do the same for you some day.\"" CR
