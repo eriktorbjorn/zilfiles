@@ -739,7 +739,7 @@ bottom. Attached to the bag is a CO2 cannister that has a red button on it." CR
 						(<AND <FSET? ,HERE ,FL-WATER>
 								<FSET? ,HERE ,FL-INDOORS>
 							>
-							<TELL "	The bag no longer contrains your movements." CR>
+							<TELL "	The bag no longer constrains your movements." CR>
 						)
 					;	(<IN? ,CH-PLAYER ,TH-MOON-POOL>
 							<TELL "	You sink below the surface of the water." CR>
