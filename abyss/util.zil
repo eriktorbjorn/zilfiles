@@ -720,7 +720,7 @@ C <ORB !\Y .M> "our stomach muscles are tight and you feel an urge to vomit"
 					>
 					<COND
 						(<L=? ,GL-NITROGEN-QTY ,K-NIT-LOW-3>
-							<TELL "ou have flashes of sudden irritibility">
+							<TELL "ou have flashes of sudden irritability">
 						)
 						(<L=? ,GL-NITROGEN-QTY ,K-NIT-LOW-2>
 							<TELL "our fingertips are shaking badly">

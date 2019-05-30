@@ -242,7 +242,7 @@ unconscious.|"
 						(<L=? ,GL-NITROGEN-MSG ,K-NIT-LOW-3 ;253>
 							<SETG GL-NITROGEN-MSG ,GL-NITROGEN-QTY>
 							<TELL
-"	The flashes of irritibility cease, but your fingertips are still
+"	The flashes of irritability cease, but your fingertips are still
 trembling." CR
 							>
 						)
@@ -269,7 +269,7 @@ trembling." CR
 						(<G? ,GL-NITROGEN-MSG ,K-NIT-LOW-3>
 							<SETG GL-NITROGEN-MSG ,GL-NITROGEN-QTY>
 							<TELL
-"	You begin to have flashes of sudden irritibility." CR
+"	You begin to have flashes of sudden irritability." CR
 							>
 						)
 					>
