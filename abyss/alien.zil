@@ -91,7 +91,7 @@ never come.|
 	One of the Alien creatures materializes at your side and explains why they
 are doing what they are doing. He bears a strong resemblance to Don Rubin.
 \"Soon there will be a puzzle here,\" he says. \"Otherwise, Bob will write it
-when he gets back from vacation. Until that time, simply push the fuschia
+when he gets back from vacation. Until that time, simply push the fuchsia
 button over there on the wall. Doing so will save the world and return you to
 Deepcore. Not a bad deal, if you ask me.\"" CR
 			>
@@ -132,7 +132,7 @@ Deepcore. Not a bad deal, if you ask me.\"" CR
 					<TELL "arrive at">
 				)
 			>
-			<TELL " the alien chamber. There is a fuschia button on the wall.|">
+			<TELL " the alien chamber. There is a fuchsia button on the wall.|">
 			<RFALSE>
 		)
 		(.CONTEXT
@@ -147,10 +147,10 @@ Deepcore. Not a bad deal, if you ask me.\"" CR
  
 <OBJECT TH-FUSCHIA-BUTTON
 	(LOC RM-ALIEN-CHAMBER)
-	(DESC "fuschia button")
+	(DESC "fuchsia button")
 	(FLAGS FL-NO-DESC)
 	(SYNONYM BUTTON)
-	(ADJECTIVE FUSCHIA)
+	(ADJECTIVE FUCHSIA)
 	(ACTION RT-TH-FUSCHIA-BUTTON)
 >
  
@@ -160,7 +160,7 @@ Deepcore. Not a bad deal, if you ask me.\"" CR
 			<RFALSE>
 		)
 		(<VERB? EXAMINE>
-			<TELL "	Pretty normal-looking button, considering it's fuschia." CR>
+			<TELL "	Pretty normal-looking button, considering it's fuchsia." CR>
 		)
 		(<VERB? PUSH>
 			<MOVE ,CH-PLAYER ,RM-SUB-BAY>
