@@ -861,7 +861,7 @@ starts. There must not be any water in the starboard bilge." CR
 "	The intercom buzzes. Then you hear a weak voice. \"This is Catfish. I'm
 trapped under a locker in Dive Gear Storage. The water in here is rising
 faster than the Johnstown flood. If one of y'all don't get down here pronto,
-I'm gonnna be singin' with the angels.\"" CR
+I'm gonna be singin' with the angels.\"" CR
 			>
 		)
 	>
