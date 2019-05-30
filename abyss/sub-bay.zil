@@ -2648,7 +2648,7 @@ chemical toilet. The only exit is in the starboard bulkhead.|"
 			>
 			<TELL
 " the female living quarters, nicknamed \"Motel Quick\" by the crew. Exits
-hee lead both fore and aft.|"
+here lead both fore and aft.|"
 			>
 			<RFALSE>
 		)
