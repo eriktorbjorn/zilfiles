@@ -152,7 +152,7 @@ pushing yourself down in the water." CR
 			>
 			<TELL
 " the missile hatch of the Montana. To the aft is the midship hatch, and the
-bow lies foreward.|"
+bow lies forward.|"
 			>
 			<RFALSE>
 		)
@@ -647,7 +647,7 @@ you will only be able to fly the ROV in here. But for now, come on in!|"
 				)
 			>
 			<TELL
-" the Montana's torpedo room. Foreward lies the gash in the hull and aft is
+" the Montana's torpedo room. Forward lies the gash in the hull and aft is
 the engine room.|"
 			>
 			<RFALSE>
@@ -687,7 +687,7 @@ the engine room.|"
 				)
 			>
 			<TELL
-" the engine room of the Montana. The torpedo room is foreward, and aft is
+" the engine room of the Montana. The torpedo room is forward, and aft is
 the missile launching room.|"
 			>
 			<RFALSE>
@@ -988,7 +988,7 @@ been crushed like the end of a paper towel roll." CR
 				)
 			>
 			<TELL
-" a corridor. The comm room is foreward and below you is the captain's
+" a corridor. The comm room is forward and below you is the captain's
 quarters.|">
 			<RFALSE>
 		)
