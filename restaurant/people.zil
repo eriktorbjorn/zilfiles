@@ -205,7 +205,7 @@ zillion at the last count.\"" CR>)
 <OBJECT FORD
 	(LOC RAMP)
 	(DESC "Ford Prefect")
-	(TEXT "Ford is a Betelgeusan who could pass for an Earthling.")
+	(TEXT "Ford is a Betelgeusian who could pass for an Earthling.")
 	(ADJECTIVE FORD MR)
 	(SYNONYM FORD PREFECT)
 	(FLAGS PERSONBIT CONTBIT SEARCHBIT OPENBIT NARTICLEBIT)
