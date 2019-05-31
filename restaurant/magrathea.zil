@@ -155,7 +155,7 @@ back to level ground again." CR>
 <ROOM	LIP2
 	(LOC ROOMS)
 	(LDESC  "The rim of the whale crater continues northwest and
-southwest. The scene of the whale's final disiluusionment lies below
+southwest. The scene of the whale's final disillusionment lies below
 you, but there's no way down")
 	(DESC "Crater Lip")
 	(WEST PER DEATH-BY-BLUBBER)
