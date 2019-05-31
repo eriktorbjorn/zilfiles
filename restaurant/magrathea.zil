@@ -197,7 +197,7 @@ break and ankle and nobody would hear you screaming and you
 would die from pain and exposure.  On the other hand, if you
 climbed down carefully, you'd have no trouble.  So what are you
 making all the fuss about?")
- 	(LDESC  "The crater lip continues northeat and southeast here,
+ 	(LDESC  "The crater lip continues northeast and southeast here,
 and below you is a ledge.")
 	(NORTH PER SLOPE-SCRAMBLE)
 	(NE TO LIP1)
