@@ -1594,12 +1594,12 @@ part of the Project.\"" CR>>
 
 <ROUTINE PRINT-OUT-F ()
 	 <COND (<VERB? READ EXAMINE>
-		<FIXED-FONT-ON>
 		<TELL
 "The printout is hundreds of pages long. It would take many chrons to
-read it all. The last page looks pretty interesting, though:|
-|
-\"Daalee Statis Reeport:|
+read it all. The last page looks pretty interesting, though:" CR CR>
+		<FIXED-FONT-ON>
+		<TELL
+"\"Daalee Statis Reeport:|
 PREELIMINEREE REESURC:  100.000%|
 INTURMEEDEEIT REESURC:  100.000%|
 FIINUL REESURC:         100.000%|
@@ -1609,10 +1609,9 @@ Proojektid tiim tuu reeviivul prooseedzur:  0 daaz, 0.8 kronz|
 |
 |
 *** ALURT! ALURT! ***|
-Malfunkshun in Sekshun 384! Sumuneeng reepaar roobot.\"|
-|
-The printout ends at this point." CR>
-		<FIXED-FONT-OFF>)>>
+Malfunkshun in Sekshun 384! Sumuneeng reepaar roobot.\"">
+		<FIXED-FONT-OFF>
+		<TELL CR CR "The printout ends at this point." CR>)>>
 
 <ROOM MINI-BOOTH
       (LOC ROOMS)
