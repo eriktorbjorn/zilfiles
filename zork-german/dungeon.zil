@@ -988,7 +988,7 @@ southwest, is marked %>To Stone Barrow%<."
 	(FLAGS READBIT TAKEBIT BURNBIT DASBIT)
 	(SIZE 2)
 	(TEXT
-" !!!!FROBOZ ZAUBERBOOTFABRIK!!!!|
+" !!!!FROBOZZ ZAUBERBOOTFABRIK!!!!|
 |
 Tag, Seeman!|
 |
