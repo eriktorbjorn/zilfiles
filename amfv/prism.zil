@@ -550,6 +550,7 @@ mad -- if you don't begin soon, I can't tell what's going to happen!\"" CR>
 <GLOBAL COLUMN-TABLE
 	<TABLE 2 2 2 2 28 28 28 28 54 54 54 54>>
 
+<ROUTINE-FLAGS CLEAN-STACK?>
 <ROUTINE LIBRARY-ACTION ("AUX" X)
 	 <REPEAT ()
 		 <SET X <INPUT 1>>
