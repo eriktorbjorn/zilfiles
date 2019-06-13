@@ -1087,21 +1087,31 @@ The Plan for Renewed National Purpose, Constitutional amendments:|
 	(LOC PLAN-DATA-DIRECTORY)
 	(DESC "PLAN.POPULARITY")
 	(FLAGS READBIT)
-	(TEXT
+	(ACTION PLAN-POPULARITY-F)>
+
+<ROUTINE PLAN-POPULARITY-F ()
+	 <COND (<VERB? READ>
+		<TELL
 "Results of public opinion polling regarding the Plan|
 (source: WNN/Newsline polls, weeks of 12/9/30 and 2/3/31)|
          sample size: 3812; accuracy: +/- 1.2%)|
 |
-Overall opinion of the Plan, entire sample:|
-                         Dec.      Feb.|
+Overall opinion of the Plan, entire sample:" CR>
+		<FIXED-FONT-ON>
+		<TELL
+"                         Dec.      Feb.|
    STRONGLY IN FAVOR     54.9     63.7|
    IN FAVOR              21.2     22.7|
    DON'T CARE            10.3      5.0|
    OPPOSED                6.6      0.8|
-   STRONGLY OPPOSED       7.0      7.8|
-|
-Percent \"in favor\" or \"strongly in favor\" of the Plan, demographically:|
-                         Dec.      Feb.|
+   STRONGLY OPPOSED       7.0      7.8" CR>
+		<FIXED-FONT-OFF>
+		<TELL CR
+"Percent \"in favor\" or \"strongly in favor\" of the Plan,
+demographically:" CR>
+		<FIXED-FONT-ON>
+		<TELL
+"                         Dec.      Feb.|
    CONSERVATIVES         78.1     87.6|
    LIBERALS              73.3     84.7|
 |
@@ -1110,15 +1120,19 @@ Percent \"in favor\" or \"strongly in favor\" of the Plan, demographically:|
    BUSINESS OWNERS       90.6     98.4|
 |
    INCOME UNDER $100K    75.9     86.3|
-   INCOME OVER $100K     76.4     86.7|
-|
-Composite average of opinions of individual Plan elements, entire sample:|
-                         Dec.      Feb.|
+   INCOME OVER $100K     76.4     86.7" CR>
+		<FIXED-FONT-OFF>
+		<TELL CR
+"Composite average of opinions of individual Plan elements, entire sample:" CR>
+		<FIXED-FONT-ON>
+		<TELL
+"                         Dec.      Feb.|
    STRONGLY IN FAVOR     15.8     15.0|
    IN FAVOR              18.7     17.8|
    DON'T CARE            30.5     31.8|
    OPPOSED               20.9     21.3|
-   STRONGLY OPPOSED      14.1     14.1")>
+   STRONGLY OPPOSED      14.1     14.1" CR>
+		<FIXED-FONT-OFF>)>>
 
 <OBJECT PLAN.CRITICISMS
 	(LOC PLAN-DATA-DIRECTORY)
