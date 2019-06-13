@@ -1387,7 +1387,7 @@ six hours have passed." CR>)>
 		<COND (<EQUAL? ,PART-FLAG 4>
 		       <TELL "There are currently no active outlets." CR>)
 		      (T
-		       <TELL "    ">
+		       <TELL "   ">
 		       <PRINTD ,CONTROL-CENTER>
 		       <TELL " (PPCC)|    ">
 		       <PRINTD ,ROOFTOP>
