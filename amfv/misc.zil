@@ -203,6 +203,12 @@
 	       (T
 		<PRINTD .OBJ>)>>
 
+<ROUTINE FIXED-FONT-ON () ;"turns off proportional spacing"
+	 <PUT 0 8 <BOR <GET 0 8> 2>>>
+
+<ROUTINE FIXED-FONT-OFF () ;"turns it back on"
+	 <PUT 0 8 <BAND <GET 0 8> -3>>>
+
 <ZSTR-ON>
 
 ;"former MAIN.ZIL stuff"
