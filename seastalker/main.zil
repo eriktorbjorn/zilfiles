@@ -55,6 +55,7 @@ Copyright (C) 1984, 1985 Infocom, Inc.  All rights reserved."
 	<SETG HERE ,CENTER-OF-LAB>
 	<MOVE ,TIP ,HERE>
 	<MOVE ,PLAYER ,HERE>
+	<V-LOOK>
 	<MAIN-LOOP>
 	<AGAIN>>    
 
