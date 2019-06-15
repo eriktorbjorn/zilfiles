@@ -1,6 +1,8 @@
 "COMPILE/LOAD FILE for M3
 Copyright (C) 1984 Infocom, Inc.  All rights reserved."
 
+<VERSION ZIP TIME>
+
 <SETG DEBUGGING? <>>
 
 ;<REPEAT (CHR)
