@@ -1,5 +1,7 @@
 "J2 for WISHBRINGER: (C)1985 Infocom, Inc. All Rights Reserved."
 
+<VERSION ZIP TIME>
+
 <PRINC "
 WISHBRINGER: The Magick Stone of Dreams
 
