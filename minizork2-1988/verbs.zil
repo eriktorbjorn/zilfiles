@@ -66,7 +66,7 @@
 		       (<EQUAL? .WRD ,W?QUIT ,W?Q>
 			<QUIT>)>>>
 
-<ROUTINE V-QUIT ("AUX" SCOR)
+<ROUTINE V-QUIT ()
 	 <COND (<DO-YOU-WISH "leave the game">
 	 	<QUIT>)
 	       (T
@@ -461,7 +461,7 @@ hard to tell with a " D ,PRSO ,PERIOD-CR>)>)
 	       (T
 		<DO-WALK ,P?OUT>)>>
 
-<ROUTINE PRE-FILL ("AUX" TX)
+<ROUTINE PRE-FILL ()
 	 <COND (<NOT ,PRSI>
 		<COND (<GLOBAL-IN? ,GLOBAL-WATER ,HERE>
 		       <PERFORM ,V?FILL ,PRSO ,GLOBAL-WATER>)
@@ -1044,7 +1044,7 @@ long description (fdesc or ldesc), otherwise will print short."
 
 <GLOBAL DESC-OBJECT <>>
 
-<ROUTINE DESCRIBE-OBJECT (OBJ V? LEVEL "AUX" (STR <>) AV)
+<ROUTINE DESCRIBE-OBJECT (OBJ V? LEVEL "AUX" (STR <>))
 	 <SETG DESC-OBJECT .OBJ>
 	 <COND (<AND <0? .LEVEL>
 		     <APPLY <GETP .OBJ ,P?DESCFCN> ,M-OBJDESC>>
@@ -1319,7 +1319,7 @@ long description (fdesc or ldesc), otherwise will print short."
 
 <GLOBAL LOAD-ALLOWED 100>
 
-<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" CNT OBJ)
+<ROUTINE ITAKE ("OPTIONAL" (VB T) "AUX" CNT)
 	 <COND (<NOT <FSET? ,PRSO ,TAKEBIT>>
 		<COND (.VB
 		       <TELL <PICK-ONE ,YUKS> CR>)>

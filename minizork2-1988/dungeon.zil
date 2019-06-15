@@ -567,7 +567,7 @@ The light falls upon a dusty wooden table. ">
 	(FLAGS DOORBIT CONTBIT)
 	(ACTION PDOOR-F)>
 
-<ROUTINE PDOOR-F ("AUX" K)
+<ROUTINE PDOOR-F ()
 	 <COND (<AND <VERB? LOOK-UNDER>
 		     ,MUD-FLAG>
 		<TELL ,PLACE-MAT-VISIBLE CR>)
