@@ -1,6 +1,8 @@
 "COMPILE/LOAD FILE for WITNESS
 Copyright (C) 1983 Infocom, Inc.  All rights reserved."
 
+<VERSION ZIP TIME>
+
 <COND (<GASSIGNED? PREDGEN>
        <SETG ZSTR-ON <SETG ZSTR-OFF ,TIME>>
        <PRINC "Compiling">
