@@ -35,7 +35,7 @@ gazebo.")
 		       <MOVE ,UNICORN ,FORMAL-GARDEN>
 		       <TELL
 "A beautiful unicorn is peacefully cropping grass across the garden. A gold
-key hangs from a red satin ribbon around its neck.">)>)
+key hangs from a red satin ribbon around its neck." CR>)>)
 	       (T
 		<REMOVE ,UNICORN>
 		<DISABLE <INT I-GARDEN>>
