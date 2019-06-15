@@ -995,12 +995,13 @@ a hungry baby, he greedily eats you.">)
 
 <GLOBAL WIZQDESCS
 	<LTABLE
-"almost monkish in its austerity"
-"an opulently furnished seraglio out of an Arabian folktale"
-"decorated in the Louis XIV style"
-"overhung with palm-trees and lianas. The only furniture is a hammock"
-"a suburban bedroom out of the 1950's, complete with bunk beds"
-"a dim cave, its floor piled with furs and old bones">>
+	 0
+	 "almost monkish in its austerity"
+	 "an opulently furnished seraglio out of an Arabian folktale"
+	 "decorated in the Louis XIV style"
+	 "overhung with palm-trees and lianas. The only furniture is a hammock"
+	 "a suburban bedroom out of the 1950's, complete with bunk beds"
+	 "a dim cave, its floor piled with furs and old bones">>
 \
 ;"the palantirs"
 
