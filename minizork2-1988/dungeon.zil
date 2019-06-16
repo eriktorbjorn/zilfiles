@@ -335,6 +335,7 @@ into little doggy biscuits.">)
       (SOUTH TO CRYPT IF CERBERUS-LEASHED ELSE "The huge dog snaps at you.")
       (IN TO CRYPT IF CERBERUS-LEASHED ELSE "The huge dog snaps at you.")
       (NORTH TO MENHIR-ROOM)
+      (VALUE 10)
       (FLAGS RLANDBIT)
       (PSEUDO "TOMB" TOMB-PSEUDO "CRYPT" TOMB-PSEUDO)>
 
