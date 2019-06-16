@@ -102,6 +102,7 @@ attached to the basket and ">
 				     <RTRUE>)
 				    (T
 				     <AND <EQUAL? <PTSIZE .M> 1>
+					  <SET R <GETB .M 0>>
 					  <SETG BALLOON-LOC .R>>
 				     <ENABLE <QUEUE I-BALLOON 3>>
 				     <RFALSE>)>)
