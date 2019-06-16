@@ -335,7 +335,7 @@ again."
 <>>>
 
 <GLOBAL FANTASIES
-	<LTABLE "pile of jewels" "gold ingot" "basilisk"
+	<LTABLE 0 "pile of jewels" "gold ingot" "basilisk"
 		"bulging chest" "yellow sphere" "grue"
 		"convention of wizards" "copy of ZORK I">>
 
