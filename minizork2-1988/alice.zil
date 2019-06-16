@@ -132,9 +132,10 @@ the walls. A passage leads west.")
 			   <NOT ,BUCKET-TOP-FLAG>>
 		      <SETG BUCKET-TOP-FLAG T>
 		      <SETG EVAPORATED <>>
+		      <TELL "The bucket rises and" ,STOPS>
 		      <PASS-THE-BUCKET ,TOP-OF-WELL>
 		      <ENABLE <QUEUE I-BUCKET 100>>
-		      <TELL "The bucket rises and" ,STOPS>)
+		      <RTRUE>)
 		     (<AND ,BUCKET-TOP-FLAG
 			   <NOT <IN? ,WATER ,BUCKET>>>
 		      <COND (,EVAPORATED
