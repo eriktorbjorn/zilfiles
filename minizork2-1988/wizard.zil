@@ -967,7 +967,7 @@ splashing you with water." CR>)
 
 <ROUTINE MURKY-ROOM-F (RARG)
 	 <COND (<EQUAL? .RARG ,M-LOOK>
-		<TELL " The floor is sandy, and your vision seems blurred.">
+		<TELL "The floor is sandy, and your vision seems blurred.">
 		<COND (<AND <IN? ,SERPENT ,AQUARIUM>
 			    <PROB 20>>
 		       <TELL " A shadow seems to swim by overhead.">)>
