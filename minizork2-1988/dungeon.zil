@@ -335,7 +335,6 @@ into little doggy biscuits.">)
       (SOUTH TO CRYPT IF CERBERUS-LEASHED ELSE "The huge dog snaps at you.")
       (IN TO CRYPT IF CERBERUS-LEASHED ELSE "The huge dog snaps at you.")
       (NORTH TO MENHIR-ROOM)
-      (VALUE 10)
       (FLAGS RLANDBIT)
       (PSEUDO "TOMB" TOMB-PSEUDO "CRYPT" TOMB-PSEUDO)>
 
@@ -424,7 +423,7 @@ flat heads mounted securely on poles. There is writing carved on the crypt.
 To the north and south are dark doorways.")
       (NORTH TO CERBERUS-ROOM)
       (SOUTH TO ZORK3)
-      (VALUE 2)
+      (VALUE 5)
       (FLAGS RLANDBIT)>
 
 <OBJECT HEADS
