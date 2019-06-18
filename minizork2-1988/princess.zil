@@ -146,7 +146,7 @@ been reported sharpening their (slavering) fangs..." CR>)>>
 		<COND (<EQUAL? ,PRSI ,PDOOR>
 		       <MOVE ,PRSO ,HERE>
 		       <SETG MUD-FLAG T>
-		       <TELL "The mat slies under the door." CR>)
+		       <TELL "The mat slides under the door." CR>)
 		      (<EQUAL? ,PRSI ,WIZ-DOOR ,RIDDLE-DOOR>
 		       <TELL "There's not enough room." CR>)>)
 	       (<AND <VERB? TAKE MOVE> ,MATOBJ>
