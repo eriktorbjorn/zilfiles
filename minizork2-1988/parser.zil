@@ -1231,7 +1231,9 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV"
 	<COND (<SET RMG <GETPT ,HERE ,P?GLOBAL>>
 	       <SET RMGL <- <PTSIZE .RMG> 1>>
 	       <REPEAT ()
-		       <COND (<THIS-IT? <SET OBJ <GETB .RMG .CNT>> .TBL>
+		       <COND (<AND <EQUAL? <LOC <SET OBJ <GETB .RMG .CNT>>>
+					   ,LOCAL-GLOBALS>
+				   <THIS-IT? .OBJ .TBL>>
 			      <OBJ-FOUND .OBJ .TBL>)>
 		       <COND (<IGRTR? CNT .RMGL> <RETURN>)>>)>
 	<COND (<SET RMG <GETPT ,HERE ,P?PSEUDO>>
