@@ -134,7 +134,9 @@ the walls. A passage leads west.")
 		      <ENABLE <QUEUE I-BUCKET 100>>
 		      <TELL "The bucket swiftly rises up, and is gone." CR>)
 		     (<VERB? KICK>
-		      <JIGS-UP "If you insist.">)>)
+		      <JIGS-UP "If you insist.">)
+		     (<VERB? OPEN CLOSE>
+		      <TELL "The bucket has no lid." CR>)>)
 	      (<EQUAL? .RARG ,M-END>
 	       <COND (<AND <IN? ,WATER ,BUCKET>
 			   <NOT ,BUCKET-TOP-FLAG>>
