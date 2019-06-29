@@ -400,12 +400,9 @@ and you feel suffused with power." CR>)>
 	 <COND (<AND ,WAND-ON
 		     <OR <EQUAL? ,WAND-ON-LOC ,HERE>
 			 <IN? ,WAND-ON ,WINNER>>>
-		<SETG WAND-ON <>>
 		<TELL
-"The " D ,WAND-ON " stops glowing and the power within you weakens." CR>)
-	       (T
-		<SETG WAND-ON <>>
-		<RFALSE>)>>
+"The " D ,WAND-ON " stops glowing and the power within you weakens." CR>)>
+	 <SETG WAND-ON <>>>
 
 <ROOM GUARDED-ROOM
       (IN ROOMS)
