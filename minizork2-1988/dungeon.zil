@@ -310,8 +310,9 @@ dinosaur). The only exit is northeast.")
 	(ACTION COLLAR-F)>
 
 <ROUTINE COLLAR-F ()
-	 <COND (<AND <VERB? TAKE>
-		     ,CERBERUS-LEASHED>
+	 <COND (<NOT ,CERBERUS-LEASHED>
+		<RFALSE>)>
+	 <COND (<VERB? TAKE>
 		<JIGS-UP
 "Bad idea. As you unfasten the collar, the monster rends you
 into little doggy biscuits.">)
