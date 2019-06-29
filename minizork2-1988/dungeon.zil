@@ -233,20 +233,17 @@ produced menhirs (standing stones). Obvious passages lead north and south." CR>
 <GLOBAL MENHIR-POSITION <>>
 
 <ROUTINE DESCRIBE-MENHIR ()
-	 <COND (<EQUAL? ,HERE ,MENHIR-ROOM>
-		<COND (<EQUAL? ,MENHIR-POSITION <>>
-		       <TELL
+	 <COND (<EQUAL? ,MENHIR-POSITION <>>
+		<TELL
 "One large menhir blocks a dark opening leading southwest.">)
-		      (<EQUAL? ,MENHIR-POSITION 1>
-		       <TELL "A menhir lies near a southwest passage.">)
-		      (<EQUAL? ,MENHIR-POSITION 2>
-		       <TELL "A dark opening leads southwest.">)
-		      (T
-		       <TELL
-"A huge menhir is floating in midair above a southwest passage.">)>
-		<CRLF>)
+	       (<EQUAL? ,MENHIR-POSITION 1>
+		<TELL "A menhir lies near a southwest passage.">)
+	       (<EQUAL? ,MENHIR-POSITION 2>
+		<TELL "A dark opening leads southwest.">)
 	       (T
-		<TELL "A dark opening leads southwest." CR>)>>
+		<TELL
+"A huge menhir is floating in midair above a southwest passage.">)>
+	 <CRLF>>
 
 <OBJECT GLOBAL-MENHIR
 	(IN LOCAL-GLOBALS)
