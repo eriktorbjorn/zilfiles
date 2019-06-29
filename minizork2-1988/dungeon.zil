@@ -241,8 +241,6 @@ produced menhirs (standing stones). Obvious passages lead north and south." CR>
 		       <TELL "A menhir lies near a southwest passage.">)
 		      (<EQUAL? ,MENHIR-POSITION 2>
 		       <TELL "A dark opening leads southwest.">)
-		      (<EQUAL? ,MENHIR-POSITION 3>
-		       <TELL "There is a huge menhir here.">)
 		      (T
 		       <TELL
 "A huge menhir is floating in midair above a southwest passage.">)>
