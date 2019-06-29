@@ -417,29 +417,22 @@ hard to tell with a " D ,PRSO ,PERIOD-CR>)>)
 	 <REMOVE .OBJ>
 	 <NOW-DARK?>>
 
-<ROUTINE PRE-ENTER ("AUX" M)
+<ROUTINE V-ENTER ("AUX" M)
 	 <COND (<NOT ,PRSO>
 		<DO-WALK ,P?IN>)
 	       (<AND <FSET? ,PRSO ,DOORBIT>
-		    <SET M <OTHER-SIDE ,PRSO>>>
-	        <DO-WALK .M>)
+		     <SET M <OTHER-SIDE ,PRSO>>>
+		<DO-WALK .M>)
 	       (<FSET? ,PRSO ,VEHBIT>
 		<COND (<FSET? <LOC ,ADVENTURER> ,VEHBIT>
 		       <TELL ,LOOK-AROUND>)
 		      (T
-		       <RFALSE>)>)
-	       (<PRSO? ,WATER ,GLOBAL-WATER>
-		<RFALSE>)
+		       <TELL "You are now in the " D ,PRSO ,PERIOD-CR>
+		       <MOVE ,WINNER ,PRSO>
+		       <APPLY <GETP ,PRSO ,P?ACTION> ,M-ENTER>)>)
 	       (T
 		<TELL
-"You hit your head against the " D ,PRSO " as you attempt this feat." CR>)>
-	 <RFATAL>>
-
-<ROUTINE V-ENTER ()
-	 <TELL "You are now in the " D ,PRSO ,PERIOD-CR>
-	 <MOVE ,WINNER ,PRSO>
-	 <APPLY <GETP ,PRSO ,P?ACTION> ,M-ENTER>
-	 <RTRUE>>
+"You hit your head against the " D ,PRSO " as you attempt this feat." CR>)>>
 
 <ROUTINE V-EXAMINE ()
 	 <COND (<GETP ,PRSO ,P?TEXT>
