@@ -228,9 +228,7 @@ the wall is crudely chiseled the number \"8\".")
 		<TELL
 "Large limestone chunks lie about this former quarry, which appears to have
 produced menhirs (standing stones). Obvious passages lead north and south." CR>
-		<COND (<IN? ,MENHIR ,LOCAL-GLOBALS>
-		       <DESCRIBE-MENHIR>)>
-		<RTRUE>)>>
+		<DESCRIBE-MENHIR>)>>
 
 <GLOBAL MENHIR-POSITION <>>
 
