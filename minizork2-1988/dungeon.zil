@@ -252,9 +252,9 @@ produced menhirs (standing stones). Obvious passages lead north and south." CR>
 
 <OBJECT GLOBAL-MENHIR
 	(IN LOCAL-GLOBALS)
-	(DESC "enormous menhir")
+	(DESC "huge menhir")
 	(SYNONYM MENHIR ROCK STONE)
-	(ADJECTIVE HUGE HEAVY ENORMOUS)
+	(ADJECTIVE HUGE LARGE HEAVY ENORMOUS)
 	(FLAGS NDESCBIT READBIT)
 	(ACTION GLOBAL-MENHIR-F)>
 
@@ -263,9 +263,9 @@ produced menhirs (standing stones). Obvious passages lead north and south." CR>
 
 <OBJECT MENHIR
 	(IN LOCAL-GLOBALS)
-	(DESC "enormous menhir")
+	(DESC "huge menhir")
 	(SYNONYM MENHIR ROCK STONE F)
-	(ADJECTIVE HUGE HEAVY ENORMOUS)
+	(ADJECTIVE HUGE LARGE HEAVY ENORMOUS)
 	(FLAGS NDESCBIT READBIT)
 	(ACTION MENHIR-F)>
 
