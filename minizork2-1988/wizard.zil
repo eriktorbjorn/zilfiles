@@ -990,7 +990,7 @@ a hungry baby, he greedily eats you.">)
 <ROUTINE WIZARD-QUARTERS-F (RARG)
 	 <COND (<EQUAL? .RARG ,M-LOOK ,M-FLASH>
 		<TELL
-"This is where the Wizard of Frobozz lives. The room is "
+"This is where the " D ,WIZARD " lives. The room is "
 <PICK-ONE ,WIZQDESCS> ,PERIOD-CR>)>>
 
 <GLOBAL WIZQDESCS

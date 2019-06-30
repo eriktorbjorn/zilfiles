@@ -465,7 +465,7 @@ Dungeon Master for amazing untastefulness.\"")
 and you tumble down the staircase! At the bottom, a vast red-lit hall,
 guarded by sinister statues, is visible far ahead.|
 |
-You have conquered the Wizard of Frobozz and become master of his domain,
+You have conquered the " D ,WIZARD " and become master of his domain,
 but the final challenge awaits! (The Zork Trilogy concludes with \"Zork III:
 The Dungeon Master\".)" CR CR>
 		       <FINISH>)
