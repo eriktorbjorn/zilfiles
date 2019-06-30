@@ -2872,8 +2872,6 @@ southwest. On this side of the menhir is carved an ornate letter \"F\"." CR>)
 		      (<EQUAL? ,MENHIR-POSITION 2>
 		       <TELL
 "A dark opening leads southwest." CR>)
-		      (<EQUAL? ,MENHIR-POSITION 3>
-		       <TELL "There is a huge menhir here." CR>)
 		      (T
 		       <TELL
 "There is a huge menhir floating like a feather in midair here. A
@@ -3237,7 +3235,7 @@ The wizard runs from the room in terror." CR>
 			     <MOVE ,MENHIR ,PENTAGRAM-ROOM>
 			     <FCLEAR ,MENHIR ,NDESCBIT>
 			     <FCLEAR ,MENHIR ,TAKEBIT>
-			     <SETG MENHIR-POSITION 3>
+			     <SETG MENHIR-POSITION 2>
 			     <TELL
 "He waves his hands, and the menhir drops softly at your feet." CR>
 			     <GENIE-LEAVES>)
