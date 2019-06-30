@@ -2857,9 +2857,7 @@ rough-hewn and unworked, others smooth and well-finished. One side of
 the room appears to have been used to quarry building blocks, the other
 to produce menhirs (standing stones). Obvious passages lead north and
 south." CR>
-		<COND (<IN? ,MENHIR ,LOCAL-GLOBALS>
-		       <DESCRIBE-MENHIR>)>
-		T)>>
+		<DESCRIBE-MENHIR>)>>
 
 <ROUTINE DESCRIBE-MENHIR ()
 	 <COND (<EQUAL? ,HERE ,MENHIR-ROOM>
