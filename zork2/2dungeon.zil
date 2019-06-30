@@ -668,6 +668,7 @@ On the wall is crudely chiseled the number \"8\".")
 	(ADJECTIVE HUGE HEAVY ENORMOUS)
 	(FLAGS NDESCBIT READBIT TURNBIT)
 	(DESC "enormous menhir")
+	(LDESC "There is a huge menhir here.")
 	(ACTION MENHIR-FCN)>
 
 <ROOM KENNEL
