@@ -1332,8 +1332,8 @@ thousands of lost souls weeping and moaning.  A passage exits to the north.")
 <ROOM DOME-ROOM	;"was DOME"
       (IN ROOMS)
       (DESC "Dome Room")
-      (NW TO DOME-ROOM)
-      (DOWN TO TORCH-ROOM
+      (NW TO ROUND-ROOM)
+      (DOWN TO NORTH-TEMPLE
        IF DOME-FLAG ELSE "You cannot go down without fracturing many bones.")
       (ACTION DOME-ROOM-FCN)
       (FLAGS RLANDBIT)
@@ -1493,7 +1493,7 @@ lies to the northeast.")
 crosses over the falls to the east and a path leads to the southwest.")
       (DESC "End of Rainbow")
       (UP TO ARAGAIN-FALLS IF RAINBOW-FLAG)
-      (EAST TO ARAGIAN-FALLS IF RAINBOW-FLAG)
+      (EAST TO ARAGAIN-FALLS IF RAINBOW-FLAG)
       (SW TO CANYON-BOTTOM)
       (FLAGS RLANDBIT ONBIT )
       (GLOBAL GLOBAL-WATER RAINBOW RIVER)>
@@ -1519,7 +1519,7 @@ by towering white cliffs.  Below rainbow-clad Aragain Falls, the river twists
 into a passage which is impossible to enter. Paths enter the forest to
 the west and north.  It is possible to climb down into the canyon from here.")
       (DESC "Canyon View")
-      (DOWN TO CLIFF-BOTTOM)
+      (DOWN TO CANYON-BOTTOM)
       (WEST TO EAST-OF-HOUSE)
       (NORTH TO FOREST-EDGE)
       (FLAGS RLANDBIT ONBIT SACREDBIT)
@@ -1560,7 +1560,7 @@ iron chain is attached.  A foul odor comes from the room to the north.")
       (DESC "Shaft Room")
       (DOWN "You'd never fit.")
       (WEST TO BAT-ROOM)
-      (NORTH TO SMELLY-ROOM)
+      (NORTH TO GAS-ROOM)
       (FLAGS RLANDBIT)>
 
 <ROOM GAS-ROOM	;"was BOOM"
