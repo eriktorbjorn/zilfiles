@@ -310,7 +310,7 @@ the coffin.")
 	(SYNONYM BUTTON)
 	(DESC "button")
 	(FLAGS NDESCBIT)
-	(ACTION DBUTTONS)>
+	(ACTION BUTTON-FCN)>
 
 <OBJECT TROPHY-CASE	;"was TCASE -- first obj so L.R. desc looks right."
 	(IN LIVING-ROOM)

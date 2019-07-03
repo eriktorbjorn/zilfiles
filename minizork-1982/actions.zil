@@ -528,24 +528,11 @@ metal bolt." CR>
 		     (ELSE <TELL
 "The bolt won't turn using the " D ,PRSI "." CR>)>)>>
 	      
-<ROUTINE DBUTTONS ()
+<ROUTINE BUTTON-FCN ()
 	 <COND (<VERB? PUSH>
-		<COND (<==? ,PRSO ,RED-BUTTON>
-		       <TELL "The room lights ">
-		       <COND (<FSET? ,HERE ,ONBIT>
-			      <FCLEAR ,HERE ,ONBIT>
-			      <TELL "shut off." CR>)
-			     (ELSE
-			      <FSET ,HERE ,ONBIT>
-			      <TELL "come on." CR>)>)
-		      (<==? ,PRSO ,BROWN-BUTTON>
-		       <FCLEAR ,DAM-ROOM ,TOUCHBIT>
-		       <SETG GATE-FLAG <>>
-		       <TELL "Click." CR>)
-		      (<==? ,PRSO ,YELLOW-BUTTON>
-		       <FCLEAR ,DAM-ROOM ,TOUCHBIT>
-		       <SETG GATE-FLAG T>
-		       <TELL "Click." CR>)>)>>
+	        <FCLEAR ,DAM-ROOM ,TOUCHBIT>
+		<SETG GATE_FLAG <NOT ,GATE-FLAG>>
+		<TELL "Click." CR>)>>
 
 <ROUTINE TOOL-CHEST-FCN ()
 	 <COND (<VERB? EXAMINE>
