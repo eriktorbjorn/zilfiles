@@ -118,7 +118,7 @@
 		 <COND (<NOT .X> <RETURN>)>
 		 <SET N <NEXT? .X>>
 		 <COND (<==? .X ,STILETTO>)
-		       (<AND <0? <GETP .X ,P?TVALUE>> <PROB 30 T>>
+		       (<AND <0? <GETP .X ,P?TVALUE>> <PROB 30>>
 			<FCLEAR .X ,INVISIBLE>
 			<MOVE .X .RM>
 			<COND (<==? .RM ,HERE>
@@ -137,7 +137,7 @@ valueless." CR>)>)>
 			     <NOT <FSET? .X ,SACREDBIT>>
 			     <NOT <FSET? .X ,INVISIBLE>>
 			     <OR <==? .X ,STILETTO>
-				 <PROB 10 T>>>
+				 <PROB 10>>>
 			<MOVE .X ,THIEF>
 			<FSET .X ,TOUCHBIT>
 			<FSET .X ,INVISIBLE>
