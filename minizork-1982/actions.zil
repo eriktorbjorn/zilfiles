@@ -308,8 +308,8 @@ trap-door." CR>
 	  (<NOT <OR <EQUAL? ,HERE ,EAST-OF-HOUSE ,WEST-OF-HOUSE>
 		    <EQUAL? ,HERE ,NORTH-OF-HOUSE ,SOUTH-OF-HOUSE>>>
 	   <COND (<VERB? FIND>
-		  <COND (<==? ,HERE ,CLEARING>
-			 <TELL "It seems to be to the west." CR>)
+		  <COND (<==? ,HERE ,PATH>
+			 <TELL "It seems to be to the south." CR>)
 			(ELSE
 			 <TELL "It was here just a minute ago...." CR>)>)
 		 (ELSE <TELL "You're not at the house." CR>)>)
@@ -331,7 +331,7 @@ trap-door." CR>
 	  (<VERB? BURN>
 	   <TELL "You must be joking." CR>)>>
     
-<ROUTINE CLEARING-FCN (RARG)
+;<ROUTINE CLEARING-FCN (RARG)
   	 <COND (<==? .RARG ,M-ENTER>
 		<COND (<NOT ,GRATE-REVEALED>
 		       <FSET ,GRATE ,INVISIBLE>)>)
@@ -371,13 +371,13 @@ trap-door." CR>
 	       (<VERB? OPEN CLOSE>
 		<COND (,GRUNLOCK
 		       <OPEN-CLOSE ,GRATE
-				   <COND (<==? ,HERE ,CLEARING>
+				   <COND (<==? ,HERE ,PATH>
 					  "The grating opens.")
 					 (T
 					  "The grating opens to reveal trees above you.")>
 				   "The grating is closed.">
 		       <COND (<FSET? ,GRATE ,OPENBIT>
-			      <COND (<AND <NOT <==? ,HERE ,CLEARING>>
+			      <COND (<AND <NOT <==? ,HERE ,PATH>>
 					  <NOT ,GRATE-REVEALED>>
 				     <TELL 
 "A pile of leaves falls onto your head and to the ground." CR>
