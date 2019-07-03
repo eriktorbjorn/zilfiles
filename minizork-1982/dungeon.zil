@@ -311,7 +311,6 @@ the coffin.")
 	(ADJECTIVE TROPHY)
 	(DESC "trophy case")
 	(FLAGS TRANSBIT CONTBIT NDESCBIT)
-	(ACTION TROPHY-CASE-FCN)
 	(CAPACITY 10000)>
 
 <OBJECT RUG	;"was RUG"
@@ -1350,7 +1349,6 @@ leading down.")
       (EAST TO EGYPT-ROOM)
       (SOUTH TO SOUTH-TEMPLE)
       (UP "You cannot reach the rope.")
-      (ACTION TORCH-ROOM-FCN)
       (GLOBAL DOME STAIRS)
       (FLAGS RLANDBIT ONBIT SACREDBIT)>
 
