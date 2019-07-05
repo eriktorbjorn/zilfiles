@@ -110,7 +110,7 @@
 	      <SET CNT 0>
 	      <REPEAT ()
 		      <SET CNT <+ .CNT 1>>
-		      <COND (<==? .CNT .LEN>
+		      <COND (<G? .CNT .LEN>
 			     <SET RES T>
 			     <RETURN T>)>
 		      <SET OO <GET ,VILLAINS .CNT>>
@@ -240,7 +240,7 @@ property, which is normally 0"
 	 #DECL ((VILLAIN) OBJECT (RES OA OD ATT DEF FIX) FIX)
 	 <REPEAT ()
 		 <SET CNT <+ .CNT 1>>
-		 <COND (<==? .CNT .LEN> <RETURN>)>
+		 <COND (<G? .CNT .LEN> <RETURN>)>
 		 <SET OO <GET ,VILLAINS .CNT>>
 		 <COND (<==? <GET .OO ,V-VILLAIN> ,PRSO>
 			<RETURN>)>>
