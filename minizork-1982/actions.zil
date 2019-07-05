@@ -1024,10 +1024,7 @@ D ,PRSO " and stops to admire its beauty." CR>)
 	 <COND (<L? .N1 .N2> .N1)
 	       (T .N2)>>
 
-<ROUTINE LIGHT-INT (OBJ INTNAM TBLNAM "AUX" (TBL <VALUE .TBLNAM>) TICK)
-	 #DECL ((OBJ) OBJECT (TBLNAM INTNAM) ATOM (TBL) <PRIMTYPE VECTOR>
-		(TICK) FIX)
-	 <ENABLE <QUEUE .INTNAM <SET TICK <GET .TBL 0>>>>
+<ROUTINE LIGHT-INT (OBJ TBL TICK)
 	 <COND (<0? .TICK>
 		<FCLEAR .OBJ ,LIGHTBIT>
 		<FCLEAR .OBJ ,ONBIT>)>
@@ -1035,9 +1032,7 @@ D ,PRSO " and stops to admire its beauty." CR>)
 		<COND (<0? .TICK>
 		       <TELL "The " D .OBJ " is out." CR>)
 		      (T
-		       <TELL <GET .TBL 1> CR>)>)>
-	 <COND (<NOT <0? .TICK>>
-		<SETG .TBLNAM <REST .TBL 4>>)>>
+		       <TELL <GET .TBL 1> CR>)>)>>
 
 \
 
