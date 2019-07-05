@@ -596,6 +596,9 @@ Each character has a tendency to move from one place to another
 at certain times. They all converge on the living room at about
 noon."
 
+<CONSTANT I-LINDER 0>
+<CONSTANT I-CAT 0>
+
 "Goal tables for the 6 characters (including PLAYER), offset
 by the preceding constants, which, for a given character,
 is the P?CHARACTER property of the object."
@@ -603,10 +606,10 @@ is the P?CHARACTER property of the object."
 <GLOBAL GOAL-TABLES
 	<TABLE <TABLE <> <> <> <> 1 <> <> I-FOLLOW 4 4>
 	       <TABLE <> <> <> <> 1 <> <> I-PHONG 3 3>
-	       ;<TABLE <> <> <> <> 1 <> <> I-LINDER 4 4>
+	       <TABLE <> <> <> <> 1 <> <> I-LINDER 4 4>
 	       <TABLE <> <> <> <> 1 <> <> I-STILES 9 9>
 	       <TABLE <> <> <> <> 1 <> <> I-MONICA 2 2>
-	       ;<TABLE <> <> <> <> 1 <> <> I-CAT 1 1>>>
+	       <TABLE <> <> <> <> 1 <> <> I-CAT 1 1>>>
 
 <GLOBAL ATTENTION-TABLE <TABLE 0 0 0 0 0 0 0 0>>
 
