@@ -887,6 +887,9 @@ D ,PRSO " and stops to admire its beauty." CR>)
 		       <TELL
 "The thief says nothing.">)>)
 	       (<==? .MODE ,F-DEAD>
+		<MOVE ,STILETTO ,HERE>
+		<FCLEAR ,STILETTO ,NDESCBIT>
+		<FSET ,STILETTO ,WEAPONBIT>
 		<DEPOSIT-BOOTY ,HERE>
 		<COND (<==? ,HERE ,TREASURE-ROOM>
 		       <SET X <FIRST? ,HERE>>

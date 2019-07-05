@@ -312,8 +312,8 @@ are dead.">
 		<FCLEAR .VILLAIN ,FIGHTBIT>
 		<TELL
 "Almost as soon as the " D .VILLAIN " breathes his last breath, a cloud
-of sinister black fog envelops him, and when the fog lifts, his carcass
-and weapon have disappeared." CR>
+of sinister black fog envelops him, and when the fog lifts, the carcass
+has disappeared." CR>
 		<REMOVE .VILLAIN>
 		<APPLY <GETP .VILLAIN ,P?ACTION> ,F-DEAD>
 		.RES)
