@@ -1260,7 +1260,7 @@ is an exit down a staircase.")
 mud pile.  There are 'shores' to the north and south.")
       (NORTH TO RESERVOIR-NORTH)
       (SOUTH TO RESERVOIR-SOUTH)
-      (FLAGS RWATERBIT )
+      (FLAGS RWATERBIT)
       (GLOBAL GLOBAL-WATER)>
 
 <ROOM RESERVOIR-NORTH	;"was RESEN"
