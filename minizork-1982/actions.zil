@@ -1520,6 +1520,26 @@ in the grass.  When the song ends, the bird flies away." CR>
 	 <COND (<VERB? WALK-AROUND>
 		<GO-NEXT ,FOREST-AROUND>)>>
 
+<ROUTINE PATH-FCN (RARG)
+	 <FOREST-ROOM .RARG>
+	 <COND (<==? .RARG ,M-ENTER>
+		<COND (<NOT ,GRATE-REVEALED>
+		       <FSET ,GRATE ,INVISIBLE>)>)
+	       (<==? .RARG ,M-LOOK>
+		<TELL
+"This is a path winding through a dimly-lit forest.  The path turns a corner
+here, heading south and east.  One large tree with some low branches stands
+at the edge of the path.">
+		<COND (<FSET? ,GRATE ,OPENBIT>
+		       <CRLF>
+		       <TELL
+"There is an open grating, descending into darkness.">)
+		      (,GRATE-REVEALED
+		       <CRLF>
+		       <TELL
+"There is a grating securely fastened into the ground.">)>
+		<CRLF>)>>
+
 <ROUTINE BIRD-OBJECT ()
 	 <COND (<VERB? EXAMINE>
 		<TELL "I can't see any songbird here." CR>)
