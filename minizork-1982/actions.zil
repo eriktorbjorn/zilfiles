@@ -364,10 +364,29 @@ trap-door." CR>
  "Above you is a locked grating.">)>
 		<CRLF>)>>
 
-<ROUTINE GRATE-FUNCTION ()
-    	 <COND (<AND <VERB? OPEN> <==? ,PRSI ,KEYS>>
+<ROUTINE GRATE-FUNCTION ("AUX" TMP)
+	 <COND (<AND <VERB? OPEN>
+		     <==? ,PRSI ,KEYS>>
 		<PERFORM ,V?UNLOCK ,GRATE ,KEYS>
 		<RTRUE>)
+	       (<VERB? LOCK UNLOCK>
+		<COND (<FSET? ,GRATE ,OPENBIT>
+		       <TELL "The grating must be closed first.">)
+		      (<==? ,HERE ,PATH>
+		       <TELL "You can't from this side.">)
+		      (<NOT <==? ,PRSI ,KEYS>>
+		       <TELL "With a " D ,PRSI "!?!">)
+		      (ELSE
+		       <SET .TMP <VERB? UNLOCK>>
+		       <COND (<NOT <==? .TMP ,GRUNLOCK>>
+			      <SETG GRUNLOCK .TMP>
+			      <COND (,GRUNLOCK
+				     <TELL "Unlocked.">)
+				    (ELSE
+				     <TELL "Locked">)>)
+			     (ELSE
+			      <TELL "It already is.">)>)>
+		<CRLF>)
 	       (<VERB? OPEN CLOSE>
 		<COND (,GRUNLOCK
 		       <OPEN-CLOSE ,GRATE
@@ -381,10 +400,13 @@ trap-door." CR>
 					  <NOT ,GRATE-REVEALED>>
 				     <TELL 
 "A pile of leaves falls onto your head and to the ground." CR>
-				     <MOVE ,LEAVES ,HERE>)>
+				     <MOVE ,LEAVES ,HERE>
+				     <SETG GRATE-REVEALED T>)>
 			      <FSET ,GRATING-ROOM ,ONBIT>)
-			     (ELSE <FCLEAR ,GRATING-ROOM ,ONBIT>)>)
-		      (ELSE <TELL "The grating is locked." CR>)>)>>
+			     (ELSE
+			      <FCLEAR ,GRATING-ROOM ,ONBIT>)>)
+		      (ELSE
+		       <TELL "The grating is locked." CR>)>)>>
 
 \
 
