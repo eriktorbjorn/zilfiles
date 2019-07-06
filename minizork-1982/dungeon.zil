@@ -1592,7 +1592,7 @@ iron chain is attached.  A foul odor comes from the room to the north.")
       (IN ROOMS)
       (DESC "Dead End")
       (LDESC "You have come to a dead end in the mine.")
-      (NORTH TO TIMBER-ROOM)
+      (WEST TO TIMBER-ROOM)
       (FLAGS RLANDBIT)>
 
 <ROOM TIMBER-ROOM	;"was TIMBE"
@@ -1604,6 +1604,7 @@ the roof.  A strong draft comes from the west where the room narrows
 considerably.")
       (DESC "Timber Room")
       (UP TO MINE-3)
+      (EAST TO DEAD-END-5)
       (WEST TO LOWER-SHAFT
        IF EMPTY-HANDED
        ELSE "You cannot fit through this passage with that load.")
