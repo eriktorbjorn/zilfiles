@@ -623,11 +623,15 @@ with the water level lowered, there is merely a muddy stream to the south.">)>
 	 <REMOVE ,WATER>
 	 T)>>
 
+<GLOBAL SWIMYUKS
+	<LTABLE
+	 "You can't swim in the dungeon.">>
+
 <ROUTINE WATER-FUNCTION ("AUX" AV W PI?)
 	 #DECL ((AV) <OR OBJECT FALSE> (W) OBJECT (PI?) <OR ATOM FALSE>)
 	 <COND (<VERB? SGIVE> <RFALSE>)
 	       (<VERB? THROUGH>
-		<TELL <PICK-ONE ,SWIMYUKS>>
+		<TELL <PICK-ONE ,SWIMYUKS> CR>
 		<RTRUE>)
 	       (<VERB? FILL>	;"fill bottle with water =>"
 		<SET W ,PRSI>	   ;"put water in bottle"
