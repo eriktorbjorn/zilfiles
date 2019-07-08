@@ -336,7 +336,7 @@ has disappeared." CR>
 		<PRINTN
 		 <+ <* ,CURE-WAIT <- .WD 1>>
 		    <GET <INT I-CURE> ,C-TICK>>>
-		<TELL " moves." CR>)>
+		<TELL " moves.">)>
 	 <CRLF>
 	 <COND (<0? .RS> <TELL "You are at death's door.">)
 	       (<1? .RS> <TELL "You can be killed by one more wound.">)
