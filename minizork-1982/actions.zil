@@ -1095,6 +1095,8 @@ gas.  I would have thought twice about carrying the torch in here.">)>)>>
 is holding his nose." CR>)>)
 	       (<==? .RARG ,M-ENTER>
 		<COND (<NOT <EQUAL? <LOC ,GARLIC> ,WINNER ,HERE>>
+		       <V-LOOK>
+		       <CRLF>
 		       <FLY-ME>)>)>>
 
 <ROUTINE BAT-FUNCTION ()
@@ -1106,8 +1108,8 @@ is holding his nose." CR>)>)
 		 <COND (<L? <SET N <- .N 1>> 1> <RETURN>)
 		       (ELSE <TELL "  Fweep!" CR>)>>
 	 <TELL
-"A giant vampire bat swoops down from his perch and lifts you away...." CR>
-	 <GOTO <PICK-ONE ,BAT-DROPS>>
+"A giant vampire bat swoops down from his perch and lifts you away...." CR CR>
+	 <GOTO <PICK-ONE ,BAT-DROPS> <>>
 	 T>
 
 <GLOBAL BAT-DROPS
