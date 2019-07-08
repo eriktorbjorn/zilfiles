@@ -1,7 +1,7 @@
 "Fighting demon"
 
 <ROUTINE I-FIGHT ("AUX" (FIGHT? <>) (LEN <GET ,VILLAINS 0>)
-		  CNT OO O P) 
+		  CNT OO O) 
       <COND (,DEAD <RTRUE>)>
       <SET CNT 0>
       <REPEAT ()
