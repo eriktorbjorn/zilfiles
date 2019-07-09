@@ -605,6 +605,19 @@ the coffin.")
 	(LDESC "There is some water here.")
 	(SIZE 4)>
 
+<OBJECT PRAYER
+	(IN NORTH-TEMPLE)
+	(SYNONYM PRAYER INSCRIPTION)
+	(ADJECTIVE ANCIENT OLD)
+	(DESC "prayer")
+	(FLAGS READBIT SACREDBIT NDESCBIT)
+	(TEXT
+"The prayer is inscribed in an ancient script, rarely used today. It seems
+to be a philippic against small insects, absent-mindedness, and the picking
+up and dropping of small objects. The final verse consigns trespassers to
+the land of the dead. All evidence indicates that the beliefs of the ancient
+Zorkers were obscure.")>
+
 <OBJECT RAILING	;"was RAILI"
 	(IN DOME-ROOM)
 	(SYNONYM RAILING RAIL)
