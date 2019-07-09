@@ -519,6 +519,15 @@ the coffin.")
 	(FDESC "A battery-powered brass lantern is on the trophy case.")
 	(SIZE 15)>
 
+<OBJECT EMERALD
+	(IN BUOY)
+	(SYNONYM EMERALD TREASURE)
+	(ADJECTIVE LARGE)
+	(DESC "large emerald")
+	(FLAGS TAKEBIT)
+	(VALUE 5)
+	(TVALUE 8)>
+
 <OBJECT MACHINE	;"was MACHI"
 	(IN MACHINE-ROOM)
 	(SYNONYM MACHINE LID)
@@ -623,6 +632,22 @@ the coffin.")
 	(ADJECTIVE FRIGID)
 	(ACTION RIVER-FUNCTION)
 	(FLAGS NDESCBIT)>
+
+<OBJECT BUOY
+	(IN RIVER-2)
+	(SYNONYM BUOY)
+	(ADJECTIVE RED)
+	(DESC "red buoy")
+	(FLAGS TAKEBIT CONTBIT)
+	(FDESC "There is a red buoy here (probably a warning).")
+	(CAPACITY 20)
+	(SIZE 10)
+	(ACTION TREASURE-INSIDE)>
+
+<ROUTINE TREASURE-INSIDE ()
+	 <COND (<VERB? OPEN>
+		<SCORE-OBJ ,EMERALD>
+		<RFALSE>)>>
 
 <OBJECT ROPE	;"was ROPE"
 	(IN ATTIC)
