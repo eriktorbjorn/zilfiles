@@ -699,7 +699,6 @@ and both tumble to the ground." CR>
 		      (T <TELL "You can't go there without a vehicle.">)>
 		<CRLF>
 		<RFALSE>)
-	       (<FSET? .RM ,RMUNGBIT> <TELL <GETP .RM ,P?LDESC> CR> <RFALSE>)
 	       (T
 		<COND (.AV <MOVE .WLOC .RM>)
 		      (T
@@ -1136,11 +1135,6 @@ by knocking down the wall on the east of the room." CR>
 		<TELL "He's wide awake, or haven't you noticed..." CR>)
 	       (ELSE
 		<TELL "The " D ,PRSO " isn't sleeping." CR>)>>
-
-<ROUTINE MUNG-ROOM (RM STR)
-	 #DECL ((STR) STRING)
-	 <FSET .RM ,RMUNGBIT>
-	 <PUTP .RM ,P?LDESC .STR>>
 
 <ROUTINE V-COMMAND ()
 	 <COND (<FSET? ,PRSO ,VICBIT>
