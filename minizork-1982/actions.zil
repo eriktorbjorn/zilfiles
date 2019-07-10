@@ -832,7 +832,8 @@ preparing for a snack."
 	        <FCLEAR ,THIEF ,INVISIBLE>
 		<TELL 
 "A thief carrying a large bag is leaning against a wall.  He does not
-speak, but it is clear that the bag will be taken over his dead body." CR>)>)
+speak, but it is clear that the bag will be taken over his dead body." CR>
+		<RTRUE>)>)
 	(<PROB 30>
 	 <COND (<SET ROBBED?
 		     <OR <ROB ,HERE ,THIEF 100>

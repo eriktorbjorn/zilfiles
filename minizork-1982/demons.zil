@@ -76,7 +76,8 @@
        <COND (.HERE? <HACK-TREASURES> <SET HERE? <>>)>
        <DEPOSIT-BOOTY ,TREASURE-ROOM>)
       (<==? .RM ,HERE>
-       <THIEF-VS-ADVENTURER .HERE?>)
+       <COND (<THIEF-VS-ADVENTURER .HERE?> <RTRUE>)>
+       <COND (<FSET? ,THIEF ,INVISIBLE> <SET HERE? <>>)>)
       (ELSE
        <COND (<AND <IN? ,THIEF .RM>
 		   <NOT <FSET? ,THIEF ,INVISIBLE>>> ;"Leave if victim left"
