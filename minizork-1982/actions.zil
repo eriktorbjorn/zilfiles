@@ -560,7 +560,14 @@ metal bolt." CR>
 
 <ROUTINE TOOL-CHEST-FCN ()
 	 <COND (<VERB? EXAMINE>
-		<TELL "The chests are all empty." CR>)>>
+		<TELL "The tool chest is empty." CR>)
+	       (<VERB? TAKE PUT>
+		<REMOVE ,TOOL-CHEST>
+		<TELL
+"The chest is so rusty and corroded that it crumbles when you
+touch it." CR>)
+	       (<VERB? OPEN>
+		<TELL "The chest is already open." CR>)>>
 
 <ROUTINE DAM-FUNCTION ()
 	 <COND (<VERB? OPEN CLOSE>
