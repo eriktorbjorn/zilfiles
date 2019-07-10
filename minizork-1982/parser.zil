@@ -115,6 +115,7 @@
 	       <SETG P-CONT <>>
 	       <COND (<NOT ,SUPER-BRIEF> <CRLF>)>)
 	      (T
+	       <SETG LIT <LIT? ,HERE>>
 	       <COND (<NOT ,SUPER-BRIEF> <CRLF>)>
 	       <TELL ">">
 	       <READ ,P-INBUF ,P-LEXV>)>
