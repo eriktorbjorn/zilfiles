@@ -844,6 +844,7 @@ speak, but it is clear that the bag will be taken over his dead body." CR>
 		<TELL
 "The thief, finding nothing of value, just left." CR>)>
 	 <FSET ,THIEF ,INVISIBLE>
+	 <NOW-DARK?>
 	 <RTRUE>)>
        <RFALSE>>
 
@@ -1139,8 +1140,7 @@ is holding his nose." CR>)>)
 		       <TELL
 "The basket is lowered to the bottom of the shaft." CR>
 		       <SETG CAGE-TOP <>>
-		       <COND (<AND ,LIT <NOT <SETG LIT <LIT? ,HERE>>>>
-			      <TELL "It is now pitch black." CR>)>
+		       <NOW-DARK?>
 		       T)>)
 	       (<EQUAL? ,LOWERED-BASKET ,PRSO ,PRSI>
 		<TELL "The basket is at the other end of the chain." CR>)

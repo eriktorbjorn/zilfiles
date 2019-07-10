@@ -630,11 +630,8 @@ and both tumble to the ground." CR>
 		       <TELL "It is already off." CR>)
 		      (ELSE
 		       <FCLEAR ,PRSO ,ONBIT>
-		       <COND (,LIT
-			      <SETG LIT <LIT? ,HERE>>)>
 		       <TELL "The " D ,PRSO " is now off." CR>
-		       <COND (<NOT <SETG LIT <LIT? ,HERE>>>
-			      <TELL "It is now pitch black." CR>)>)>)
+		       <NOW-DARK?>)>)
 	       (ELSE <TELL "You can't turn that off." CR>)>
 	 <RTRUE>>
 
@@ -912,6 +909,14 @@ by knocking down the wall on the east of the room." CR>
 <ROUTINE SEE-INSIDE? (OBJ)
 	 <AND <NOT <FSET? .OBJ ,INVISIBLE>>
 	      <OR <FSET? .OBJ ,TRANSBIT> <FSET? .OBJ ,OPENBIT>>>>
+
+<ROUTINE NOW-DARK? ()
+	 <COND (<AND ,LIT
+		     <NOT <LIT? ,HERE>>>
+		<SETG LIT <>>
+		<TELL "It is now pitch black." CR>)>
+	 <RTRUE>>
+
 <ROUTINE PRE-BURN ()
 	 <COND (<FLAMING? ,PRSI> <RFALSE>)
 	       (T <TELL "With a " D ,PRSI "??!?" CR>)>>
