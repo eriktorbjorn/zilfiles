@@ -850,10 +850,20 @@ speak, but it is clear that the bag will be taken over his dead body." CR>
 	       (ELSE
 		<TELL
 "The thief, finding nothing of value, just left." CR>)>
-	 <FSET ,THIEF ,INVISIBLE>
+	 <THIEF-LEAVES>
 	 <NOW-DARK?>
 	 <RTRUE>)>
        <RFALSE>>
+
+<ROUTINE THIEF-LEAVES ("AUX" X)
+	 <FSET ,THIEF ,INVISIBLE>
+	 <FCLEAR ,THIEF ,FIGHTBIT>
+	 <SET X <FIRST? ,THIEF>>
+	 <REPEAT ()
+		 <COND (<NOT .X> <RETURN>)
+		       (<NOT <==? .X ,STILETTO>>
+			<FSET .X ,INVISIBLE>)>
+		 <SET X <NEXT? .X>>>>
 
 <ROUTINE HACK-TREASURES ("AUX" X)
 	 <FSET ,THIEF ,INVISIBLE>
