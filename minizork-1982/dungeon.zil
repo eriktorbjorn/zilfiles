@@ -1519,7 +1519,7 @@ unbearable. On the east shore is a sandy beach.")
       (UP "You cannot go upstream due to strong currents.")
       (LAND TO SANDY-BEACH)
       (EAST TO SANDY-BEACH)
-      (FLAGS RWATERBIT SACREDBIT)
+      (FLAGS RWATERBIT SACREDBIT ONBIT)
       (GLOBAL GLOBAL-WATER RIVER)>
 
 <ROOM SANDY-BEACH	;"was BEACH"
@@ -1531,7 +1531,7 @@ lies to the northeast.")
       (DESC "Sandy Beach")
       (NE TO SANDY-CAVE)
       (SOUTH TO ARAGAIN-FALLS)
-      (FLAGS RLANDBIT SACREDBIT)
+      (FLAGS RLANDBIT SACREDBIT ONBIT)
       (GLOBAL GLOBAL-WATER RIVER)>
 
 <ROOM SANDY-CAVE	;"was TCAVE"
@@ -1550,7 +1550,7 @@ lies to the northeast.")
       (NORTH TO SANDY-BEACH)
       (UP TO END-OF-RAINBOW IF RAINBOW-FLAG)
       (ACTION FALLS-ROOM)
-      (FLAGS RLANDBIT SACREDBIT)
+      (FLAGS RLANDBIT SACREDBIT ONBIT)
       (GLOBAL GLOBAL-WATER RIVER RAINBOW)>
 
 <ROOM END-OF-RAINBOW	;"was POG"
