@@ -248,7 +248,7 @@
 	(SIZE 10)
 	(TEXT
 "The book contains instructions for using certain noises and prayers to
-drive away evil." )>
+drive away evil.")>
 
 <OBJECT SCEPTRE	;"was STICK"
 	(IN COFFIN)
@@ -1586,7 +1586,6 @@ the west and north.  It is possible to climb down into the canyon from here.")
 <ROOM MINE-ENTRANCE	;"was ENTRA"
       (IN ROOMS)
       (LDESC
-
 "You are at the entrance of a disused coal mine.  Strange squeaky sounds
 come from a shaft leading into the north wall, and there is another exit
 to the south.")
