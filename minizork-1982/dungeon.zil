@@ -1101,7 +1101,7 @@ thin out.")
 <ROOM TROLL-ROOM	;"was MTROL"
       (IN ROOMS)
       (LDESC
-"This is a small room with passages to the east and south and a
+"This is a small room with passages to the east, northeast and south, and a
 forbidding hole leading west.  Bloodstains and deep scratches mar the walls.")
       (DESC "The Troll Room")
       (SOUTH TO CELLAR)
@@ -1514,7 +1514,7 @@ leads west into the Cliffs.")
       (IN ROOMS)
       (LDESC
 "The river is running faster here, and the roar of rushing water is almost
-unbearable.  You can see beaches on both the east and west shores.")
+unbearable. On the east shore is a sandy beach.")
       (DESC "Frigid River")
       (UP "You cannot go upstream due to strong currents.")
       (LAND TO SANDY-BEACH)
