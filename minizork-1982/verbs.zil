@@ -732,7 +732,7 @@ and both tumble to the ground." CR>
 
 <ROUTINE V-POUR-ON
 	 ()
-	 <REMOVE ,PRSO>
+	 <REMOVE-CAREFULLY ,PRSO>
 	 <COND (<FLAMING? ,PRSI>
 		<COND (<==? ,PRSI ,TORCH>
 		       <TELL "The water evaporates before it gets close.">)
@@ -778,7 +778,7 @@ and both tumble to the ground." CR>
 by knocking down the wall on the east of the room." CR>
 		<SETG MAGIC-FLAG T>
 		<FCLEAR ,CYCLOPS ,FIGHTBIT>
-		<REMOVE ,CYCLOPS>)
+		<REMOVE-CAREFULLY ,CYCLOPS>)
 	       (T <TELL "Wasn't he a sailor?" CR>)>>
 
 <ROUTINE V-RING
@@ -796,7 +796,7 @@ by knocking down the wall on the east of the room." CR>
 		<COND (<VERB? DRINK> <TELL "How can I drink that?">)
 		      (ELSE
 		       <TELL "Thank you. It really hit the spot.">
-		       <REMOVE ,PRSO>)>
+		       <REMOVE-CAREFULLY ,PRSO>)>
 		<CRLF>)
 	       (<SET DRINK? <FSET? ,PRSO ,DRINKBIT>>
 		<COND (<OR <IN? ,PRSO ,GLOBAL-OBJECTS>
@@ -805,7 +805,7 @@ by knocking down the wall on the east of the room." CR>
 				<FSET? .NOBJ ,OPENBIT>>>
 		       <TELL 
 "Thank you very much.  I was rather thirsty." CR>
-		       <REMOVE ,PRSO>)
+		       <REMOVE-CAREFULLY ,PRSO>)
 		      (T <TELL "I can't get to it." CR>)>)
 	       (<NOT <OR .EAT? .DRINK?>>
 		<TELL "I don't think the "
@@ -929,12 +929,12 @@ by knocking down the wall on the east of the room." CR>
 	 ()
 	 <COND (<FSET? ,PRSO ,BURNBIT>
 		<COND (<IN? ,PRSO ,WINNER>
-		       <REMOVE ,PRSO>
+		       <REMOVE-CAREFULLY ,PRSO>
 		       <TELL "The " D ,PRSO " catches fire." CR>
 		       <JIGS-UP 
 "Unfortunately, you were holding it at the time.">)
 		      (T
-		       <REMOVE ,PRSO>
+		       <REMOVE-CAREFULLY ,PRSO>
 		       <TELL "The " D ,PRSO " is consumed by fire." CR>)>)
 	       (T <TELL "You can't burn a " D ,PRSO "." CR>)>>
 
@@ -965,7 +965,7 @@ by knocking down the wall on the east of the room." CR>
 		<PERFORM ,V?KILL ,PRSO ,PRSI>)
 	       (<AND <FSET? ,PRSO ,BURNBIT>
 		     <FSET? ,PRSI ,WEAPONBIT>>
-		<REMOVE ,PRSO>
+		<REMOVE-CAREFULLY ,PRSO>
 		<TELL "You slice it into tiny bits which disappear!" CR>)
 	       (<NOT <FSET? ,PRSI ,WEAPONBIT>>
 		<TELL "Not so sharp." CR>)
@@ -1181,6 +1181,16 @@ by knocking down the wall on the east of the room." CR>
 
 <ROUTINE V-PUT-UNDER ()
 	 <TELL "You can't do that." CR>>
+
+<ROUTINE REMOVE-CAREFULLY (OBJ "AUX" OLIT)
+	 <COND (<EQUAL? .OBJ ,P-IT-OBJECT>
+		<SETG P-IT-OBJECT <>>)>
+	 <SET OLIT ,LIT>
+	 <REMOVE .OBJ>
+	 <SETG LIT <LIT? ,HERE>>
+	 <COND (<AND .OLIT <NOT <EQUAL? .OLIT ,LIT>>>
+		<TELL "You are left in the dark..." CR>)>
+	 T>
 
 <ROUTINE V-ENTER ()
 	<PERFORM ,V?WALK ,P?IN>>

@@ -252,7 +252,7 @@ trap-door." CR>
 		       <COND (<VERB? THROW GIVE>
 			      <TELL
 "The troll grabs the " D ,PRSO " and eats it." CR>
-			      <REMOVE ,PRSO>)
+			      <REMOVE-CAREFULLY ,PRSO>)
 			     (<VERB? MUNG>
 			      <TELL
 "The troll laughs at your puny gesture." CR>)>)
@@ -282,7 +282,7 @@ trap-door." CR>
 <ROUTINE LEAF-PILE ()
 	<COND (<VERB? BURN>
 	       <LEAVES-APPEAR>
-	       <REMOVE ,PRSO>
+	       <REMOVE-CAREFULLY ,PRSO>
 	       <COND (<IN? ,PRSO ,HERE>
 		      <TELL
 "The leaves burn." CR>)
@@ -469,7 +469,7 @@ face you, displaying a long-forgotten terror." CR>
 "The prayer reverberates through the hall.  As the last word fades, a
 heart-stopping scream fills the cavern, and the spirits flee your unearthly
 power." CR>
-		  <REMOVE ,GHOST>
+		  <REMOVE-CAREFULLY ,GHOST>
 		  <SETG LLD-FLAG T>
 		  <DISABLE <INT I-XC>>)
 		 (<VERB? EXORCISE>
@@ -562,7 +562,7 @@ metal bolt." CR>
 	 <COND (<VERB? EXAMINE>
 		<TELL "The tool chest is empty." CR>)
 	       (<VERB? TAKE PUT>
-		<REMOVE ,TOOL-CHEST>
+		<REMOVE-CAREFULLY ,TOOL-CHEST>
 		<TELL
 "The chest is so rusty and corroded that it crumbles when you
 touch it." CR>)
@@ -615,18 +615,18 @@ with the water level lowered, there is merely a muddy stream to the south.">)>
 
 <ROUTINE BOTTLE-FUNCTION ("AUX" (E? <>))
   <COND (<VERB? THROW>
-	 <REMOVE ,PRSO>
+	 <REMOVE-CAREFULLY ,PRSO>
 	 <SET E? T>
 	 <TELL "The bottle hits the far wall and shatters." CR>)
 	(<VERB? MUNG>
 	 <SET E? T>
-	 <REMOVE ,PRSO>
+	 <REMOVE-CAREFULLY ,PRSO>
 	 <TELL "A brilliant maneuver destroys the bottle." CR>)
 	(<VERB? SHAKE>
 	 <COND (<FSET? ,PRSO ,OPENBIT> <SET E? T>)>)>
   <COND (<AND .E? <IN? ,WATER ,PRSO>>
 	 <TELL "The water spills to the floor and evaporates." CR>
-	 <REMOVE ,WATER>
+	 <REMOVE-CAREFULLY ,WATER>
 	 T)>>
 
 <GLOBAL SWIMYUKS
@@ -653,7 +653,7 @@ with the water level lowered, there is merely a muddy stream to the south.">)>
 		<SET PI? T>)>
 	 <COND (<==? .W ,GLOBAL-WATER>
 		<SET W ,WATER>
-		<COND (<VERB? TAKE PUT> <REMOVE .W>)>)>
+		<COND (<VERB? TAKE PUT> <REMOVE-CAREFULLY .W>)>)>
 	 <COND (.PI? <SETG PRSI .W>)
 	       (T <SETG PRSO .W>)>
 	 <SET AV <LOC ,WINNER>>
@@ -665,12 +665,12 @@ with the water level lowered, there is merely a muddy stream to the south.">)>
 				     <NOT <IN? .W .AV>>>>>
 		       <TELL "There is now a puddle in the bottom of the "
 			     D .AV "." CR>
-		       <REMOVE ,PRSO>
+		       <REMOVE-CAREFULLY ,PRSO>
 		       <MOVE ,PRSO .AV>)
 		      (<AND ,PRSI <NOT <==? ,PRSI ,BOTTLE>>>
 		       <TELL "The water leaks out of the " D ,PRSI
 			     " and evaporates immediately." CR>
-		       <REMOVE .W>)
+		       <REMOVE-CAREFULLY .W>)
 		      (<IN? ,BOTTLE ,WINNER>
 		       <COND (<NOT <FSET? ,BOTTLE ,OPENBIT>>
 			      <TELL "The bottle is closed." CR>)
@@ -690,7 +690,7 @@ with the water level lowered, there is merely a muddy stream to the south.">)>
 		       <TELL "The water slips through your fingers." CR>)>)
 	       (.PI? <TELL "Nice try." CR>)
 	       (<VERB? DROP GIVE>
-		<REMOVE ,WATER>
+		<REMOVE-CAREFULLY ,WATER>
 		<COND (.AV
 		       <TELL "There is now a puddle in the bottom of the "
 			     D .AV "." CR>
@@ -698,11 +698,11 @@ with the water level lowered, there is merely a muddy stream to the south.">)>
 		      (T
 		       <TELL
 "The water spills to the floor and evaporates immediately." CR>
-		       <REMOVE ,WATER>)>)
+		       <REMOVE-CAREFULLY ,WATER>)>)
 	       (<VERB? THROW>
 		<TELL
 "The water splashes on the walls and evaporates immediately." CR>
-		<REMOVE ,WATER>)>>
+		<REMOVE-CAREFULLY ,WATER>)>>
 
 \
 
@@ -726,7 +726,7 @@ with the water level lowered, there is merely a muddy stream to the south.">)>
 	      (<AND <VERB? GIVE> <==? ,PRSI ,CYCLOPS>>
 	       <COND (<==? ,PRSO ,FOOD>
 		      <COND (<NOT <L? .COUNT 0>>
-			     <REMOVE ,FOOD>
+			     <REMOVE-CAREFULLY ,FOOD>
 			     <TELL
 "The cyclops says 'Mmm Mmm.  I love hot peppers!  But oh, could I use
 a drink--perhaps some blood.'  From the gleam in his eye, it is clear whose
@@ -735,7 +735,7 @@ blood he means." CR>
 		      <ENABLE <QUEUE I-CYCLOPS -1>>)
 		     (<==? ,PRSO ,WATER>
 		      <COND (<L? .COUNT 0>
-			     <REMOVE ,WATER>
+			     <REMOVE-CAREFULLY ,WATER>
 			     <FCLEAR ,CYCLOPS ,FIGHTBIT>
 			     <TELL 
 "The cyclops yawns and falls fast asleep (what did you put in that
@@ -1208,19 +1208,19 @@ large lid, which is ">
 			     (ELSE <TELL 
 "The machine emits a brief display of dazzling lights and bizarre noises." CR>
 			      <COND (<IN? ,COAL ,MACHINE>
-				     <REMOVE ,COAL>
+				     <REMOVE-CAREFULLY ,COAL>
 				     <MOVE ,DIAMOND ,MACHINE>)
 				    (ELSE
 				     <REPEAT ()
 					     <COND (<SET O <FIRST? ,MACHINE>>
-						    <REMOVE .O>)
+						    <REMOVE-CAREFULLY .O>)
 						   (ELSE <RETURN>)>>
 				     <MOVE ,GUNK ,MACHINE>)>)>)
 		      (ELSE
 		       <TELL "It seems that a " D ,PRSO " won't do." CR>)>)>>
 
 <ROUTINE GUNK-FUNCTION ()
-	 <REMOVE ,GUNK>
+	 <REMOVE-CAREFULLY ,GUNK>
 	 <TELL
 "The slag crumbles into dust at your touch." CR>>
 
@@ -1312,11 +1312,11 @@ here is on the north end." CR>
 			      <TELL
 "You should get in the boat then launch it." CR>)
 			     (<FSET? ,PRSO ,BURNBIT>
-			      <REMOVE ,PRSO>
+			      <REMOVE-CAREFULLY ,PRSO>
 			      <TELL
 "The " D ,PRSO " floats for a moment, then sinks." CR>)
 			     (ELSE
-			      <REMOVE ,PRSO>
+			      <REMOVE-CAREFULLY ,PRSO>
 			      <TELL
 "The " D ,PRSO " splashes into the water and is gone forever." CR>)>)>)
 	       (<VERB? LEAP>
@@ -1379,7 +1379,7 @@ and boulders at the bottom of many waterfalls.  Including this one.">)>>
 		 (ELSE <TELL
 "The boat deflates." CR>
 		  <SETG DEFLATE T>
-		  <REMOVE ,INFLATED-BOAT>
+		  <REMOVE-CAREFULLY ,INFLATED-BOAT>
 		  <MOVE ,INFLATABLE-BOAT ,HERE>)>)>>
 
 <ROUTINE BREATHE ()
@@ -1397,7 +1397,7 @@ and boulders at the bottom of many waterfalls.  Including this one.">)>>
 			      <TELL
 "A tan label is lying inside the boat." CR>)>
 		       <SETG DEFLATE <>>
-		       <REMOVE ,INFLATABLE-BOAT>
+		       <REMOVE-CAREFULLY ,INFLATABLE-BOAT>
 		       <MOVE ,INFLATED-BOAT ,HERE>)
 		      (<==? ,PRSI ,LUNGS>
 		       <TELL
@@ -1527,7 +1527,7 @@ compromised its esthetic appeal." CR>
 "Nestled inside the now broken egg is a golden clockwork canary." CR>
 	 <MOVE ,BROKEN-EGG <LOC ,EGG>>
 	 <MOVE ,CANARY ,BROKEN-EGG>
-	 <REMOVE ,EGG>>
+	 <REMOVE-CAREFULLY ,EGG>>
 
 <GLOBAL SING-SONG <>>
 
@@ -1604,7 +1604,7 @@ at the edge of the path.">
 		<COND (<VERB? PUT>
 		       <TELL
 "The " D ,PRSO " tumbles into the river and is gone." CR>
-		       <REMOVE ,PRSO>)>)>>
+		       <REMOVE-CAREFULLY ,PRSO>)>)>>
 
 \
 
@@ -1661,7 +1661,7 @@ at the edge of the path.">
 		<COND (<FSET? ,PRSO ,TAKEBIT>
 		       <TELL
 "The " D ,PRSO " falls into the slide and is gone." CR>
-		       <COND (<==? ,PRSO ,WATER> <REMOVE ,PRSO>)
+		       <COND (<==? ,PRSO ,WATER> <REMOVE-CAREFULLY ,PRSO>)
 			     (T
 			      <MOVE ,PRSO ,CELLAR>)>)
 		      (ELSE <YUK>)>)>>

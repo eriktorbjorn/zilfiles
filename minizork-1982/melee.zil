@@ -296,7 +296,7 @@ are dead.">
 "Almost as soon as the " D .VILLAIN " breathes his last breath, a cloud
 of sinister black fog envelops him, and when the fog lifts, the carcass
 has disappeared." CR>
-		<REMOVE .VILLAIN>
+		<REMOVE-CAREFULLY .VILLAIN>
 		<APPLY <GETP .VILLAIN ,P?ACTION> ,F-DEAD>
 		.RES)
 	       (ELSE .RES)>>
