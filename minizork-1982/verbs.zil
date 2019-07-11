@@ -506,6 +506,11 @@ and both tumble to the ground." CR>
 		<PERFORM ,V?DISEMBARK ,PRSO>
 		<RTRUE>)>>
 
+<ROUTINE PRE-GIVE ()
+	 <COND (<NOT <HELD? ,PRSO>>
+	        <TELL
+"That's easy for you to say since you don't even have the " D ,PRSO "." CR>)>>
+
 <ROUTINE V-GIVE ()
 	 <COND (<NOT <FSET? ,PRSI ,VICBIT>>
 		<TELL "You can't give a " D ,PRSO " to a " D ,PRSI "!" CR>)
