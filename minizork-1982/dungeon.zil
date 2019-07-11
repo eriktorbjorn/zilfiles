@@ -555,6 +555,19 @@ the coffin.")
 	(FLAGS CONTBIT)
 	(CAPACITY 10)>
 
+<OBJECT LEAFLET
+	(IN MAILBOX)
+	(DESC "leaflet")
+	(SYNONYM LEAFLET MAIL)
+	(FLAGS READBIT TAKEBIT BURNBIT)
+	(SIZE 2)
+	(TEXT
+"\"WELCOME TO ZORK, a game of adventure, danger, and low cunning. No computer
+should be without one!\"|
+|
+Note: this \"mini-zork\" contains only a sub-set of the locations, puzzles,
+and descriptions found in the larger, disk-based version of Zork I.")>
+
 <OBJECT PAINTING	;"was PAINT"
 	(IN STUDIO)
 	(SYNONYM PAINTING TREASURE)
