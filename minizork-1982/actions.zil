@@ -97,7 +97,7 @@ and perilous adventure which has tested your wit and courage." CR CR>
 	       <COND (,MAGIC-FLAG
 		      <TELL
 "You are in the living room.  There is a door to the east.  To the
-west is an old wooden door, which has a cyclops-sized hole in it,">)
+west is an old wooden door, which has a cyclops-sized hole in it, ">)
 		     (T
 		      <TELL
 "You are in the living room.  There is a door to the east, a rustic wooden
