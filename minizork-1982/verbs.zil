@@ -79,10 +79,15 @@ long description (fdesc or ldesc), otherwise will print short."
 				<SET STR <GETP .OBJ ,P?FDESC>>>
 			   <SET STR <GETP .OBJ ,P?LDESC>>>
 		       <TELL .STR>)
-		      (T <TELL "There is a " D .OBJ " here.">)>)
+		      (T <TELL "There is a " D .OBJ " here">
+			 <COND (<FSET? .OBJ ,ONBIT>
+				<TELL " (providing light)">)>
+			 <TELL ".">)>)
 	       (ELSE
 		<TELL <GET ,INDENTS .LEVEL>>
-		<TELL "A " D .OBJ>)>
+		<TELL "A " D .OBJ>
+		<COND (<FSET? .OBJ ,ONBIT>
+		       <TELL " (providing light)">)>)>
 	 <COND (<AND <0? .LEVEL>
 		     <SET AV <LOC ,WINNER>>
 		     <FSET? .AV ,VEHBIT>
