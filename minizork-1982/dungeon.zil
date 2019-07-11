@@ -1019,8 +1019,7 @@ thin out.")
       (UP TO UP-A-TREE)
       (EAST TO FOREST-EDGE)
       (SOUTH TO NORTH-OF-HOUSE)
-      (DOWN TO GRATING-ROOM
-       IF GRATE IS OPEN ELSE "You can't go through the closed grating.")
+      (DOWN PER GRATING-EXIT)
       (ACTION PATH-FCN)
       (FLAGS RLANDBIT ONBIT SACREDBIT)
       (GLOBAL TREE SONGBIRD WHITE-HOUSE FOREST GRATE)>

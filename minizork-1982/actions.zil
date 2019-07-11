@@ -1587,6 +1587,18 @@ at the edge of the path.">
 "There is a grating securely fastened into the ground.">)>
 		<CRLF>)>>
 
+<ROUTINE GRATING-EXIT ()
+	 <COND (,GRATE-REVEALED
+		<COND (<FSET? ,GRATE ,OPENBIT>
+		       <RETURN ,GRATING-ROOM>)
+		      (T
+		       <TELL "You can't go through the closed grating." CR>
+		       <RFALSE>)>)
+	       (T
+		<TELL "You can't go that way." CR>
+		<RFALSE>)>>
+
+
 <ROUTINE BIRD-OBJECT ()
 	 <COND (<VERB? EXAMINE>
 		<TELL "I can't see any songbird here." CR>)
