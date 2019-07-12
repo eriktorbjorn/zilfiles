@@ -236,6 +236,13 @@ Release ">
 	 <PRINTN <BAND <GET 0 1> *3777*>>
 	 <CRLF>>
 
+<ROUTINE V-VERIFY ()
+	 <TELL "Verifying..." CR>
+	 <COND (<VERIFY>
+		<TELL "Correct." CR>)
+	       (T
+		<TELL "*** FAILED." CR>)>>
+
 <ROUTINE V-AGAIN ("AUX" OBJ)
 	 <SET OBJ
 	      <COND (<AND ,L-PRSO <NOT <LOC ,L-PRSO>>>
