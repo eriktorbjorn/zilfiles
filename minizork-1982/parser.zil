@@ -682,7 +682,8 @@
 			      (T
 			       <SET OBJ <GET .TBL <+ .PTR 1>>>
 			       <COND (<==? .OBJ ,IT> <SET OBJ ,P-IT-OBJECT>)>
-			       <COND (<NOT <IN? .OBJ ,WINNER>>
+			       <COND (<AND <NOT <IN? .OBJ ,WINNER>>
+					   <NOT <EQUAL? .OBJ ,HANDS ,ME>>>
 				      <SETG PRSO .OBJ>
 				      <COND (<FSET? .OBJ ,TRYTAKEBIT>
 					     <SET TAKEN T>)
