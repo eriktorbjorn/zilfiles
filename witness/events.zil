@@ -1764,17 +1764,16 @@ mechanism.|" CR>
 		      <TELL
 "While Monica could have conspired with him and aided him, she too was
 acquitted of conspiracy, because ">
-		      <COND (<NOT <FSET? ,GUN-RECEIPT ,TOUCHBIT>>
+		      <COND (<NOT ,MONICA-HAS-MOTIVE>
+			     <TELL "she had no apparent motive.|" CR>)
+			    (<OR ,SEEN-MONICA-AT-CLOCK ,USED-CLOCK-KEY>
 			     <TELL
 "he was. If only we had tried her for plain murder instead of conspiracy!|"
 CR>)
-			    (,MONICA-HAS-MOTIVE
+			    (T
 			     <TELL "the available
 evidence against her was circumstantial, since there was no definite
-link between her and the hidden gun mechanism.|" CR>)
-			    (<OR ,SEEN-MONICA-AT-CLOCK ,USED-CLOCK-KEY>
-			     <TELL "she had no
-apparent motive.|" CR>)>)>)
+link between her and the hidden gun mechanism.|" CR>)>)>)
 	      (<==? .PERSON ,MONICA>
 	       <COND (,MONICA-HAS-MOTIVE
 		      <COND (<OR ,SEEN-MONICA-AT-CLOCK ,USED-CLOCK-KEY>
